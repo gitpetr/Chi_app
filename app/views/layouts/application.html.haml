@@ -7,19 +7,8 @@
     = csrf_meta_tags
     %meta{ :name => "viewport", :content => "width=device-width, initial-scale=1.0"  }
   %body
-    %div{ :class => "navbar navbar-inverse navbar-fixed-top" }
-      %div{ :class => "navbar-inner" }
-        %a{:class => "btn btn-navbar", "data-toggle" => "collapse", "data-target" => ".nav-collapse"}
-          %span{:class=>"icon-bar"}
-          %span{:class=>"icon-bar"}
-          %span{:class=>"icon-bar"}
+    = render 'layouts/navbar_template'
 
-        = link_to "Transfiguration in Christ", "#", { :class => "brand" }
-        %div{ :class => "nav-collapse" }
-          %ul{ :class => "nav" }
-            %li=link_to "Home", "#"
-            %li=link_to "Link", "#"
-            %li=link_to "Link", "#"
     %div{ :class => "container-fluid" }
       %div{ :class => "row-fluid" }
         %div{:class => "span10"}
