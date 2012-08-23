@@ -10,6 +10,8 @@
     = render 'layouts/navbar_template'
 
     %div{ :class => "container-fluid" }
+      - flash.each do |key, value|
+        = content_tag( :div, value, :class => "alert alert-#{key}" )
       %div{ :class => "row-fluid" }
         %div{:class => "span10"}
           =yield
