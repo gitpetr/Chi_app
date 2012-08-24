@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
   def home
-    @var = "lorem " * 10000
+    @var = "lorem " * 100
   end
 end
