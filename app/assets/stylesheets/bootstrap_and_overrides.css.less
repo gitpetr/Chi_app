@@ -31,8 +31,21 @@ body {
 // Example:
 // @linkColor: #ff0000;
 
+* {
+	margin: 0;
+}
 html, body {
-    height: 86%;
+	height: 100%;
+}
+.wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -142px; /* the bottom margin is the negative value of the footer's height */
+}
+.footer, .push {
+	height: 142px; /* .push must be the same height as .footer */
+	clear: both;
 }
 footer {
     color: #666;
@@ -42,13 +55,4 @@ footer {
 }
 footer a {
     color: #999;
-}
-footer a:hover {
-    color: #efefef;
-}
-.wrapper {
-    min-height: 100%;
-    height: auto !important;
-    height: 10px;
-    margin-bottom: -10px;
 }
