@@ -1,4 +1,3 @@
-# Created by 'bundle exec annotate --position before'
 # == Schema Information
 #
 # Table name: users
@@ -16,8 +15,10 @@
 #  last_sign_in_ip        :string(255)
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
+#  admin                  :boolean
 #
 
+# Created by 'bundle exec annotate --position before'
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
