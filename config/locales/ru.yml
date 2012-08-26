@@ -268,3 +268,8 @@ ru:
     navbar_template:
       logout_link: "Выйти"
       brand_name: "Преображение во Христе"
+  devise:
+    sessions:
+      new:
+        title: "Вход"
+        sign_in_button: "Войти"
