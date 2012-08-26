@@ -1,8 +1,15 @@
 ChirchApp::Application.routes.draw do
-  devise_for :users
+  # Put all you routes to here (to keep correct localization).
+  scope ":locale", locale: /#{I18n.available_locales.join("|")}/ do
+    devise_for :users
 
-  root :to => 'pages#home'
-  match '/about', :to => 'pages#about'
+    root :to => 'pages#home'
+
+    match '/about', :to => 'pages#about'
+  end
+
+  match '*path', to: redirect("/#{I18n.default_locale}/%{path}"), constraints: lambda { |req| !req.path.starts_with? "/#{I18n.default_locale}/" }
+  match '', to: redirect("/#{I18n.default_locale}")
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

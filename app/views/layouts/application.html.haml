@@ -20,6 +20,9 @@
           %div{:class => "span10"}
             =yield
           %div{:class => "span2"}
-            %h2 Test sidebar
+            %p
+              = link_to_unless_current "English", locale: "en"
+              |
+              = link_to_unless_current "Русский", locale: "ru"
 
     = render 'layouts/footer'
