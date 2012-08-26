@@ -13,3 +13,4 @@ en:
       login_link: "Login"
     navbar_template:
       logout_link: "Logout"
+      brand_name: "Transfiguration in Christ"
