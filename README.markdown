@@ -4,6 +4,12 @@ This is Web app for chirch.
 
 ------------------------------------------------------------------------------------------
 
+* Now users can't register in system. To enable this feature:
+  1. Remove from routes.rb from `devise_for :users, :skip => [:registrations]` that `:skip => [:registrations]`
+  2. From app/views/devise/shared/_links uncomment this:
+    ` -#  %br/
+      -#- if devise_mapping.registerable? && controller_name != 'registrations'
+      -#  = link_to t(".sign_up_link"), new_registration_path(resource_name)`
 * Devise views converted from .erb to .haml via [This link](https://github.com/plataformatec/devise/wiki/How-To%3a-Create-Haml-and-Slim-Views)
 * I18n (English and Russian).
 * Links added to login/logout.

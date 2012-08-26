@@ -1,7 +1,7 @@
 ChirchApp::Application.routes.draw do
   # Put all you routes to here (to keep correct localization).
   scope ":locale", locale: /#{I18n.available_locales.join("|")}/ do
-    devise_for :users
+    devise_for :users, :skip => [:registrations]                                          # Users can't register now.
 
     root :to => 'pages#home'
 
