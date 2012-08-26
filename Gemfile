@@ -5,8 +5,8 @@ gem 'pg', '0.13.2'                                                              
 gem 'jquery-rails', '2.1.1'
 gem 'haml', '3.1.7'
 gem 'therubyracer', :platform => :ruby
-gem 'devise'                                                                              # Easy auth.
-gem 'simple_form'
+gem 'devise', '2.1.0'                                                                     # Easy auth.
+gem 'simple_form', '2.0.2'                                                                # Super simple forms with bootstrap look support.
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -24,7 +24,7 @@ group :development do
 end
 
 group :development, :test do
-  gem 'rspec-rails', '2.10.0'
+  gem 'rspec-rails'
   gem 'rb-fsevent'
   gem 'guard-rspec'                                                                       # Rspec for guard.
   gem 'ruby_gntp'
