@@ -5,7 +5,8 @@ gem 'pg', '0.13.2'                                                              
 gem 'jquery-rails', '2.1.1'
 gem 'haml', '3.1.7'
 gem 'therubyracer', :platform => :ruby
-gem 'devise'
+gem 'devise'                                                                              # Easy auth.
+gem 'simple_form'
 
 # Gems used only for assets and not required
 # in production environments by default.
