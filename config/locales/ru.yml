@@ -265,3 +265,5 @@ ru:
   layouts:
     footer:
       login_link: "Войти"
+    navbar_template:
+      logout_link: "Выйти"

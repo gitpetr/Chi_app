@@ -11,3 +11,5 @@ en:
   layouts:
     footer:
       login_link: "Login"
+    navbar_template:
+      logout_link: "Logout"
