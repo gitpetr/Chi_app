@@ -8,3 +8,6 @@ en:
       title: "Test title"
     about:
       title: "About us"
+  layouts:
+    footer:
+      login_link: "Login"

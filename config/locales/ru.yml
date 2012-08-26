@@ -262,3 +262,6 @@ ru:
       title: "Тестовый заголовок"
     about:
       title: "О нас"
+  layouts:
+    footer:
+      login_link: "Войти"
