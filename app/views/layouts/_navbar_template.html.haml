@@ -7,7 +7,14 @@
 
     = link_to "Transfiguration in Christ", "#", { :class => "brand" }
     %div{ :class => "nav-collapse" }
+      -# Left navigation.
       %ul{ :class => "nav" }
         %li=link_to "Home", "#"
         %li=link_to "Link", "#"
         %li=link_to "Link", "#"
+
+      -# Right navigation.
+      %ul{ :class => "nav pull-right" }
+        - if user_signed_in?
+          %li{ :class => "divider-vertical" }
+          %li=link_to "Logout", destroy_user_session_path, :method => :delete
