@@ -4,6 +4,7 @@ This is Web app for chirch.
 
 ------------------------------------------------------------------------------------------
 
+* I18n (English and Russian).
 * Links added to login/logout.
 * Show flash messages (which can be closed) and debug information (for developer only).
 * Navbar now can be collapesed.
