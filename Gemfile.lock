@@ -191,17 +191,17 @@ DEPENDENCIES
   annotate (= 2.5.0)
   capybara (= 1.1.2)
   coffee-rails (~> 3.2.2)
-  devise
+  devise (= 2.1.0)
   guard-rspec
   haml (= 3.1.7)
   jquery-rails (= 2.1.1)
   pg (= 0.13.2)
   rails (= 3.2.8)
   rb-fsevent
-  rspec-rails (= 2.10.0)
+  rspec-rails
   ruby_gntp
   sass-rails (~> 3.2.4)
-  simple_form
+  simple_form (= 2.0.2)
   therubyracer
   twitter-bootstrap-rails!
   uglifier (>= 1.2.3)
