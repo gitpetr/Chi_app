@@ -21,5 +21,36 @@
 require 'spec_helper'
 
 describe User do
-  pending "add some examples to (or delete) #{__FILE__}"
+  before(:each) do
+    @attr = { :email => "qwerty@qwerty.com", :password => "qwerty" }
+  end
+
+  it "should create user in DB with valid params" do
+    expect do
+      user = User.create( @attr )
+    end.should change( User, :count ).by( 1 )
+  end
+
+  it "should not create user in DB with invalid params" do
+    expect do
+      user = User.create( @attr.merge :email => "", :password => "" )
+    end.should_not change( User, :count )
+  end
+
+  describe "Validations for" do
+    it "admin's attribute should = false when user has been created" do
+      user = User.create( @attr )
+      user.admin.should be_false
+    end
+
+    it "email can't be empty" do
+      user = User.create( @attr.merge :email => "" )
+      user.should_not be_valid
+    end
+
+    it "password can't be empty" do
+      user = User.create( @attr.merge :password => "" )
+      user.should_not be_valid
+    end
+  end
 end
