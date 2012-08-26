@@ -277,6 +277,8 @@ ru:
       links:
         forgot_password: "Забыли пароль?"
         sign_up_link: "Зарегистрироваться!"
+        sign_in_link: "Уже зарегистрированы?"
     registrations:
       new:
         sign_up_title: "Регистрация"
+        sign_up_button: "Зарегистрироваться"
