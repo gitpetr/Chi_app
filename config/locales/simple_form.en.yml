@@ -1,9 +1,13 @@
 en:
   simple_form:
+    labels:
+      user:
+        new:
+          email: 'E-mail'
     "yes": 'Yes'
     "no": 'No'
     required:
-      text: 'required'
+      text: 'Required'
       mark: '*'
       # You can uncomment the line below if you need to overwrite the whole required html.
       # When using html, text and mark won't be used.
@@ -23,4 +27,6 @@ en:
     #   defaults:
     #     username: 'User name to sign in.'
     #     password: 'No special characters, please.'
+
+
 
