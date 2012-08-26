@@ -15,7 +15,14 @@ en:
       logout_link: "Logout"
       brand_name: "Transfiguration in Christ"
   devise:
-    sessions:                      
-      new:                         
-        title: "Sign in"           
-        sign_in_button: "Sign in"  
+    sessions:
+      new:
+        title: "Sign in"
+        sign_in_button: "Sign in"
+    shared:
+      links:
+        forgot_password: "Forgot your password?"
+        sign_up_link: "Sign up"
+    registrations:
+      new:
+        sign_up_title: "Sign up"

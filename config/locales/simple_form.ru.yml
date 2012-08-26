@@ -6,6 +6,7 @@ ru:
           email: 'Ваш email'
           password: 'Пароль'
           remember_me: 'Запомнить меня'
+          password_confirmation: "Подтверждение пароля"
     required:
       text: 'Обязательное поле'
       mark: '*'

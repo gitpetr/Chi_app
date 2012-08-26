@@ -273,3 +273,10 @@ ru:
       new:
         title: "Вход"
         sign_in_button: "Войти"
+    shared:
+      links:
+        forgot_password: "Забыли пароль?"
+        sign_up_link: "Зарегистрироваться!"
+    registrations:
+      new:
+        sign_up_title: "Регистрация"
