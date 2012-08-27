@@ -15,5 +15,6 @@
       -# Right navigation.
       %ul{ :class => "nav pull-right" }
         - if user_signed_in?
+          %li=link_to "Settings", edit_user_registration_path
           %li{ :class => "divider-vertical" }
           %li=link_to t(".logout_link"), destroy_user_session_path, :method => :delete
