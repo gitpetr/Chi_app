@@ -5,6 +5,8 @@ ChirchApp::Application.routes.draw do
     as :user do
       get 'users/edit' => 'devise/registrations#edit', :as => 'edit_user_registration'    # But user can edit...
       put 'users' => 'devise/registrations#update', :as => 'user_registration'            # ..and update his password.
+
+      get '/users/sign_out' => 'devise/sessions#destroy'                                  # Unfortunately i use that because Webrate generated GET method for logout, not DELETE.
     end
 
     match '/about', :to => 'pages#about'
