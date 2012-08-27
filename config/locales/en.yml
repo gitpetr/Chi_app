@@ -27,3 +27,7 @@ en:
       new:
         sign_up_title: "Sign up"
         sign_up_button: "Sign up"
+    passwords:                                                                           
+      new:                                                                               
+        send_pass_instructions_button: "Send me reset password instructions"
+        title: "Forgot your password?"   

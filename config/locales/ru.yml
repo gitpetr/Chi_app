@@ -282,3 +282,7 @@ ru:
       new:
         sign_up_title: "Регистрация"
         sign_up_button: "Зарегистрироваться"
+    passwords:
+      new:
+        send_pass_instructions_button: "Выслать инструкцию для восстановления пароля"
+        title: "Забыли ваш пароль?"
