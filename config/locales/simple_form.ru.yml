@@ -3,13 +3,18 @@ ru:
     labels:
       user:
         new:
-          email: 'Ваш email'
-          password: 'Пароль'
-          remember_me: 'Запомнить меня'
+          email: "Ваш email"
+          password: "Пароль"
+          remember_me: "Запомнить меня"
           password_confirmation: "Подтверждение пароля"
+        edit:
+          email: "Ваш email"
+          password: "Пароль"
+          password_confirmation: "Подтверждение пароля"
+          current_password: "Ваш текущий пароль"
     required:
-      text: 'Обязательное поле'
-      mark: '*'
+      text: "Обязательное поле"
+      mark: "*"
       # You can uncomment the line below if you need to overwrite the whole required html.
       # When using html, text and mark won't be used.
       # html: '<abbr title="required">*</abbr>'

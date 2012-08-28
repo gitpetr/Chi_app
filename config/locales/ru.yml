@@ -268,6 +268,7 @@ ru:
     navbar_template:
       logout_link: "Выйти"
       brand_name: "Преображение во Христе"
+      settings: "Настройки"
   devise:
     sessions:
       new:
@@ -282,6 +283,11 @@ ru:
       new:
         sign_up_title: "Регистрация"
         sign_up_button: "Зарегистрироваться"
+      edit:
+        header: "Редактирование настроек пользователя"
+        update_button: "Обновить"
+        password_hint: "Оставьте это поле пустым, если вы не хотите менять пароль"
+        current_password_hint: "Для смены пароля вам необходимо указать текущий пароль"
     passwords:
       new:
         send_pass_instructions_button: "Выслать инструкцию для восстановления пароля"

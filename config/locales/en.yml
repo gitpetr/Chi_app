@@ -14,6 +14,7 @@ en:
     navbar_template:
       logout_link: "Logout"
       brand_name: "Transfiguration in Christ"
+      settings: "Settings"
   devise:
     sessions:
       new:
@@ -27,7 +28,12 @@ en:
       new:
         sign_up_title: "Sign up"
         sign_up_button: "Sign up"
-    passwords:                                                                           
-      new:                                                                               
+      edit:
+        header: "Edit settings"
+        update_button: "Update"
+        password_hint: "Leave it blank if you don't want to change it"
+        current_password_hint: "We need your current password to confirm your changes"
+    passwords:
+      new:
         send_pass_instructions_button: "Send me reset password instructions"
-        title: "Forgot your password?"   
+        title: "Forgot your password?"
