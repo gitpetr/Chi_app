@@ -25,9 +25,9 @@ describe "Users" do
         fill_in "Пароль", :with => 'qwerty'
         click_button "Войти"
 
-        # controller.should be_signed_in
+        controller.should be_signed_in
         click_link "Выйти"
-        # controller.should_not be_signed_in
+        controller.should_not be_signed_in
       end
     end
   end
