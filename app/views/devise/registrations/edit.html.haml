@@ -9,7 +9,7 @@
     = f.input :password_confirmation, :required => false
     = f.input :current_password, :hint => t(".current_password_hint"), :required => true
   .actions
-    = f.button :submit, t(".update_button")
+    = f.button :submit, t(".update_button"), :class => "btn btn-large btn-warning"
 
 %legend
   %h3=t(".cansel_acc_header")
