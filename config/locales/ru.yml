@@ -288,6 +288,10 @@ ru:
         update_button: "Обновить"
         password_hint: "Оставьте это поле пустым, если вы не хотите менять пароль"
         current_password_hint: "Для смены пароля вам необходимо указать текущий пароль"
+        cansel_acc_header: "Удаление аккаунта"
+        cansel_acc_text: "Не нравится наш сервис?"
+        cansel_acc_link: "Удалить мой аккаунт"
+        cansel_acc_confirm_message: "Вы уверены? Это действие необратимо!"
     passwords:
       new:
         send_pass_instructions_button: "Выслать инструкцию для восстановления пароля"
