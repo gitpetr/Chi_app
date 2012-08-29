@@ -4,9 +4,19 @@ This is Web app for chirch.
 
 ------------------------------------------------------------------------------------------
 
-* Added line to load script if it IE 8 or less. 
+* User can't delete himself now. To enable this feature:
+  1. Remove from routes.rb from `devise_for :users, :skip => [:registrations]` that `:skip => [:registrations]`
+     OR add link (i enabled few featerus in routes).
+  2. Add to app/views/devise/registrations/edit (or in other file):
+     `%legend
+        %h3=t(".cansel_acc_header")
+      %p
+        =t(".cansel_acc_text")
+        #{link_to "Cansel your accaunt", registration_path(resource_name), :confirm => "Are you sure?", :method => :delete}`
+* Added line to load script if it IE 8 or less.
 * Now users can't register in system. To enable this feature:
   1. Remove from routes.rb from `devise_for :users, :skip => [:registrations]` that `:skip => [:registrations]`
+     OR add link (i enabled few featerus in routes).
   2. From app/views/devise/shared/_links uncomment this:
     ` -#  %br/
       -#- if devise_mapping.registerable? && controller_name != 'registrations'
