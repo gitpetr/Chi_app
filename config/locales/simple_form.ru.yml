@@ -9,8 +9,8 @@ ru:
           password_confirmation: "Подтверждение пароля"
         edit:
           email: "Ваш email"
-          password: "Пароль"
-          password_confirmation: "Подтверждение пароля"
+          password: "Новый пароль"
+          password_confirmation: "Подтверждение нового пароля"
           current_password: "Ваш текущий пароль"
     required:
       text: "Обязательное поле"
