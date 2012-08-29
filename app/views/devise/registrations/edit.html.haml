@@ -11,8 +11,10 @@
   .actions
     = f.button :submit, t(".update_button"), :class => "btn btn-large btn-warning"
 
-%legend
-  %h3=t(".cansel_acc_header")
-%p
-  =t(".cansel_acc_text")
-  #{link_to t(".cansel_acc_link"), registration_path(resource_name), :confirm => t(".cansel_acc_confirm_message"), :method => :delete}.
+/ Uncomment this and remove :skip => [registrations] from routes.rb (or add link there) to
+/ add possibility user to remove himself.
+/ %legend
+/   %h3=t(".cansel_acc_header")
+/ %p
+/   =t(".cansel_acc_text")
+/   #{link_to t(".cansel_acc_link"), registration_path(resource_name), :confirm => t(".cansel_acc_confirm_message"), :method => :delete}
