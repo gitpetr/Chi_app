@@ -4,6 +4,7 @@ This is Web app for chirch.
 
 ------------------------------------------------------------------------------------------
 
+* Added line to load script if it IE 8 or less. 
 * Now users can't register in system. To enable this feature:
   1. Remove from routes.rb from `devise_for :users, :skip => [:registrations]` that `:skip => [:registrations]`
   2. From app/views/devise/shared/_links uncomment this:
