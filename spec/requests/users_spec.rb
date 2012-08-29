@@ -4,7 +4,7 @@ require 'spec_helper'
 describe "Users" do
   before(:each){ @user = FactoryGirl.create(:user) }
 
-  describe "sign in/out" do
+  describe "Sign in/out" do
     describe "failure" do
       it "should not sign a user in if user login/pass incorrect" do
         visit '/'
@@ -28,6 +28,36 @@ describe "Users" do
         controller.should be_signed_in
         click_link "Выйти"
         controller.should_not be_signed_in
+      end
+    end
+  end
+
+  describe "For signed-in user" do
+    before(:each) do
+      visit '/'
+      click_link "Войти"
+      fill_in "Ваш email",  :with => @user.email
+      fill_in "Пароль", :with => 'qwerty'
+      click_button "Войти"
+    end
+
+    describe "Settings" do
+      it "should change password and log-in in system with new password" do
+        new_pass = 'qwerty1'
+
+        click_link "Настройки"
+        fill_in "Ваш email", :with => @user.email
+        fill_in "Новый пароль", :with => new_pass
+        fill_in "Подтверждение нового пароля", :with => new_pass
+        fill_in "Ваш текущий пароль", :with => 'qwerty'
+        click_button 'Обновить'
+
+        click_link "Выйти"
+        click_link "Войти"
+        fill_in "Ваш email",  :with => @user.email
+        fill_in "Пароль", :with => new_pass
+        click_button "Войти"
+        controller.should be_signed_in
       end
     end
   end
