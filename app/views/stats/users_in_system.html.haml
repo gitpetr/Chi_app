@@ -1,2 +1,29 @@
 %legend
   =t(".legend")
+
+%table{ :class => "table table-striped table-bordered" }
+  %thead
+    %tr
+      %th Email
+      %th Admin?
+      %th Sign-in count
+      %th Current ip of signed in user
+      %th Ip of last sign-in user
+      %th Current date of sign-in
+      %th Last date of sign-in
+  %tbody
+    - @users.each do |u|
+      %tr
+        %td= u.email
+        %td
+          - if u.admin?
+            %font{ :color => "red" }= u.admin?
+          - else
+            = u.admin?
+        %td= u.sign_in_count
+        %td= u.current_sign_in_ip
+        %td= u.last_sign_in_ip
+        %td= u.current_sign_in_at
+        %td= u.last_sign_in_at
+
+
