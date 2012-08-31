@@ -269,6 +269,8 @@ ru:
       logout_link: "Выйти"
       brand_name: "Преображение во Христе"
       settings: "Настройки"
+    admin_panel:
+      users_link: "Пользователи"
   devise:
     sessions:
       new:
