@@ -18,12 +18,14 @@
             %button{ :type => "button", :class => "close", "data-dismiss" =>"alert" }×
             = msg
         %div{ :class => "row-fluid" }
-          %div{:class => "span10"}
+          %div{ :class => "span10" }
             =yield
-          %div{:class => "span2"}
+          %div{ :class => "span2" }
             %p
               = link_to_unless_current "English", locale: "en"
               |
               = link_to_unless_current "Русский", locale: "ru"
 
+            - if user_signed_in? and current_user.admin?
+              = render 'layouts/admin_panel'
     = render 'layouts/footer'

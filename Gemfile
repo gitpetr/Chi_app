@@ -15,7 +15,7 @@ gem 'simple_form', '2.0.2'                                                      
 group :assets do
   gem 'sass-rails',   '~> 3.2.4'
   gem 'coffee-rails', '~> 3.2.2'
-  gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git' # I use this version (2.1.2) from git because it supports bootstrap 2.1.0 right now.
+  gem "twitter-bootstrap-rails", "~> 2.1.3"
   gem 'uglifier', '>= 1.2.3'
 end
 
