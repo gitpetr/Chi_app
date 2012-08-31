@@ -271,6 +271,9 @@ ru:
       settings: "Настройки"
     admin_panel:
       users_link: "Пользователи"
+  stats:
+    users_in_system:
+      legend: "Список пользователей"
   devise:
     sessions:
       new:

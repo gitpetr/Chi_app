@@ -17,6 +17,9 @@ en:
       settings: "Settings"
     admin_panel:
       users_link: "Users"
+  stats:
+    users_in_system:
+      legend: "List of users"
   devise:
     sessions:
       new:
