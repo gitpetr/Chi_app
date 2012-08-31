@@ -5,21 +5,21 @@
   %thead
     %tr
       %th Email
-      %th Admin?
-      %th Sign-in count
-      %th Current ip of signed in user
-      %th Ip of last sign-in user
-      %th Current date of sign-in
-      %th Last date of sign-in
+      %th= t(".admin_field")
+      %th= t(".signin_count_field")
+      %th= t(".current_ip_field")
+      %th= t(".last_ip_field")
+      %th= t(".current_date_of_sign_in_field")
+      %th= t(".last_date_of_sign_in_field")
   %tbody
     - @users.each do |u|
       %tr
         %td= u.email
         %td
           - if u.admin?
-            %font{ :color => "red" }= u.admin?
+            %font{ :color => "red" }= t(".true_field")
           - else
-            = u.admin?
+            = t(".false_field")
         %td= u.sign_in_count
         %td= u.current_sign_in_ip
         %td= u.last_sign_in_ip

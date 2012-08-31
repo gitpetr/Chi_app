@@ -274,6 +274,14 @@ ru:
   stats:
     users_in_system:
       legend: "Список пользователей"
+      admin_field: "Администратор?"
+      signin_count_field: "Число входов в систему"
+      current_ip_field: "Текущий ip зашедшего пользователя"
+      last_ip_field: "Ip с последнего подлючения пользователя"
+      current_date_of_sign_in_field: "Дата последнего подключения"
+      last_date_of_sign_in_field: "Дата предпоследнего подключения"
+      true_field: "Да"
+      false_field: "Нет"
   devise:
     sessions:
       new:

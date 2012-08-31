@@ -20,6 +20,14 @@ en:
   stats:
     users_in_system:
       legend: "List of users"
+      admin_field: "Admin?"
+      signin_count_field: "Sign-in count"
+      current_ip_field: "Current ip of signed in user"
+      last_ip_field: "Ip of last sign-in user"
+      current_date_of_sign_in_field: "Current date of sign-in"
+      last_date_of_sign_in_field: "Last date of sign-in"
+      true_field: "Yes"
+      false_field: "No"
   devise:
     sessions:
       new:
