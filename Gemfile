@@ -24,7 +24,7 @@ group :development do
 end
 
 group :development, :test do
-  gem 'rspec-rails'
+  gem 'rspec-rails', '2.10.1'
   gem 'rb-fsevent'
   gem 'guard-rspec'                                                                       # Rspec for guard.
   gem 'ruby_gntp'
