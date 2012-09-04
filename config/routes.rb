@@ -10,8 +10,8 @@ ChirchApp::Application.routes.draw do
     end
 
     match '/users_list', :to => 'stats#users_in_system'
-
     match '/about', :to => 'pages#about'
+
     root :to => 'pages#home'
   end
 
