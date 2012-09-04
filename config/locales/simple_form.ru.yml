@@ -12,6 +12,9 @@ ru:
           password: "Новый пароль"
           password_confirmation: "Подтверждение нового пароля"
           current_password: "Ваш текущий пароль"
+      article:
+        new:
+          content: "Текст статьи"
     required:
       text: "Обязательное поле"
       mark: "*"

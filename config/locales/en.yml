@@ -8,6 +8,9 @@ en:
       title: "Test title"
     about:
       title: "About us"
+  articles:
+    new:
+      create_article_button: "Create"
   layouts:
     footer:
       login_link: "Login"

@@ -4,6 +4,9 @@ en:
       user:
         new:
           email: 'Email'
+      article:
+        new:
+          content: "Content of article"
     "yes": 'Yes'
     "no": 'No'
     required:

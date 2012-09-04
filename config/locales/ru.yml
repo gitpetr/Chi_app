@@ -262,6 +262,9 @@ ru:
       title: "Тестовый заголовок"
     about:
       title: "О нас"
+  articles:
+    new:
+      create_article_button: "Создать"
   layouts:
     footer:
       login_link: "Войти"
