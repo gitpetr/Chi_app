@@ -270,6 +270,7 @@ ru:
       brand_name: "Преображение во Христе"
       settings: "Настройки"
     admin_panel:
+      stats_header: "Статистика"
       users_link: "Пользователи"
   stats:
     users_in_system:

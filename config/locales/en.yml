@@ -17,6 +17,7 @@ en:
       settings: "Settings"
     admin_panel:
       users_link: "Users"
+      stats_header: "Statistics"
   stats:
     users_in_system:
       legend: "List of users"
