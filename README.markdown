@@ -4,6 +4,13 @@ This is Web app for chirch.
 
 ------------------------------------------------------------------------------------------
 
+* I created my own .rvmrc to use project-specific ruby (1.9.3-head now) and gemset (global). I did that:
+    `$ rvm --rvmrc --create ruby-1.9.3-head@global`
+
+    Don't forget to run that in current project:
+    `$ rvm rvmrc trust DIR`
+
+    And then reload shell.
 * User can't delete himself now. To enable this feature:
   1. Remove from routes.rb from `devise_for :users, :skip => [:registrations]` that `:skip => [:registrations]`
      OR add link (i enabled few featerus in routes).
