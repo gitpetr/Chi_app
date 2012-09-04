@@ -287,6 +287,14 @@ ru:
       last_date_of_sign_in_field: "Дата предпоследнего подключения"
       true_field: "Да"
       false_field: "Нет"
+  activerecord:
+    errors:
+      models:
+        article:
+          attributes:
+            content:
+              presense_message: "не должен быть пустым"
+              max_lenght_message: "не должен содержать больше %{count} символов"       
   devise:
     sessions:
       new:

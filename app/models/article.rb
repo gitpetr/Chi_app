@@ -15,9 +15,9 @@ class Article < ActiveRecord::Base
   belongs_to :user
 
   validates :content,
-              :presence => { :message => "can't be blank" },
+              :presence => { :message => :presense_message },
               :length   => {
                              :maximum => 50000,
-                             :message => "can't contain more than %{count} symbols"
+                             :message => :max_lenght_message
                            }
 end

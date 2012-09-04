@@ -33,6 +33,14 @@ en:
       last_date_of_sign_in_field: "Last date of sign-in"
       true_field: "Yes"
       false_field: "No"
+  activerecord:
+    errors:
+      models:
+        article:
+          attributes:
+            content:
+              presense_message: "can't be blank"
+              max_lenght_message: "can't contain more than %{count} symbols"          
   devise:
     sessions:
       new:
