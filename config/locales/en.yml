@@ -18,6 +18,7 @@ en:
     admin_panel:
       users_link: "Users"
       stats_header: "Statistics"
+      article_header: "Articles"
   stats:
     users_in_system:
       legend: "List of users"
