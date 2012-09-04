@@ -15,7 +15,7 @@
 #  last_sign_in_ip        :string(255)
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
-#  admin                  :boolean
+#  admin                  :boolean          default(FALSE)
 #
 
 require 'spec_helper'
