@@ -12,12 +12,14 @@
 require 'spec_helper'
 
 describe Article do
-  # before(:each){ @attr = { :content => "some text is here" } }
-  # 
-  # describe "Validations for" do
-  #   it "content can't be empty" do
-  #     article = Article.create( @attr.merge :content => "" )
-  #     article.should_not be_valid
-  #   end
-  # end
+  before(:each) do
+    @user = FactoryGirl.create( :user )
+    @attr = { :content => "some text is here" }
+  end
+
+  describe "Validations for" do
+    it "content can't be empty" do
+      @user.articles.build( @attr.merge( :content => "" ) ).should_not be_valid
+    end
+  end
 end
