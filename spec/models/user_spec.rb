@@ -25,16 +25,18 @@ describe User do
     @attr = { :email => "qwerty@qwerty.com", :password => "qwerty" }
   end
 
-  it "should create user in DB with valid params" do
-    expect do
-      user = User.create( @attr )
-    end.should change( User, :count ).by( 1 )
-  end
+  describe "DB" do
+    it "should create user with valid params" do
+      expect do
+        user = User.create( @attr )
+      end.should change( User, :count ).by( 1 )
+    end
 
-  it "should not create user in DB with invalid params" do
-    expect do
-      user = User.create( @attr.merge :email => "", :password => "" )
-    end.should_not change( User, :count )
+    it "should not create user with invalid params" do
+      expect do
+        user = User.create( @attr.merge :email => "", :password => "" )
+      end.should_not change( User, :count )
+    end
   end
 
   describe "Validations for" do
