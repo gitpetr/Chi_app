@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/Nerian/bootstrap-wysihtml5-rails.git
+  revision: 483df17ed05148374ff9e3789e33a739fdd68ec6
+  specs:
+    bootstrap-wysihtml5-rails (0.3.1)
+      railties (>= 3.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -32,8 +39,6 @@ GEM
       rake
     arel (3.0.2)
     bcrypt-ruby (3.0.1)
-    bootstrap-wysihtml5-rails (0.3.1)
-      railties (>= 3.0)
     builder (3.0.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -175,7 +180,7 @@ PLATFORMS
 
 DEPENDENCIES
   annotate (= 2.5.0)
-  bootstrap-wysihtml5-rails
+  bootstrap-wysihtml5-rails!
   coffee-rails (~> 3.2.2)
   devise (= 2.1.0)
   factory_girl (~> 4.0)
