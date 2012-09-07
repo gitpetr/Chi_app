@@ -2,7 +2,13 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  # Translation for views.
+  ##################################
+  # CONTROLLERS
+  ##################################
+  article_created_message: "Article created successfully!"
+  ##################################
+  # VIEWS
+  ##################################
   pages:
     home:
       title: "Test title"
@@ -34,6 +40,9 @@ en:
       last_date_of_sign_in_field: "Last date of sign-in"
       true_field: "Yes"
       false_field: "No"
+  ##################################
+  # MODELS
+  ##################################
   activerecord:
     errors:
       models:
@@ -42,6 +51,9 @@ en:
             content:
               presense_message: "can't be blank"
               max_lenght_message: "can't contain more than %{count} symbols"
+  ##################################
+  # DEVISE
+  ##################################
   devise:
     sessions:
       new:
