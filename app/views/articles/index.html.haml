@@ -1,7 +1,7 @@
 %legend
   = t(".legend")
-.div-for-new-article
-  = link_to "Создать новую статью", new_article_path, :class => "btn btn-large btn-primary btn-block"
+.div-for-new-article-button
+  = link_to "Создать новую статью", new_article_path, :class => "btn btn-large btn-info btn-block"
 %br
 - unless @articles.empty?
   - @articles.each do |a|
