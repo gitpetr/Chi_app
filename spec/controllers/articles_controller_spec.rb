@@ -63,7 +63,7 @@ describe ArticlesController do
   end
 
   describe "POST 'create'" do
-    before(:each){ @article = FactoryGirl.create(:article) }
+    before(:each){ @article = FactoryGirl.build(:article, :user => @admin) }
 
     describe "for non-signed users" do
       it "should deny access" do
