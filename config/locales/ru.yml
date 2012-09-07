@@ -282,7 +282,8 @@ ru:
     admin_panel:
       stats_header: "Статистика"
       users_link: "Пользователи"
-      article_header: "Статьи"
+      data_header: "Материалы"
+      articles_link: "Статьи"
   stats:
     users_in_system:
       legend: "Список пользователей"
