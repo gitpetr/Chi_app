@@ -269,6 +269,8 @@ ru:
     about:
       title: "О нас"
   articles:
+    index:
+      legend: "Статьи"
     new:
       new_article_legend: "Новая статья"
       create_article_button: "Создать"

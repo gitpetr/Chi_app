@@ -1,0 +1,7 @@
+%legend
+  = t(".legend")
+- unless @articles.empty?
+  - @articles.each do |a|
+    = render :partial => 'shared/article_item', :locals => { :article => a }
+- else
+  = link_to "Создать первую статью", new_article_path, :class => "btn btn-primary btn-large"
