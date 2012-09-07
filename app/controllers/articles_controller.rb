@@ -1,4 +1,8 @@
 class ArticlesController < ApplicationController
+  before_filter do
+    redirect_to :root unless current_user && current_user.admin?
+  end
+
   def index
 
   end
@@ -14,7 +18,7 @@ class ArticlesController < ApplicationController
       redirect_to articles_path
       flash[:success] = "It has been created!"
     else
-      render 'new'                                                                        # It should be placed after flash message or you will have to click button twice.
+      render 'new'
     end
   end
 end

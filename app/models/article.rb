@@ -10,9 +10,9 @@
 #
 
 class Article < ActiveRecord::Base
-  attr_accessible :content
-
   belongs_to :user
+
+  attr_accessible :content
 
   validates :content,
               :presence => { :message => :presense_message },
