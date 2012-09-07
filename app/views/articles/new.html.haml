@@ -2,7 +2,8 @@
   =t(".new_article_legend")
 
 = simple_form_for @article do |f|
-  = f.input :content
+  %div{ :class => "hero-unit", :style => "width: 828px;" }
+    = f.input :content, :input_html => {:style => "width: 630px;"}
   = f.button :submit, t(".create_article_button"), :class => "btn btn-large btn-success"
 
   :javascript
