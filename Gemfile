@@ -7,8 +7,8 @@ gem 'haml', '3.1.7'
 gem 'therubyracer', :platform => :ruby
 gem 'devise', '2.1.0'                                                                     # Easy auth.
 gem 'simple_form', '2.0.2'                                                                # Super simple forms with bootstrap look support.
-gem 'bootstrap-wysihtml5-rails', :require => 'bootstrap-wysihtml5-rails',
-                                 :git => 'git://github.com/Nerian/bootstrap-wysihtml5-rails.git'
+gem 'bootstrap-wysihtml5-rails'
+gem 'kaminari'
 
 # Gems used only for assets and not required
 # in production environments by default.
