@@ -4,7 +4,7 @@
   = link_to t(".new_article_button"), new_article_path, :class => "btn btn-large btn-info btn-block"
 %br
 - unless @articles.empty?
-  - @articles.all.each do |a|
+  - @articles.each do |a|
     = render :partial => 'shared/article_item', :locals => { :article => a }
   = paginate @articles
 
