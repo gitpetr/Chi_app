@@ -264,6 +264,7 @@ ru:
       title: "О нас"
   articles:
     new:
+      new_article_legend: "Новая статья"
       create_article_button: "Создать"
   layouts:
     footer:
@@ -294,7 +295,7 @@ ru:
           attributes:
             content:
               presense_message: "не должен быть пустым"
-              max_lenght_message: "не должен содержать больше %{count} символов"       
+              max_lenght_message: "не должен содержать больше %{count} символов"
   devise:
     sessions:
       new:

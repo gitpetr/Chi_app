@@ -10,6 +10,7 @@ en:
       title: "About us"
   articles:
     new:
+      new_article_legend: "New article"
       create_article_button: "Create"
   layouts:
     footer:
@@ -40,7 +41,7 @@ en:
           attributes:
             content:
               presense_message: "can't be blank"
-              max_lenght_message: "can't contain more than %{count} symbols"          
+              max_lenght_message: "can't contain more than %{count} symbols"
   devise:
     sessions:
       new:
