@@ -12,3 +12,8 @@
  *= require bootstrap-wysihtml5
  *= require_tree .
  */
+
+.admin_panel_link{
+  margin-right: -20px;
+  margin-left: -20px;
+}

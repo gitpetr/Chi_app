@@ -2,9 +2,9 @@
   %ul{ :class => "nav nav-list" }
     %li{ :class => "nav-header" }
       = t(".stats_header")
-    %li{ :class => "#{active_link?( users_list_path )}", :style => "margin-right: -20px; margin-left: -20px;" }
+    %li{ :class => "#{active_link?( users_list_path )} admin_panel_link" }
       = link_to t(".users_link"), users_list_path
     %li{ :class => "nav-header" }
       = t(".data_header")
-    %li{ :class => "#{active_link?( articles_path )}", :style => "margin-right: -20px; margin-left: -20px;" }
+    %li{ :class => "#{active_link?( articles_path )} admin_panel_link" }
       = link_to t(".articles_link"), articles_path
