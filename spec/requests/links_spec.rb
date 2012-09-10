@@ -4,7 +4,15 @@ require 'spec_helper'
 describe "Links" do
   before(:each){ @user = FactoryGirl.create(:user) }
 
-  describe "of footer" do
+  describe "Navbar" do
+    it "should visit articles" do
+      visit '/'
+      click_link "Статьи"
+      response.should be_success
+    end
+  end
+
+  describe "Footer" do
     describe "for non-signed users" do
       it "should show link to login" do
         visit '/'

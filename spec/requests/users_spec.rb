@@ -60,5 +60,12 @@ describe "Users" do
         controller.should be_signed_in
       end
     end
+
+    describe "Articles" do
+      it "should not have button to create new article" do
+        click_link "Статьи"
+        response.should_not have_selector( 'a', :content => 'Создать новую статью' )
+      end
+    end
   end
 end

@@ -22,6 +22,11 @@ describe "Admins" do
   end
 
   describe "Article" do
+    it "should have button to create new article" do
+      click_link "Статьи"
+      response.should have_selector( 'a', :content => 'Создать новую статью' )
+    end
+
     it "should be created" do
       expect do
         click_link "Статьи"
