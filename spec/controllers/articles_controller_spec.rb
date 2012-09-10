@@ -95,12 +95,6 @@ describe ArticlesController do
 
     # describe "for signed-in admin" do
     #   before(:each){ test_sign_in( @admin ) }
-
-    #   it "should access" do
-    #     post :create, :locale => :en, :article => @article.attributes.merge( :content => "some" )
-    #     response.should redirect_to( root_path )
-    #   end
-
     #   it "should create article" do
     #     expect do
     #       post :create, :locale => :en, :article => @article.attributes.merge(:content => "some" )
