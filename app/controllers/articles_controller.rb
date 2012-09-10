@@ -1,7 +1,5 @@
 class ArticlesController < ApplicationController
-  before_filter do
-    redirect_to :root unless current_user && current_user.admin?
-  end
+  load_and_authorize_resource
 
   def index
     @articles = Article.order(:updated_at).page(params[:page]).per(5)
