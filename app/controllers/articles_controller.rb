@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
   end
 
   def index
-    @articles = Article.order(:updated_at).page(params[:page]).per(2)
+    @articles = Article.order(:updated_at).page(params[:page]).per(5)
   end
 
   def new

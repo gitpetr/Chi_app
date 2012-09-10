@@ -12,7 +12,6 @@ ChirchApp::Application.routes.draw do
     resources :articles, :only => [ :index, :new, :create ]
 
     match '/users_list', :to => 'stats#users_in_system'
-    match '/about', :to => 'pages#about'
 
     root :to => 'pages#home'
   end
