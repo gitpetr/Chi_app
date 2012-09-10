@@ -9,7 +9,8 @@
     %div{ :class => "nav-collapse" }
       -# Left navigation.
       %ul{ :class => "nav" }
-        %li=link_to "Articles", articles_path
+        %li{ :class => "#{active_link?( articles_path )}" }
+          =link_to t(".articles_link"), articles_path
 
       -# Right navigation.
       %ul{ :class => "nav pull-right" }

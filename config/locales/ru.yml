@@ -290,6 +290,7 @@ ru:
     footer:
       login_link: "Войти"
     navbar_template:
+      articles_link: "Статьи"
       logout_link: "Выйти"
       brand_name: "Преображение во Христе"
       settings: "Настройки"

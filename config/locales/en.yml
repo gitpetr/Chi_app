@@ -26,6 +26,7 @@ en:
     footer:
       login_link: "Login"
     navbar_template:
+      articles_link: "Articles"
       logout_link: "Logout"
       brand_name: "Transfiguration in Christ"
       settings: "Settings"
