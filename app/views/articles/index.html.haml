@@ -4,10 +4,11 @@
   .div-for-new-article-button
     = link_to t(".new_article_button"), new_article_path, :class => "btn btn-large btn-info btn-block"
 %br
-- unless @articles.empty?
-  - @articles.each do |a|
-    = render :partial => 'shared/article_item', :locals => { :article => a }
-  = paginate @articles
+- if can? :read, Article
+  - unless @articles.empty?
+    - @articles.each do |a|
+      = render :partial => 'shared/article_item', :locals => { :article => a }
+    = paginate @articles
 
 - if Article.first.nil?
   = t(".no_articles_message")
