@@ -66,6 +66,14 @@ describe "Users" do
         click_link "Статьи"
         response.should_not have_selector( 'a', :content => 'Создать новую статью' )
       end
+
+      it "should have title which is link on index page and legend on show page" do
+        article = FactoryGirl.create(:article)
+        click_link "Статьи"
+
+        click_link article.title
+        response.should have_selector('legend', :content => article.title)
+      end
     end
   end
 end
