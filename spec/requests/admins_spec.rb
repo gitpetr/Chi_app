@@ -31,6 +31,7 @@ describe "Admins" do
       expect do
         click_link "Статьи"
         click_link "Создать новую статью"
+        fill_in "Заголовок",  :with => "random text"
         fill_in "Текст статьи",  :with => "random text"
         click_button "Создать"
       end.should change( Article, :count ).by( 1 )
