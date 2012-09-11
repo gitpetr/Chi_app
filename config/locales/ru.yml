@@ -283,8 +283,6 @@ ru:
       legend: "Статьи"
       new_article_button: "Создать новую статью"
       no_articles_message: "Здесь пока ничего нет."
-    show:
-      legend: "Просмотр статьи"
     new:
       new_article_legend: "Новая статья"
       create_article_button: "Создать"

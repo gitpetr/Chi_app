@@ -1,4 +1,5 @@
 - if can? :read, Article
   %legend
-    = t(".legend")
+    = @article.title
+  %hr
   != @article.content
