@@ -19,6 +19,8 @@ en:
       legend: "Articles"
       new_article_button: "Create new article"
       no_articles_message: "There is nothing to show here yet."
+    show:
+      legend: "Read article"
     new:
       new_article_legend: "New article"
       create_article_button: "Create"
@@ -46,6 +48,9 @@ en:
       last_date_of_sign_in_field: "Last date of sign-in"
       true_field: "Yes"
       false_field: "No"
+  shared:
+    article_item:
+      read_article: "Read more"
   ##################################
   # MODELS
   ##################################

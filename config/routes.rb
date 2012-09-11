@@ -9,7 +9,7 @@ ChirchApp::Application.routes.draw do
       get '/users/sign_out' => 'devise/sessions#destroy'                                  # Unfortunately i use that because Webrate generated GET method for logout, not DELETE.
     end
 
-    resources :articles, :only => [ :index, :new, :create ]
+    resources :articles, :only => [ :index, :show, :new, :create ]
 
     match '/users_list', :to => 'stats#users_in_system'
 

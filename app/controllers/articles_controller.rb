@@ -5,6 +5,9 @@ class ArticlesController < ApplicationController
     @articles = Article.order(:updated_at).page(params[:page]).per(5)
   end
 
+  def show
+  end
+
   def new
   end
 

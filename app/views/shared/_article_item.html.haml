@@ -1,2 +1,5 @@
-!= truncate(article.content, :length => 1200, :separator => ' ')
+%p
+  != truncate(article.content, :length => 1200, :separator => ' ')
+- if can? :read, Article
+  = link_to t(".read_article"), article_path( :id => article ), :class => "btn"
 %hr
