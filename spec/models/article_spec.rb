@@ -14,7 +14,7 @@ require 'spec_helper'
 describe Article do
   before(:each) do
     @user = FactoryGirl.create( :user )
-    @attr = { :content => "some text is here" }
+    @attr = { :content => "some text is here", :title => "Test title" }
   end
 
   describe "DB" do
@@ -39,12 +39,20 @@ describe Article do
   end
 
   describe "Validations for" do
+    it "title can't be empty" do
+      @user.articles.build( @attr.merge( :title => "" ) ).should_not be_valid
+    end
+
     it "content can't be empty" do
       @user.articles.build( @attr.merge( :content => "" ) ).should_not be_valid
     end
 
     it "content can't have more than 50000 symbols" do
       @user.articles.build( @attr.merge( :content => "a" * 50001 ) ).should_not be_valid
+    end
+
+    it "title can't have more than 100 symbols" do
+      @user.articles.build( @attr.merge( :title => "a" * 101 ) ).should_not be_valid
     end
   end
 end

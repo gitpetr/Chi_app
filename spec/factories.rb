@@ -10,6 +10,7 @@ FactoryGirl.define do
   end
 
   factory :article do
+    title 'Some title'
     content 'text is here'
     user
   end
