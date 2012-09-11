@@ -14,6 +14,7 @@ ru:
           current_password: "Ваш текущий пароль"
       article:
         new:
+          title: "Заголовок"
           content: "Текст статьи"
     required:
       text: "Обязательное поле"

@@ -326,6 +326,9 @@ ru:
             content:
               presense_message: "не должен быть пустым"
               max_lenght_message: "не должен содержать больше %{count} символов"
+            title:
+              presense_message: "не должен быть пустым"
+              max_length_message: "не должен содержать больше %{count} символов"
   ##################################
   # DEVISE
   ##################################

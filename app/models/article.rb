@@ -18,7 +18,7 @@ class Article < ActiveRecord::Base
               :presence => { :message => :presense_message },
               :length   => { :maximum => 50000, :message => :max_lenght_message }
   validates :title,
-              :presence => true,
-              :length => { :maximum => 100 }
+              :presence => { :message => :presense_message },
+              :length => { :maximum => 100, :message => :max_length_message }
 
 end
