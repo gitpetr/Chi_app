@@ -2,9 +2,8 @@
   =t(".new_article_legend")
 
 = simple_form_for @article do |f|
-  %div{ :class => "article-unit" }
-    = f.input :title
-    = f.input :content, :input_html => { :class => "article-textarea" }
+  = render :partial => 'fields', :locals => { :f => f }
+
   %div{ :class => "form-actions"}
     = f.button :submit, t(".create_article_button"), :class => "btn btn-large btn-success"
     = link_to "Отмена", articles_path, :class => "btn btn-large"
