@@ -16,6 +16,9 @@ ru:
         new:
           title: "Заголовок"
           content: "Текст статьи"
+        edit:
+          title: "Заголовок"
+          content: "Текст статьи"
     required:
       text: "Обязательное поле"
       mark: "*"

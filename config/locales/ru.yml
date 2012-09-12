@@ -260,6 +260,7 @@ ru:
   # CONTROLLERS
   ##################################
   article_created_message: "Статья была успешно создана!"
+  article_updated_message: "Статья была успешно обновлена!"
   ##################################
   # PAGINATION
   ##################################
@@ -286,6 +287,10 @@ ru:
     new:
       new_article_legend: "Новая статья"
       create_article_button: "Создать"
+    edit:
+      legend: "Редактировать статью"
+      update_button: "Обновить"
+      cancel_button: "Отменить"
   layouts:
     footer:
       login_link: "Войти"
@@ -312,6 +317,7 @@ ru:
       false_field: "Нет"
   shared:
     article_item:
+      edit_article: "Редактировать"
       read_article: "Читать дальше"
   ##################################
   # MODELS

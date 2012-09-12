@@ -15,7 +15,7 @@ class ArticlesController < ApplicationController
   def create
     if @article.save
       redirect_to articles_path
-      flash[:success] = t(:article_created_message)
+      flash[:success] = t( :article_created_message )
     else
       render 'new'
     end
@@ -27,7 +27,7 @@ class ArticlesController < ApplicationController
   def update
     if @article.update_attributes( params[:article] )
       redirect_to articles_path
-      flash[:success] = "Статья успешно обновлена (tranlste it!)!"
+      flash[:success] = t( :article_updated_message )
     else
       render 'edit'
     end

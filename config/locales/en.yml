@@ -6,6 +6,7 @@ en:
   # CONTROLLERS
   ##################################
   article_created_message: "Article created successfully!"
+  article_updated_message: "Article updated successfully!"
   ##################################
   # VIEWS
   ##################################
@@ -22,6 +23,10 @@ en:
     new:
       new_article_legend: "New article"
       create_article_button: "Create"
+    edit:
+      legend: "Edit article"
+      update_button: "Update"
+      cancel_button: "Cancel"
   layouts:
     footer:
       login_link: "Login"
@@ -48,6 +53,7 @@ en:
       false_field: "No"
   shared:
     article_item:
+      edit_article: "Edit"
       read_article: "Read more"
   ##################################
   # MODELS
