@@ -1,0 +1,6 @@
+= simple_form_for @article do |f|
+  = render :partial => 'fields', :locals => { :f => f }
+
+  %div{ :class => "form-actions"}
+    = f.button :submit, "Update", :class => "btn btn-large btn-warning"
+    = link_to "Cancel", articles_path, :class => "btn btn-large"

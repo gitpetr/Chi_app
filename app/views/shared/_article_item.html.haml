@@ -1,5 +1,6 @@
 %h2
   = link_to article.title, article_path( :id => article )
+  = link_to "Edit", edit_article_path( :id => article ), :class => "btn"
 %p
   != truncate(article.content, :length => 1200, :separator => ' ')
 = link_to t(".read_article"), article_path( :id => article ), :class => "btn"

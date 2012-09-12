@@ -7,6 +7,3 @@
   %div{ :class => "form-actions"}
     = f.button :submit, t(".create_article_button"), :class => "btn btn-large btn-success"
     = link_to "Отмена", articles_path, :class => "btn btn-large"
-
-  :javascript
-    $('#article_content').wysihtml5();

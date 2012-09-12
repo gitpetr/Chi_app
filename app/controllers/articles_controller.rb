@@ -1,3 +1,4 @@
+# encoding: UTF-8
 class ArticlesController < ApplicationController
   load_and_authorize_resource
 
@@ -17,6 +18,18 @@ class ArticlesController < ApplicationController
       flash[:success] = t(:article_created_message)
     else
       render 'new'
+    end
+  end
+
+  def edit
+  end
+
+  def update
+    if @article.update_attributes( params[:article] )
+      redirect_to articles_path
+      flash[:success] = "Статья успешно обновлена (tranlste it!)!"
+    else
+      render 'edit'
     end
   end
 end
