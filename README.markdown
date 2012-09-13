@@ -4,6 +4,7 @@ This is Web app for chirch.
 
 ------------------------------------------------------------------------------------------
 
+* Article: adding, updating.
 * CanCan implemented.
 * I implemented rich text editor via 'bootstrap-wysihtml5-rails'. [how to](https://github.com/Nerian/bootstrap-wysihtml5-rails)
 * I created my own .rvmrc to use project-specific ruby (1.9.3-head now) and gemset (global). I did that:
