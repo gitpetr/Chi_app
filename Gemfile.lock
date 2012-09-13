@@ -179,7 +179,7 @@ PLATFORMS
 
 DEPENDENCIES
   annotate (= 2.5.0)
-  bootstrap-wysihtml5-rails
+  bootstrap-wysihtml5-rails (= 0.3.1)
   cancan (= 1.6.8)
   coffee-rails (~> 3.2.2)
   devise (= 2.1.0)
