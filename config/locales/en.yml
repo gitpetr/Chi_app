@@ -27,6 +27,8 @@ en:
       legend: "Edit article"
       update_button: "Update"
       cancel_button: "Cancel"
+    edit_link:
+      edit: "Edit"
   layouts:
     footer:
       login_link: "Login"
@@ -53,7 +55,6 @@ en:
       false_field: "No"
   shared:
     article_item:
-      edit_article: "Edit"
       read_article: "Read more"
   ##################################
   # MODELS

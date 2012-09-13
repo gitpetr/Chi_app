@@ -291,6 +291,8 @@ ru:
       legend: "Редактировать статью"
       update_button: "Обновить"
       cancel_button: "Отменить"
+    edit_link:
+      edit: "Редактировать"
   layouts:
     footer:
       login_link: "Войти"
@@ -317,7 +319,6 @@ ru:
       false_field: "Нет"
   shared:
     article_item:
-      edit_article: "Редактировать"
       read_article: "Читать дальше"
   ##################################
   # MODELS

@@ -1,0 +1,4 @@
+- if can? :edit, Article
+  = link_to edit_article_path(article), :class => "btn btn-small article-edit-button" do
+    %i{:class=>"icon-pencil icon-white"}
+    =t(".edit")
