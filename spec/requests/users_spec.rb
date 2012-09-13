@@ -67,6 +67,17 @@ describe "Users" do
         response.should_not have_selector( 'a', :content => 'Создать новую статью' )
       end
 
+      it "should not have button to edit existing article" do
+        @article = FactoryGirl.create( :article )
+
+        click_link "Статьи"
+        click_link "Статьи"
+
+        response.should have_selector( 'h2' ) do |h2|
+          h2.should_not have_selector( 'a', :content => 'Редактировать' )
+        end
+      end
+
       it "should have title which is link on index page and legend on show page" do
         article = FactoryGirl.create(:article)
         click_link "Статьи"
