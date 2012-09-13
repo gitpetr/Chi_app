@@ -70,9 +70,8 @@ describe "Users" do
       it "should have title which is link on index page and legend on show page" do
         article = FactoryGirl.create(:article)
         click_link "Статьи"
-
         click_link article.title
-        response.should have_selector('legend', :content => article.title)
+        response.should have_selector('h2', :content => article.title)
       end
     end
   end
