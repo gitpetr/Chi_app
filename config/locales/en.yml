@@ -7,6 +7,7 @@ en:
   ##################################
   article_created_message: "Article created successfully!"
   article_updated_message: "Article updated successfully!"
+  article_deleted_message: "Article deleted successfully!"
   ##################################
   # VIEWS
   ##################################
@@ -28,7 +29,10 @@ en:
       update_button: "Update"
       cancel_button: "Cancel"
     edit_link:
+      change: "Change"
       edit: "Edit"
+      delete: "Delete"
+      confirm_message: "Are you sure you want do delete"
   layouts:
     footer:
       login_link: "Login"

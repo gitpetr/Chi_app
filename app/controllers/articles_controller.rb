@@ -32,4 +32,10 @@ class ArticlesController < ApplicationController
       render 'edit'
     end
   end
+
+  def destroy
+    @article.destroy
+    flash[:success] = t( :article_deleted_message )
+    redirect_to articles_path
+  end
 end
