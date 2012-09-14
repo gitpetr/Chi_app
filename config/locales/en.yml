@@ -33,6 +33,7 @@ en:
       edit: "Edit"
       delete: "Delete"
       confirm_message: "Are you sure you want do delete"
+      close: "Close"
   layouts:
     footer:
       login_link: "Login"
@@ -46,6 +47,7 @@ en:
       stats_header: "Statistics"
       data_header: "Materials"
       articles_link: "Articles"
+      modal_title: "Article deleting"
   stats:
     users_in_system:
       legend: "List of users"

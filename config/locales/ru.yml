@@ -297,6 +297,8 @@ ru:
       edit: "Редактировать"
       delete: "Удалить"
       confirm_message: "Вы уверены, что хотите удалить"
+      close: "Отмена"
+      modal_title: "Удаление статьи"
   layouts:
     footer:
       login_link: "Войти"
