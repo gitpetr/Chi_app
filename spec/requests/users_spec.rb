@@ -13,7 +13,7 @@ describe "Users" do
         fill_in "Пароль", :with => ""
         click_button "Войти"
 
-        response.should have_selector("div.alert.alert-alert", :content => "Неверный адрес e-mail или пароль.")
+        page.should have_selector("div.alert.alert-alert", :content => "Неверный адрес e-mail или пароль.")
       end
     end
 
@@ -25,9 +25,9 @@ describe "Users" do
         fill_in "Пароль", :with => 'qwerty'
         click_button "Войти"
 
-        controller.should be_signed_in
+        page.should have_selector("div.alert.alert-notice", :content => "Вход в систему выполнен.")
         click_link "Выйти"
-        controller.should_not be_signed_in
+        page.should have_selector("div.alert.alert-notice", :content => "Выход из системы выполнен.")
       end
     end
   end
@@ -57,7 +57,8 @@ describe "Users" do
         fill_in "Ваш email",  :with => @user.email
         fill_in "Пароль", :with => new_pass
         click_button "Войти"
-        controller.should be_signed_in
+
+        page.should have_selector("div.alert.alert-notice", :content => "Вход в систему выполнен.")
       end
     end
 
@@ -73,7 +74,7 @@ describe "Users" do
         click_link "Статьи"
         click_link "Статьи"
 
-        response.should have_selector( 'h2' ) do |h2|
+        page.should have_selector( 'h2' ) do |h2|
           h2.should_not have_selector( 'a', :content => 'Редактировать' )
         end
       end
@@ -82,7 +83,7 @@ describe "Users" do
         article = FactoryGirl.create(:article)
         click_link "Статьи"
         click_link article.title
-        response.should have_selector('h2', :content => article.title)
+        page.should have_selector('h2', :content => article.title)
       end
     end
   end

@@ -4,6 +4,7 @@ require 'spec_helper'
 describe "Admins" do
   before(:each) do
     @admin = FactoryGirl.create(:admin)
+
     visit '/'
     click_link "Войти"
     fill_in "Ваш email",  :with => @admin.email
@@ -14,10 +15,10 @@ describe "Admins" do
   describe "Admin panel" do
     it "should have correct links" do
       click_link "Пользователи"
-      response.should be_success
+      current_path.should == "/ru/users_list"
 
       click_link "Статьи"
-      response.should be_success
+      current_path.should == "/ru/articles"
     end
   end
 
@@ -25,7 +26,7 @@ describe "Admins" do
     describe "Buttons" do
       it "should have button to create new article" do
         click_link "Статьи"
-        response.should have_selector( 'a', :content => 'Создать новую статью' )
+        page.should have_selector( 'a', :content => 'Создать новую статью' )
       end
 
       describe "Change" do
@@ -33,7 +34,7 @@ describe "Admins" do
 
         it "should have button to сhange existing article" do
           click_link "Статьи"
-          response.should have_selector( 'h2' ) do |h2|
+          page.should have_selector( 'h2' ) do |h2|
             h2.should have_selector( 'div', :class => 'article-edit-button btn-group' ) do |div|
               div.should have_selector( 'a', :content => 'Изменить' )
             end
@@ -42,7 +43,7 @@ describe "Admins" do
 
         it "should have links to edit and delete article inside of change button" do
           click_link "Статьи"
-          response.should have_selector( 'div', :class => 'article-edit-button btn-group' ) do |div|
+          page.should have_selector( 'div', :class => 'article-edit-button btn-group' ) do |div|
             div.should have_selector( 'ul', :class => 'dropdown-menu') do |ul|
               ul.should have_selector( 'li' ) do |li|
                 li.should have_selector('a', :content => 'Редактировать')
@@ -77,8 +78,8 @@ describe "Admins" do
         fill_in "Текст статьи",  :with => content
         click_button "Обновить"
 
-        response.should have_selector( 'h2' ){ |h2| h2.should have_selector( 'a', :content => title ) }
-        response.should have_selector( 'p', :content => content )
+        page.should have_selector( 'h2' ){ |h2| h2.should have_selector( 'a', :content => title ) }
+        page.should have_selector( 'p', :content => content )
       end
     end
   end

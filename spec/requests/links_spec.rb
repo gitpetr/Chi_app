@@ -8,7 +8,7 @@ describe "Links" do
     it "should visit articles" do
       visit '/'
       click_link "Статьи"
-      response.should be_success
+      current_path.should == "/ru/articles"
     end
   end
 
@@ -16,12 +16,12 @@ describe "Links" do
     describe "for non-signed users" do
       it "should show link to login" do
         visit '/'
-        response.should have_selector("a", :href => new_user_session_path, :content => "Войти" )
+        page.should have_selector("a", :href => "ru/users/sign_in", :content => "Войти" )
       end
 
       it "should not show setting's link" do
         visit '/'
-        response.should_not have_selector("a", :href => edit_user_registration_path, :content => "Настройки" )
+        page.should_not have_link("a", :href => "ru/users/edit", :content => "Настройки" )
       end
     end
 
@@ -36,12 +36,12 @@ describe "Links" do
 
       it "should not show link to login" do
         visit '/'
-        response.should_not have_selector("a", :href => new_user_session_path, :content => "Войти" )
+        page.should_not have_link("a", :href => "ru/users/sign_in", :content => "Войти" )
       end
 
       it "should show setting's link" do
         visit '/'
-        response.should have_selector("a", :href => edit_user_registration_path, :content => "Настройки" )
+        page.should have_selector("a", :href => "ru/users/edit", :content => "Настройки" )
       end
     end
   end
