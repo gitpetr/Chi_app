@@ -31,10 +31,12 @@ group :development, :test do
   gem 'rb-fsevent'
   gem 'guard-rspec'                                                                       # Rspec for guard.
   gem 'ruby_gntp'
+  gem 'launchy'                                                                           # This gem allow us to open testing page in browser (save_and_open_page method)
 end
 
 group :test do
-  gem 'webrat'                                                                            # Browser automation for rspec.
+  # gem 'webrat'                                                                            # Browser automation for rspec.
+  gem 'capybara'
   gem "factory_girl_rails", "~> 4.0"
 end
 
