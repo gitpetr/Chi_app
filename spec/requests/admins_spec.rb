@@ -28,12 +28,28 @@ describe "Admins" do
         response.should have_selector( 'a', :content => 'Создать новую статью' )
       end
 
-      it "should have button to edit article for existing articles" do
-        @article = FactoryGirl.create( :article )
+      describe "Change" do
+        before(:each){ @article = FactoryGirl.create( :article ) }
 
-        click_link "Статьи"
-        response.should have_selector( 'h2' ) do |h2|
-          h2.should have_selector( 'a', :content => 'Редактировать' )
+        it "should have button to сhange existing article" do
+          click_link "Статьи"
+          response.should have_selector( 'h2' ) do |h2|
+            h2.should have_selector( 'div', :class => 'article-edit-button btn-group' ) do |div|
+              div.should have_selector( 'a', :content => 'Изменить' )
+            end
+          end
+        end
+
+        it "should have links to edit and delete article inside of change button" do
+          click_link "Статьи"
+          response.should have_selector( 'div', :class => 'article-edit-button btn-group' ) do |div|
+            div.should have_selector( 'ul', :class => 'dropdown-menu') do |ul|
+              ul.should have_selector( 'li' ) do |li|
+                li.should have_selector('a', :content => 'Редактировать')
+                li.should have_selector('a', :content => 'Удалить')
+              end
+            end
+          end
         end
       end
     end
@@ -55,6 +71,7 @@ describe "Admins" do
         @article = FactoryGirl.create( :article ); title = "title text"; content = "content text"
 
         click_link "Статьи"
+        click_link "Изменить"
         click_link "Редактировать"
         fill_in "Заголовок",  :with => title
         fill_in "Текст статьи",  :with => content

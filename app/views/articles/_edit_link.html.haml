@@ -19,7 +19,7 @@
       %h6
         %p= t(".confirm_message") + " \"#{article.title}\"?"
     %div.modal-footer
-      = link_to t(".delete"), article, :method => :delete, :class => "btn btn-danger"
+      = link_to t(".delete"), article, :method => :delete, :class => "btn btn-danger", :id => "destroy_link"
       = link_to t(".close"), "#", :class => "btn", "data-dismiss" => "modal"
 
 
