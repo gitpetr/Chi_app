@@ -18,7 +18,8 @@
             %button{ :type => "button", :class => "close", "data-dismiss" =>"alert" }×
             = msg
         %div{ :class => "row-fluid" }
-          %div{ :class => "span10" }
+          %div{ :class => "span1" }
+          %div{ :class => "span8" }
             =yield
           %div{ :class => "span2" }
             %p
@@ -28,4 +29,5 @@
 
             - if user_signed_in? and current_user.admin?
               = render 'layouts/admin_panel'
+          %div{ :class => "span1" }
     = render 'layouts/footer'
