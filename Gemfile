@@ -30,13 +30,13 @@ group :development, :test do
   gem 'rspec-rails', '2.10.1'
   gem 'rb-fsevent'
   gem 'guard-rspec'                                                                       # Rspec for guard.
-  gem 'ruby_gntp'
+  # gem 'ruby_gntp'                                                                       # Notification via Growl.
+  gem 'terminal-notifier-guard'                                                           # Notification via notification center.
   gem 'launchy'                                                                           # This gem allow us to open testing page in browser (save_and_open_page method)
 end
 
 group :test do
-  # gem 'webrat'                                                                            # Browser automation for rspec.
-  gem 'capybara'
+  gem 'capybara'                                                                            # Browser automation for rspec with js support.
   gem "factory_girl_rails", "~> 4.0"
 end
 
