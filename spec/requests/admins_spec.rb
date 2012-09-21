@@ -82,5 +82,19 @@ describe "Admins" do
         page.should have_selector( 'p', :content => content )
       end
     end
+
+    describe "Deleting" do
+      it "should be done", :js => true do
+        @article = FactoryGirl.create( :article )
+
+        click_link "Статьи"
+        click_link "Изменить"
+        click_link "Удалить"
+        sleep 0.3                                                                     # Here we sleep because js need some time to show message.
+        click_link "Удалить"
+
+        page.should have_selector('div', :content => 'Статья была успешно удалена!')
+      end
+    end
   end
 end
