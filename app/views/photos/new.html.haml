@@ -2,7 +2,7 @@
   = t(".legend")
 
 = simple_form_for @photo do |f|
-  = f.input :description
+  = f.input :description, :input_html => { :rows => "3", :class => "span9" }
 
   %div{ :class => "form-actions"}
     = f.button :submit, t(".create"), :class => "btn btn-large btn-success"
