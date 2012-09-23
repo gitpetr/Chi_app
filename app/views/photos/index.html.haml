@@ -1,6 +1,8 @@
 %legend
   = t(".legend")
-  = link_to t(".new_photo_button"), new_photo_path, :class => "btn btn-large btn-info btn-block"
+
+  - if can? :create, Photo
+    = link_to t(".new_photo_button"), new_photo_path, :class => "btn btn-large btn-info btn-block"
 
 - Photo.all.each do |p|
   = image_tag p.image if p.image?
