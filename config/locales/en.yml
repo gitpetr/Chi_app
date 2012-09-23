@@ -50,6 +50,7 @@ en:
     index:
       legend: "Photos"
       new_photo_button: "New photo"
+      no_photos: "There is nothing to show here yet."
     new:
       legend: "New photo"
       create: "Create"

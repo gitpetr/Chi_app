@@ -7,3 +7,6 @@
 - Photo.all.each do |p|
   = image_tag p.image if p.image?
   = p.description
+
+- if Photo.first.nil?
+  = t(".no_photos")
