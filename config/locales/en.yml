@@ -39,6 +39,7 @@ en:
       login_link: "Login"
     navbar_template:
       articles_link: "Articles"
+      photos_link: "Photos"
       logout_link: "Logout"
       brand_name: "Transfiguration in Christ"
       settings: "Settings"
