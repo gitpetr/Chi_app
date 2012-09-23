@@ -1,0 +1,6 @@
+= simple_form_for @photo do |f|
+  = f.input :description
+
+  %div{ :class => "form-actions"}
+    = f.button :submit, "Создать", :class => "btn btn-large btn-success"
+    = link_to "Отмена", articles_path, :class => "btn btn-large"
