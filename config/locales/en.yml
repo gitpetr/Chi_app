@@ -5,9 +5,12 @@ en:
   ##################################
   # CONTROLLERS
   ##################################
+  # Article
   article_created_message: "Article created successfully!"
   article_updated_message: "Article updated successfully!"
   article_deleted_message: "Article deleted successfully!"
+  # Photo
+  photo_created_message: "Photo created successfully!"
   ##################################
   # VIEWS
   ##################################

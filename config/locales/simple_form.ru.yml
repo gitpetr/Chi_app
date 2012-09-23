@@ -22,6 +22,7 @@ ru:
       photo:
         new:
           description: "Описание"
+          image: "Путь к изображению"
     required:
       text: "Обязательное поле"
       mark: "*"

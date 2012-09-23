@@ -12,7 +12,7 @@ class PhotosController < ApplicationController
 
     if @photo.save
       redirect_to photos_path
-      flash[:success] = "Created!"
+      flash[:success] = t( :photo_created_message )
     else
       render 'new'
     end
