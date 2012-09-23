@@ -350,6 +350,10 @@ ru:
             title:
               presense_message: "не должен быть пустым"
               max_length_message: "не должен содержать больше %{count} символов"
+        photo:
+          attributes:
+            description:
+              max_lenght_message: "не должно содержать больше %{count} символов"
   ##################################
   # DEVISE
   ##################################

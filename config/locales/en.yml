@@ -83,6 +83,10 @@ en:
             content:
               presense_message: "can't be blank"
               max_lenght_message: "can't contain more than %{count} symbols"
+        photo:
+          attributes:
+            description:
+              max_lenght_message: "can't contain more than %{count} symbols"
   ##################################
   # DEVISE
   ##################################
