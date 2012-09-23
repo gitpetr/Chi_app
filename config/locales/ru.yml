@@ -288,6 +288,7 @@ ru:
     new:
       new_article_legend: "Новая статья"
       create_article_button: "Создать"
+      cancel: "Отмена"
     edit:
       legend: "Редактировать статью"
       update_button: "Обновить"
@@ -299,6 +300,14 @@ ru:
       confirm_message: "Вы уверены, что хотите удалить"
       close: "Отмена"
       modal_title: "Удаление статьи"
+  photos:
+    index:
+      legend: "Фотографии"
+      new_photo_button: "Создать новую фотографию"
+    new:
+      legend: "Новая фотография"
+      create: "Создать"
+      cancel: "Отмена"
   layouts:
     footer:
       login_link: "Войти"

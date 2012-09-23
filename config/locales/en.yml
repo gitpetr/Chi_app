@@ -24,6 +24,7 @@ en:
     new:
       new_article_legend: "New article"
       create_article_button: "Create"
+      cancel: "Cancel"
     edit:
       legend: "Edit article"
       update_button: "Update"
@@ -34,6 +35,14 @@ en:
       delete: "Delete"
       confirm_message: "Are you sure you want do delete"
       close: "Close"
+  photos:
+    index:
+      legend: "Photos"
+      new_photo_button: "New photo"
+    new:
+      legend: "New photo"
+      create: "Create"
+      cancel: "Cancel"
   layouts:
     footer:
       login_link: "Login"
