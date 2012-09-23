@@ -10,7 +10,7 @@ gem 'simple_form', '2.0.2'                                                      
 gem 'bootstrap-wysihtml5-rails', '0.3.1'                                                  # Rich text editor via JS.
 gem 'kaminari', '0.14.0'                                                                  # Be very carefull with changing version of this gem (i modified a lot generated views).
 gem "cancan", '1.6.8'                                                                     # Authorization library.
-
+gem "carrierwave"                                                                         # Simple file uploading.
 # Gems used only for assets and not required
 # in production environments by default.
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
@@ -30,7 +30,6 @@ group :development, :test do
   gem 'rspec-rails', '2.10.1'
   gem 'rb-fsevent'
   gem 'guard-rspec'                                                                       # Rspec for guard.
-  # gem 'ruby_gntp'                                                                       # Notification via Growl.
   gem 'terminal-notifier-guard'                                                           # Notification via notification center.
   gem 'launchy'                                                                           # This gem allow us to open testing page in browser (save_and_open_page method)
 end
