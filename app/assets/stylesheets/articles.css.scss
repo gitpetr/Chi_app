@@ -4,15 +4,11 @@
 
 
 .article-unit {
-  min-width: 811px;
+  max-width: 811px;
   background-color: #EEEEEE;
   border-radius: 6px 6px 6px 6px;
   margin-bottom: 30px;
   padding: 60px;
-}
-
-.article-textarea {
-  width: 630px;
 }
 
 .article-edit-button{
