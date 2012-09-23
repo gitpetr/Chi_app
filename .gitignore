@@ -5,6 +5,7 @@
 #   git config --global core.excludesfile ~/.gitignore_global
 
 .bundle
+public/uploads/*
 db/*.sqlite3*
 db/backups/*.yml
 log/*.log

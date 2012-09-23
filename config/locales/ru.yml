@@ -255,7 +255,14 @@ ru:
   activerecord:
     errors:
       <<: *errors
-
+  ##################################
+  # ERRORS
+  ##################################
+  errors:
+    messages:
+      carrierwave_processing_error: 'Невозможно изменить размер изображения.'
+      carrierwave_integrity_error: 'Не является изображением.'
+      carrierwave_download_error: 'Невозможно загрузить изображение. Попробуйте еще раз!'
   ##################################
   # CONTROLLERS
   ##################################
