@@ -10,7 +10,9 @@
       -# Left navigation.
       %ul{ :class => "nav" }
         %li{ :class => "#{active_link?( articles_path )}" }
-          =link_to t(".articles_link"), articles_path
+          = link_to t(".articles_link"), articles_path
+        %li{ :class => "#{active_link?( photos_path )}" }
+          = link_to "Фотографии", photos_path
 
       -# Right navigation.
       %ul{ :class => "nav pull-right" }

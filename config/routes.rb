@@ -10,6 +10,7 @@ ChirchApp::Application.routes.draw do
     end
 
     resources :articles
+    resources :photos, :only => [:index]
 
     match '/users_list', :to => 'stats#users_in_system'
 
