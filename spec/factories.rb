@@ -1,3 +1,5 @@
+include ActionDispatch::TestProcess
+
 FactoryGirl.define do
   factory :user do
     sequence(:email) { |n| "email#{n}@factory.com" }
@@ -17,6 +19,6 @@ FactoryGirl.define do
 
   factory :photo do
     description 'Photo name'
-    image { fixture_file_upload("files/violin.jpg", "image/jpeg") }
+    image { fixture_file_upload("#{Rails.root}/spec/fixtures/files/violin.jpg", "image/jpeg") }
   end
 end
