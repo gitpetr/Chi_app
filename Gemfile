@@ -11,6 +11,8 @@ gem 'bootstrap-wysihtml5-rails', '0.3.1'                                        
 gem 'kaminari', '0.14.0'                                                                  # Be very carefull with changing version of this gem (i modified a lot generated views).
 gem "cancan", '1.6.8'                                                                     # Authorization library.
 gem "carrierwave"                                                                         # Simple file uploading.
+gem "rmagick"                                                                             # Powerfull image manipulation. Don't forget to install imagemagick before that!
+
 # Gems used only for assets and not required
 # in production environments by default.
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
