@@ -99,6 +99,8 @@ en:
           attributes:
             description:
               max_lenght_message: "can't contain more than %{count} symbols"
+            image:
+              presence_message: "can't be blank"
   ##################################
   # DEVISE
   ##################################

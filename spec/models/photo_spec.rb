@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Photo do
-  before(:each){ @attr = { :description => "some text is here" } }
+  before(:each){ @attr = { :description => "some text is here", :image => File.open(File.join(Rails.root, '/spec/fixtures/files/violin.jpg')) } }
 
   describe "DB" do
     it "should create with valid params" do
@@ -18,6 +18,10 @@ describe Photo do
 
     it "description can't contain more than 500 symbols" do
       Photo.new( @attr.merge( :description => "a" * 501 ) ).should_not be_valid
+    end
+
+    it "image can't have empty path" do
+      Photo.new( @attr.merge( :image => "" ) ).should_not be_valid
     end
   end
 end

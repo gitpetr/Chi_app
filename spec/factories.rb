@@ -14,4 +14,9 @@ FactoryGirl.define do
     content 'text is here'
     user
   end
+
+  factory :photo do
+    description 'Photo name'
+    image { fixture_file_upload("files/violin.jpg", "image/jpeg") }
+  end
 end
