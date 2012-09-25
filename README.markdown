@@ -1,9 +1,26 @@
 This is Web app for chirch.
 
+**Setup**
+
+1) Before installation make sure that you installed PostgreSQL and imagemagik.
+
+To install imagemagik in Mac use homebrew:
+  `$ brew install imagemagick`
+
+2) Change password in database.yml
+
+3) To lauch app:
+  `$ cd app_name
+   $ bundle
+   $ rake db:create:all
+   $ rake db:migrate
+   $ rake db:test:prepare`
+
 **Changelog**
 
 ------------------------------------------------------------------------------------------
 
+* Now we also have resize version of image.
 * Photo: showing, uploading. For uploading i use `carrierwave`.
 * Article: showing, adding, updating, deleting.
 * CanCan implemented.
