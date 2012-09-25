@@ -5,7 +5,7 @@
     = link_to t(".new_photo_button"), new_photo_path, :class => "btn btn-large btn-info btn-block"
 
 - Photo.all.each do |p|
-  = image_tag p.image if p.image?
+  =  image_tag p.image_url(:thumb) if p.image?
   = p.description
 
 - if Photo.first.nil?
