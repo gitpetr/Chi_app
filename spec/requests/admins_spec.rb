@@ -16,9 +16,6 @@ describe "Admins" do
     it "should have correct links" do
       click_link "Пользователи"
       current_path.should == "/ru/users_list"
-
-      click_link "Статьи"
-      current_path.should == "/ru/articles"
     end
   end
 end
