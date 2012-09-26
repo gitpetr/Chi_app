@@ -5,10 +5,6 @@
   = link_to t(".new_photo_button"), new_photo_path, :class => "btn btn-large btn-info btn-block"
   %br/
 
--# Photo.all.each do |p|
-  / = image_tag p.image_url(:thumb) if p.image?
-  / = p.description
-
 - Photo.all.each_slice(3) do |a,b,c|
   %div{ :class => "row-fluid" }
     = photos_inline( a )
