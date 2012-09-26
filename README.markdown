@@ -2,6 +2,8 @@ This is Web app for chirch.
 
 **Setup**
 
+------------------------------------------------------------------------------------------
+
 1) Before installation make sure that you installed PostgreSQL and imagemagik.
 
 To install imagemagik in Mac use homebrew:
@@ -15,6 +17,9 @@ To install imagemagik in Mac use homebrew:
    $ rake db:create:all
    $ rake db:migrate
    $ rake db:test:prepare`
+
+4) Create admin (login: qwerty@qwerty.com, password: qwerty):
+  `$ rake db:create_admin`
 
 **Changelog**
 
