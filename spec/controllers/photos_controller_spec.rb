@@ -34,4 +34,31 @@ describe PhotosController do
       end
     end
   end
+
+  describe "GET 'new'" do
+    describe "for non-signed users" do
+      it "should deny access" do
+        get :new, :locale => :en
+        response.should_not be_success
+      end
+    end
+
+    describe "for signed-in users" do
+      before(:each){ test_sign_in( @user ) }
+
+      it "should deny access" do
+        get :new, :locale => :en
+        response.should_not be_success
+      end
+    end
+
+    describe "for signed-in admin" do
+      before(:each){ test_sign_in( @admin ) }
+
+      it "should access" do
+        get :new, :locale => :en
+        response.should be_success
+      end
+    end
+  end
 end
