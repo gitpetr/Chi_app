@@ -12,15 +12,12 @@ To install imagemagik in Mac use homebrew:
 2) Change password in database.yml
 
 3) To lauch app:
-  `$ cd app_name
 
+```$ cd app_name
    $ bundle
-
    $ rake db:create:all
-
    $ rake db:migrate
-
-   $ rake db:test:prepare`
+   $ rake db:test:prepare```
 
 4) Create admin (login: qwerty@qwerty.com, password: qwerty):
   `$ rake db:create_admin`
