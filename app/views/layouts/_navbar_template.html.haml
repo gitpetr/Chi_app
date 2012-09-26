@@ -1,15 +1,15 @@
 %div{ :class => "navbar navbar-inverse navbar-fixed-top" }
   %div{ :class => "navbar-inner" }
     %a{:class => "btn btn-navbar", "data-toggle" => "collapse", "data-target" => ".nav-collapse"}
-      %span{:class=>"icon-bar"}
-      %span{:class=>"icon-bar"}
-      %span{:class=>"icon-bar"}
+      / Show 3 icons in button when navabar collapsed.
+      - 3.times do
+        %span{ :class => "icon-bar" }
 
     = link_to t(".brand_name"), root_path, { :class => "brand" }
     %div{ :class => "nav-collapse" }
       -# Left navigation.
       %ul{ :class => "nav" }
-        %li{ :class => "#{active_link?( articles_path )}" }
+        %li{ :class => "#{active_link?( articles_path, root_path )}" }
           = link_to t(".articles_link"), articles_path
         %li{ :class => "#{active_link?( photos_path )}" }
           = link_to t(".photos_link"), photos_path

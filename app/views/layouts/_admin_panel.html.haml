@@ -6,5 +6,5 @@
       = link_to t(".users_link"), users_list_path
     %li{ :class => "nav-header" }
       = t(".data_header")
-    %li{ :class => "#{active_link?( articles_path )} admin_panel_link" }
+    %li{ :class => "#{active_link?( articles_path, root_path )} admin_panel_link" }
       = link_to t(".articles_link"), articles_path
