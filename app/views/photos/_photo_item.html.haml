@@ -2,6 +2,6 @@
   / There is situation when nil object can be send to this particle. We should just to ignore it.
   - unless photo.nil?
     %div.photo-item
-      = link_to 'edit', edit_photo_path( photo ), :class => "edit-link"
+      = link_to t(".edit"), edit_photo_path( photo ), :class => "edit-link"
     %p
       = image_tag photo.image_url(:thumb), :class => "photo"

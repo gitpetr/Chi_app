@@ -273,6 +273,7 @@ ru:
   article_deleted_message: "Статья была успешно удалена!"
   # Photo
   photo_created_message: "Изображение успешно сохранено!"
+  photo_updated_message: "Изображение успешно обновлено!"
   ##################################
   # PAGINATION
   ##################################
@@ -320,6 +321,12 @@ ru:
       legend: "Новая фотография"
       create: "Создать"
       cancel: "Отмена"
+    edit:
+      legend: "Редактировать фотографию"
+      update: "Обновить"
+      cancel: "Отмена"
+    photo_item:
+      edit: "Редактировать"
   layouts:
     footer:
       login_link: "Войти"

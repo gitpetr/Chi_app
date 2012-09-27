@@ -23,6 +23,8 @@ ru:
         new:
           description: "Описание"
           image: "Путь к изображению"
+        edit:
+          description: "Описание"
     required:
       text: "Обязательное поле"
       mark: "*"

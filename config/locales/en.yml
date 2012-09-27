@@ -19,6 +19,7 @@ en:
   article_deleted_message: "Article deleted successfully!"
   # Photo
   photo_created_message: "Photo created successfully!"
+  photo_updated_message: "Photo updated successfully!"
   ##################################
   # VIEWS
   ##################################
@@ -55,6 +56,12 @@ en:
       legend: "New photo"
       create: "Create"
       cancel: "Cancel"
+    edit:
+      legend: "Edit photo"
+      update: "Update"
+      cancel: "Cancel"
+    photo_item:
+      edit: "Edit"
   layouts:
     footer:
       login_link: "Login"

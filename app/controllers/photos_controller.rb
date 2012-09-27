@@ -22,7 +22,7 @@ class PhotosController < ApplicationController
   def update
     if @photo.update_attributes( params[:photo] )
       redirect_to photos_path
-      flash[:success] = "Updated!"
+      flash[:success] = t( :photo_updated_message )
     else
       render 'edit'
     end
