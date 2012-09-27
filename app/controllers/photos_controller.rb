@@ -15,4 +15,16 @@ class PhotosController < ApplicationController
       render 'new'
     end
   end
+
+  def edit
+  end
+
+  def update
+    if @photo.update_attributes( params[:photo] )
+      redirect_to photos_path
+      flash[:success] = "Updated!"
+    else
+      render 'edit'
+    end
+  end
 end

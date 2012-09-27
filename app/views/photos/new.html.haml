@@ -2,7 +2,7 @@
   = t(".legend")
 
 = simple_form_for @photo do |f|
-  = f.input :description, :input_html => { :rows => "3", :class => "span9" }
+  = render :partial => 'fields', :locals => { :f => f }
   = f.input :image
 
   %div{ :class => "form-actions"}
