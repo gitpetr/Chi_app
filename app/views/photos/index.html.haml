@@ -7,9 +7,9 @@
 
 - Photo.all.each_slice(3) do |a,b,c|
   %div{ :class => "row-fluid" }
-    = photos_inline( a )
-    = photos_inline( b )
-    = photos_inline( c )
+    = render :partial => 'photo_item', :locals => { :photo => a }
+    = render :partial => 'photo_item', :locals => { :photo => b }
+    = render :partial => 'photo_item', :locals => { :photo => c }
 
 - if Photo.first.nil?
   = t(".no_photos")
