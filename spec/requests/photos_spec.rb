@@ -16,7 +16,7 @@ describe "Photos" do
     describe "Buttons" do
       it "should have button to create new photo" do
         click_link "Фотографии"
-        page.should have_selector( 'a', :content => 'Создать новую фотографию' )
+        page.should have_selector( 'a', :text => 'Создать новую фотографию' )
       end
     end
 
@@ -28,7 +28,7 @@ describe "Photos" do
         attach_file "Путь к изображению", "#{Rails.root}/spec/fixtures/files/violin.jpg"
         click_button "Создать"
 
-        page.should have_selector('div', :content => 'Изображение успешно сохранено! ')
+        page.should have_selector('div', :text => 'Фотография была успешно сохранена!')
       end
     end
   end
