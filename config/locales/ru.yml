@@ -312,6 +312,8 @@ ru:
       confirm_message: "Вы уверены, что хотите удалить"
       close: "Отмена"
       modal_title: "Удаление статьи"
+    article_item:
+      read_article: "Читать дальше"
   photos:
     index:
       legend: "Фотографии"

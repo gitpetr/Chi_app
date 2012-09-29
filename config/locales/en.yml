@@ -47,6 +47,8 @@ en:
       delete: "Delete"
       confirm_message: "Are you sure you want do delete"
       close: "Close"
+    article_item:
+      read_article: "Read more"
   photos:
     index:
       legend: "Photos"
