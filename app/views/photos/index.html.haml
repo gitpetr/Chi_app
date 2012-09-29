@@ -5,10 +5,44 @@
   = link_to t(".new_photo_button"), new_photo_path, :class => "btn btn-large btn-info btn-block"
   %br/
 
+= link_to "Slideshow", "#", {:remote => true, 'data-toggle' => 'modal', 'data-target' => "#modal-window-slideshow", 'data-backdrop' => true, 'data-keyboard' => true, :class => "btn btn-primary btn-block"}
+%br/
+
 - Photo.all.each_slice(3) do |a,b,c|
   %div{ :class => "row-fluid" }
     - [a,b,c].each do |val|
       = render :partial => 'photo_item', :locals => { :photo => val }
+
+
+/ Modal window to delete article.
+%div{ :class => "modal hide fade", :id => "modal-window-slideshow" }
+  %div.modal-header
+    %button{ :type => "button", :class => "close", "data-dismiss" => "modal", "aria-hidden" => "true"} ×
+    %h3= "Title"
+  %div.modal-body
+    / Carousel
+    %div{ :id => "myCarousel", :class => "carousel slide" }
+      / Carousel items
+      %div.carousel-inner
+        - Photo.all.each_with_index do |photo, i|
+          - if i == 0
+            %div{ :class => "active item"}
+              = image_tag photo.image_url
+
+              - unless photo.description.blank?
+                %div.carousel-caption
+                  %p= photo.description
+          - else
+            %div{ :class => "item"}
+              = image_tag photo.image_url
+
+              - unless photo.description.blank?
+                %div.carousel-caption
+                  %p= photo.description
+      / Carousel nav
+      %a{ :class => "carousel-control left", :href => "#myCarousel", "data-slide" => "prev"}‹
+      %a{ :class => "carousel-control right", :href => "#myCarousel", "data-slide" => "next"}›
+
 
 - if Photo.first.nil?
   = t(".no_photos")
