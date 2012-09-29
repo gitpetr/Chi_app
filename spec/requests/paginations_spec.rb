@@ -10,15 +10,11 @@ describe "Paginations" do
     end
 
     it "should have pagination" do
-      page.should have_selector('div', :class => 'pagination pagination-centered')
+      page.should have_css('div.pagination.pagination-centered')
     end
 
     it "should have link to last page for 6 Articles" do
-      page.should have_selector('div', :class => 'pagination pagination-centered') do |div|
-        div.should have_selector('ul') do |ul|
-          ul.should have_selector('li', :class => 'last')
-        end
-      end
+      page.should have_selector('a', :text => "Последняя »")
     end
   end
 end
