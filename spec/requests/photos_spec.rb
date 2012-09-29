@@ -4,7 +4,7 @@ require 'spec_helper'
 describe "Photos" do
   describe "For admin" do
     before(:each) do
-      @admin = FactoryGirl.create(:admin)
+      @admin = FactoryGirl.create( :admin )
 
       visit '/'
       click_link "Войти"
@@ -29,6 +29,34 @@ describe "Photos" do
         click_button "Создать"
 
         page.should have_selector('div', :text => 'Фотография была успешно сохранена!')
+      end
+    end
+
+    describe "Updating" do
+      it "should be done with valid attrs" do
+        @photo = FactoryGirl.create( :photo )
+
+        click_link "Фотографии"
+        click_link "Изменить"
+        click_link "Редактировать"
+        fill_in "Описание",  :with => "Here is new description"
+        click_button "Обновить"
+
+        page.should have_selector('div', :text => 'Фотография была успешно обновлена!')
+      end
+    end
+
+    describe "Deleting" do
+      it "should be done", :js => true do
+        @photo = FactoryGirl.create( :photo )
+
+        click_link "Фотографии"
+        click_link "Изменить"
+        click_link "Удалить"
+        sleep 0.3                                                                     # Here we sleep because js need some time to show message.
+        click_link "Удалить"
+
+        page.should have_selector('div', :text => 'Фотография была успешно удалена!')
       end
     end
   end
