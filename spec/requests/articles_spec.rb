@@ -15,7 +15,7 @@ describe "Articles" do
   describe "Buttons" do
     it "should have button to create new article" do
       click_link "Статьи"
-      page.should have_selector( 'a', :content => 'Создать новую статью' )
+      page.should have_selector( 'a', :text => 'Создать новую статью' )
     end
 
     describe "Change" do
@@ -23,23 +23,20 @@ describe "Articles" do
 
       it "should have button to сhange existing article" do
         click_link "Статьи"
-        page.should have_selector( 'h2' ) do |h2|
-          h2.should have_selector( 'div', :class => 'article-edit-button btn-group' ) do |div|
-            div.should have_selector( 'a', :content => 'Изменить' )
-          end
+
+        within( 'div', :class => 'article-edit-button btn-group' ) do
+          page.should have_selector( 'a', :text => 'Изменить' )
         end
       end
 
-      it "should have links to edit and delete article inside of change button" do
+      it "should have links to edit" do
         click_link "Статьи"
-        page.should have_selector( 'div', :class => 'article-edit-button btn-group' ) do |div|
-          div.should have_selector( 'ul', :class => 'dropdown-menu') do |ul|
-            ul.should have_selector( 'li' ) do |li|
-              li.should have_selector('a', :content => 'Редактировать')
-              li.should have_selector('a', :content => 'Удалить')
-            end
-          end
-        end
+        page.should have_selector('a', :text => 'Редактировать')
+      end
+
+      it "should have links to delete article" do
+        click_link "Статьи"
+        page.should have_selector('a', :text => 'Удалить')
       end
     end
   end
@@ -67,8 +64,8 @@ describe "Articles" do
       fill_in "Текст статьи",  :with => content
       click_button "Обновить"
 
-      page.should have_selector( 'h2' ){ |h2| h2.should have_selector( 'a', :content => title ) }
-      page.should have_selector( 'p', :content => content )
+      within( 'h2' ){ page.should have_selector( 'a', :text => title ) }
+      page.should have_selector( 'p', :text => content )
     end
   end
 
@@ -82,7 +79,7 @@ describe "Articles" do
       sleep 0.3                                                                     # Here we sleep because js need some time to show message.
       click_link "Удалить"
 
-      page.should have_selector('div', :content => 'Статья была успешно удалена!')
+      page.should have_selector('div', :text => 'Статья была успешно удалена!')
     end
   end
 end
