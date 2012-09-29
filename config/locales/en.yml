@@ -20,6 +20,7 @@ en:
   # Photo
   photo_created_message: "Photo created successfully!"
   photo_updated_message: "Photo updated successfully!"
+  photo_destroyed_message: "Photo deleted successfully!"
   ##################################
   # VIEWS
   ##################################
@@ -63,7 +64,13 @@ en:
       update: "Update"
       cancel: "Cancel"
     photo_item:
+      change: "Change"
       edit: "Edit"
+      delete: "Delete"
+      title: "Photo deleting"
+      message: "Are you sure you want to delete this picture?"
+      close: "Cancel"
+      delete: "Delete"
   layouts:
     footer:
       login_link: "Login"

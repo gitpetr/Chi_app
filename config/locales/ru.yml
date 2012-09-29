@@ -274,6 +274,7 @@ ru:
   # Photo
   photo_created_message: "Изображение успешно сохранено!"
   photo_updated_message: "Изображение успешно обновлено!"
+  photo_destroyed_message: "Фотография была успешно удалена!"
   ##################################
   # PAGINATION
   ##################################
@@ -328,7 +329,13 @@ ru:
       update: "Обновить"
       cancel: "Отмена"
     photo_item:
+      change: "Изменить"
       edit: "Редактировать"
+      delete: "Удалить"
+      title: "Удаление фотографии"
+      message: "Вы уверены, что хотите удалить эту фотографию?"
+      close: "Отмена"
+      delete: "Удалить"
   layouts:
     footer:
       login_link: "Войти"

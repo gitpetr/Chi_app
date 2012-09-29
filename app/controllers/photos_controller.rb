@@ -30,7 +30,7 @@ class PhotosController < ApplicationController
 
   def destroy
     @photo.destroy
-    flash[:success] = "Destroyed!"
+    flash[:success] = t( :photo_destroyed_message )
     redirect_to photos_path
   end
 end
