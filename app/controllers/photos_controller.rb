@@ -27,4 +27,10 @@ class PhotosController < ApplicationController
       render 'edit'
     end
   end
+
+  def destroy
+    @photo.destroy
+    flash[:success] = "Destroyed!"
+    redirect_to photos_path
+  end
 end

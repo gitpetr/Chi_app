@@ -3,10 +3,10 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .photo-item{
-  max-width: 210px; // Note: it should have size like image.
+  max-width: 210px; // It should have sane with image size.
 }
 
-a.edit-link{
+.photo-edit-button{
   float: right;
 }
 
