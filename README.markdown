@@ -1,26 +1,36 @@
-This is Web app for chirch.
+This is a web app for chirch.
 
 **Setup**
 
 ------------------------------------------------------------------------------------------
 
-1) Before installation make sure that you installed PostgreSQL and imagemagik.
+1) Before installation make sure that you installed PostgreSQL and Imagemagik.
 
-To install imagemagik in Mac use homebrew:
+To install Imagemagik in Mac use homebrew:
+
   `$ brew install imagemagick`
 
 2) Change password in database.yml
 
 3) To lauch app:
 
-```$ cd app_name
-   $ bundle
-   $ rake db:create:all
-   $ rake db:migrate
-   $ rake db:test:prepare```
+```shell
+$ cd app_name
+$ bundle
+$ rake db:create:all
+$ rake db:migrate
+$ rake db:test:prepare
+```
 
 4) Create admin (login: qwerty@qwerty.com, password: qwerty):
   `$ rake db:create_admin`
+
+5) Also you probably'd like to use .rvmrc file to set correct version. To use it you should do that:
+
+```shell
+ $ cd this_app
+ $ rvm rvmrc trust DIR
+```
 
 **Changelog**
 
@@ -32,26 +42,48 @@ To install imagemagik in Mac use homebrew:
 * CanCan implemented.
 * I implemented rich text editor via 'bootstrap-wysihtml5-rails'. [how to](https://github.com/Nerian/bootstrap-wysihtml5-rails)
 * I created my own .rvmrc to use project-specific ruby (1.9.3-head now) and gemset (global). I did that:
+
     `$ rvm --rvmrc --create ruby-1.9.3-head@global`
 
     Don't forget to run that in current project:
+
     `$ rvm rvmrc trust DIR`
 
     And then reload shell.
 * User can't delete himself now. To enable this feature:
-  1. Remove from routes.rb from `devise_for :users, :skip => [:registrations]` that `:skip => [:registrations]`
+  1) Remove from routes.rb from:
+
+    `devise_for :users, :skip => [:registrations]`
+
+    that:
+
+    `:skip => [:registrations]`
+
      OR add link (i enabled few featerus in routes).
-  2. Add to app/views/devise/registrations/edit (or in other file):
-     `%legend
-        %h3=t(".cansel_acc_header")
-      %p
-        =t(".cansel_acc_text")
-        #{link_to "Cansel your accaunt", registration_path(resource_name), :confirm => "Are you sure?", :method => :delete}`
+
+  2) Add to app/views/devise/registrations/edit (or in other file):
+
+     `
+     %legend
+       %h3=t(".cansel_acc_header")
+     %p
+       =t(".cansel_acc_text")
+       #{link_to "Cansel your accaunt", registration_path(resource_name), :confirm => "Are you sure?", :method => :delete}
+     `
+
 * Added line to load script if it IE 8 or less.
 * Now users can't register in system. To enable this feature:
-  1. Remove from routes.rb from `devise_for :users, :skip => [:registrations]` that `:skip => [:registrations]`
-     OR add link (i enabled few featerus in routes).
-  2. From app/views/devise/shared/_links uncomment this:
+  1) Remove from routes.rb from:
+
+    `devise_for :users, :skip => [:registrations]`
+
+    that:
+
+    `:skip => [:registrations]`
+
+    OR add link (i enabled few featerus in routes).
+
+  2) From app/views/devise/shared/_links uncomment this:
     ` -#  %br/
       -#- if devise_mapping.registerable? && controller_name != 'registrations'
       -#  = link_to t(".sign_up_link"), new_registration_path(resource_name)`
