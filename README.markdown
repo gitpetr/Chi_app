@@ -26,8 +26,8 @@ To install imagemagik in Mac use homebrew:
 
 ------------------------------------------------------------------------------------------
 
-* Now we also have resize version of image.
-* Photo: showing, uploading. For uploading i use `carrierwave`.
+* Uploading image has thumb version.
+* Photo: showing, uploading, editing, deleting. For uploading i use `carrierwave`.
 * Article: showing, adding, updating, deleting.
 * CanCan implemented.
 * I implemented rich text editor via 'bootstrap-wysihtml5-rails'. [how to](https://github.com/Nerian/bootstrap-wysihtml5-rails)
