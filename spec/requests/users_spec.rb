@@ -13,7 +13,7 @@ describe "Users" do
         fill_in "Пароль", :with => ""
         click_button "Войти"
 
-        page.should have_selector("div.alert.alert-alert", :content => "Неверный адрес e-mail или пароль.")
+        page.should have_selector("div.alert.alert-alert", :text => "Неверный адрес e-mail или пароль.")
       end
     end
 
@@ -25,9 +25,9 @@ describe "Users" do
         fill_in "Пароль", :with => 'qwerty'
         click_button "Войти"
 
-        page.should have_selector("div.alert.alert-notice", :content => "Вход в систему выполнен.")
+        page.should have_selector("div.alert.alert-notice", :text => "Вход в систему выполнен.")
         click_link "Выйти"
-        page.should have_selector("div.alert.alert-notice", :content => "Выход из системы выполнен.")
+        page.should have_selector("div.alert.alert-notice", :text => "Выход из системы выполнен.")
       end
     end
   end
@@ -58,14 +58,14 @@ describe "Users" do
         fill_in "Пароль", :with => new_pass
         click_button "Войти"
 
-        page.should have_selector("div.alert.alert-notice", :content => "Вход в систему выполнен.")
+        page.should have_selector("div.alert.alert-notice", :text => "Вход в систему выполнен.")
       end
     end
 
     describe "Articles" do
       it "should not have button to create new article" do
         click_link "Статьи"
-        response.should_not have_selector( 'a', :content => 'Создать новую статью' )
+        response.should_not have_selector( 'a', :text => 'Создать новую статью' )
       end
 
       it "should not have button to edit existing article" do
@@ -74,16 +74,16 @@ describe "Users" do
         click_link "Статьи"
         click_link "Статьи"
 
-        page.should have_selector( 'h2' ) do |h2|
-          h2.should_not have_selector( 'a', :content => 'Редактировать' )
+        within( 'h2' ) do
+          page.should_not have_selector( 'a', :text => 'Редактировать' )
         end
       end
 
       it "should have title which is link on index page and legend on show page" do
-        article = FactoryGirl.create(:article)
+        article = FactoryGirl.create( :article )
         click_link "Статьи"
         click_link article.title
-        page.should have_selector('h2', :content => article.title)
+        page.should have_selector( 'h2', :text => article.title )
       end
     end
   end

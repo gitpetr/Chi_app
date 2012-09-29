@@ -19,7 +19,7 @@ describe "Wysihtml5Editors" do
     end
 
     it "should have toolbar", :js => true do
-      page.should have_selector( 'ul', :class => 'wysihtml5-toolbar' )
+      page.should have_css('ul.wysihtml5-toolbar')
     end
   end
 end
