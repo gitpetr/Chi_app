@@ -328,6 +328,7 @@ ru:
       legend: "Новая фотография"
       create: "Создать"
       cancel: "Отмена"
+      file_hint: "Допустимые расширения: 'jpg', 'jpeg', 'gif', 'png'."
     edit:
       legend: "Редактировать фотографию"
       update: "Обновить"

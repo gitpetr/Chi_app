@@ -1,5 +1,6 @@
 require 'spec_helper'
 
+#TODO: add test to check extensions of file.
 describe Photo do
   before(:each){ @attr = { :description => "some text is here", :image => File.open(File.join(Rails.root, '/spec/fixtures/files/violin.jpg')) } }
 
