@@ -27,8 +27,8 @@
       %i{ :class => "icon-arrow-right icon-white"}
 
 / Rendering photos ( 3 photo in 1 line).
-- Photo.all.each_slice(3) do |a,b,c|
-  %div{ :id => "gallery", "data-toggle" => "modal-gallery", "data-target" => "#modal-gallery" }
+%div{ :id => "gallery", "data-toggle" => "modal-gallery", "data-target" => "#modal-gallery" }
+  - Photo.all.each_slice(3) do |a,b,c|
     %div{ :class => "row-fluid" }
       - [a,b,c].each do |val|
         = render :partial => 'photo_item', :locals => { :photo => val }
