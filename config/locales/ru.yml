@@ -320,6 +320,10 @@ ru:
       legend: "Фотографии"
       new_photo_button: "Создать новую фотографию"
       no_photos: "Здесь пока ничего нет."
+      original: "Оригинал"
+      slideshow: "Слайдшоу"
+      previous: "Назад"
+      next: "Вперед"
     new:
       legend: "Новая фотография"
       create: "Создать"

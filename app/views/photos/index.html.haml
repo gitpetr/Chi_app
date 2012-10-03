@@ -15,15 +15,15 @@
   %div.modal-footer
     %a{ :class => "btn modal-download", :target => "_blank"}
       %i.icon-download
-      Download
+      = t(".original")
     %a{ :class => "btn btn-primary modal-play modal-slideshow", "data-slideshow" => "5000"}
       %i{ :class => "icon-play icon-white" }
-      Slideshow
+      = t(".slideshow")
     %a{ :class => "btn modal-prev" }
       %i{ :class => "icon-arrow-left icon-white" }
-      Previous
+      = t(".previous")
     %a{ :class => "btn modal-next" }
-      Next
+      = t(".next")
       %i{ :class => "icon-arrow-right icon-white"}
 
 / Rendering photos ( 3 photo in 1 line).
