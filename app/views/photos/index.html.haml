@@ -13,18 +13,18 @@
   %div.modal-body
     %div.modal-image
   %div.modal-footer
+    %a{ :class => "btn modal-download", :target => "_blank"}
+      %i.icon-download
+      Download
+    %a{ :class => "btn btn-primary modal-play modal-slideshow", "data-slideshow" => "5000"}
+      %i{ :class => "icon-play icon-white" }
+      Slideshow
     %a{ :class => "btn modal-prev" }
       %i{ :class => "icon-arrow-left icon-white" }
       Previous
     %a{ :class => "btn modal-next" }
       Next
       %i{ :class => "icon-arrow-right icon-white"}
-    %a{ :class => "btn btn-primary modal-play modal-slideshow", "data-slideshow" => "5000"}
-      %i{ :class => "icon-play icon-white" }
-      Slideshow
-    %a{ :class => "btn modal-download", :target => "_blank"}
-      %i.icon-download
-      Download
 
 / Rendering photos ( 3 photo in 1 line).
 - Photo.all.each_slice(3) do |a,b,c|
