@@ -10,6 +10,7 @@
  *
  *= require_self
  *= require bootstrap-wysihtml5
+ *= require bootstrap/image-gallery
  *= require_tree .
  */
 

@@ -5,44 +5,33 @@
   = link_to t(".new_photo_button"), new_photo_path, :class => "btn btn-large btn-info btn-block"
   %br/
 
-= link_to "Slideshow", "#", {:remote => true, 'data-toggle' => 'modal', 'data-target' => "#modal-window-slideshow", 'data-backdrop' => true, 'data-keyboard' => true, :class => "btn btn-primary btn-block"}
-%br/
-
-- Photo.all.each_slice(3) do |a,b,c|
-  %div{ :class => "row-fluid" }
-    - [a,b,c].each do |val|
-      = render :partial => 'photo_item', :locals => { :photo => val }
-
-
-/ Modal window to delete article.
-%div{ :class => "modal hide fade", :id => "modal-window-slideshow" }
+/ Modal dialog used for the image gallery.
+%div{ :id => "modal-gallery", :class => "modal modal-gallery hide fade", :tabindex => "-1" }
   %div.modal-header
-    %button{ :type => "button", :class => "close", "data-dismiss" => "modal", "aria-hidden" => "true"} ×
-    %h3= "Title"
+    %a{ :class => "close", "data-dismiss" => "modal" } ×
+    %h3.modal-title
   %div.modal-body
-    / Carousel
-    %div{ :id => "myCarousel", :class => "carousel slide" }
-      / Carousel items
-      %div.carousel-inner
-        - Photo.all.each_with_index do |photo, i|
-          - if i == 0
-            %div{ :class => "active item"}
-              = image_tag photo.image_url
+    %div.modal-image
+  %div.modal-footer
+    %a{ :class => "btn modal-prev" }
+      %i{ :class => "icon-arrow-left icon-white" }
+      Previous
+    %a{ :class => "btn modal-next" }
+      Next
+      %i{ :class => "icon-arrow-right icon-white"}
+    %a{ :class => "btn btn-primary modal-play modal-slideshow", "data-slideshow" => "5000"}
+      %i{ :class => "icon-play icon-white" }
+      Slideshow
+    %a{ :class => "btn modal-download", :target => "_blank"}
+      %i.icon-download
+      Download
 
-              - unless photo.description.blank?
-                %div.carousel-caption
-                  %p= photo.description
-          - else
-            %div{ :class => "item"}
-              = image_tag photo.image_url
-
-              - unless photo.description.blank?
-                %div.carousel-caption
-                  %p= photo.description
-      / Carousel nav
-      %a{ :class => "carousel-control left", :href => "#myCarousel", "data-slide" => "prev"}‹
-      %a{ :class => "carousel-control right", :href => "#myCarousel", "data-slide" => "next"}›
-
+/ Rendering photos ( 3 photo in 1 line).
+- Photo.all.each_slice(3) do |a,b,c|
+  %div{ :id => "gallery", "data-toggle" => "modal-gallery", "data-target" => "#modal-gallery" }
+    %div{ :class => "row-fluid" }
+      - [a,b,c].each do |val|
+        = render :partial => 'photo_item', :locals => { :photo => val }
 
 - if Photo.first.nil?
   = t(".no_photos")

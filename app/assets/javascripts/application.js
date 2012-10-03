@@ -14,4 +14,6 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require bootstrap-wysihtml5-all
+//= require bootstrap/load-image.min
+//= require bootstrap/image-gallery.min
 //= require_tree .
