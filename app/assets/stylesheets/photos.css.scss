@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .photo-item{
-  max-width: 210px; // It should have sane with image size.
+  max-width: 210px; // It should have sane with image size (+10px because of the padding).
 }
 
 .photo-edit-button{
@@ -14,11 +14,19 @@ img.photo{
   padding: 10px;
 }
 
-// .modal-body {
-//     max-width: 800px; max-height: 600px;
-// }
-
-.modal {
+// Modal window to show slideshow.
+.modal-huge {
   width: 800px;
   height: 630px;
+  background-clip: padding-box;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 6px 6px 6px 6px;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  left: 50%;
+  margin: -250px 0 0 -280px;
+  overflow: auto;
+  position: fixed;
+  top: 50%;
+  z-index: 1050;
 }
