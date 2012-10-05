@@ -7,10 +7,10 @@
     %ul.dropdown-menu
       %li= link_to t(".edit"), edit_article_path( article )
       %li.divider
-      %li= link_to t(".delete"), "#", {:remote => true, 'data-toggle' => 'modal', 'data-target' => "#modal-window", 'data-backdrop' => true, 'data-keyboard' => true}
+      %li= link_to t(".delete"), "#", {:remote => true, 'data-toggle' => 'modal', 'data-target' => "#modal-window-#{article.id}", 'data-backdrop' => true, 'data-keyboard' => true}
 
   / Modal window to delete article.
-  %div{ :class => "modal hide fade", :id => "modal-window" }
+  %div{ :class => "modal hide fade", :id => "modal-window-#{article.id}" }
     %div.modal-header
       %button{ :type => "button", :class => "close", "data-dismiss" => "modal", "aria-hidden" => "true"} ×
       %h3
