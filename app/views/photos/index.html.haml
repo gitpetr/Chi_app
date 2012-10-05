@@ -5,27 +5,6 @@
   = link_to t(".new_photo_button"), new_photo_path, :class => "btn btn-large btn-info btn-block"
   %br/
 
-/ Modal dialog used for the image gallery.
-%div{ :id => "modal-gallery", :class => "modal-huge modal-gallery hide fade", :tabindex => "-1" }
-  %div.modal-header
-    %a{ :class => "close", "data-dismiss" => "modal" } ×
-    %h3.modal-title
-  %div.modal-body
-    %div.modal-image
-  %div.modal-footer
-    %a{ :class => "btn modal-download", :target => "_blank"}
-      %i.icon-download
-      = t(".original")
-    %a{ :class => "btn btn-primary modal-play modal-slideshow", "data-slideshow" => "5000"}
-      %i{ :class => "icon-play icon-white" }
-      = t(".slideshow")
-    %a{ :class => "btn modal-prev" }
-      %i{ :class => "icon-arrow-left icon-white" }
-      = t(".previous")
-    %a{ :class => "btn modal-next" }
-      = t(".next")
-      %i{ :class => "icon-arrow-right icon-white"}
-
 / Rendering photos ( 3 photo in 1 line).
 %div{ :id => "gallery", "data-toggle" => "modal-gallery", "data-target" => "#modal-gallery" }
   - Photo.all.each_slice(3) do |a,b,c|

@@ -55,10 +55,6 @@ en:
       legend: "Photos"
       new_photo_button: "New photo"
       no_photos: "There is nothing to show here yet."
-      original: "View original"
-      slideshow: "Slideshow"
-      previous: "Previous"
-      next: "Next"
     new:
       legend: "New photo"
       create: "Create"

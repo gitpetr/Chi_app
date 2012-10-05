@@ -12,7 +12,6 @@ gem 'kaminari', '~> 0.14.0'                                                     
 gem "cancan", '~> 1.6.8'                                                                  # Authorization library.
 gem "carrierwave", '~> 0.6.2'                                                             # Simple file uploading.
 gem "rmagick", '~> 2.13.1'                                                                # Powerfull image manipulation. Don't forget to install imagemagick before that!
-gem 'bootstrap-addons-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.
