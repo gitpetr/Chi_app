@@ -3,7 +3,7 @@
   - unless photo.nil?
     - if can? [:edit, :destroy], Photo
       / To align it right we first of all should make box of chosen size where we will align.
-      %div.photo-item
+      %div{ :class => "photo-item", :id => "#{photo.id}"}
         %div.photo-edit-button
           %div.btn-group
             = link_to "#", :class => "btn dropdown-toggle", "data-toggle" => "dropdown" do
@@ -13,12 +13,12 @@
             %ul.dropdown-menu
               %li= link_to t(".edit"), edit_photo_path( photo )
               %li.divider
-              %li= link_to t(".delete"), "#", {:remote => true, 'data-toggle' => 'modal', 'data-target' => "#modal-window", 'data-backdrop' => true, 'data-keyboard' => true}
+              %li= link_to t(".delete"), "#", {:remote => true, 'data-toggle' => 'modal', 'data-target' => "#modal-window-#{photo.id}", 'data-backdrop' => true, 'data-keyboard' => true}
     %p
       = image_tag photo.image_url(:thumb), :class => "photo"
 
     / Modal window to delete photo.
-    %div{ :class => "modal hide fade", :id => "modal-window" }
+    %div{ :class => "modal hide fade", :id => "modal-window-#{photo.id}" }
       %div.modal-header
         %button{ :type => "button", :class => "close", "data-dismiss" => "modal", "aria-hidden" => "true"} ×
         %h3
