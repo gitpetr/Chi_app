@@ -29,7 +29,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   # end
 
   # Process files as they are uploaded:
-  process :resize_to_limit => [800, 600]
+  process :resize_to_limit => [800, 580]              # Second value should NOT be big to prevent overflow of slideshow block.
 
   # def scale(width, height)
   #   # do something
