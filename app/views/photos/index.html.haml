@@ -20,20 +20,12 @@
       %div.carousel-inner
         - Photo.all.each_with_index do |photo, i|
           / You need to add the class of active only to the first item in your list, otherwise they'll all show.
-          - if i == 0
-            %div{ :class => "active item"}
-              = image_tag photo.image_url
+          %div{ :class => "#{set_active_first_photo(i)} item"}
+            = link_to(image_tag(photo.image.url), photo.image.url)
 
-              - unless photo.description.blank?
-                %div.carousel-caption
-                  %p= photo.description
-          - else
-            %div{ :class => "item"}
-              = image_tag photo.image_url
-
-              - unless photo.description.blank?
-                %div.carousel-caption
-                  %p= photo.description
+            - unless photo.description.blank?
+              %div.carousel-caption
+                %p= photo.description
       / Carousel nav
       %a{ :class => "carousel-control left", :href => "#myCarousel", "data-slide" => "prev"}‹
       %a{ :class => "carousel-control right", :href => "#myCarousel", "data-slide" => "next"}›
