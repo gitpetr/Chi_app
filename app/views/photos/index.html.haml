@@ -8,21 +8,21 @@
 = link_to "Slideshow", "#", {:remote => true, 'data-toggle' => 'modal', 'data-target' => "#modal-window-slideshow", 'data-backdrop' => true, 'data-keyboard' => true, :class => "btn btn-primary btn-block"}
 %br/
 
-/ Modal window to delete article.
+/ Modal window to show slideshow.
 %div{ :class => "modal-huge hide fade", :id => "modal-window-slideshow" }
   %div.modal-header
     %button{ :type => "button", :class => "close", "data-dismiss" => "modal", "aria-hidden" => "true"} ×
     %h3= "Photos"
   %div.modal-huge-body
-    / Carousel
     %div{ :id => "myCarousel", :class => "carousel slide" }
       / Carousel items
-      %div.carousel-inner
+      %div{ :class => "carousel-inner", :id => "div-carousel-items" }
         - Photo.all.each_with_index do |photo, i|
           / You need to add the class of active only to the first item in your list, otherwise they'll all show.
-          %div{ :class => "#{set_active_first_photo(i)} item"}
+          %div{ :class => "item", :id => "gallery-#{photo.id}" }
             = link_to(image_tag(photo.image.url), photo.image.url)
 
+            / Description of photo
             - unless photo.description.blank?
               %div.carousel-caption
                 %p= photo.description
@@ -30,12 +30,34 @@
       %a{ :class => "carousel-control left", :href => "#myCarousel", "data-slide" => "prev"}‹
       %a{ :class => "carousel-control right", :href => "#myCarousel", "data-slide" => "next"}›
 
-/ Rendering photos ( 3 photo in 1 line).
+/ Rendering photos (3 photo in 1 line).
 %div{ :id => "gallery", "data-toggle" => "modal-gallery", "data-target" => "#modal-gallery" }
   - Photo.all.each_slice(3) do |a,b,c|
     %div{ :class => "row-fluid" }
       - [a,b,c].each do |val|
         = render :partial => 'photo_item', :locals => { :photo => val }
+
+/ 1. when click on pic create - add active class for picture (%div{ :class => "#{set_active_first_photo(i)} item"})
+/ 2. Remove active
+:javascript
+  $(document).on("click", ".photo-Link", function () {
+    var photoId = $(this).data('id');
+    var photoInGalleryId = "gallery-" + photoId;
+
+    document.getElementById( photoInGalleryId ).className = "active item";
+    $('#modal-window-slideshow').modal('show')
+  });
+
+  $(document).on("click", ".close", function () {
+    $('.myCarousel').carousel('pause')
+
+    var div = document.getElementById("div-carousel-items");
+    for( i=0; i<div.childNodes.length; i++ )
+    {
+      if(div.childNodes[i].tagName == 'DIV')
+        div.childNodes[i].className = "item";
+    }
+  });
 
 - if Photo.first.nil?
   = t(".no_photos")
