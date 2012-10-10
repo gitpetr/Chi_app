@@ -5,7 +5,7 @@
   = link_to t(".new_photo_button"), new_photo_path, :class => "btn btn-large btn-info btn-block"
   %br/
 
-= link_to "Slideshow", "#", {:remote => true, 'data-toggle' => 'modal', 'data-target' => "#modal-window-slideshow", 'data-backdrop' => true, 'data-keyboard' => true, :class => "btn btn-primary btn-block"}
+= link_to "Slideshow", "#", :class => "photo-Link btn btn-primary btn-block", "data-id" => Photo.first.id
 %br/
 
 / Modal window to show slideshow.
