@@ -37,27 +37,5 @@
       - [a,b,c].each do |val|
         = render :partial => 'photo_item', :locals => { :photo => val }
 
-/ 1. when click on pic create - add active class for picture (%div{ :class => "#{set_active_first_photo(i)} item"})
-/ 2. Remove active
-:javascript
-  $(document).on("click", ".photo-Link", function () {
-    var photoId = $(this).data('id');
-    var photoInGalleryId = "gallery-" + photoId;
-
-    document.getElementById( photoInGalleryId ).className = "active item";
-    $('#modal-window-slideshow').modal('show')
-  });
-
-  $(document).on("click", ".close", function () {
-    $('.myCarousel').carousel('pause')
-
-    var div = document.getElementById("div-carousel-items");
-    for( i=0; i<div.childNodes.length; i++ )
-    {
-      if ( ( div.childNodes[i].tagName == 'DIV' ) && ( div.childNodes[i].className != "item" ) )
-        div.childNodes[i].className = "item";
-    }
-  });
-
 - if Photo.first.nil?
   = t(".no_photos")
