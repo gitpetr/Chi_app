@@ -54,7 +54,7 @@
     var div = document.getElementById("div-carousel-items");
     for( i=0; i<div.childNodes.length; i++ )
     {
-      if(div.childNodes[i].tagName == 'DIV')
+      if ( ( div.childNodes[i].tagName == 'DIV' ) && ( div.childNodes[i].className != "item" ) )
         div.childNodes[i].className = "item";
     }
   });
