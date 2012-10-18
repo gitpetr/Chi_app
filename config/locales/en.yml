@@ -55,6 +55,7 @@ en:
       legend: "Photos"
       new_photo_button: "New photo"
       no_photos: "There is nothing to show here yet."
+      slides: "Slides"
     new:
       legend: "New photo"
       create: "Create"
