@@ -11,13 +11,37 @@ describe "Slideshows" do
     fill_in "Пароль", :with => 'qwerty'
     click_button "Войти"
 
-    FactoryGirl.create( :photo )
-    FactoryGirl.create( :photo, :image => File.open(File.join(Rails.root, '/spec/fixtures/files/cello.jpg')) )
+    @text1 = "my super text1"; @text2 = "my super text2"
+    FactoryGirl.create( :photo, :description => @text1 )
+    FactoryGirl.create( :photo,
+                        :description => @text2,
+                        :image => File.open(File.join( Rails.root, '/spec/fixtures/files/cello.jpg' )))
+    click_link "Фотографии"
   end
 
-  it "should show slideshow when button 'slideshow' clicked", :js => true do
-    click_link "Фотографии"
-    click_link "Показать фотографии"
+  describe "Slideshow button" do
+    before(:each){ click_link "Показать фотографии" }
+
+    it "should show slideshow when button 'slideshow' clicked", :js => true do
+      page.should have_selector('h3', :text => 'Слайды')
+    end
+
+    it "should move to other slide by clicking in arrow", :js => true  do
+      page.should have_selector('p', :text => @text1)
+
+      click_link "›"
+      page.should have_selector('p', :text => @text2)
+    end
+
+    it "should hide modal window when user click x-arrow", :js => true do
+      page.should have_selector('h3', :text => 'Слайды')
+      click_button "×"
+      page.should_not have_selector('h3', :text => 'Слайды')
+    end
+  end
+
+  it "should show slideshow when image clicked", :js => true do
+    page.find(:css, 'img').click
     page.should have_selector('h3', :text => 'Слайды')
   end
 end
