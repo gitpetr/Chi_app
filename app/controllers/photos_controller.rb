@@ -2,8 +2,7 @@ class PhotosController < ApplicationController
   load_and_authorize_resource
 
   def index
-    @first_photo = nil
-    @first_photo = Photo.first.id unless Photo.first.nil?
+    @first_photo = Photo.first.nil? ? nil : Photo.first.id
   end
 
   def new
