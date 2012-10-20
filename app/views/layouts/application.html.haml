@@ -12,14 +12,16 @@
       = render 'layouts/navbar_template'
 
       %div{ :class => "container-fluid" }
-        -# Show flash message which can be closed by small x button.
-        - flash.each do |key, msg|
-          %div{ :class => "alert alert-#{key}" }
-            %button{ :type => "button", :class => "close", "data-dismiss" =>"alert" }×
-            = msg
         %div{ :class => "row-fluid" }
           %div{ :class => "span1" }
           %div{ :class => "span8" }
+            -# Show flash message which can be closed by small x button.
+            - flash.each do |key, msg|
+              %div{ :class => "alert alert-#{key}" }
+                %button{ :type => "button", :class => "close", "data-dismiss" =>"alert" }×
+                = msg
+
+            -# Body of the view.
             =yield
           %div{ :class => "span2" }
             %p
