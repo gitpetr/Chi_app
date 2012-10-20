@@ -8,9 +8,9 @@
 -# Here we do a trick and centering our button.
 %div.span12.pagination-centered
   - unless @first_photo.nil?
-    -# .photo-Link class uses to show slideshow, so, if you changes it then look into:
+    -# #photo-Link id uses to show slideshow, so, if you changes it then look into:
     -#  photo.js.coffee and _photo_item.html.haml
-    = link_to "#", :class => "photo-Link btn btn-primary", "data-id" => @first_photo do
+    = link_to "#", :class => "btn btn-primary", :id => "photo-Link", "data-id" => @first_photo do
       = t(".slideshow")
       %i{ :class => "icon-play-circle" }
     %br/

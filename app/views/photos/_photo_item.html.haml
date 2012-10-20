@@ -15,7 +15,7 @@
               %li.divider
               %li= link_to t(".delete"), "#", {:remote => true, 'data-toggle' => 'modal', 'data-target' => "#modal-window-#{photo.id}", 'data-backdrop' => true, 'data-keyboard' => true}
     %p
-      %div{ "data-id" => photo.id, :class => "photo-Link" }
+      %div{ "data-id" => photo.id, :id => "photo-Link" }
         = image_tag photo.image_url(:thumb), :class => "photo", :style => "cursor: pointer;"
 
     / Modal window to delete photo.

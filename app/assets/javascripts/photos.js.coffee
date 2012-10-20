@@ -7,8 +7,8 @@
 #     document.getElementById( id ).toggle
 #     # alert(id)
 
-# Show modal window with carousel when mouse clicked the image.
-$(document).on 'click', '.photo-Link', ->
+# Show modal window (checking the id) with carousel when mouse clicked the image.
+$(document).on 'click', '#photo-Link', ->
   photoId = $(this).data 'id'                       # Get photo id from data attribute.
   photoInGalleryId = "gallery-" + photoId           # Here we find div wich contains the clicked image.
 
