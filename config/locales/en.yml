@@ -144,3 +144,8 @@ en:
       new:
         send_pass_instructions_button: "Send me reset password instructions"
         title: "Forgot your password?"
+  ##################################
+  # CANCAN
+  ##################################
+  unauthorized:
+    default: "You are not authorized to access this page."
