@@ -10,6 +10,18 @@ describe "Links" do
       click_link "Статьи"
       current_path.should == "/ru/articles"
     end
+
+    it "should visit articles via brand name" do
+      visit '/'
+      click_link "Преображение во Христе"
+      current_path.should == "/ru/articles"
+    end
+
+    it "should visit photos" do
+      visit '/'
+      click_link "Фотографии"
+      current_path.should == "/ru/photos"
+    end
   end
 
   describe "Footer" do
