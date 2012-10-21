@@ -393,8 +393,12 @@ ru:
               presence_message: "не должен быть пустым"
         contact:
           attributes:
-            presense_message: "не должно быть пустым"
-            max_length_message: "не должно содержать больше %{count} символов"
+            chirch_name:
+              presense_message: "не должно быть пустым"
+              max_length_message: "не должно содержать больше %{count} символов"
+            address:
+              presense_message: "не должен быть пустым"
+              max_length_message: "не должен содержать больше %{count} символов"
   ##################################
   # DEVISE
   ##################################

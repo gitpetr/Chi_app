@@ -125,8 +125,12 @@ en:
               presence_message: "can't be blank"
         contact:
           attributes:
-            presense_message: "can't be blank"
-            max_length_message: "can't contain more than %{count} symbols"
+            chirch_name:
+              presense_message: "can't be blank"
+              max_length_message: "can't contain more than %{count} symbols"
+            address:
+              presense_message: "can't be blank"
+              max_length_message: "can't contain more than %{count} symbols"
   ##################################
   # DEVISE
   ##################################

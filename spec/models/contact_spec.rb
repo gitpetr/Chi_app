@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Contact do
   before(:each) do
-    @attr = { :chirch_name => "Transfiguration" }
+    @attr = { :chirch_name => "Transfiguration", :address => "Moscow" }
   end
 
   describe "DB" do
@@ -20,6 +20,14 @@ describe Contact do
 
     it "chirch_name can't have more than 200 symbols" do
       Contact.new( @attr.merge( :chirch_name => "a" * 201 ) ).should_not be_valid
+    end
+
+    it "address can't be empty" do
+      Contact.new( @attr.merge( :address => "" ) ).should_not be_valid
+    end
+
+    it "chirch_name can't have more than 200 symbols" do
+      Contact.new( @attr.merge( :address => "a" * 501 ) ).should_not be_valid
     end
   end
 end

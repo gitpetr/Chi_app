@@ -4,4 +4,8 @@ class Contact < ActiveRecord::Base
   validates :chirch_name,
               :presence => { :message => :presense_message },
               :length   => { :maximum => 200, :message => :max_length_message }
+
+  validates :address,
+              :presence => { :message => :presense_message },
+              :length   => { :maximum => 500, :message => :max_length_message }
 end
