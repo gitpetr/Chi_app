@@ -73,12 +73,16 @@ en:
       message: "Are you sure you want to delete this picture?"
       close: "Cancel"
       delete: "Delete"
+  contacts:
+    index:
+      legend: "Our contacts"
   layouts:
     footer:
       login_link: "Login"
     navbar_template:
       articles_link: "Articles"
       photos_link: "Photos"
+      contacts_link: "Contacts"
       logout_link: "Logout"
       brand_name: "Transfiguration in Christ"
       settings: "Settings"

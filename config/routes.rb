@@ -11,6 +11,7 @@ ChirchApp::Application.routes.draw do
 
     resources :articles
     resources :photos
+    resources :contacts, :only => [ :index ]
 
     match '/users_list', :to => 'stats#users_in_system'
 

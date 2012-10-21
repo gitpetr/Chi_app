@@ -339,12 +339,16 @@ ru:
       message: "Вы уверены, что хотите удалить эту фотографию?"
       close: "Отмена"
       delete: "Удалить"
+  contacts:
+    index:
+      legend: "Контакты и координаты"
   layouts:
     footer:
       login_link: "Войти"
     navbar_template:
       articles_link: "Статьи"
       photos_link: "Фотографии"
+      contacts_link: "Контакты"
       logout_link: "Выйти"
       brand_name: "Преображение во Христе"
       settings: "Настройки"

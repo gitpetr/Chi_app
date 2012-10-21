@@ -13,6 +13,8 @@
           = link_to t(".articles_link"), articles_path
         %li{ :class => "#{active_link?( photos_path )}" }
           = link_to t(".photos_link"), photos_path
+        %li{ :class => "#{active_link?( contacts_path )}" }
+          = link_to t(".contacts_link"), contacts_path
 
       -# Right navigation.
       %ul{ :class => "nav pull-right" }
