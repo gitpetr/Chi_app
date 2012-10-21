@@ -12,4 +12,8 @@ class Contact < ActiveRecord::Base
   validates :google_map,
               :presence => { :message => :presense_message },
               :length   => { :maximum => 5000, :message => :max_length_message }
+
+  validates :phone,
+              :presence => { :message => :presense_message },
+              :length   => { :maximum => 100, :message => :max_length_message }
 end

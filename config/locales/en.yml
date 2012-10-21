@@ -134,6 +134,9 @@ en:
             google_map:
               presense_message: "can't be blank"
               max_length_message: "can't contain more than %{count} symbols"
+            phone:
+              presense_message: "can't be blank"
+              max_length_message: "can't contain more than %{count} symbols"
   ##################################
   # DEVISE
   ##################################

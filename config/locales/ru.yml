@@ -402,6 +402,9 @@ ru:
             google_map:
               presense_message: "не должна быть пустой"
               max_length_message: "не должна содержать больше %{count} символов"
+            phone:
+              presense_message: "не должен быть пустым"
+              max_length_message: "не должен содержать больше %{count} символов"
   ##################################
   # DEVISE
   ##################################
