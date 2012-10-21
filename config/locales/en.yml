@@ -131,6 +131,9 @@ en:
             address:
               presense_message: "can't be blank"
               max_length_message: "can't contain more than %{count} symbols"
+            google_map:
+              presense_message: "can't be blank"
+              max_length_message: "can't contain more than %{count} symbols"
   ##################################
   # DEVISE
   ##################################
