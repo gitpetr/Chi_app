@@ -123,6 +123,10 @@ en:
               max_lenght_message: "can't contain more than %{count} symbols"
             image:
               presence_message: "can't be blank"
+        contact:
+          attributes:
+            presense_message: "can't be blank"
+            max_length_message: "can't contain more than %{count} symbols"
   ##################################
   # DEVISE
   ##################################
