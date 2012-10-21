@@ -1,19 +1,20 @@
 %legend
   = t(".legend")
 
-%div.span12
-  %address
-    %strong= Contact.first.chirch_name
-    %br/
-    = Contact.first.address
-    %br/
-    %abbr{ :title => "Телефон"} Тел.
-    = Contact.first.phone
+- unless @contact.nil?
+  %div.span12
+    %address
+      %strong= @contact.chirch_name
+      %br/
+      = @contact.address
+      %br/
+      %abbr{ :title => "Телефон"} Тел.
+      = @contact.phone
 
 
-%div.span12.pagination-centered
-  != Contact.first.google_map
-  %br/
-  %br/
+  %div.span12.pagination-centered
+    != @contact.google_map
+    %br/
+    %br/
 
 
