@@ -11,6 +11,7 @@ class Ability
       can :index, :home
       can :read, Article
       can :read, Photo
+      can :read, Contact
       # can :read, :all
     end
     #
