@@ -36,6 +36,7 @@ $ rake db:test:prepare
 
 ------------------------------------------------------------------------------------------
 
+* Contacts: show, edit, update.
 * Slideshow starts when user clicks a photo.
 * Uploading image has thumb version. Original resizes to 800x600 pixels.
 * Photo: showing, uploading, editing, deleting. For uploading i use `carrierwave`.
