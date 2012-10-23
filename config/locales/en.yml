@@ -76,6 +76,7 @@ en:
   contacts:
     index:
       legend: "Our contacts"
+      edit_link: "Edit"
   layouts:
     footer:
       login_link: "Login"

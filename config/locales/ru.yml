@@ -342,6 +342,7 @@ ru:
   contacts:
     index:
       legend: "Контакты и координаты"
+      edit_link: "Редактировать"
   layouts:
     footer:
       login_link: "Войти"
