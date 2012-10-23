@@ -1,5 +1,5 @@
 %legend
-  Edit Contact
+  = t(".legend")
 
 = simple_form_for @contact do |f|
   = f.input :chirch_name, :input_html => { :class => "span9" }
@@ -9,5 +9,5 @@
 
 
   %div{ :class => "form-actions"}
-    = f.button :submit, "Update", :class => "btn btn-large btn-warning"
-    = link_to "Cancel", contacts_path, :class => "btn btn-large"
+    = f.button :submit, t(".update_button"), :class => "btn btn-large btn-warning"
+    = link_to t(".cancel_button"), contacts_path, :class => "btn btn-large"

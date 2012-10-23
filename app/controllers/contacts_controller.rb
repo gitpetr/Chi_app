@@ -11,7 +11,7 @@ class ContactsController < ApplicationController
   def update
     if @contact.update_attributes( params[:contact] )
       redirect_to contacts_path
-      flash[:success] = "Contacts updated!"
+      flash[:success] = t( :contact_updated_message )
     else
       render 'edit'
     end

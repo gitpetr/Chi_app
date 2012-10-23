@@ -275,6 +275,8 @@ ru:
   photo_created_message: "Фотография была успешно сохранена!"
   photo_updated_message: "Фотография была успешно обновлена!"
   photo_destroyed_message: "Фотография была успешно удалена!"
+  # Contact
+  contact_updated_message: "Контакты успешно обновлены!"
   ##################################
   # PAGINATION
   ##################################
@@ -343,6 +345,10 @@ ru:
     index:
       legend: "Контакты и координаты"
       edit_link: "Редактировать"
+    edit:
+      legend: "Редактирование контактных данных"
+      cancel_button: "Отмена"
+      update_button: "Обновить"
   layouts:
     footer:
       login_link: "Войти"
