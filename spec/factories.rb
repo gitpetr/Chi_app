@@ -26,6 +26,5 @@ FactoryGirl.define do
     chirch_name 'Transfiguration'
     address 'Moscow'
     phone '111-222-333'
-    google_map 'google.com'
   end
 end

@@ -2,7 +2,7 @@
 class Contact < ActiveRecord::Base
   acts_as_gmappable
 
-  attr_accessible :address, :chirch_name, :google_map, :phone, :latitude, :longitude, :gmaps
+  attr_accessible :address, :chirch_name, :phone, :latitude, :longitude, :gmaps
 
   validates :chirch_name,
               :presence => { :message => :presense_message },
@@ -11,10 +11,6 @@ class Contact < ActiveRecord::Base
   validates :address,
               :presence => { :message => :presense_message },
               :length   => { :maximum => 500, :message => :max_length_message }
-
-  validates :google_map,
-              :presence => { :message => :presense_message },
-              :length   => { :maximum => 5000, :message => :max_length_message }
 
   validates :phone,
               :presence => { :message => :presense_message },
