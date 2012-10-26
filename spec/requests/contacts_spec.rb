@@ -25,4 +25,13 @@ describe "Contacts" do
       page.should have_selector( 'address', :text => name )
     end
   end
+
+  describe "Google map" do
+    it "should exists on the page" do
+      click_link 'Контакты'
+
+      page.should have_css('div.map_container')
+      page.should have_css('div.gmaps4rails_map')
+    end
+  end
 end
