@@ -2,8 +2,13 @@ class ContactsController < ApplicationController
   load_and_authorize_resource
 
   def index
-    @contact = Contact.first.nil? ? nil : Contact.first
-    @json = Contact.first.to_gmaps4rails                # Getting data to show google map properly.
+    if Contact.first.nil?
+      @contact = nil
+      @json = nil
+    else
+      @contact = Contact.first
+      @json = Contact.first.to_gmaps4rails  # Getting data to show google map properly.
+    end
   end
 
   def edit
