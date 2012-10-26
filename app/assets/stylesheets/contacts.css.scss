@@ -5,3 +5,11 @@
 .contact-edit-button{
   float: right;
 }
+
+// Fix to show correct google map via gem.
+#map img {
+  max-width: none;
+}
+#map label {
+  width: auto; display:inline;
+}

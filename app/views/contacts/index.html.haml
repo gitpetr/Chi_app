@@ -20,7 +20,8 @@
 
 
   %div.span12.pagination-centered
-    != @contact.google_map
+    / To make correct zoom in our case we should set FIRSTLY "auto_zoom" => false and then set zoom value.
+    = gmaps("map_options" => { "detect_location" => true, "center_on_user" => true, "auto_zoom" => false, "zoom" => 16},"markers" => { "data" => @json })
     %br/
     %br/
 

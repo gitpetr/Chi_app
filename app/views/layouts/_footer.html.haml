@@ -2,6 +2,8 @@
 
 %footer{ :class => "footer" }
   %div{ :class => "container" }
+    = yield :scripts
+
     %ul{ :class => "footer-links" }
       - unless user_signed_in?
         %li=link_to t(".login_link"), new_user_session_path

@@ -3,6 +3,7 @@ class ContactsController < ApplicationController
 
   def index
     @contact = Contact.first.nil? ? nil : Contact.first
+    @json = Contact.first.to_gmaps4rails
   end
 
   def edit
