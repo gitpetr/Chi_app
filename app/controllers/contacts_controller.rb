@@ -3,7 +3,7 @@ class ContactsController < ApplicationController
 
   def index
     @contact = Contact.first.nil? ? nil : Contact.first
-    @json = Contact.first.to_gmaps4rails
+    @json = Contact.first.to_gmaps4rails                # Getting data to show google map properly.
   end
 
   def edit
