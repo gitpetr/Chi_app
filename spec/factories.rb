@@ -21,4 +21,11 @@ FactoryGirl.define do
     description 'Photo name'
     image { fixture_file_upload("#{Rails.root}/spec/fixtures/files/violin.jpg", "image/jpeg") }
   end
+
+  factory :contact do
+    chirch_name 'Transfiguration'
+    address 'Moscow'
+    phone '111-222-333'
+    google_map 'google.com'
+  end
 end
