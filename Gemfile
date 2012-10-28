@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
-gem 'pg', '0.13.2'                                                                        # Connect to postgreSQL.
+gem 'pg', '0.14.1'                                                                        # Connect to postgreSQL.
 gem 'jquery-rails', '2.1.1'
 gem 'haml', '3.1.7'
 gem 'therubyracer', :platform => :ruby
