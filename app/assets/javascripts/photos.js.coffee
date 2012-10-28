@@ -15,12 +15,12 @@ jQuery ->
 
     document.getElementById( photoInGalleryId ).className = "item active"   # Set image as active so carousel will show it properly.
     $('#modal-window-slideshow').modal 'show'
-    $('.myCarousel').carousel 'pause'
+    $('.myCarousel').carousel( {interval: false} )                          # Setting no interval to prevent cycling.
     return true
 
   # This code works when user clicks the "close" button. We seek all classes wich are not inactive and change them to good state.
   $(document).on "click", ".close", ->
-    $(this).carousel 'pause'
+    $('.myCarousel').carousel 'pause'
     div = document.getElementById "div-carousel-items"
 
     for i in [0...div.childNodes.length]
@@ -39,11 +39,11 @@ jQuery ->
     # If event is not undefined and modal window with slideshow is visible.
     if typeof event != 'undefined' and $('#modal-window-slideshow').is(':visible')
       if event.keyCode == RIGHT_ARROW
-        $(this).carousel 'next'
-        $(this).carousel 'pause'
+        $('a.carousel-control.right').trigger('click') # Find and click link to show next slide.
+        $('.myCarousel').carousel 'pause'
       if event.keyCode == LEFT_ARROW
-        $(this).carousel 'prev'
-        $(this).carousel 'pause'
+        $('a.carousel-control.left').trigger('click')  # Find and click prev link.
+        $('.myCarousel').carousel 'pause'
     return true
 
 
