@@ -36,6 +36,20 @@ $ rake db:test:prepare
 
 ------------------------------------------------------------------------------------------
 
+* Google map inetgration via `gmaps4rails` gem. After installation make sure that in `gmaps4rails.css.scss` you did that:
+
+```css
+.map_container {
+  // ...
+  max-width: 800px;
+}
+
+.gmaps4rails_map {
+  // ...
+  max-width: 800px;
+}
+```
+
 * Contacts: show, edit, update.
 * Slideshow starts when user clicks a photo.
 * Uploading image has thumb version. Original resizes to 800x600 pixels.
