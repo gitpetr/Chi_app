@@ -20,7 +20,7 @@ jQuery ->
 
   # This code works when user clicks the "close" button. We seek all classes wich are not inactive and change them to good state.
   $(document).on "click", ".close", ->
-    $('.myCarousel').carousel 'pause'
+    $(this).carousel 'pause'
     div = document.getElementById "div-carousel-items"
 
     for i in [0...div.childNodes.length]
@@ -31,4 +31,20 @@ jQuery ->
   # This is a fix so carousel wouldn't work in background and it wouldn't raise strange bugs.
   $(document).on 'mouseleave', '.carousel', ->
     $(this).carousel 'pause'
+
+  # Show other slide if left or right arrows pressed.
+  $(document).keypress (event)->
+    RIGHT_ARROW = 39; LEFT_ARROW = 37
+
+    # If event is not undefined and modal window with slideshow is visible.
+    if typeof event != 'undefined' and $('#modal-window-slideshow').is(':visible')
+      if event.keyCode == RIGHT_ARROW
+        $(this).carousel 'next'
+        $(this).carousel 'pause'
+      if event.keyCode == LEFT_ARROW
+        $(this).carousel 'prev'
+        $(this).carousel 'pause'
+    return true
+
+
 
