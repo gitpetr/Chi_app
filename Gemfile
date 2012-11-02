@@ -38,9 +38,9 @@ group :development, :test do
 end
 
 group :test do
-  gem 'capybara', '1.1.2'                                                                 # Browser automation for rspec with js support.
+  gem 'capybara', '1.1.3'                                                                 # Browser automation for rspec with js support.
   gem "factory_girl_rails", "~> 4.1.0"
-  gem 'database_cleaner', '0.8.0'
+  gem 'database_cleaner', '0.9.1'
 end
 
 # To use ActiveModel has_secure_password
