@@ -18,7 +18,14 @@ describe "Wysihtml5Editors" do
       click_link "Создать новую статью"
     end
 
-    it "should have toolbar", :js => true do
+    it "should have toolbar for default (russian) version", :js => true do
+      page.should have_css('ul.wysihtml5-toolbar')
+    end
+
+    it "should have toolbar for english version", :js => true do
+      click_link "English"
+      sleep 1.5
+
       page.should have_css('ul.wysihtml5-toolbar')
     end
   end
