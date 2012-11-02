@@ -10,7 +10,7 @@ gem 'simple_form', '2.0.4'                                                      
 gem 'bootstrap-wysihtml5-rails', "0.3.1.8"                                                # Rich text editor via JS.
 gem 'kaminari', '0.14.0'                                                                  # Be very carefull with changing version of this gem (i modified a lot generated views).
 gem "cancan", '1.6.8'                                                                     # Authorization library.
-gem "carrierwave", '0.6.2'                                                                # Simple file uploading.
+gem "carrierwave", '0.7.0'                                                                # Simple file uploading.
 gem "rmagick", '2.13.1'                                                                   # Powerfull image manipulation. Don't forget to install imagemagick before that!
 gem 'gmaps4rails', '1.5.6'                                                                # Google maps integration.
 
