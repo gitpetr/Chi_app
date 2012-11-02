@@ -21,7 +21,7 @@ gem 'gmaps4rails', '1.5.6'                                                      
 group :assets do
   gem 'sass-rails',   '~> 3.2.4'
   gem 'coffee-rails', '~> 3.2.2'
-  gem "twitter-bootstrap-rails", "2.1.3"
+  gem 'twitter-bootstrap-rails', '2.1.5'
   gem 'uglifier', '>= 1.2.3'
 end
 
