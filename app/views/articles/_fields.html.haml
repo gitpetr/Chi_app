@@ -2,5 +2,9 @@
   = f.input :title, :input_html => { :class => "span12" }
   = f.input :content, :input_html => { :class => "span12" }
 
-:javascript
-  $('#article_content').wysihtml5();
+- if I18n.locale.to_s == "ru"
+  :javascript
+    $('#article_content').wysihtml5({locale: "ru-RU"});
+- elsif I18n.locale.to_s == "en"
+  :javascript
+    $('#article_content').wysihtml5();
