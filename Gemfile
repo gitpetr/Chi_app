@@ -32,7 +32,7 @@ end
 group :development, :test do
   gem 'rspec-rails', '2.11.4'
   gem 'rb-fsevent'                                                                        # Dependency for guard.
-  gem 'guard-rspec', '1.2.1'                                                              # Rspec for guard.
+  gem 'guard-rspec', '2.1.1'                                                              # Rspec for guard.
   gem 'terminal-notifier-guard'                                                           # Notification via notification center.
   gem 'launchy'                                                                           # This gem allow us to open testing page in browser (save_and_open_page method)
 end
