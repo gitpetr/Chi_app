@@ -29,13 +29,13 @@ describe User do
     it "should create user with valid params" do
       expect do
         user = User.create( @attr )
-      end.should change( User, :count ).by( 1 )
+      end.to change( User, :count ).by( 1 )
     end
 
     it "should not create user with invalid params" do
       expect do
         user = User.create( @attr.merge :email => "", :password => "" )
-      end.should_not change( User, :count )
+      end.to_not change( User, :count )
     end
   end
 

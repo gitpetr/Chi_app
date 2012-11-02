@@ -49,7 +49,7 @@ describe "Articles" do
         fill_in "Заголовок",  :with => "random text"
         fill_in "Текст статьи",  :with => "random text"
         click_button "Создать"
-      end.should change( Article, :count ).by( 1 )
+      end.to change( Article, :count ).by( 1 )
     end
   end
 

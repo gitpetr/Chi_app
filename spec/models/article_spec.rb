@@ -21,7 +21,7 @@ describe Article do
     it "should create article with valid params" do
       expect do
         @user.articles.create @attr
-      end.should change( Article, :count ).by( 1 )
+      end.to change( Article, :count ).by( 1 )
     end
   end
 

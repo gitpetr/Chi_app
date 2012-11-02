@@ -9,7 +9,7 @@ describe Contact do
     it "should create contact with valid params" do
       expect do
         Contact.create @attr
-      end.should change( Contact, :count ).by( 1 )
+      end.to change( Contact, :count ).by( 1 )
     end
   end
 

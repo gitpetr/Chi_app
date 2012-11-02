@@ -30,7 +30,7 @@ group :development do
 end
 
 group :development, :test do
-  gem 'rspec-rails', '2.10.1'
+  gem 'rspec-rails', '2.11.4'
   gem 'rb-fsevent'                                                                        # Dependency for guard.
   gem 'guard-rspec', '1.2.1'                                                              # Rspec for guard.
   gem 'terminal-notifier-guard'                                                           # Notification via notification center.

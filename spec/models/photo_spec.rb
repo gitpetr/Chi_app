@@ -8,7 +8,7 @@ describe Photo do
     it "should create with valid params" do
       expect do
         Photo.create( @attr )
-      end.should change( Photo, :count ).by( 1 )
+      end.to change( Photo, :count ).by( 1 )
     end
   end
 

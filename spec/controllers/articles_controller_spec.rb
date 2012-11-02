@@ -105,7 +105,7 @@ describe ArticlesController do
       it "should not create article" do
         expect do
           post :create, :locale => :en, :article => @article
-        end.should_not change( Article, :count )
+        end.to_not change( Article, :count )
       end
     end
 
@@ -120,7 +120,7 @@ describe ArticlesController do
       it "should not create article" do
         expect do
           post :create, :locale => :en, :article => @article
-        end.should_not change( Article, :count )
+        end.to_not change( Article, :count )
       end
     end
 
