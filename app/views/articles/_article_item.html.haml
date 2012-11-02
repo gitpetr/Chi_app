@@ -3,5 +3,8 @@
   = render :partial => 'articles/edit_link', :locals => { :article => article }
 %p
   != truncate(article.content, :length => 1200, :separator => ' ')
-= link_to t(".read_article"), article_path( :id => article ), :class => "btn"
+
+= link_to article_path( :id => article ), :class => "btn" do
+  = t(".read_article")
+  %i{ :class=>"icon-arrow-right" }
 %hr
