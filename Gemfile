@@ -32,15 +32,15 @@ end
 group :development, :test do
   gem 'rspec-rails', '2.10.1'
   gem 'rb-fsevent'
-  gem 'guard-rspec'                                                                       # Rspec for guard.
+  gem 'guard-rspec', '1.2.1'                                                              # Rspec for guard.
   gem 'terminal-notifier-guard'                                                           # Notification via notification center.
   gem 'launchy'                                                                           # This gem allow us to open testing page in browser (save_and_open_page method)
 end
 
 group :test do
-  gem 'capybara'                                                                            # Browser automation for rspec with js support.
+  gem 'capybara', '1.1.2'                                                                 # Browser automation for rspec with js support.
   gem "factory_girl_rails", "~> 4.1.0"
-  gem 'database_cleaner'
+  gem 'database_cleaner', '0.8.0'
 end
 
 # To use ActiveModel has_secure_password
