@@ -7,7 +7,7 @@ gem 'haml', '3.1.7'
 gem 'therubyracer', :platform => :ruby
 gem 'devise', '~> 2.1.0'                                                                  # Easy authentication.
 gem 'simple_form', '2.0.4'                                                                # Super simple forms with bootstrap look support.
-gem 'bootstrap-wysihtml5-rails', "0.3.1.1"                                                # Rich text editor via JS.
+gem 'bootstrap-wysihtml5-rails', "0.3.1.8"                                                # Rich text editor via JS.
 gem 'kaminari', '0.14.0'                                                                  # Be very carefull with changing version of this gem (i modified a lot generated views).
 gem "cancan", '1.6.8'                                                                     # Authorization library.
 gem "carrierwave", '0.6.2'                                                                # Simple file uploading.
@@ -31,7 +31,7 @@ end
 
 group :development, :test do
   gem 'rspec-rails', '2.10.1'
-  gem 'rb-fsevent'
+  gem 'rb-fsevent'                                                                        # Dependency for guard.
   gem 'guard-rspec', '1.2.1'                                                              # Rspec for guard.
   gem 'terminal-notifier-guard'                                                           # Notification via notification center.
   gem 'launchy'                                                                           # This gem allow us to open testing page in browser (save_and_open_page method)
