@@ -19,7 +19,8 @@ ChirchApp::Application.routes.draw do
   end
 
   match '*path', to: redirect("/#{I18n.default_locale}/%{path}"), constraints: lambda { |req| !req.path.starts_with? "/#{I18n.default_locale}/" }
-  match '', to: redirect("/#{I18n.default_locale}")
+  match '', to: redirect("/#{I18n.default_locale}/articles")                              # Redirect default to articles.
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
