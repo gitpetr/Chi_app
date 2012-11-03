@@ -8,7 +8,7 @@
     = csrf_meta_tags
     %meta{ :name => "viewport", :content => "width=device-width, initial-scale=1.0"  }
   %body
-    %div{ :class => "wrapper" }
+    %div{ :id => "wrap" }
       = render 'layouts/navbar_template'
 
       %div{ :class => "container-fluid" }
@@ -32,4 +32,7 @@
             - if user_signed_in? and current_user.admin?
               = render 'layouts/admin_panel'
           %div{ :class => "span1" }
+      %div{ :id => "push" }
+
     = render 'layouts/footer'
+
