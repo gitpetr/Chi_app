@@ -84,6 +84,9 @@ en:
       cancel_button: "Cancel"
       update_button: "Update"
   layouts:
+    noscript:
+      title: "Warning!"
+      message: "Javascript is disabled! You should turn it on to get a great expirience!"
     footer:
       login_link: "Login"
       articles_link: "Articles"

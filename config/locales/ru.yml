@@ -350,6 +350,9 @@ ru:
       cancel_button: "Отмена"
       update_button: "Обновить"
   layouts:
+    noscript:
+      title: "Внимание!"
+      message: "В вашем браузере выключен Javascript! Для корректной работы, пожалуйста, включите его!"
     footer:
       login_link: "Войти"
       articles_link: "Статьи"
