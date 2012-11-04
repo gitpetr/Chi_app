@@ -86,6 +86,9 @@ en:
   layouts:
     footer:
       login_link: "Login"
+      articles_link: "Articles"
+      photos_link: "Photos"
+      contacts_link: "Contacts"
     navbar_template:
       articles_link: "Articles"
       photos_link: "Photos"

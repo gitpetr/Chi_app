@@ -352,6 +352,9 @@ ru:
   layouts:
     footer:
       login_link: "Войти"
+      articles_link: "Статьи"
+      photos_link: "Фотографии"
+      contacts_link: "Контакты"
     navbar_template:
       articles_link: "Статьи"
       photos_link: "Фотографии"

@@ -1,10 +1,15 @@
 -#= debug(params) if Rails.env.development?
 
-%div{ :id => "footer" }
+%footer{ :id => "footer" }
   %div{ :class => "container" }
     / This is callback to load gmaps4rails javascript.
     = yield :scripts
 
     %ul{ :class => "footer-links" }
       - unless user_signed_in?
-        %li=link_to t(".login_link"), new_user_session_path
+        %li= link_to t(".login_link"), new_user_session_path
+        %li|
+
+      %li= link_to t(".articles_link"), articles_path, :id => "footer-article"
+      %li= link_to t(".photos_link"), photos_path, :id => "footer-photos"
+      %li= link_to t(".contacts_link"), contacts_path, :id => "footer-contacts"

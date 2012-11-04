@@ -27,37 +27,4 @@ describe "Links" do
       current_path.should == "/ru/contacts"
     end
   end
-
-  describe "Footer" do
-    describe "for non-signed users" do
-      before(:each){ visit '/' }
-
-      it "should show link to login" do
-        page.should have_selector("a", :href => "ru/users/sign_in", :text => "Войти" )
-      end
-
-      it "should not show setting's link" do
-        page.should_not have_link("a", :href => "ru/users/edit", :text => "Настройки" )
-      end
-    end
-
-    describe "for signed-in users" do
-      before(:each) do
-        visit '/'
-        click_link "Войти"
-        fill_in "Ваш email",  :with => @user.email
-        fill_in "Пароль", :with => 'qwerty'
-        click_button "Войти"
-        visit '/'
-      end
-
-      it "should not show link to login" do
-        page.should_not have_link("a", :href => "ru/users/sign_in", :text => "Войти" )
-      end
-
-      it "should show setting's link" do
-        page.should have_selector("a", :href => "ru/users/edit", :text => "Настройки" )
-      end
-    end
-  end
 end
