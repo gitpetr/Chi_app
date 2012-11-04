@@ -5,16 +5,16 @@
       - 3.times do
         %span{ :class => "icon-bar" }
 
-    = link_to t(".brand_name"), articles_path, { :class => "brand" }
+    = link_to t(".brand_name"), articles_path, :class => "brand"
     %div{ :class => "nav-collapse" }
       -# Left navigation.
       %ul{ :class => "nav" }
         %li{ :class => "#{active_link?( articles_path, root_path )}" }
-          = link_to t(".articles_link"), articles_path
+          = link_to t(".articles_link"), articles_path, :id => "navbar-articles"
         %li{ :class => "#{active_link?( photos_path )}" }
-          = link_to t(".photos_link"), photos_path
+          = link_to t(".photos_link"), photos_path, :id => "navbar-photos"
         %li{ :class => "#{active_link?( contacts_path )}" }
-          = link_to t(".contacts_link"), contacts_path
+          = link_to t(".contacts_link"), contacts_path, :id => "navbar-contacts"
 
       -# Right navigation.
       %ul{ :class => "nav pull-right" }
