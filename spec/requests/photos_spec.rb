@@ -21,13 +21,22 @@ describe "Photos" do
     end
 
     describe "Creation" do
-      it "should be done with valid attrs" do
+      before(:each) do
         click_link "Фотографии"
         click_link "Создать новую фотографию"
+      end
+
+      it "should be done with valid attrs" do
         attach_file "Путь к изображению", "#{Rails.root}/spec/fixtures/files/violin.jpg"
         click_button "Загрузить"
 
         page.should have_css('div.alert.alert-success')
+      end
+
+      it "should inform user if he tries to upload without attached file" do
+        click_button "Загрузить"
+
+        page.should have_css('div.alert.alert-info')
       end
     end
 
