@@ -19,12 +19,13 @@ class PhotosController < ApplicationController
           Photo.create( :image => photo )                                                           # Key :image is very important, saving doesn't work without it.
         end
       end
+
+      redirect_to photos_path
     else                                                                                            # If user didn't choose any photo and clicked "upload".
-      flash.now[:info] = "Please, choose at least one photo before uploading."
+      flash.now[:info] = t( :photo_choose_one_before_upload )
       render 'new' and return
     end
 
-    redirect_to photos_path
     # if @photo.save
     #   redirect_to photos_path
     #   flash[:success] = t( :photo_created_message )

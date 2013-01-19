@@ -21,6 +21,7 @@ en:
   photo_created_message: "Photo created successfully!"
   photo_updated_message: "Photo updated successfully!"
   photo_destroyed_message: "Photo deleted successfully!"
+  photo_choose_one_before_upload: "Please, choose at least one photo before uploading."
   # Contact
   contact_updated_message: "Contacts updated successfully!"
   ##################################
@@ -60,7 +61,7 @@ en:
       slides: "Slides"
     new:
       legend: "New photo"
-      create: "Create"
+      create: "Upload"
       cancel: "Cancel"
       file_hint: "You can upload file with such extensions: 'jpg', 'jpeg', 'gif', 'png'."
     edit:

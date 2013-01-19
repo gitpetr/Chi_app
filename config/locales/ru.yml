@@ -275,6 +275,7 @@ ru:
   photo_created_message: "Фотография была успешно сохранена!"
   photo_updated_message: "Фотография была успешно обновлена!"
   photo_destroyed_message: "Фотография была успешно удалена!"
+  photo_choose_one_before_upload: "Пожалуйста, выберите хотя бы одну фотографию перед загрузкой."
   # Contact
   contact_updated_message: "Контакты успешно обновлены!"
   ##################################
