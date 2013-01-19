@@ -2,8 +2,7 @@
   = t(".legend")
 
 = simple_form_for @photo do |f|
-  = render :partial => 'fields', :locals => { :f => f }
-  = f.input :image, :hint => t(".file_hint")
+  = f.input :image, :as => :file, :hint => t(".file_hint"), :input_html => { multiple: true }
 
   %div{ :class => "form-actions"}
     = f.button :submit, t(".create"), :class => "btn btn-large btn-success"

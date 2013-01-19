@@ -24,9 +24,8 @@ describe "Photos" do
       it "should be done with valid attrs" do
         click_link "Фотографии"
         click_link "Создать новую фотографию"
-        fill_in "Описание",  :with => "random text"
         attach_file "Путь к изображению", "#{Rails.root}/spec/fixtures/files/violin.jpg"
-        click_button "Создать"
+        click_button "Загрузить"
 
         page.should have_selector('div', :text => 'Фотография была успешно сохранена!')
       end
