@@ -27,7 +27,7 @@ describe "Photos" do
         attach_file "Путь к изображению", "#{Rails.root}/spec/fixtures/files/violin.jpg"
         click_button "Загрузить"
 
-        page.should have_selector('div', :text => 'Фотография была успешно сохранена!')
+        page.should have_css('div.alert.alert-success')
       end
     end
 
@@ -41,7 +41,7 @@ describe "Photos" do
         fill_in "Описание",  :with => "Here is new description"
         click_button "Обновить"
 
-        page.should have_selector('div', :text => 'Фотография была успешно обновлена!')
+        page.should have_css('div.alert.alert-success')
       end
     end
 
@@ -52,10 +52,10 @@ describe "Photos" do
         click_link "Фотографии"
         click_link "Изменить"
         click_link "Удалить"
-        sleep 0.3                                                                     # Here we sleep because js need some time to show message.
-        click_link "destroy_link"                                                     # Click delete link in window via id.
+        sleep 0.3                                                                                   # Here we sleep because js need some time to show message.
+        click_link "destroy_link"                                                                   # Click delete link in window via id.
 
-        page.should have_selector('div', :text => 'Фотография была успешно удалена!')
+        page.should have_css('div.alert.alert-success')
       end
     end
   end

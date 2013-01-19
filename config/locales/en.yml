@@ -18,7 +18,7 @@ en:
   article_updated_message: "Article updated successfully!"
   article_deleted_message: "Article deleted successfully!"
   # Photo
-  photo_created_message: "Photo created successfully!"
+  photo_created_message: "Photo(s) have been saved: "
   photo_updated_message: "Photo updated successfully!"
   photo_destroyed_message: "Photo deleted successfully!"
   photo_choose_one_before_upload: "Please, choose at least one photo before uploading."

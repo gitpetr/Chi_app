@@ -272,7 +272,7 @@ ru:
   article_updated_message: "Статья была успешно обновлена!"
   article_deleted_message: "Статья была успешно удалена!"
   # Photo
-  photo_created_message: "Фотография была успешно сохранена!"
+  photo_created_message: "Фотографии были успешно сохранены в количестве:"
   photo_updated_message: "Фотография была успешно обновлена!"
   photo_destroyed_message: "Фотография была успешно удалена!"
   photo_choose_one_before_upload: "Пожалуйста, выберите хотя бы одну фотографию перед загрузкой."
