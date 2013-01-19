@@ -27,6 +27,8 @@ end
 
 group :development do
   gem 'annotate', '~> 2.5.0'
+  gem 'better_errors'                                                                               # Show errors with better output.
+  gem 'binding_of_caller'                                                                           # Advance better errors.
 end
 
 group :development, :test do
