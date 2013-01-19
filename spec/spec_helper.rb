@@ -9,6 +9,12 @@ require 'capybara/rspec'
 # in spec/support/ and its subdirectories.
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
+# Using chrome as browser to test in capybara.
+Capybara.register_driver :selenium do |app|
+  Capybara::Selenium::Driver.new(app, :browser => :chrome)
+end
+
+# RSpec config.
 RSpec.configure do |config|
   config.include Devise::TestHelpers, :type => :controller
   # ## Mock Framework

@@ -35,6 +35,15 @@ $ rake db:test:prepare
 **Changelog**
 
 ------------------------------------------------------------------------------------------
+* Now for capybara's js tests i use chrome browser. I added in `/spec/spec_helper.rb` that:
+
+```ruby
+Capybara.register_driver :selenium do |app|
+  Capybara::Selenium::Driver.new(app, :browser => :chrome)
+end
+```
+
+And also in installed driver (not sure about that): `$ brew install chromedriver`
 
 * Google map inetgration via `gmaps4rails` gem. After installation make sure that in `gmaps4rails.css.scss` you did that:
 
