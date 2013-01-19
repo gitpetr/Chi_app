@@ -16,14 +16,14 @@ describe "Photos" do
     describe "Buttons" do
       it "should have button to create new photo" do
         click_link "Фотографии"
-        page.should have_selector( 'a', :text => 'Создать новую фотографию' )
+        page.should have_selector( 'a', :text => 'Добавить фотографии' )
       end
     end
 
     describe "Creation" do
       before(:each) do
         click_link "Фотографии"
-        click_link "Создать новую фотографию"
+        click_link "Добавить фотографии"
       end
 
       it "should upload single photo" do
@@ -61,8 +61,6 @@ describe "Photos" do
         click_link "Фотографии"
         click_link "Изменить"
         click_link "Удалить"
-        sleep 0.3                                                                                   # Here we sleep because js need some time to show message.
-        click_link "destroy_link"                                                                   # Click delete link in window via id.
 
         page.should have_css('div.alert.alert-success')
       end
