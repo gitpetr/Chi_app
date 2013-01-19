@@ -56,7 +56,7 @@ en:
   photos:
     index:
       legend: "Photos"
-      new_photo_button: "New photo"
+      new_photo_button: "Add new photos"
       no_photos: "There is nothing to show here yet."
       slides: "Slides"
     new:

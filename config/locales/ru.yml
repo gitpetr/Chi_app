@@ -321,7 +321,7 @@ ru:
   photos:
     index:
       legend: "Фотографии"
-      new_photo_button: "Создать новую фотографию"
+      new_photo_button: "Добавить фотографии"
       no_photos: "Здесь пока ничего нет."
       slideshow: "Показать фотографии"
       slides: "Слайды"
