@@ -35,6 +35,8 @@ $ rake db:test:prepare
 **Changelog**
 
 ------------------------------------------------------------------------------------------
+* Admin can upload multiple photos now.
+
 * Now for capybara's js tests i use chrome browser. I added in `/spec/spec_helper.rb` that:
 
 ```ruby
