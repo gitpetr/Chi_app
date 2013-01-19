@@ -26,7 +26,7 @@ describe "Photos" do
         click_link "Создать новую фотографию"
       end
 
-      it "should be done with valid attrs" do
+      it "should upload single photo" do
         attach_file "Путь к изображению", "#{Rails.root}/spec/fixtures/files/violin.jpg"
         click_button "Загрузить"
 

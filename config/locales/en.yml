@@ -63,7 +63,7 @@ en:
       legend: "New photo"
       create: "Upload"
       cancel: "Cancel"
-      file_hint: "You can upload file with such extensions: 'jpg', 'jpeg', 'gif', 'png'."
+      file_hint: "You can upload file with such extensions: 'jpg', 'jpeg', 'gif', 'png'. You can upload few files."
     edit:
       legend: "Edit photo"
       update: "Update"
