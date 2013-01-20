@@ -2,7 +2,7 @@ development:
   adapter: postgresql
   database: chirch_app_development
   username: postgres
-  password: def!ne_p0stgre
+  password:
   host: localhost
   encoding: UTF8
 
@@ -10,7 +10,7 @@ test:
   adapter: postgresql
   database: chirch_app_test
   username: postgres
-  password: def!ne_p0stgre
+  password:
   host: localhost
   encoding: UTF8
 
