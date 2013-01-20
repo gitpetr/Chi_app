@@ -15,6 +15,7 @@ gem "rmagick", '2.13.1'                                                         
 gem 'gmaps4rails', '1.5.6'                                                                          # Google maps integration.
 gem 'unicorn', '4.5.0'                                                                              # Use unicorn as the app server
 gem 'capistrano', '2.14.1'                                                                          # Deploy with Capistrano
+gem 'less-rails', '2.2.6'                                                                           # twitter-bootstrap-rails needs that now. Without that it fails.
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -23,7 +24,7 @@ gem 'capistrano', '2.14.1'                                                      
 group :assets do
   gem 'sass-rails',   '~> 3.2.4'
   gem 'coffee-rails', '~> 3.2.2'
-  gem 'twitter-bootstrap-rails', '2.1.5'
+  gem 'twitter-bootstrap-rails', '2.1.6'
   gem 'uglifier', '>= 1.2.3'
 end
 
