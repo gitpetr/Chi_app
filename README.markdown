@@ -32,6 +32,64 @@ $ rake db:test:prepare
  $ rvm rvmrc trust DIR
 ```
 
+**Setup (production)**
+
+------------------------------------------------------------------------------------------
+
+All things done on Ubuntu 12.04 LTS.
+
+0) Create database manually on the server:
+
+```shell
+ $ ssh deployer@your_ip_here
+ $ sudo -u postgres psql
+ $ create database chirch_app_production owner postgres;
+```
+
+1) Install imagemagick on server:
+
+```shell
+ $ sudo apt-get install imagemagick
+ $ sudo apt-get install libmagickwand-dev
+```
+
+2) Use [this screencast](http://railscasts.com/episodes/335-deploying-to-a-vps) to setup application.
+
+2.1) To create separate user to deploy do this on server:
+
+```shell
+ $ groupadd admin
+ $ adduser deployer --ingroup admin
+```
+
+3) On your server go to your app's **shared** folder (it generated automatically via capistrano). And create you folder to keep new images:
+
+```shell
+ $ mkdir uploads
+```
+
+Then give nessesary rights to created folder:
+
+```shell
+ $ sudo chmod 775 uploads
+```
+
+And on your local machine in config/deploy.rb:
+
+```ruby
+ task :symlink_config, roles: :app do
+   ...
+   run "ln -nfs #{shared_path}/uploads #{release_path}/public/uploads"
+ end
+```
+
+and after this push git and deploy:
+
+```shell
+ $ git push
+ $ cap deploy
+```
+
 **Changelog**
 
 ------------------------------------------------------------------------------------------
