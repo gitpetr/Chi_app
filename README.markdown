@@ -1,6 +1,6 @@
 This is a web app for chirch.
 
-**Setup**
+**Setup (Development)**
 
 ------------------------------------------------------------------------------------------
 
@@ -10,7 +10,7 @@ To install Imagemagik in Mac use homebrew:
 
   `$ brew install imagemagick`
 
-2) Change password in database.yml
+2) In config/ create database.yml from database.example.yml. Give a password in database.yml in test and development sections.
 
 3) To lauch app:
 
