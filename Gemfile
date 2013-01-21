@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.8'
+gem 'rails', '3.2.11'
 gem 'pg', '0.14.1'                                                                                  # Connect to postgreSQL.
 gem 'jquery-rails', '2.1.3'
 gem 'haml', '3.1.7'
@@ -32,6 +32,7 @@ group :development do
   gem 'annotate', '~> 2.5.0'
   gem 'better_errors'                                                                               # Show errors with better output.
   gem 'binding_of_caller'                                                                           # Advance better errors.
+  gem 'brakeman'                                                                                    # Checking for secure vulnerabilities.
 end
 
 group :development, :test do
