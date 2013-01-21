@@ -32,8 +32,9 @@ jQuery ->
   $(document).on 'mouseleave', '.carousel', ->
     $(this).carousel 'pause'
 
-  # Show other slide if left or right arrows pressed.
-  $(document).keypress (event)->
+  # Show other slide if left or right arrows pressed up.
+  # I use keyup because it works in Chrome and Safari too.
+  $(document).keyup (event)->
     RIGHT_ARROW = 39; LEFT_ARROW = 37
 
     # If event is not undefined and modal window with slideshow is visible.
