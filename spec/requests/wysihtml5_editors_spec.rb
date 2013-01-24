@@ -10,20 +10,25 @@ describe "Wysihtml5Editors" do
     fill_in "Ваш email",  :with => @admin.email
     fill_in "Пароль", :with => 'qwerty'
     click_button "Войти"
+
+    click_link "Статьи"
+    click_link "Создать новую статью"
   end
 
   describe "Panel" do
-    before(:each) do
-      click_link "Статьи"
-      click_link "Создать новую статью"
-    end
-
     it "should have toolbar for default (russian) version", :js => true do
       page.should have_css('ul.wysihtml5-toolbar')
     end
 
     it "should have toolbar for english version", :js => true do
-      click_link "English"
+      page.find("#us_flag").click                                                                   # Click english flag by id.
+      sleep 1.5
+
+      page.should have_css('ul.wysihtml5-toolbar')
+    end
+
+    it "should have toolbar for russian version", :js => true do
+      page.find("#ru_flag").click
       sleep 1.5
 
       page.should have_css('ul.wysihtml5-toolbar')
