@@ -1,3 +1,18 @@
+# == Schema Information
+#
+# Table name: contacts
+#
+#  id          :integer          not null, primary key
+#  chirch_name :string(255)
+#  address     :text
+#  phone       :string(255)
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  latitude    :float
+#  longitude   :float
+#  gmaps       :boolean          default(TRUE)
+#
+
 require 'spec_helper'
 
 describe Contact do

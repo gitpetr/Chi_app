@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: photos
+#
+#  id          :integer          not null, primary key
+#  description :text
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  image       :string(255)
+#
+
 require 'spec_helper'
 
 #TODO: add test to check extensions of file.
