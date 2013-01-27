@@ -9,16 +9,18 @@
     %div{ :class => "nav-collapse" }
       -# Left navigation.
       %ul{ :class => "nav" }
-        %li{ :class => "#{active_link?( articles_path, root_path )}" }
+        %li{ :class => "#{active_link?( "articles", params[:controller] )}" }
           = link_to t(".articles_link"), articles_path, :id => "navbar-articles"
-        %li{ :class => "#{active_link?( photos_path )}" }
+        %li{ :class => "#{active_link?( "photos", params[:controller] )}" }
           = link_to t(".photos_link"), photos_path, :id => "navbar-photos"
-        %li{ :class => "#{active_link?( contacts_path )}" }
+        %li{ :class => "#{active_link?( "contacts", params[:controller] )}" }
           = link_to t(".contacts_link"), contacts_path, :id => "navbar-contacts"
 
       -# Right navigation.
       %ul{ :class => "nav pull-right" }
         - if user_signed_in?
-          %li=link_to t(".settings"), edit_user_registration_path
+          %li{ :class => "#{active_link?( "devise/registrations", params[:controller] )}"}
+            =link_to t(".settings"), edit_user_registration_path
           %li{ :class => "divider-vertical" }
-          %li=link_to t(".logout_link"), destroy_user_session_path, :method => :delete
+          %li
+            =link_to t(".logout_link"), destroy_user_session_path, :method => :delete
