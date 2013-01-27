@@ -33,6 +33,7 @@ group :development do
   gem 'better_errors'                                                                               # Show errors with better output.
   gem 'binding_of_caller'                                                                           # Advance better errors.
   gem 'brakeman'                                                                                    # Checking for secure vulnerabilities.
+  gem 'meta_request'                                                                                # Panel in chrome to debug rails apps.
 end
 
 group :development, :test do
