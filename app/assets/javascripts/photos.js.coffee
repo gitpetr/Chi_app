@@ -8,13 +8,22 @@
 #     # alert(id)
 
 jQuery ->
-  window.minSizeToShowSlideshow = 900
-  slideshowBtn = '#photo-Link'
-
-  if $(window).width() < window.minSizeToShowSlideshow
+  # Hide button and links on images.
+  hideElements = (slideshowBtn) ->
     $( slideshowBtn ).hide()
     $('img.photo').css('cursor', 'default')
     window.showSlideshow = false
+    return true
+
+  # Hiding slideshow's stuff if window is too small.
+  hideSlideshowElementsOnLoad = () ->
+    window.minSizeToShowSlideshow = 900
+
+    if $(window).width() < window.minSizeToShowSlideshow
+      hideElements( '#photo-Link' )
+    else
+      window.showSlideshow = true
+    return true
 
   # Remove button to show slideshow and set global param (window.showSlideshow) to show/now show slideshow.
   $(window).on 'resize', ->
@@ -27,9 +36,7 @@ jQuery ->
         $('img.photo').css('cursor', 'pointer')                                                     # Set cursor to pointer.
         window.showSlideshow = true                                                                 # Set in global variable that we can show slideshow.
     else
-      $( slideshowBtn ).hide()
-      $('img.photo').css('cursor', 'default')
-      window.showSlideshow = false
+      hideElements( slideshowBtn )
     return true
 
   # Show modal window (checking the id) with carousel when mouse clicked the image.
@@ -72,5 +79,5 @@ jQuery ->
         $('.myCarousel').carousel 'pause'
     return true
 
-
+  hideSlideshowElementsOnLoad()
 
