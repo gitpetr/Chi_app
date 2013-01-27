@@ -16,5 +16,5 @@
               %li= link_to t(".delete"), photo, :method => :delete, :id => "destroy_link"
     %p
       %div{ "data-id" => photo.id, :id => "photo-Link" }
-        = image_tag photo.image_url(:thumb), :class => "photo", :style => "cursor: pointer;"
+        = image_tag photo.image_url(:thumb), :class => "photo"
 

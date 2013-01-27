@@ -16,6 +16,7 @@ gem 'gmaps4rails', '1.5.6'                                                      
 gem 'unicorn', '4.5.0'                                                                              # Use unicorn as the app server
 gem 'capistrano', '2.14.1'                                                                          # Deploy with Capistrano
 gem 'less-rails', '2.2.6'                                                                           # twitter-bootstrap-rails needs that now. Without that it fails.
+# gem 'gon', '3.0.5'                                                                                  # Access data from ruby and JS.
 
 # Gems used only for assets and not required
 # in production environments by default.
