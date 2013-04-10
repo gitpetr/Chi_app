@@ -16,7 +16,8 @@ describe "Slideshows" do
     FactoryGirl.create( :photo,
                         :description => @text2,
                         :image => File.open(File.join( Rails.root, '/spec/fixtures/files/cello.jpg' )))
-    click_link "Фотографии"
+
+    click_link "navbar-photos"                                                                      # Фотографии. Clicking by id.
   end
 
   describe "Slideshow button" do
@@ -41,7 +42,7 @@ describe "Slideshows" do
   end
 
   it "should show slideshow when image clicked", :js => true do
-    page.find(:css, 'img').click
+    first(:css, 'img').click                                                                        # Find the first one image and click it.
     page.should have_selector('h3', :text => 'Слайды')
   end
 end
