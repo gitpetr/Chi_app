@@ -15,14 +15,14 @@ describe "Photos" do
 
     describe "Buttons" do
       it "should have button to create new photo" do
-        click_link "Фотографии"
+        click_link "navbar-photos"                                                                  # Фотографии. Clicking by id.
         page.should have_selector( 'a', :text => 'Добавить фотографии' )
       end
     end
 
     describe "Creation" do
       before(:each) do
-        click_link "Фотографии"
+        click_link "navbar-photos"                                                                  # Фотографии. Clicking by id.
         click_link "Добавить фотографии"
       end
 
@@ -44,7 +44,7 @@ describe "Photos" do
       it "should be done with valid attrs" do
         @photo = FactoryGirl.create( :photo )
 
-        click_link "Фотографии"
+        click_link "navbar-photos"                                                                  # Фотографии. Clicking by id.
         click_link "Изменить"
         click_link "Редактировать"
         fill_in "Описание",  :with => "Here is new description"
@@ -58,7 +58,7 @@ describe "Photos" do
       it "should be done", :js => true do
         @photo = FactoryGirl.create( :photo )
 
-        click_link "Фотографии"
+        click_link "navbar-photos"                                                                  # Фотографии. Clicking by id.
         click_link "Изменить"
         click_link "Удалить"
 
