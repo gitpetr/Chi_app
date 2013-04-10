@@ -64,15 +64,14 @@ describe "Users" do
 
     describe "Articles" do
       it "should not have button to create new article" do
-        click_link "Статьи"
-        response.should_not have_selector( 'a', :text => 'Создать новую статью' )
+        click_link "navbar-articles"                                                                # Статьи. Clicking by id.
+        page.should_not have_selector( 'a', :text => 'Создать новую статью' )
       end
 
       it "should not have button to edit existing article" do
         @article = FactoryGirl.create( :article )
 
-        click_link "Статьи"
-        click_link "Статьи"
+        click_link "navbar-articles"                                                                # Статьи. Clicking by id.
 
         within( 'h2' ) do
           page.should_not have_selector( 'a', :text => 'Редактировать' )
@@ -81,8 +80,10 @@ describe "Users" do
 
       it "should have title which is link on index page and legend on show page" do
         article = FactoryGirl.create( :article )
-        click_link "Статьи"
+
+        click_link "navbar-articles"                                                                # Статьи. Clicking by id.
         click_link article.title
+
         page.should have_selector( 'h2', :text => article.title )
       end
     end
