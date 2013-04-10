@@ -9,17 +9,17 @@ describe "Footers" do
 
   describe "for each user" do
     it "should link to aricles" do
-      click_link "footer-article"                                                  # Click via id.
+      click_link "footer-article"                                                                   # Click via id.
       current_path.should == "/ru/articles"
     end
 
     it "should link to photos" do
-      click_link "footer-photos"                                                   # Click via id.
+      click_link "footer-photos"                                                                    # Click via id.
       current_path.should == "/ru/photos"
     end
 
     it "should link to contacts" do
-      click_link "footer-contacts"                                                   # Click via id.
+      click_link "footer-contacts"                                                                  # Click via id.
       current_path.should == "/ru/contacts"
     end
   end

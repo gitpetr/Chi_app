@@ -44,7 +44,7 @@ describe "Articles" do
   describe "Creation" do
     it "should be done with valid attrs" do
       expect do
-        page.find("#navbar-articles").click                                                        # Статьи.
+        page.find("#navbar-articles").click                                                         # Статьи.
         click_link "Создать новую статью"
         fill_in "Заголовок",  :with => "random text"
         fill_in "Текст статьи",  :with => "random text"

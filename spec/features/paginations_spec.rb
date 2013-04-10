@@ -6,7 +6,7 @@ describe "Paginations" do
     before(:each) do
       6.times{ FactoryGirl.create(:article) }
       visit '/'
-      click_link "Статьи"
+      click_link "navbar-articles"                                                                  # Статьи. Clicking by id.
     end
 
     it "should have pagination" do
