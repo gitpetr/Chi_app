@@ -24,7 +24,7 @@ describe "Articles" do
       it "should have button to сhange existing article" do
         page.find("#navbar-articles").click                                                         # Статьи.
 
-        within( 'div', :class => 'article-edit-button btn-group' ) do
+        within( 'div.article-edit-button.btn-group' ) do
           page.should have_selector( 'a', :text => 'Изменить' )
         end
       end
@@ -44,7 +44,7 @@ describe "Articles" do
   describe "Creation" do
     it "should be done with valid attrs" do
       expect do
-        cpage.find("#navbar-articles").click                                                        # Статьи.
+        page.find("#navbar-articles").click                                                        # Статьи.
         click_link "Создать новую статью"
         fill_in "Заголовок",  :with => "random text"
         fill_in "Текст статьи",  :with => "random text"
