@@ -38,6 +38,9 @@ RSpec.configure do |config|
   # rspec-rails.
   config.infer_base_class_for_anonymous_controllers = false
 
+  # New setting for Capybara.
+  config.include Capybara::DSL
+
   # Clean test database.
   config.before(:suite) do
     DatabaseCleaner.strategy = :truncation

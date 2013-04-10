@@ -52,4 +52,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   #   "something.jpg" if original_filename
   # end
 
+  def extension
+    self.file.extension
+  end
 end
