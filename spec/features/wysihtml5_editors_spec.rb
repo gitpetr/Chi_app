@@ -11,7 +11,7 @@ describe "Wysihtml5Editors" do
     fill_in "Пароль", :with => 'qwerty'
     click_button "Войти"
 
-    click_link "Статьи"
+    click_link "navbar-articles"                                                                    # Статьи. Clicking by id.
     click_link "Создать новую статью"
   end
 
