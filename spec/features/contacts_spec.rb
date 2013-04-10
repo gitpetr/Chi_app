@@ -17,7 +17,7 @@ describe "Contacts" do
     it "should be done with valid attrs" do
       name = 'Some name'
 
-      click_link 'Контакты'
+      page.find('#navbar-contacts').click                                                           # Контакты
       click_link 'Редактировать'
       fill_in 'Имя церкви', :with => name
       click_button 'Обновить'
@@ -28,7 +28,7 @@ describe "Contacts" do
 
   describe "Google map" do
     it "should exists on the page" do
-      click_link 'Контакты'
+      page.find('#navbar-contacts').click                                                           # Контакты
 
       page.should have_css('div.map_container')
       page.should have_css('div.gmaps4rails_map')
