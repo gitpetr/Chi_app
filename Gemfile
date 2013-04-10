@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.11'
+gem 'rails', '3.2.13'
 gem 'pg', '0.14.1'                                                                                  # Connect to postgreSQL.
 gem 'jquery-rails', '2.1.3'
 gem 'haml', '3.1.7'
@@ -38,7 +38,7 @@ group :development do
 end
 
 group :development, :test do
-  gem 'rspec-rails', '2.11.4'
+  gem 'rspec-rails', '2.13.0'
   gem 'rb-fsevent'                                                                                  # Dependency for guard.
   gem 'guard-rspec', '2.1.1'                                                                        # Rspec for guard.
   gem 'terminal-notifier-guard'                                                                     # Notification via notification center.
@@ -46,9 +46,10 @@ group :development, :test do
 end
 
 group :test do
-  gem 'capybara', '1.1.3'                                                                           # Browser automation for rspec with js support.
+  gem 'capybara', '2.1.0'                                                                           # Browser automation for rspec with js support.
   gem 'factory_girl_rails', '~> 4.1.0'
   gem 'database_cleaner', '0.9.1'
+  gem 'selenium-webdriver', '2.32.0'                                                                # Driver to launch tests in Chrome.
 end
 
 # To use ActiveModel has_secure_password
