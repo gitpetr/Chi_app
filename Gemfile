@@ -3,13 +3,13 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.13'
 gem 'pg', '0.15.1'                                                                                  # Connect to postgreSQL.
 gem 'jquery-rails', '2.1.3'
-gem 'haml', '3.1.7'
+gem 'haml', '4.0.2'                                                                                 # Templating engine for HTML.
 gem 'therubyracer', :platform => :ruby
 gem 'devise', '~> 2.1.0'                                                                            # Easy authentication.
-gem 'simple_form', '2.0.4'                                                                          # Super simple forms with bootstrap look support.
-gem 'bootstrap-wysihtml5-rails', "0.3.1.8"                                                          # Rich text editor via JS.
+gem 'simple_form', '2.1.0'                                                                          # Super simple forms with bootstrap look support.
+gem 'bootstrap-wysihtml5-rails', "0.3.1.19"                                                         # Rich text editor via JS.
 gem 'kaminari', '0.14.0'                                                                            # Be very carefull with changing version of this gem (i modified a lot generated views).
-gem "cancan", '1.6.8'                                                                               # Authorization library.
+gem "cancan", '1.6.9'                                                                               # Authorization library.
 gem "carrierwave", '0.8.0'                                                                          # Simple file uploading.
 gem "rmagick", '2.13.1'                                                                             # Powerfull image manipulation. Don't forget to install imagemagick before that!
 gem 'gmaps4rails', '1.5.6'                                                                          # Google maps integration.
