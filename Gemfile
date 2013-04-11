@@ -25,7 +25,7 @@ gem 'less-rails', '2.2.6'                                                       
 group :assets do
   gem 'sass-rails',   '~> 3.2.4'
   gem 'coffee-rails', '~> 3.2.2'
-  gem 'twitter-bootstrap-rails', '2.2.0'
+  gem 'twitter-bootstrap-rails', '2.2.6'                                                            # Twitter Bootstrap 2.
   gem 'uglifier', '>= 1.2.3'
 end
 

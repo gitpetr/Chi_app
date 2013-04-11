@@ -243,7 +243,7 @@ GEM
     treetop (1.4.12)
       polyglot
       polyglot (>= 0.3.1)
-    twitter-bootstrap-rails (2.2.0)
+    twitter-bootstrap-rails (2.2.6)
       actionpack (>= 3.1)
       execjs
       railties (>= 3.1)
@@ -296,6 +296,6 @@ DEPENDENCIES
   simple_form (= 2.1.0)
   terminal-notifier-guard
   therubyracer
-  twitter-bootstrap-rails (= 2.2.0)
+  twitter-bootstrap-rails (= 2.2.6)
   uglifier (>= 1.2.3)
   unicorn (= 4.5.0)
