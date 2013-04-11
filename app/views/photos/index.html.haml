@@ -28,7 +28,7 @@
         - Photo.all.each_with_index do |photo, i|
           / You need to add the class of active only to the first item in your list, otherwise they'll all show.
           %div{ :class => "item", :id => "gallery-#{photo.id}" }
-            = link_to(image_tag(photo.image.url), photo.image.url)
+            = image_tag photo.image
 
             / Description of photo
             - unless photo.description.blank?
