@@ -324,7 +324,6 @@ ru:
       new_photo_button: "Добавить фотографии"
       no_photos: "Здесь пока ничего нет."
       slideshow: "Показать фотографии"
-      slides: "Слайды"
     new:
       legend: "Добавление новых фотографий"
       create: "Загрузить"
@@ -338,6 +337,8 @@ ru:
       change: "Изменить"
       edit: "Редактировать"
       delete: "Удалить"
+    slideshow:
+      slides: "Слайды"
   contacts:
     index:
       legend: "Контакты и координаты"
