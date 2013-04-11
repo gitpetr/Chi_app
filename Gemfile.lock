@@ -53,7 +53,7 @@ GEM
       terminal-table (~> 1.4)
     builder (3.0.4)
     cancan (1.6.8)
-    capistrano (2.14.1)
+    capistrano (2.14.2)
       highline
       net-scp (>= 1.0.0)
       net-sftp (>= 2.0.0)
@@ -65,7 +65,7 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    carrierwave (0.7.0)
+    carrierwave (0.8.0)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
     childprocess (0.3.9)
@@ -150,7 +150,7 @@ GEM
       net-ssh (>= 2.6.5)
     nokogiri (1.5.9)
     orm_adapter (0.4.0)
-    pg (0.14.1)
+    pg (0.15.1)
     polyglot (0.3.3)
     pry (0.9.12)
       coderay (~> 1.0.5)
@@ -270,9 +270,9 @@ DEPENDENCIES
   bootstrap-wysihtml5-rails (= 0.3.1.8)
   brakeman
   cancan (= 1.6.8)
-  capistrano (= 2.14.1)
+  capistrano (= 2.14.2)
   capybara (= 2.1.0)
-  carrierwave (= 0.7.0)
+  carrierwave (= 0.8.0)
   coffee-rails (~> 3.2.2)
   database_cleaner (= 0.9.1)
   devise (~> 2.1.0)
@@ -285,7 +285,7 @@ DEPENDENCIES
   launchy
   less-rails (= 2.2.6)
   meta_request
-  pg (= 0.14.1)
+  pg (= 0.15.1)
   rails (= 3.2.13)
   rb-fsevent
   rmagick (= 2.13.1)

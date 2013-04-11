@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
-gem 'pg', '0.14.1'                                                                                  # Connect to postgreSQL.
+gem 'pg', '0.15.1'                                                                                  # Connect to postgreSQL.
 gem 'jquery-rails', '2.1.3'
 gem 'haml', '3.1.7'
 gem 'therubyracer', :platform => :ruby
@@ -10,11 +10,11 @@ gem 'simple_form', '2.0.4'                                                      
 gem 'bootstrap-wysihtml5-rails', "0.3.1.8"                                                          # Rich text editor via JS.
 gem 'kaminari', '0.14.0'                                                                            # Be very carefull with changing version of this gem (i modified a lot generated views).
 gem "cancan", '1.6.8'                                                                               # Authorization library.
-gem "carrierwave", '0.7.0'                                                                          # Simple file uploading.
+gem "carrierwave", '0.8.0'                                                                          # Simple file uploading.
 gem "rmagick", '2.13.1'                                                                             # Powerfull image manipulation. Don't forget to install imagemagick before that!
 gem 'gmaps4rails', '1.5.6'                                                                          # Google maps integration.
 gem 'unicorn', '4.5.0'                                                                              # Use unicorn as the app server
-gem 'capistrano', '2.14.1'                                                                          # Deploy with Capistrano
+gem 'capistrano', '2.14.2'                                                                          # Deploy with Capistrano
 gem 'less-rails', '2.2.6'                                                                           # twitter-bootstrap-rails needs that now. Without that it fails.
 # gem 'gon', '3.0.5'                                                                                  # Access data from ruby and JS.
 
