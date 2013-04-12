@@ -1,4 +1,5 @@
 ChirchApp::Application.routes.draw do
+
   # Put all you routes to here (to keep correct localization).
   scope ":locale", locale: /#{I18n.available_locales.join("|")}/ do
     devise_for :users, :skip => [:registrations]                                          # Users can't register now (and destroy himself).
@@ -14,6 +15,7 @@ ChirchApp::Application.routes.draw do
     resources :contacts, :only => [ :index, :edit, :update ]
 
     match '/users_list', :to => 'stats#users_in_system'
+    get "tests/index"
 
     root :to => 'articles#index'
   end
