@@ -1,9 +1,9 @@
-legend
-  = t(".legend")
+%legend
+  =t(".legend")
 
 = simple_form_for @article do |f|
   = render :partial => 'fields', :locals => { :f => f }
 
-  div class="form-actions"
+  %div{ :class => "form-actions"}
     = f.button :submit, t(".update_button"), :class => "btn btn-large btn-warning"
     = link_to t(".cancel_button"), articles_path, :class => "btn btn-large"

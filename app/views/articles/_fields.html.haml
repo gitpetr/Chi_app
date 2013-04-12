@@ -1,10 +1,10 @@
-div class="article-unit"
+%div{ :class => "article-unit" }
   = f.input :title, :input_html => { :class => "span12" }
   = f.input :content, :input_html => { :class => "span12" }
 
 - if I18n.locale.to_s == "ru"
-  javascript:
+  :javascript
     $('#article_content').wysihtml5({locale: "ru-RU"});
 - elsif I18n.locale.to_s == "en"
-  javascript:
+  :javascript
     $('#article_content').wysihtml5();
