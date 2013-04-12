@@ -1,13 +1,13 @@
 # encoding: UTF-8
 namespace :db do
-  desc "Fill database with admin user."
+  desc "Fill database with test admin user."
   task :create_admin => :environment do
     make_admin
   end
 
   desc "Create team of maintainers."
-  task :make_admins_team => :environment do
-    make_admins_team
+  task :create_admins_team => :environment do
+    create_admins_team
   end
 end
 
@@ -17,8 +17,8 @@ def make_admin
   admin.save!
 end
 
-def make_admins_team
-  emails = [ "gelika007@mail.ru", "gelvior@gmail.com" ]
+def create_admins_team
+  emails = [ "gelika007@mail.ru", "gelvior@gmail.com", "veragorbatova@yandex.ru" ]
   uncreated_users_count = 0
 
   emails.each do |email|
