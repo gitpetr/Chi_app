@@ -15,7 +15,7 @@ ChirchApp::Application.routes.draw do
     resources :contacts, :only => [ :index, :edit, :update ]
 
     match '/users_list', :to => 'stats#users_in_system'
-    get "tests/index"
+    match '/tests',      :to => 'tests#index'
 
     root :to => 'articles#index'
   end
