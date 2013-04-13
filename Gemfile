@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.13'
 gem 'pg', '0.15.1'                                                                                  # Connect to postgreSQL.
 gem 'jquery-rails', '2.2.1'                                                                         # Jquery for rails.
-# gem 'haml', '4.0.2'                                                                                 # Templating engine for HTML.
+gem 'haml', '4.0.2'                                                                                 # Templating engine for HTML.
 gem 'therubyracer', :platform => :ruby
 gem 'devise', '2.2.3'                                                                               # Easy authentication.
 gem 'simple_form', '2.1.0'                                                                          # Super simple forms with bootstrap look support.
