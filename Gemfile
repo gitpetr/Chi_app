@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.13'
 gem 'pg', '0.15.1'                                                                                  # Connect to postgreSQL.
 gem 'jquery-rails', '2.2.1'                                                                         # Jquery for rails.
-# gem 'haml', '4.0.2'                                                                                 # Templating engine for HTML.
+gem 'haml', '4.0.2'                                                                                 # Templating engine for HTML.
 gem 'therubyracer', :platform => :ruby
 gem 'devise', '2.2.3'                                                                               # Easy authentication.
 gem 'simple_form', '2.1.0'                                                                          # Super simple forms with bootstrap look support.
@@ -19,7 +19,7 @@ gem 'less-rails', '2.3.2'                                                       
 gem 'slim', '1.3.8'
 # gem 'gon', '3.0.5'                                                                                  # Access data from ruby and JS.
 
-# gem 'haml2slim'
+gem 'haml2slim'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -36,7 +36,7 @@ group :development do
   gem 'annotate', '~> 2.5.0'
   gem 'better_errors'                                                                               # Show errors with better output.
   gem 'binding_of_caller'                                                                           # Advance better errors.
-  # gem 'brakeman'                                                                                    # Checking for secure vulnerabilities.
+  gem 'brakeman'                                                                                    # Checking for secure vulnerabilities.
   gem 'meta_request'                                                                                # Panel in chrome to debug rails apps.
 end
 
