@@ -93,6 +93,8 @@ and after this push git and deploy:
 **Changelog**
 
 ------------------------------------------------------------------------------------------
+* Slim migration. If you have troubles on production then you should just restart the whole server.
+
 * Admin can upload multiple photos now.
 
 * Now for capybara's js tests i use chrome browser. I added in `/spec/spec_helper.rb` that:
