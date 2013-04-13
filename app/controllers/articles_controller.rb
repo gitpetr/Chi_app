@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
   load_and_authorize_resource
 
   def index
-    puts "----> #{ActionView::Template::Handlers.extensions}"
+    puts "----> articles (index): #{ActionView::Template::Handlers.extensions}"
     @articles = Article.order("updated_at DESC").page(params[:page]).per(5)
   end
 

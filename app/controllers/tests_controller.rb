@@ -1,5 +1,5 @@
 class TestsController < ApplicationController
   def index
-    puts "----> #{ActionView::Template::Handlers.extensions}"
+    puts "----> tests (index): #{ActionView::Template::Handlers.extensions}"
   end
 end
