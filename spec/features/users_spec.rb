@@ -2,13 +2,16 @@
 require 'spec_helper'
 
 describe "Users" do
-  before(:each){ @user = FactoryGirl.create(:user) }
+  before(:each) do
+    @user = FactoryGirl.create(:user)
+
+    visit '/'
+    click_link "Войти"
+  end
 
   describe "Sign in/out" do
     describe "failure" do
       it "should not sign a user in if user login/pass incorrect" do
-        visit '/'
-        click_link "Войти"
         fill_in "Ваш email",  :with => ""
         fill_in "Пароль", :with => ""
         click_button "Войти"
@@ -19,8 +22,6 @@ describe "Users" do
 
     describe "success" do
       it "should sign a user in and out" do
-        visit '/'
-        click_link "Войти"
         fill_in "Ваш email",  :with => @user.email
         fill_in "Пароль", :with => 'qwerty'
         click_button "Войти"
@@ -34,8 +35,6 @@ describe "Users" do
 
   describe "For signed-in user" do
     before(:each) do
-      visit '/'
-      click_link "Войти"
       fill_in "Ваш email",  :with => @user.email
       fill_in "Пароль", :with => 'qwerty'
       click_button "Войти"
