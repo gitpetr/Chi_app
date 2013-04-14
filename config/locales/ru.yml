@@ -310,14 +310,14 @@ ru:
       update_button: "Обновить"
       cancel_button: "Отменить"
     edit_link:
-      change: "Изменить"
+      change: " Изменить"
       edit: "Редактировать"
       delete: "Удалить"
       confirm_message: "Вы уверены, что хотите удалить"
       close: "Отмена"
       modal_title: "Удаление статьи"
     article_item:
-      read_article: "Читать дальше"
+      read_article: "Читать дальше "
   photos:
     index:
       legend: "Фотографии"

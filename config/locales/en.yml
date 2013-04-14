@@ -46,13 +46,13 @@ en:
       update_button: "Update"
       cancel_button: "Cancel"
     edit_link:
-      change: "Change"
+      change: " Change"
       edit: "Edit"
       delete: "Delete"
       confirm_message: "Are you sure you want do delete"
       close: "Close"
     article_item:
-      read_article: "Read more"
+      read_article: "Read more "
   photos:
     index:
       legend: "Photos"
