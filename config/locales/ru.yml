@@ -342,7 +342,7 @@ ru:
   contacts:
     index:
       legend: "Контакты и координаты"
-      edit_link: "Редактировать"
+      edit_link: " Редактировать"
     edit:
       legend: "Редактирование контактных данных"
       cancel_button: "Отмена"

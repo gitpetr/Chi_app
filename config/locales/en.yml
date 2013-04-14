@@ -75,7 +75,7 @@ en:
   contacts:
     index:
       legend: "Our contacts"
-      edit_link: "Edit"
+      edit_link: " Edit"
     edit:
       legend: "Edit your contacts"
       cancel_button: "Cancel"
