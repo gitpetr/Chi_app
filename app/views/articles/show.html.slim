@@ -1,5 +1,6 @@
 - if can? :read, Article
-  %h2
+  h2
     = @article.title
     = render :partial => 'articles/edit_link', :locals => { :article => @article }
-  != @article.content
+  -# Make sure that we output data without escaping it.
+  == @article.content
