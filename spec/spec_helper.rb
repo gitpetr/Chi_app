@@ -41,19 +41,18 @@ RSpec.configure do |config|
   # New setting for Capybara.
   config.include Capybara::DSL
 
-  # Disable garbage collector to speed up the test suit.
-  config.before(:all) { DeferredGarbageCollection.start }
-  config.after(:all)  { DeferredGarbageCollection.reconsider }
-
   # Clean test database.
   config.before(:suite) do
-    DatabaseCleaner.strategy = :transaction
-    DatabaseCleaner.clean_with(:truncation)
+    DatabaseCleaner.strategy = :truncation
   end
 
-  config.before(:each) { DatabaseCleaner.start }
-  config.after(:each)  { DatabaseCleaner.clean }
+  config.before(:each) do
+    DatabaseCleaner.start
+  end
 
+  config.after(:each) do
+    DatabaseCleaner.clean
+  end
 
   # Helper to sign in user
   def test_sign_in( user )
