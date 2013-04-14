@@ -1,9 +1,9 @@
-%legend
+legend
   = t(".legend")
 
 = simple_form_for @photo do |f|
   = f.input :image, :as => :file, :hint => t(".file_hint"), :input_html => { multiple: true }
 
-  %div{ :class => "form-actions"}
+  div class="form-actions"
     = f.button :submit, t(".create"), :class => "btn btn-large btn-success"
     = link_to t(".cancel"), photos_path, :class => "btn btn-large"

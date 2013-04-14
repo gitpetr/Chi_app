@@ -1,0 +1,21 @@
+/ Modal window to show slideshow.
+div class="modal-huge hide fade" id="modal-window-slideshow" data-backdrop="static"
+  div.modal-header
+    button type="button" class="close" data-dismiss="modal" aria-hidden="true" ×
+    h3 = t(".slides")
+  div.modal-huge-body
+    div id="myCarousel" class="carousel slide"
+      / Carousel items
+      div class="carousel-inner" id="div-carousel-items"
+        - Photo.all.each_with_index do |photo, i|
+          -# You need to add the class of active only to the first item in your list, otherwise they'll all show.
+          div class="item" id="gallery-#{photo.id}"
+            = image_tag photo.image
+
+            -# Description of photo
+            - unless photo.description.blank?
+              div.carousel-caption
+                p = photo.description
+      / Carousel nav
+      a class="carousel-control left" href="#myCarousel" data-slide="prev" ‹
+      a class="carousel-control right" href="#myCarousel" data-slide="next" ›
