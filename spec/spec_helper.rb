@@ -16,6 +16,10 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
 # RSpec config.
 RSpec.configure do |config|
+  # Disable garbage collector to speed up the test suit.
+  config.before(:all) { DeferredGarbageCollection.start }
+  config.after(:all)  { DeferredGarbageCollection.reconsider }
+
   config.include Devise::TestHelpers, :type => :controller
   # ## Mock Framework
   #
