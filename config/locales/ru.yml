@@ -323,7 +323,7 @@ ru:
       legend: "Фотографии"
       new_photo_button: "Добавить фотографии"
       no_photos: "Здесь пока ничего нет."
-      slideshow: "Показать фотографии"
+      slideshow: "Показать фотографии "
     new:
       legend: "Добавление новых фотографий"
       create: "Загрузить"
@@ -334,7 +334,7 @@ ru:
       update: "Обновить"
       cancel: "Отмена"
     photo_item:
-      change: "Изменить"
+      change: " Изменить"
       edit: "Редактировать"
       delete: "Удалить"
     slideshow:

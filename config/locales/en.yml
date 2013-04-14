@@ -58,7 +58,7 @@ en:
       legend: "Photos"
       new_photo_button: "Add new photos"
       no_photos: "There is nothing to show here yet."
-      slides: "Slides"
+      slideshow: "Slideshow "
     new:
       legend: "New photo"
       create: "Upload"
@@ -69,7 +69,7 @@ en:
       update: "Update"
       cancel: "Cancel"
     photo_item:
-      change: "Change"
+      change: " Change"
       edit: "Edit"
       delete: "Delete"
   contacts:
