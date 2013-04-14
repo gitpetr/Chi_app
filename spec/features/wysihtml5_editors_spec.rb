@@ -22,14 +22,14 @@ describe "Wysihtml5Editors" do
 
     it "should have toolbar for english version", :js => true do
       page.find("#us_flag").click                                                                   # Click english flag by id.
-      sleep 1.5
+      sleep 0.2
 
       page.should have_css('ul.wysihtml5-toolbar')
     end
 
     it "should have toolbar for russian version", :js => true do
       page.find("#ru_flag").click
-      sleep 1.5
+      sleep 0.2
 
       page.should have_css('ul.wysihtml5-toolbar')
     end

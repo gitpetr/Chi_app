@@ -76,8 +76,8 @@ describe "Articles" do
       page.find("#navbar-articles").click                                                           # Статьи.
       click_link "Изменить"
       click_link "Удалить"
-      sleep 0.4                                                                   # Here we sleep because js need some time to show message.
-      click_link "destroy_link"                                                   # Click delete link in window via id.
+      sleep 0.4                                                                                     # Here we sleep because js need some time to show message.
+      click_link "destroy_link"                                                                     # Click delete link in window via id.
 
       page.should have_selector('div', :text => 'Статья была успешно удалена!')
     end
