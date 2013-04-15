@@ -22,10 +22,16 @@ $ rake db:migrate
 $ rake db:test:prepare
 ```
 
-4) Create admin (login: qwerty@qwerty.com, password: qwerty):
+4) After that, you should make sure that all tests pass:
+
+```shell
+$ rake spec
+```
+
+5) Create admin (login: qwerty@qwerty.com, password: qwerty):
   `$ rake db:create_admin`
 
-5) Also you probably'd like to use .rvmrc file to set correct version. To use it you should do that:
+6) Also you probably'd like to use .rvmrc file to set correct version. To use it you should do that:
 
 ```shell
  $ cd this_app
