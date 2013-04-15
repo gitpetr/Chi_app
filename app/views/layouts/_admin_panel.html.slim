@@ -1,0 +1,6 @@
+div class="well"
+  ul class="nav nav-list"
+    li class="nav-header"
+      = t(".stats_header")
+    li class="#{active_link?( "stats", params[:controller] )} admin_panel_link"
+      = link_to t(".users_link"), users_list_path
