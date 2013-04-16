@@ -20,6 +20,7 @@
 
 class User < ActiveRecord::Base
   has_many :articles
+  has_many :albums
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
