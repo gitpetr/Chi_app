@@ -271,11 +271,16 @@ ru:
   article_created_message: "Статья была успешно создана!"
   article_updated_message: "Статья была успешно обновлена!"
   article_deleted_message: "Статья была успешно удалена!"
+
   # Photo
   photo_created_message: "Фотографии были успешно сохранены в количестве:"
   photo_updated_message: "Фотография была успешно обновлена!"
   photo_destroyed_message: "Фотография была успешно удалена!"
   photo_choose_one_before_upload: "Пожалуйста, выберите хотя бы одну фотографию перед загрузкой."
+
+  # Album
+  album_created_message: "Альбом был успешно создан!"
+
   # Contact
   contact_updated_message: "Контакты успешно обновлены!"
   ##################################
@@ -347,6 +352,14 @@ ru:
       legend: "Редактирование контактных данных"
       cancel_button: "Отмена"
       update_button: "Обновить"
+  albums:
+    index:
+      legend: "Альбомы"
+      new_link: " Новый альбом"
+    new:
+      legend: "Создание нового альбома"
+      create_article_button: "Создать"
+      cancel: "Отмена"
   layouts:
     application:
       title: "Преображение во Христе"
@@ -405,6 +418,13 @@ ru:
               max_lenght_message: "не должно содержать больше %{count} символов"
             image:
               presence_message: "не должен быть пустым"
+        album:
+          attributes:
+            name:
+              presense_message: "не должно быть пустым"
+              max_length_message: "не должно содержать больше %{count} символов"
+            description:
+              max_lenght_message: "не должно содержать больше %{count} символов"
         contact:
           attributes:
             chirch_name:

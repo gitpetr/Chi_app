@@ -25,6 +25,10 @@ ru:
           image: "Путь к изображению"
         edit:
           description: "Описание"
+      album:
+        new:
+          name: "Имя"
+          description: "Описание"
       contact:
         edit:
           chirch_name: "Имя церкви"

@@ -17,11 +17,16 @@ en:
   article_created_message: "Article created successfully!"
   article_updated_message: "Article updated successfully!"
   article_deleted_message: "Article deleted successfully!"
+
   # Photo
   photo_created_message: "Photo(s) have been saved: "
   photo_updated_message: "Photo updated successfully!"
   photo_destroyed_message: "Photo deleted successfully!"
   photo_choose_one_before_upload: "Please, choose at least one photo before uploading."
+
+  # Album
+  album_created_message: "Album created successfully!"
+
   # Contact
   contact_updated_message: "Contacts updated successfully!"
   ##################################
@@ -80,6 +85,14 @@ en:
       legend: "Edit your contacts"
       cancel_button: "Cancel"
       update_button: "Update"
+  albums:
+    index:
+      legend: "Albums"
+      new_link: " New album"
+    new:
+      legend: "New album"
+      create_article_button: "Create"
+      cancel: "Cancel"
   layouts:
     application:
       title: "Transfiguration in Christ"
@@ -136,6 +149,13 @@ en:
               max_lenght_message: "can't contain more than %{count} symbols"
             image:
               presence_message: "can't be blank"
+        album:
+          attributes:
+            name:
+              presense_message: "can't be blank"
+              max_length_message: "can't contain more than %{count} symbols"
+            description:
+              max_lenght_message: "can't contain more than %{count} symbols"
         contact:
           attributes:
             chirch_name:
