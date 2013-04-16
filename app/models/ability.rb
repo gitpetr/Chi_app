@@ -3,7 +3,7 @@ class Ability
 
   def initialize(user)
     # Define abilities for the passed in user here:
-    user ||= User.new # guest user (not logged in)
+    user ||= User.new                                                                               # guest user (not logged in)
 
     if user.admin?
       can :manage, :all
@@ -12,7 +12,7 @@ class Ability
       can :read, Article
       can :read, Photo
       can :read, Contact
-      # can :read, :all
+      can :read, Album
     end
     #
     # The first argument to `can` is the action you are giving the user permission to do.

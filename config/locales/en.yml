@@ -94,6 +94,7 @@ en:
     navbar_template:
       articles_link: "Articles"
       photos_link: "Photos"
+      albums_link: "Albums"
       contacts_link: "Contacts"
       logout_link: "Logout"
       brand_name: "Transfiguration in Christ"

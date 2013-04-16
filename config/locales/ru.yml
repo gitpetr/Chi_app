@@ -361,6 +361,7 @@ ru:
     navbar_template:
       articles_link: "Статьи"
       photos_link: "Фотографии"
+      albums_link: "Альбомы"
       contacts_link: "Контакты"
       logout_link: "Выйти"
       brand_name: "Преображение во Христе"
