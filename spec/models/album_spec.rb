@@ -44,10 +44,6 @@ describe Album do
       @user.albums.build( @attr.merge( :name => "" ) ).should_not be_valid
     end
 
-    it "description can't be empty" do
-      @user.albums.build( @attr.merge( :description => "" ) ).should_not be_valid
-    end
-
     it "description can't have more than 2000 symbols" do
       @user.albums.build( @attr.merge( :description => "a" * 2001 ) ).should_not be_valid
     end
