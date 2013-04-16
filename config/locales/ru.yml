@@ -348,6 +348,8 @@ ru:
       cancel_button: "Отмена"
       update_button: "Обновить"
   layouts:
+    application:
+      title: "Преображение во Христе"
     noscript:
       title: "Внимание!"
       message: "В вашем браузере выключен Javascript! Для корректной работы, пожалуйста, включите его!"
