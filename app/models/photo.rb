@@ -10,6 +10,8 @@
 #
 
 class Photo < ActiveRecord::Base
+  belongs_to :album
+
   attr_accessible :description, :image
 
   mount_uploader :image, ImageUploader
