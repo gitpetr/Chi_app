@@ -33,6 +33,7 @@ group :assets do
 end
 
 group :development do
+  gem 'webrick', '1.3.1'                                                                            # Standart server. I specify it to remove warning from logs.
   gem 'annotate', '~> 2.5.0'
   gem 'better_errors'                                                                               # Show errors with better output.
   gem 'binding_of_caller'                                                                           # Advance better errors.
