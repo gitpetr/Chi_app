@@ -2,6 +2,7 @@ class AlbumsController < ApplicationController
   load_and_authorize_resource
 
   def index
+    @albums = Album.order("updated_at DESC")
   end
 
   def new

@@ -5,3 +5,13 @@ legend
     = link_to new_album_path, :class => "btn btn-primary album-new-button" do
       i class="icon-plus icon-white"
       = t(".new_link")
+
+- if !@albums.empty?
+   - @albums.each_slice(2) do |first, second|
+    div class="row-fluid"
+      - [first, second].each do |album|
+        = render :partial => 'album', :locals => { :album => album }
+- else
+  div class="well"
+    p class="text-center"
+      = t(".no_albums_yet")

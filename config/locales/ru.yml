@@ -356,6 +356,7 @@ ru:
     index:
       legend: "Альбомы"
       new_link: " Новый альбом"
+      no_albums_yet: "Здесь еще нет альбомов. Но скоро они появятся!"
     new:
       legend: "Создание нового альбома"
       create_article_button: "Создать"

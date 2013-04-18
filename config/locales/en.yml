@@ -89,6 +89,7 @@ en:
     index:
       legend: "Albums"
       new_link: " New album"
+      no_albums_yet: "There are no albums yet. They will appear soon!"
     new:
       legend: "New album"
       create_article_button: "Create"

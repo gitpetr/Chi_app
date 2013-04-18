@@ -1,0 +1,4 @@
+div class="span6"
+  -# There is situation when nil object (because of the slice) could be send. We should just ignore it.
+  - unless album.nil?
+    = image_tag "waterfall.jpg", :class => "album-preview"
