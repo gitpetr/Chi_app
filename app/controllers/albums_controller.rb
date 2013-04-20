@@ -32,5 +32,8 @@ class AlbumsController < ApplicationController
   end
 
   def destroy
+    @album.destroy
+    flash[:success] = t( :album_deleted_message )
+    redirect_to albums_path
   end
 end

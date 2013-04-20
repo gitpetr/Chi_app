@@ -281,6 +281,7 @@ ru:
   # Album
   album_created_message: "Альбом был успешно создан!"
   album_updated_message: "Альбом был успешно обновлен!"
+  album_deleted_message: "Альбом был успешно удален!"
 
   # Contact
   contact_updated_message: "Контакты успешно обновлены!"
@@ -364,6 +365,7 @@ ru:
       cancel: "Отмена"
     album:
       edit: "Редактировать"
+      delete: "Удалить"
     edit:
       legend: "Редактирование альбома"
       update_button: "Обновить"

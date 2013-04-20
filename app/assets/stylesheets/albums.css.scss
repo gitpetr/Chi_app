@@ -55,6 +55,11 @@ div.imageLabel {
       color: white;
       text-decoration: underline;
     }
+
+    a.destroy-link {
+      @extend a.edit-link;
+      padding-left:  4px;
+    }
   }
 
   div.album-label {

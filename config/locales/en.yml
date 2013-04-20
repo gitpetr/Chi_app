@@ -27,6 +27,7 @@ en:
   # Album
   album_created_message: "Album created successfully!"
   album_updated_message: "Album updated successfully!"
+  album_deleted_message: "Album deleted successfully!"
 
   # Contact
   contact_updated_message: "Contacts updated successfully!"
@@ -97,6 +98,7 @@ en:
       cancel: "Cancel"
     album:
       edit: "Edit"
+      delete: "Delete"
     edit:
       legend: "Edit album"
       update_button: "Update"

@@ -4,8 +4,9 @@ div class="span6"
     - if album.photos.empty?
       div class="imageLabel"
 
-        - if can? :edit, Album
+        - if can? [:edit, :destroy], Album
           div class="album-menu"
+            = link_to t(".delete"), album, :method => :delete, :class => "destroy-link"
             = link_to t(".edit"), edit_album_path( album ), :class => "edit-link"
 
         = image_tag "no-photos.jpg", :class => "album-preview"
