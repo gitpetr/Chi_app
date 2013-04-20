@@ -2,7 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+//----- Variables ----- //
+
 $album-preview-width: 400px;
+
+@mixin label-base {
+  padding: 4px;
+  left: 0;
+  right: 0;
+  color: white;
+  background-color: rgba(51, 51, 51, 0.75);                                                         // Gray transparent.
+}
+
+//----- CSS ----- //
 
 .album-new-button{
   float: right;
@@ -28,37 +40,19 @@ $album-preview-width: 400px;
 div.imageLabel {
   position: relative;
   width: $album-preview-width;
+
+  div.album-menu {
+    @include label-base;
+
+    position: absolute;
+    top: 30px;                                                                                      // Magic number to keep menu up.
+  }
+
+  div.album-label {
+    @include label-base;
+
+    position: absolute;
+    bottom: 0;
+  }
 }
 
-div.imageLabel div.album-menu {
-  position: relative;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 30px;                                                                                        // Magic number to keep menu up.
-  padding: 4px;
-}
-
-div.imageLabel div.album-menu {
-  color: white;
-  background-color: #333333;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-  filter: alpha(opacity=50);
-  opacity: 0.75;
-}
-
-div.imageLabel div.album-label {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 4px;
-}
-
-div.imageLabel div.album-label {
-  color: white;
-  background-color: #333333;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-  filter: alpha(opacity=50);
-  opacity: 0.75;
-}
