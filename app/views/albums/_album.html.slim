@@ -5,9 +5,13 @@ div class="span6"
       div class="imageLabel"
         = image_tag "no-photos.jpg", :class => "album-preview"
 
-        - unless album.description.blank?
+        - unless album.name.blank?
           div class="album-label"
-            = album.description
+            b
+              = album.name
+            - unless album.description.blank?
+              p
+                = album.description
 
 
 
