@@ -3,11 +3,13 @@ div class="span6"
   - unless album.nil?
     - if album.photos.empty?
       div class="imageLabel"
-        div class="album-menu" test
+
+        - if can? :edit, Album
+          div class="album-menu"
+            = link_to t(".edit"), edit_album_path( album ), :class => "edit-link"
 
         = image_tag "no-photos.jpg", :class => "album-preview"
 
-        -# Album's label.
         div class="album-label"
           b = album.name
           - unless album.description.blank?

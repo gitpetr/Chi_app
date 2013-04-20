@@ -280,6 +280,7 @@ ru:
 
   # Album
   album_created_message: "Альбом был успешно создан!"
+  album_updated_message: "Альбом был успешно обновлен!"
 
   # Contact
   contact_updated_message: "Контакты успешно обновлены!"
@@ -361,6 +362,12 @@ ru:
       legend: "Создание нового альбома"
       create_article_button: "Создать"
       cancel: "Отмена"
+    album:
+      edit: "Редактировать"
+    edit:
+      legend: "Редактирование альбома"
+      update_button: "Обновить"
+      cancel_button: "Отмена"
   layouts:
     application:
       title: "Преображение во Христе"

@@ -18,4 +18,19 @@ class AlbumsController < ApplicationController
       render 'new'
     end
   end
+
+  def edit
+  end
+
+  def update
+    if @album.update_attributes( params[:album] )
+      redirect_to albums_path
+      flash[:success] = t( :album_updated_message )
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+  end
 end

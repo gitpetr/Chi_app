@@ -1,0 +1,10 @@
+legend
+  = t(".legend")
+
+= simple_form_for @album do |f|
+  = render :partial => 'fields', :locals => { :f => f }
+
+  div class="form-actions"
+    = f.button :submit, t(".update_button"), :class => "btn btn-large btn-warning"
+    | &#32;
+    = link_to t(".cancel_button"), articles_path, :class => "btn btn-large"

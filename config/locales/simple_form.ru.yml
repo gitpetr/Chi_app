@@ -29,6 +29,9 @@ ru:
         new:
           name: "Имя"
           description: "Описание"
+        edit:
+          name: "Имя"
+          description: "Описание"
       contact:
         edit:
           chirch_name: "Имя церкви"

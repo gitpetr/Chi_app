@@ -7,11 +7,14 @@
 $album-preview-width: 400px;
 
 @mixin label-base {
-  padding: 4px;
+  padding-top:    2px;
+  padding-right:  4px;
+  padding-bottom: 2px;
+  padding-left:   8px;
   left: 0;
   right: 0;
   color: white;
-  background-color: rgba(51, 51, 51, 0.75);                                                         // Gray transparent.
+  background-color: rgba(51, 51, 51, 0.75);                                                         // Gry transparent.
 }
 
 //----- CSS ----- //
@@ -43,14 +46,19 @@ div.imageLabel {
 
   div.album-menu {
     @include label-base;
-
     position: absolute;
     top: 30px;                                                                                      // Magic number to keep menu up.
+
+    a.edit-link {
+      float: right;
+      padding-right: 4px;
+      color: white;
+      text-decoration: underline;
+    }
   }
 
   div.album-label {
     @include label-base;
-
     position: absolute;
     bottom: 0;
   }

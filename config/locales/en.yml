@@ -26,6 +26,7 @@ en:
 
   # Album
   album_created_message: "Album created successfully!"
+  album_updated_message: "Album updated successfully!"
 
   # Contact
   contact_updated_message: "Contacts updated successfully!"
@@ -94,6 +95,12 @@ en:
       legend: "New album"
       create_article_button: "Create"
       cancel: "Cancel"
+    album:
+      edit: "Edit"
+    edit:
+      legend: "Edit album"
+      update_button: "Update"
+      cancel_button: "Cancel"
   layouts:
     application:
       title: "Transfiguration in Christ"
