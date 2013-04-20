@@ -19,3 +19,32 @@
   max-height: 300px;
   padding-top: 30px;
 }
+
+
+//----- Label on album. ----- //
+
+div.imageLabel {
+  position: relative;
+  width: 400px;
+}
+
+div.imageLabel img {
+  z-index: 1;
+}
+
+div.imageLabel div {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 4px;
+}
+
+div.imageLabel div.album-label {
+  z-index: 2;
+  color: white;
+  background-color: #333333;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+  opacity: 0.75;
+}
