@@ -370,6 +370,11 @@ ru:
       legend: "Редактирование альбома"
       update_button: "Обновить"
       cancel_button: "Отмена"
+    delete:
+      modal_title: "Удаление альбома"
+      confirm_message: "Вы уверены, что хотите удалить альбом"
+      delete: "Удалить"
+      close: "Отменить"
   layouts:
     application:
       title: "Преображение во Христе"

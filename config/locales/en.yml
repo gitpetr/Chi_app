@@ -103,6 +103,11 @@ en:
       legend: "Edit album"
       update_button: "Update"
       cancel_button: "Cancel"
+    delete:
+      modal_title: "Album's deleting"
+      confirm_message: "Are you really want to delete the whole album?"
+      delete: "Destroy"
+      close: "Cancel"
   layouts:
     application:
       title: "Transfiguration in Christ"
