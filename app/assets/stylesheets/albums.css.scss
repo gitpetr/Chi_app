@@ -30,11 +30,24 @@ div.imageLabel {
   width: $album-preview-width;
 }
 
-div.imageLabel img {
-  z-index: 1;
+div.imageLabel div.album-menu {
+  position: relative;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 30px;                                                                                        // Magic number to keep menu up.
+  padding: 4px;
 }
 
-div.imageLabel div {
+div.imageLabel div.album-menu {
+  color: white;
+  background-color: #333333;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+  opacity: 0.75;
+}
+
+div.imageLabel div.album-label {
   position: absolute;
   left: 0;
   right: 0;
@@ -43,7 +56,6 @@ div.imageLabel div {
 }
 
 div.imageLabel div.album-label {
-  z-index: 2;
   color: white;
   background-color: #333333;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";

@@ -3,15 +3,15 @@ div class="span6"
   - unless album.nil?
     - if album.photos.empty?
       div class="imageLabel"
+        div class="album-menu" test
+
         = image_tag "no-photos.jpg", :class => "album-preview"
 
-        - unless album.name.blank?
-          div class="album-label"
-            b
-              = album.name
-            - unless album.description.blank?
-              p
-                = album.description
+        -# Album's label.
+        div class="album-label"
+          b = album.name
+          - unless album.description.blank?
+            p = album.description
 
 
 
