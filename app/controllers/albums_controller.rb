@@ -9,7 +9,9 @@ class AlbumsController < ApplicationController
   end
 
   def create
-    if @album.save
+    album = current_user.albums.create( params[:album] )
+
+    if album.save
       redirect_to albums_path
       flash[:success] = t( :album_created_message )
     else
