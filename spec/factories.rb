@@ -27,4 +27,10 @@ FactoryGirl.define do
     address 'Moscow'
     phone '111-222-333'
   end
+
+  factory :album do
+    name 'New album'
+    description 'Some data'
+    user
+  end
 end
