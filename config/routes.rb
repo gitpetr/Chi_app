@@ -11,9 +11,10 @@ ChirchApp::Application.routes.draw do
     end
 
     resources :articles
-    resources :photos
-    resources :albums, :except => [ :show ]
     resources :contacts, :only => [ :index, :edit, :update ]
+    resources :albums, :except => [ :show ] do
+      resources :photos
+    end
 
     match '/users_list', :to => 'stats#users_in_system'
 
