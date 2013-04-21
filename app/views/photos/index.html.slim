@@ -6,6 +6,7 @@ legend
   br/
 
 - unless @photos.empty?
+  = render :partial => 'slideshow_button', :locals => { :first_photo => @photos.first }
 
   / Photos: 3 in 1 line.
   div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery"
@@ -13,6 +14,8 @@ legend
       div class="row-fluid"
         - [a,b,c].each do |val|
           = render :partial => 'photo', :locals => { :photo => val }
+
+  = render :partial => 'slideshow', :locals => { :photos => @photos }
 - else
   div class="well"
     = t(".no_photos")
