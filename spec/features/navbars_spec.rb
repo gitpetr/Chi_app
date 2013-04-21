@@ -17,9 +17,9 @@ describe "Navbar" do
     current_path.should == "/ru/articles"
   end
 
-  it "should visit photos" do
-    click_link "navbar-photos"                                                                      # Click via id.
-    current_path.should == "/ru/photos"
+  it "should visit albums" do
+    click_link "navbar-albums"                                                                      # Click via id.
+    current_path.should == "/ru/albums"
   end
 
   it "should visit contacts" do

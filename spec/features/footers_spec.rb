@@ -13,9 +13,9 @@ describe "Footers" do
       current_path.should == "/ru/articles"
     end
 
-    it "should link to photos" do
-      click_link "footer-photos"                                                                    # Click via id.
-      current_path.should == "/ru/photos"
+    it "should link to albums" do
+      click_link "footer-albums"                                                                    # Click via id.
+      current_path.should == "/ru/albums"
     end
 
     it "should link to contacts" do
