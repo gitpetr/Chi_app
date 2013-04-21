@@ -1,5 +1,5 @@
 legend
-  = t(".legend")
+  = @album.name + ": " + t(".legend")
 
 = simple_form_for [@album, @photo] do |f|
   = f.input :description, :input_html => { :rows => "3", :class => "span9" }
