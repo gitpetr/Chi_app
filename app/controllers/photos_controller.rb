@@ -9,7 +9,6 @@ class PhotosController < ApplicationController
 
   def new
     @photo = @album.photos.new
-    puts @photo.inspect
   end
 
   def create
