@@ -4,8 +4,6 @@
 
 //----- Variables ----- //
 
-$album-preview-width: 400px;
-
 @mixin label-base {
   padding-top:    2px;
   padding-right:  4px;
@@ -32,7 +30,6 @@ $album-preview-width: 400px;
 }
 
 .album-preview {
-  max-width: $album-preview-width;
   max-height: 300px;
   padding-top: 30px;
 }
@@ -42,7 +39,7 @@ $album-preview-width: 400px;
 
 div.imageLabel {
   position: relative;
-  width: $album-preview-width;
+  max-width: 400px;                                                                                 // Should be equal to the size of album's preview.
 
   div.album-menu {
     @include label-base;
