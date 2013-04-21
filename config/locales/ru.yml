@@ -340,7 +340,7 @@ ru:
       legend: "Редактировать фотографию"
       update: "Обновить"
       cancel: "Отмена"
-    photo_item:
+    photo:
       change: " Изменить"
       edit: "Редактировать"
       delete: "Удалить"

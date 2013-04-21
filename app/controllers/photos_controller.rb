@@ -34,23 +34,30 @@ class PhotosController < ApplicationController
     end
   end
 
-  # def edit
-  # end
+  def edit
+    @photo = @album.photos.find( params[:id] )
+  end
 
-  # def update
-  #   if @photo.update_attributes( params[:photo] )
-  #     redirect_to photos_path
-  #     flash[:success] = t( :photo_updated_message )
-  #   else
-  #     render 'edit'
-  #   end
-  # end
+  def update
+    @photo = @album.photos.find( params[:id] )
 
-  # def destroy
-  #   @photo.destroy
-  #   flash[:success] = t( :photo_destroyed_message )
-  #   redirect_to photos_path
-  # end
+    if @photo.update_attributes( params[:photo] )
+      redirect_to album_photos_path( @album )
+      flash[:success] = t( :photo_updated_message )
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    @photo = @album.photos.find( params[:id] )
+
+    if @photo.destroy
+      flash[:success] = t( :photo_destroyed_message )
+    end
+
+    redirect_to album_photos_path( @album )
+  end
 
   private
     def load_album

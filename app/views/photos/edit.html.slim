@@ -1,0 +1,10 @@
+legend
+  = t(".legend")
+
+= simple_form_for [@album, @photo] do |f|
+  = f.input :description, :input_html => { :rows => "3", :class => "span9" }
+
+  div class="form-actions"
+    = f.button :submit, t(".update"), :class => "btn btn-large btn-warning"
+    | &#32;
+    = link_to t(".cancel"), album_photos_path( @album ), :class => "btn btn-large"

@@ -6,7 +6,13 @@ legend
   br/
 
 - unless @photos.empty?
-  | have data
+
+  / Photos: 3 in 1 line.
+  div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery"
+    - @photos.each_slice(3) do |a,b,c|
+      div class="row-fluid"
+        - [a,b,c].each do |val|
+          = render :partial => 'photo', :locals => { :photo => val }
 - else
   div class="well"
     = t(".no_photos")

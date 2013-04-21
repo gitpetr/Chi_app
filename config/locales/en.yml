@@ -75,7 +75,7 @@ en:
       legend: "Edit photo"
       update: "Update"
       cancel: "Cancel"
-    photo_item:
+    photo:
       change: " Change"
       edit: "Edit"
       delete: "Delete"
