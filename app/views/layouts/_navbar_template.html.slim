@@ -12,9 +12,6 @@ div class="navbar navbar-inverse"
         li class="#{active_link?( "articles", params[:controller] )}"
           = link_to t(".articles_link"), articles_path, :id => "navbar-articles"
 
-        / li class="#{active_link?( "photos", params[:controller] )}"
-        /   = link_to t(".photos_link"), photos_path, :id => "navbar-photos"
-
         li class="#{active_link?( "albums", params[:controller] )}"
           = link_to t(".albums_link"), albums_path, :id => "navbar-albums"
 
