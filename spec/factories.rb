@@ -20,6 +20,7 @@ FactoryGirl.define do
   factory :photo do
     description 'Photo name'
     image { fixture_file_upload("#{Rails.root}/spec/fixtures/files/violin.jpg", "image/jpeg") }
+    album
   end
 
   factory :contact do
