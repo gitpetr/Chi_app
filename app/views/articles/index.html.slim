@@ -1,7 +1,11 @@
 legend
   = t(".legend")
-- if can? :create, Article
-  = link_to t(".new_article_button"), new_article_path, :class => "btn btn-large btn-info btn-block"
+
+  - if can? :create, Article
+    = link_to new_article_path, :class => "btn btn-primary article-new-button" do
+      i class="icon-plus icon-white"
+      = t(".new_article_button")
+
 - if can? :read, Article
   - unless @articles.empty?
     - @articles.each do |a|

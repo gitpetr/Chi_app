@@ -306,7 +306,7 @@ ru:
   articles:
     index:
       legend: "Статьи"
-      new_article_button: "Создать новую статью"
+      new_article_button: " Создать новую статью"
       no_articles_message: "Здесь пока ничего нет."
     new:
       new_article_legend: "Новая статья"

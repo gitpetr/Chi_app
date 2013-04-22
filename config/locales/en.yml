@@ -42,7 +42,7 @@ en:
   articles:
     index:
       legend: "Articles"
-      new_article_button: "Create new article"
+      new_article_button: " Create new article"
       no_articles_message: "There is nothing to show here yet."
     new:
       new_article_legend: "New article"
