@@ -1,21 +1,35 @@
 div class="span6"
   -# There is situation when nil object (because of the slice) could be send. We should just ignore it.
   - unless album.nil?
-    / - if album.photos.empty?
-    div class="imageLabel"
+    - if album.photos.empty?
+      div class="imageLabel"
 
-      - if can? [:edit, :destroy], Album
-        div class="album-menu"
-          = link_to t(".delete"), "#", {:remote => true, :class => "destroy-link", 'data-toggle' => 'modal', 'data-target' => "#modal-window-#{album.id}", 'databackdrop' => true, 'data-keyboard' => true}
-          = link_to t(".edit"), edit_album_path( album ), :class => "edit-link"
+        - if can? [:edit, :destroy], Album
+          div class="album-menu"
+            = link_to t(".delete"), "#", {:remote => true, :class => "destroy-link", 'data-toggle' => 'modal', 'data-target' => "#modal-window-#{album.id}", 'databackdrop' => true, 'data-keyboard' => true}
+            = link_to t(".edit"), edit_album_path( album ), :class => "edit-link"
 
-      = link_to image_tag("no-photos.jpg", :class => "album-preview"), album_photos_path( album ), :class => "album-preview", :id => "album-#{album.id}"
+        = link_to image_tag("no-photos.jpg", :class => "album-preview"), album_photos_path( album ), :class => "album-preview", :id => "album-#{album.id}"
 
-      div class="album-label"
-        b = album.name
-        - unless album.description.blank?
-          p = album.description
+        div class="album-label"
+          b = album.name
+          - unless album.description.blank?
+            p = album.description
+    - else
+      div class="imageLabel"
 
+        - if can? [:edit, :destroy], Album
+          div class="album-menu"
+            = link_to t(".delete"), "#", {:remote => true, :class => "destroy-link", 'data-toggle' => 'modal', 'data-target' => "#modal-window-#{album.id}", 'databackdrop' => true, 'data-keyboard' => true}
+            = link_to t(".edit"), edit_album_path( album ), :class => "edit-link"
+
+        = link_to image_tag( album.photos.last.image_url(:album), :class => "album-preview" ), album_photos_path( album ), :class => "album-preview", :id => "album-#{album.id}"
+
+
+        div class="album-label"
+          b = album.name
+          - unless album.description.blank?
+            p = album.description
     = render :partial => 'delete', :locals => { :album => album }
 
 

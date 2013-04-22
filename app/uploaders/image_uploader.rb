@@ -12,7 +12,6 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # Choose what kind of storage to use for this uploader:
   storage :file
-  # storage :fog
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
@@ -29,15 +28,16 @@ class ImageUploader < CarrierWave::Uploader::Base
   # end
 
   # Process files as they are uploaded:
-  process :resize_to_limit => [800, 580]              # Second value should NOT be big to prevent overflow of slideshow block.
-
-  # def scale(width, height)
-  #   # do something
-  # end
+  # Second value should NOT be big to prevent overflow of slideshow block.
+  process :resize_to_limit => [800, 580]
 
   # Create different versions of your uploaded files:
   version :thumb do
     process :resize_to_limit => [200, 200]
+  end
+
+  version :album do
+    process :resize_to_limit => [400, 300]
   end
 
   # Add a white list of extensions which are allowed to be uploaded.
