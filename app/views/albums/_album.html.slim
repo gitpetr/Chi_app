@@ -9,7 +9,7 @@ div class="span6"
           = link_to t(".delete"), "#", {:remote => true, :class => "destroy-link", 'data-toggle' => 'modal', 'data-target' => "#modal-window-#{album.id}", 'databackdrop' => true, 'data-keyboard' => true}
           = link_to t(".edit"), edit_album_path( album ), :class => "edit-link"
 
-      = link_to image_tag("no-photos.jpg", :class => "album-preview"), album_photos_path( album ), :class => "album-preview"
+      = link_to image_tag("no-photos.jpg", :class => "album-preview"), album_photos_path( album ), :class => "album-preview", :id => "album-#{album.id}"
 
       div class="album-label"
         b = album.name

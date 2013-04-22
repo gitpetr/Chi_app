@@ -5,24 +5,26 @@ describe "Photos" do
   describe "For admin" do
     before(:each) do
       @admin = FactoryGirl.create( :admin )
+      @album = FactoryGirl.create( :album )
+      @photo = FactoryGirl.create( :photo, :album => @album )
 
       visit '/'
       click_link "Войти"
       fill_in "Ваш email",  :with => @admin.email
       fill_in "Пароль", :with => 'qwerty'
       click_button "Войти"
+      click_link "navbar-albums"                                                                  # Clicking by id.
+      click_link "album-#{@album.id}"
     end
 
     describe "Buttons" do
       it "should have button to create new photo" do
-        click_link "navbar-photos"                                                                  # Фотографии. Clicking by id.
         page.should have_selector( 'a', :text => 'Добавить фотографии' )
       end
     end
 
     describe "Creation" do
       before(:each) do
-        click_link "navbar-photos"                                                                  # Фотографии. Clicking by id.
         click_link "Добавить фотографии"
       end
 
@@ -42,9 +44,6 @@ describe "Photos" do
 
     describe "Updating" do
       it "should be done with valid attrs" do
-        @photo = FactoryGirl.create( :photo )
-
-        click_link "navbar-photos"                                                                  # Фотографии. Clicking by id.
         click_link "Изменить"
         click_link "Редактировать"
         fill_in "Описание",  :with => "Here is new description"
@@ -56,9 +55,6 @@ describe "Photos" do
 
     describe "Deleting" do
       it "should be done", :js => true do
-        @photo = FactoryGirl.create( :photo )
-
-        click_link "navbar-photos"                                                                  # Фотографии. Clicking by id.
         click_link "Изменить"
         click_link "Удалить"
 
