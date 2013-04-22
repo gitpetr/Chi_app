@@ -2,7 +2,7 @@ legend
   = @album.name + ": " + t(".legend")
 
 - if can? :create, Photo
-  = link_to t(".new_photo_button"), new_album_photo_path( @album ), :class => "btn btn-large btn-info btn-block"
+  = link_to t(".new_photo_button"), new_album_photo_path( @album ), :class => "btn btn-large btn-block"
   br/
 
 - unless @photos.empty?
