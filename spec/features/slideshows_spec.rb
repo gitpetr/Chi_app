@@ -4,6 +4,7 @@ require 'spec_helper'
 describe "Slideshows" do
   before(:each) do
     @admin = FactoryGirl.create( :admin )
+    @album = FactoryGirl.create( :album )
 
     visit '/'
     click_link "Войти"
@@ -11,13 +12,17 @@ describe "Slideshows" do
     fill_in "Пароль", :with => 'qwerty'
     click_button "Войти"
 
-    @text1 = "my super text1"; @text2 = "my super text2"
-    FactoryGirl.create( :photo, :description => @text1 )
+    @text1 = "my super text1"
+    @text2 = "my super text2"
+
+    FactoryGirl.create( :photo, :description => @text1, :album => @album, )
     FactoryGirl.create( :photo,
+                        :album       => @album,
                         :description => @text2,
                         :image => File.open(File.join( Rails.root, '/spec/fixtures/files/cello.jpg' )))
 
-    click_link "navbar-photos"                                                                      # Фотографии. Clicking by id.
+    click_link "navbar-albums"                                                                      # Фотографии. Clicking by id.
+    click_link "album-#{@album.id}"
   end
 
   describe "Slideshow button" do
@@ -28,10 +33,9 @@ describe "Slideshows" do
     end
 
     it "should move to other slide by clicking in arrow", :js => true  do
-      page.should have_selector('p', :text => @text1)
-
-      click_link "›"
       page.should have_selector('p', :text => @text2)
+      click_link "›"
+      page.should have_selector('p', :text => @text1)
     end
 
     it "should hide modal window when user click x-arrow", :js => true do
