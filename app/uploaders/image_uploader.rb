@@ -36,8 +36,9 @@ class ImageUploader < CarrierWave::Uploader::Base
     process :resize_to_limit => [200, 200]
   end
 
+  # Slice part of image to fill the area.
   version :album do
-    process :resize_to_limit => [400, 300]
+    process :resize_to_fill => [400, 300]
   end
 
   # Add a white list of extensions which are allowed to be uploaded.
