@@ -81,8 +81,6 @@ en:
       delete: "Delete"
     slideshow:
       slides: "Slides"
-    slideshow_button:
-      slideshow: "Slideshow "
   contacts:
     index:
       legend: "Our contacts"

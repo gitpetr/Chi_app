@@ -6,7 +6,8 @@ legend
   br/
 
 - unless @photos.empty?
-  = render :partial => 'slideshow_button', :locals => { :first_photo => @photos.first }
+  = slideshow_btn( @photos.first )
+  br/
 
   / Photos: 3 in 1 line.
   div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery"
