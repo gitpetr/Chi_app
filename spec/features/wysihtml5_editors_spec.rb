@@ -12,7 +12,7 @@ describe "Wysihtml5Editors" do
     click_button "Войти"
 
     click_link "navbar-articles"                                                                    # Статьи. Clicking by id.
-    click_link "Создать новую статью"
+    click_link "Новая статья"
   end
 
   describe "Panel" do

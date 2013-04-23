@@ -9,7 +9,7 @@ legend
 - if can? :read, Article
   - unless @articles.empty?
     - @articles.each do |a|
-      = render :partial => 'article_item', :locals => { :article => a }
+      = render :partial => 'article', :locals => { :article => a }
     = paginate @articles
 
 - if Article.first.nil?

@@ -42,7 +42,7 @@ en:
   articles:
     index:
       legend: "Articles"
-      new_article_button: " Create new article"
+      new_article_button: " New article"
       no_articles_message: "There is nothing to show here yet."
     new:
       new_article_legend: "New article"
@@ -58,7 +58,7 @@ en:
       delete: "Delete"
       confirm_message: "Are you sure you want do delete"
       close: "Close"
-    article_item:
+    article:
       read_article: "Read more "
   photos:
     index:
@@ -147,7 +147,7 @@ en:
       true_field: "Yes"
       false_field: "No"
   shared:
-    article_item:
+    article:
       read_article: "Read more"
   ##################################
   # MODELS

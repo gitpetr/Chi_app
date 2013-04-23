@@ -306,7 +306,7 @@ ru:
   articles:
     index:
       legend: "Статьи"
-      new_article_button: " Создать новую статью"
+      new_article_button: " Новая статья"
       no_articles_message: "Здесь пока ничего нет."
     new:
       new_article_legend: "Новая статья"
@@ -323,7 +323,7 @@ ru:
       confirm_message: "Вы уверены, что хотите удалить"
       close: "Отмена"
       modal_title: "Удаление статьи"
-    article_item:
+    article:
       read_article: "Читать дальше "
   photos:
     index:
@@ -411,7 +411,7 @@ ru:
       true_field: "Да"
       false_field: "Нет"
   shared:
-    article_item:
+    article:
       read_article: "Читать дальше"
   ##################################
   # MODELS

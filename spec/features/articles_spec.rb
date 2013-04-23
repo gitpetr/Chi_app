@@ -15,7 +15,7 @@ describe "Articles" do
   describe "Buttons" do
     it "should have button to create new article" do
       page.find("#navbar-articles").click                                                           # Статьи.
-      page.should have_selector( 'a', :text => 'Создать новую статью' )
+      page.should have_selector( 'a', :text => 'Новая статья' )
     end
 
     describe "Change" do
@@ -45,7 +45,7 @@ describe "Articles" do
     it "should be done with valid attrs" do
       expect do
         page.find("#navbar-articles").click                                                         # Статьи.
-        click_link "Создать новую статью"
+        click_link "Новая статья"
         fill_in "Заголовок",  :with => "random text"
         fill_in "Текст статьи",  :with => "random text"
         click_button "Создать"
