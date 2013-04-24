@@ -16,7 +16,7 @@ div class="span6"
         b = album.name
         - unless album.description.blank?
           p class="label-preview-big" style="display: none;"
-            = truncate( album.description, :length => 200, :separator => ' ' )
+            = truncate( album.description, :length => 400, :separator => ' ' )
           p class="label-preview-small"
             = truncate( album.description, :length => 65, :separator => ' ' )
 

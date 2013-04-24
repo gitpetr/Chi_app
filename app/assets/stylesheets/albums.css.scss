@@ -30,7 +30,6 @@
 }
 
 .album-preview {
-  max-height: 300px;
   padding-top: 30px;
 }
 
@@ -61,6 +60,7 @@ div.imageLabel {
 
   div.album-label {
     @include label-base;
+    max-height: 65%;                                                                                // Full description doesn't go outside of the album preview.
     position: absolute;
     bottom: 0;
   }
