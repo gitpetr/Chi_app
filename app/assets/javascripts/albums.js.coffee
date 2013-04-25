@@ -3,11 +3,19 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 jQuery ->
-  # Show and hide description on mouse events.
+  # ------- Global variables. -------
+  root = exports ? this
+  root.animation_speed = 385
+
+  # ------- Methods -------
   $(document).on "mouseenter", ".imageLabel", ->
-    $(this).find('p.label-preview-small').toggle()
-    $(this).find('p.label-preview-big').toggle()
+    toggleLabels $(this)
 
   $(document).on "mouseleave", ".imageLabel", ->
-    $(this).find('p.label-preview-small').toggle()
-    $(this).find('p.label-preview-big').toggle()
+    toggleLabels $(this)
+
+  # Show and hide description on mouse events.
+  toggleLabels = (this_elem) ->
+    if this_elem.find('p.label-preview-big').text().length > 65
+      this_elem.find('p.label-preview-small').toggle( root.animation_speed )
+      this_elem.find('p.label-preview-big').toggle( root.animation_speed )
