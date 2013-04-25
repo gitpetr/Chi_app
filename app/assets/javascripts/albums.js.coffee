@@ -8,10 +8,10 @@ jQuery ->
   root.animation_speed = 385
 
   # ------- Methods -------
-  $(document).on "mouseenter", ".imageLabel", ->
+  $(document).on "mouseenter", ".imageWithLabel", ->
     toggleLabels $(this)
 
-  $(document).on "mouseleave", ".imageLabel", ->
+  $(document).on "mouseleave", ".imageWithLabel", ->
     toggleLabels $(this)
 
   # Show and hide description on mouse events.

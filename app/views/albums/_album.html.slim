@@ -1,7 +1,7 @@
 div class="span6"
   -# There is situation when nil object (because of the slice) could be send. We should just ignore it.
   - unless album.nil?
-    div class="imageLabel"
+    div class="imageWithLabel"
       - if can? [:edit, :destroy], Album
         div class="album-menu"
           = link_to t(".delete"), "#", {:remote => true, :class => "destroy-link", 'data-toggle' => 'modal', 'data-target' => "#modal-window-#{album.id}", 'databackdrop' => true, 'data-keyboard' => true}
