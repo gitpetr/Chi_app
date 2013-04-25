@@ -2,8 +2,8 @@ div.span4
   -# There is situation when nil object can be send to this particle. We should just to ignore it.
   - unless photo.nil?
     - if can? [:edit, :destroy], Photo
-      -# To align it right we first of all should make box of chosen size where we will align.
-      div class="photo-item" id="#{photo.id}"
+      -# To align edit button we first of all should make box of chosen size where we will align.
+      div class="button-wrapper" id="#{photo.id}"
         div.photo-edit-button
           div.btn-group
             = link_to "#", :class => "btn dropdown-toggle", "data-toggle" => "dropdown" do
