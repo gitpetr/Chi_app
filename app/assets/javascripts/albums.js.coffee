@@ -16,6 +16,6 @@ jQuery ->
 
   # Show and hide description on mouse events.
   toggleLabels = (this_elem) ->
-    if this_elem.find('p.label-preview-big').text().length > gon.small_preview_size
+    if this_elem.find('p.label-preview-big').text().length > gon.small_preview_size                 # Checking that full description is BIGGER then a small one.
       this_elem.find('p.label-preview-small').toggle( root.animation_speed )
       this_elem.find('p.label-preview-big').toggle( root.animation_speed )
