@@ -1,8 +1,13 @@
 # encoding: UTF-8
 namespace :db do
   desc "Fill database with test admin user."
-  task :create_admin => :environment do
-    make_admin
+  task :create_test_admin => :environment do
+    make_test_admin
+  end
+
+  desc "Destroy test admin user"
+  task :destroy_test_admin => :environment do
+    destroy_test_admin
   end
 
   desc "Create team of maintainers."
@@ -11,10 +16,15 @@ namespace :db do
   end
 end
 
-def make_admin
+def make_test_admin
   admin = User.new( :email => "qwerty@qwerty.com", :password => "qwerty" )
   admin.admin = true
   admin.save!
+end
+
+def destroy_test_admin
+  admin = User.find_by_email "qwerty@qwerty.com"
+  admin.destroy unless admin.nil?
 end
 
 def create_admins_team
