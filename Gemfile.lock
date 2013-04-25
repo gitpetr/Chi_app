@@ -99,6 +99,9 @@ GEM
     ffi (1.7.0)
     formatador (0.2.4)
     gmaps4rails (1.5.6)
+    gon (3.0.5)
+      actionpack (>= 2.3.0)
+      json
     guard (1.7.0)
       formatador (>= 0.2.4)
       listen (>= 0.6.0)
@@ -284,6 +287,7 @@ DEPENDENCIES
   devise (= 2.2.3)
   factory_girl_rails (= 4.2.1)
   gmaps4rails (= 1.5.6)
+  gon (= 3.0.5)
   guard-rspec (= 2.5.2)
   haml (= 4.0.2)
   haml2slim

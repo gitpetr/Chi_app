@@ -18,7 +18,7 @@ div class="span6"
           p class="label-preview-big" style="display: none;"
             = truncate( album.description, :length => 400, :separator => ' ' )
           p class="label-preview-small"
-            = truncate( album.description, :length => 65, :separator => ' ' )
+            = truncate( album.description, :length => @small_preview_size, :separator => ' ' )
 
     = render :partial => 'delete', :locals => { :album => album }
 
