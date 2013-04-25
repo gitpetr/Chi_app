@@ -2,6 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+//---------- Variables ---------- //
+
+$modal-height: 680px;
+
+//---------- CSS ---------- //
+
 .button-wrapper{
   max-width: 300px;
 }
@@ -18,7 +24,7 @@ img.photo{
 // Modal window to show slideshow.
 .modal-huge {
   width: 800px;
-  height: 680px;
+  height: $modal-height;
   background-clip: padding-box;
   background-color: #FFFFFF;
   border: 1px solid rgba(0, 0, 0, 0.3);
@@ -33,7 +39,7 @@ img.photo{
 }
 
 .modal-huge-body{
-  max-height: 680px;
+  max-height: $modal-height;
   overflow-y: auto;
   padding: 15px;
 }
