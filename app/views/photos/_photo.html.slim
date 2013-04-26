@@ -1,7 +1,7 @@
 div.span4
   -# There is situation when nil object can be send to this particle. We should just to ignore it.
   - unless photo.nil?
-    div class="imageWithLabel"
+    div class="photo-with-label"
       - if can? [:edit, :destroy], Photo
         div class="photo-menu"
           = link_to t(".delete"), [@album, photo], :method => :delete, :class => "edit-link"
