@@ -131,7 +131,7 @@ en:
       settings: "Settings"
     admin_panel:
       users_link: "Users"
-      stats_header: "Statistics"
+      panel_header: "Admin's panel"
       data_header: "Materials"
       articles_link: "Articles"
       modal_title: "Article deleting"

@@ -395,7 +395,7 @@ ru:
       brand_name: "Преображение во Христе"
       settings: "Настройки"
     admin_panel:
-      stats_header: "Статистика"
+      panel_header: "Панель администратора"
       users_link: "Пользователи"
       data_header: "Материалы"
       articles_link: "Статьи"
