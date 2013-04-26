@@ -8,14 +8,6 @@ $modal-height: 680px;
 
 //---------- CSS ---------- //
 
-.button-wrapper{
-  max-width: 300px;
-}
-
-.photo-edit-button{
-  float: right;
-}
-
 img.photo{
   padding-top: 5px;
   cursor: pointer;
@@ -47,3 +39,35 @@ img.photo{
 // Centering the image in the carousel.
 .carousel-inner { text-align: center; }
 .carousel .item > img { display: inline-block; }
+
+//----- Label on image. ----- //
+
+div.imageWithLabel {
+  position: relative;
+  max-width: 300px;                                                                                 // Should be equal to the size of photo's preview.
+
+  div.photo-menu {
+    padding-top:    2px;
+    padding-right:  4px;
+    padding-bottom: 2px;
+    padding-left:   8px;
+    left: 0;
+    right: 0;
+    color: white;
+    background-color: rgba(51, 51, 51, 0.60);                                                       // Gry transparent.
+    position: absolute;
+    top: 5px;                                                                                       // Magic number to keep menu up.
+
+    a.edit-link {
+      float: right;
+      padding-right: 4px;
+      color: white;
+      text-decoration: underline;
+    }
+
+    a.destroy-link {
+      @extend a.edit-link;
+      padding-left:  4px;
+    }
+  }
+}
