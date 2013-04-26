@@ -44,7 +44,6 @@ describe "Photos" do
 
     describe "Updating" do
       it "should be done with valid attrs" do
-        click_link "Изменить"
         click_link "Редактировать"
         fill_in "Описание",  :with => "Here is new description"
         click_button "Обновить"
@@ -54,8 +53,7 @@ describe "Photos" do
     end
 
     describe "Deleting" do
-      it "should be done", :js => true do
-        click_link "Изменить"
+      it "should be done" do
         click_link "Удалить"
 
         page.should have_css('div.alert.alert-success')
