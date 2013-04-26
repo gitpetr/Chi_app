@@ -327,7 +327,7 @@ ru:
       read_article: "Читать дальше "
   photos:
     index:
-      legend: "Фотографии"
+      legend: "Альбомы"
       new_photo_button: "Добавить фотографии"
       no_photos: "Здесь пока ничего нет."
       slideshow: "Показать фотографии "

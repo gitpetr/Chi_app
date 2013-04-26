@@ -62,7 +62,7 @@ en:
       read_article: "Read more "
   photos:
     index:
-      legend: "Photos"
+      legend: "Albums"
       new_photo_button: "Add new photos"
       no_photos: "There is nothing to show here yet."
       slideshow: "Slideshow "
