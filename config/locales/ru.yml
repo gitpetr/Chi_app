@@ -371,7 +371,7 @@ ru:
       delete: "Удалить"
       close: "Отменить"
   layouts:
-    application:
+    head:
       title: "Преображение во Христе"
     noscript:
       title: "Внимание!"

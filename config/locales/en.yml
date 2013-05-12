@@ -106,7 +106,7 @@ en:
       delete: "Destroy"
       close: "Cancel"
   layouts:
-    application:
+    head:
       title: "Transfiguration in Christ"
     noscript:
       title: "Warning!"
