@@ -6,7 +6,7 @@ describe "Slideshows" do
     @admin = FactoryGirl.create( :admin )
     @album = FactoryGirl.create( :album )
 
-    visit '/'
+    visit root_path( :locale => "ru" )
     click_link "Войти"
     fill_in "Ваш email",  :with => @admin.email
     fill_in "Пароль", :with => 'qwerty'

@@ -5,7 +5,7 @@ describe "Admins" do
   before(:each) do
     @admin = FactoryGirl.create(:admin)
 
-    visit '/'
+    visit root_path( :locale => "ru" )
     click_link "Войти"
     fill_in "Ваш email",  :with => @admin.email
     fill_in "Пароль", :with => 'qwerty'
@@ -15,7 +15,7 @@ describe "Admins" do
   describe "Admin panel" do
     it "should have correct links" do
       click_link "Пользователи"
-      current_path.should == "/ru/users_list"
+      current_path.should == users_list_path( :locale => "ru" )
     end
   end
 end

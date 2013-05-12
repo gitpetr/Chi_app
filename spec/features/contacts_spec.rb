@@ -6,7 +6,7 @@ describe "Contacts" do
     @admin = FactoryGirl.create(:admin)
     @contact = FactoryGirl.create(:contact)
 
-    visit '/'
+    visit root_path( :locale => "ru" )
     click_link 'Войти'
     fill_in 'Ваш email',  :with => @admin.email
     fill_in 'Пароль', :with => 'qwerty'

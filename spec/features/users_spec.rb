@@ -5,7 +5,7 @@ describe "Users" do
   before(:each) do
     @user = FactoryGirl.create(:user)
 
-    visit '/'
+    visit root_path( :locale => "ru" )
     click_link "Войти"
   end
 

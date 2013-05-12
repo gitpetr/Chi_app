@@ -8,7 +8,7 @@ describe "Photos" do
       @album = FactoryGirl.create( :album )
       @photo = FactoryGirl.create( :photo, :album => @album )
 
-      visit '/'
+      visit root_path( :locale => "ru" )
       click_link "Войти"
       fill_in "Ваш email",  :with => @admin.email
       fill_in "Пароль", :with => 'qwerty'

@@ -3,7 +3,7 @@ require 'spec_helper'
 
 describe "Titles" do
   before(:each) do
-    visit '/'
+    visit root_path( :locale => "ru" )
   end
 
   it "should have title with 'ru' locale" do
@@ -11,7 +11,7 @@ describe "Titles" do
   end
 
   it "should have title with 'en' locale" do
-    visit '/en/articles'
+    visit root_path( :locale => "en" )
 
     expect(page).to have_title "Transfiguration in Christ"
   end

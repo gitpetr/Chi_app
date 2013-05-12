@@ -5,7 +5,7 @@ describe "Paginations" do
   describe "Articles" do
     before(:each) do
       6.times{ FactoryGirl.create(:article) }
-      visit '/'
+      visit root_path( :locale => "ru" )
       click_link "navbar-articles"                                                                  # Статьи. Clicking by id.
     end
 
