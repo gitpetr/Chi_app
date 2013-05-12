@@ -12,13 +12,12 @@ ChirchApp::Application.routes.draw do
 
     resources :articles
     resources :contacts, :only => [ :index, :edit, :update ]
+    resources :homes,    :only => [ :index ]
     resources :albums, :except => [ :show ] do
       resources :photos
     end
 
     match '/users_list', :to => 'stats#users_in_system'
-
-    get "pages/home"
 
     root :to => 'articles#index'
   end

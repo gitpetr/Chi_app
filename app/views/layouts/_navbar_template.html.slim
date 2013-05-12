@@ -9,8 +9,8 @@ div class="navbar navbar-inverse"
     div class="nav-collapse"
       / Left navigation.
       ul class="nav"
-        li class="#{ active_link?( :controllers => ["pages#home"] ) }"
-          = link_to t(".home_link"), pages_home_path, :id => "navbar-contacts"
+        li class="#{ active_link?( :controllers => ["homes"] ) }"
+          = link_to t(".home_link"), homes_path, :id => "navbar-contacts"
 
         li class="#{ active_link?( :controllers => ["articles"] ) }"
           = link_to t(".articles_link"), articles_path, :id => "navbar-articles"
