@@ -1,4 +1,4 @@
-/* Layout styles. */
+/* Layout styles: global */
 body {
   background-image: image-url("theme.png");
   background-color: #e4e4e4;
@@ -8,16 +8,34 @@ legend, hr {
   border-bottom: 1px solid #AAAAAA;
 }
 
-.content {
-  background-color: white;
-}
-
 .content-inner {
   margin-top:    30px;
   margin-right:  30px;
   margin-left:   30px;
   margin-bottom: 30px;
 }
+
+/* Layout styles: application.html.slim */
+.content {
+  background-color: white;
+}
+
+/* Layout styles: home.html.slim */
+.home-welcome-content {
+  @extend .content;
+}
+
+// Paddings are hacks to make div bigger. Otherwise admin's panel goes down and it doesn't look good.
+.home-welcome-text{
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.home-photos-content {
+  @extend .content;
+  margin-top: 25px;
+}
+
 
 /* Text's aligning inside of the table. */
 table.text-center > thead > tr > th {

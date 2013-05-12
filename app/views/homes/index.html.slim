@@ -1,2 +1,8 @@
-h1 Homes#index
-p Find me in app/views/homes/index.html.slim
+- content_for :welcome do
+  div class="home-welcome-text"
+    h1 Homes#index
+    p Find me in app/views/homes/index.html.slim
+
+- content_for :photos do
+  h1 Text
+  p Photos
