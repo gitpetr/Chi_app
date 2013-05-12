@@ -1,0 +1,5 @@
+/ Show flash message which can be closed by small x button.
+- flash.each do |key, msg|
+  div class="alert alert-#{key}"
+    button type="button" class="close" data-dismiss="alert" ×
+    = msg
