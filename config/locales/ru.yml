@@ -298,11 +298,6 @@ ru:
   ##################################
   # VIEWS
   ##################################
-  pages:
-    home:
-      title: "Тестовый заголовок"
-    about:
-      title: "О нас"
   articles:
     index:
       legend: "Статьи"
@@ -387,6 +382,7 @@ ru:
       albums_link: "Альбомы"
       contacts_link: "Контакты"
     navbar_template:
+      home_link: "Главная"
       articles_link: "Статьи"
       photos_link: "Фотографии"
       albums_link: "Альбомы"

@@ -34,11 +34,6 @@ en:
   ##################################
   # VIEWS
   ##################################
-  pages:
-    home:
-      title: "Test title"
-    about:
-      title: "About us"
   articles:
     index:
       legend: "Articles"
@@ -122,6 +117,7 @@ en:
       photos_link: "Photos"
       contacts_link: "Contacts"
     navbar_template:
+      home_link: "Home"
       articles_link: "Articles"
       photos_link: "Photos"
       albums_link: "Albums"
