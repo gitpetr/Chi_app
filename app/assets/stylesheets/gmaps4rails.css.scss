@@ -1,3 +1,10 @@
+//----- Variables ----- //
+
+$map-size: 860px;
+
+
+//----- CSS ----- //
+
 .map_container {
   padding: 6px;
   border-width: 1px;
@@ -6,11 +13,11 @@
   -webkit-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
   -moz-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
   box-shadow: rgba(64, 64, 64, 0.1) 0 2px 5px;
-  max-width: 800px;
+  max-width: $map-size;
 }
 
 .gmaps4rails_map {
-  max-width: 800px;
+  max-width: $map-size;
   height: 400px;
 }
 
