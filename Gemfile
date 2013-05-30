@@ -35,10 +35,11 @@ end
 group :development do
   gem 'webrick', '1.3.1'                                                                            # Standart server. I specify it to remove warning from logs.
   gem 'annotate', '~> 2.5.0'
-  gem 'better_errors'                                                                               # Show errors with better output.
-  gem 'binding_of_caller'                                                                           # Advance better errors.
-  gem 'brakeman'                                                                                    # Checking for secure vulnerabilities.
-  gem 'meta_request'                                                                                # Panel in chrome to debug rails apps.
+  gem 'better_errors', '0.8.0'                                                                      # Show errors with better output.
+  gem 'binding_of_caller', '0.7.1'                                                                  # Advance better errors.
+  gem 'brakeman', '1.9.5'                                                                           # Checking for secure vulnerabilities.
+  gem 'meta_request', '0.2.5'                                                                       # Panel in chrome to debug rails apps.
+  gem 'quiet_assets', '1.0.2'                                                                       # Don't show assets messages.
 end
 
 group :development, :test do
