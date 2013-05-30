@@ -131,6 +131,8 @@ en:
       data_header: "Materials"
       articles_link: "Articles"
       modal_title: "Article deleting"
+    home:
+      last-photos: "Last uploaded photos"
   stats:
     users_in_system:
       legend: "List of users"

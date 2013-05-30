@@ -395,6 +395,8 @@ ru:
       users_link: "Пользователи"
       data_header: "Материалы"
       articles_link: "Статьи"
+    home:
+      last-photos: "Последние загруженные фотографии"
   stats:
     users_in_system:
       legend: "Список пользователей"

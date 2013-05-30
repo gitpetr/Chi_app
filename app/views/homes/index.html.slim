@@ -1,8 +1,11 @@
 - content_for :welcome do
   div class="home-welcome-text"
-    h1 Homes#index
+    h1 Welcome!
     p Find me in app/views/homes/index.html.slim
 
 - content_for :photos do
-  h1 Text
-  p Photos
+  div class="row-fluid"
+    div class="span6"
+      = image_tag @photos.first.image_url(:album)
+    div class="span6"
+      = image_tag @photos.last.image_url(:album)
