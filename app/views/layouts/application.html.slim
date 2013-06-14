@@ -9,16 +9,21 @@ html
 
       div class="container-fluid"
         div class="row-fluid"
-          div class="span1"
+          div class="span2 sidebar"
+            div class="pagination-centered"
+              = link_to image_tag( "rus-icon.png", :id => "ru_flag" ), locale: "ru"
+              | &#32;
+              = link_to image_tag( "us-icon.png", :id => "us_flag" ), locale: "en"
+
+            - if user_signed_in? and current_user.admin?
+              = render 'layouts/admin_panel'
           div class="span8 content"
             div class="content-inner"
               = render 'layouts/flash_message'
 
               / Body of the view.
               = yield
-          div class="span2 sidebar"
-            = render 'layouts/sidebar_top'
-          div class="span1"
+          div class="span2"
       div id="push"
 
     = render 'layouts/footer'
