@@ -4,8 +4,9 @@
     p Find me in app/views/homes/index.html.slim
 
 - content_for :photos do
-  div class="row-fluid"
-    div class="span6"
-      = image_tag @photos.first.image_url(:album)
-    div class="span6"
-      = image_tag @photos.last.image_url(:album)
+  - unless Photo.first.nil?
+    div class="row-fluid"
+      div class="span6"
+        = image_tag @photos.first.image_url(:album)
+      div class="span6"
+        = image_tag @photos.last.image_url(:album)
