@@ -15,7 +15,14 @@ html
 
       div class="container-fluid"
         div class="row-fluid"
-          div class="span1"
+          div class="span2 sidebar"
+            p
+              = link_to image_tag( "rus-icon.png", :id => "ru_flag" ), locale: "ru"
+              | &#32;
+              = link_to image_tag( "us-icon.png", :id => "us_flag" ), locale: "en"
+
+            - if user_signed_in? and current_user.admin?
+              = render 'layouts/admin_panel'
           div class="span8 content"
             div class="content-inner"
               / Show flash message which can be closed by small x button.
@@ -26,15 +33,7 @@ html
 
               / Body of the view.
               = yield
-          div class="span2 sidebar"
-            p
-              = link_to image_tag( "rus-icon.png", :id => "ru_flag" ), locale: "ru"
-              | &#32;
-              = link_to image_tag( "us-icon.png", :id => "us_flag" ), locale: "en"
-
-            - if user_signed_in? and current_user.admin?
-              = render 'layouts/admin_panel'
-          div class="span1"
+          div class="span2"
       div id="push"
 
     = render 'layouts/footer'
