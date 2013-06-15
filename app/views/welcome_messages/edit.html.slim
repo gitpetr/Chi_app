@@ -8,3 +8,10 @@ legend
     = f.button :submit, t(".update_button"), :class => "btn btn-large btn-warning"
     | &#32;
     = link_to t(".cancel_button"), root_path, :class => "btn btn-large"
+
+- if I18n.locale.to_s == "ru"
+  javascript:
+    $('#welcome_message_content').wysihtml5({locale: "ru-RU"});
+- elsif I18n.locale.to_s == "en"
+  javascript:
+    $('#welcome_message_content').wysihtml5();

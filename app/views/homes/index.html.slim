@@ -2,7 +2,7 @@
   div class="home-welcome-text"
     - unless @welcome_message.nil?
       p
-        = @welcome_message.content
+        == @welcome_message.content
       = link_to "Edit", edit_welcome_message_path( @welcome_message )
 
 - content_for :photos do
