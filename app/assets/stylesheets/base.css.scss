@@ -1,4 +1,12 @@
-/* Layout styles: global */
+/* -------- Layout styles: global -------- */
+
+// Fix to set max size.
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1200px;
+}
+
 body {
   background-image: image-url("theme.png");
   background-color: #e4e4e4;
@@ -15,12 +23,12 @@ legend, hr {
   margin-bottom: 30px;
 }
 
-/* Layout styles: application.html.slim */
+/* -------- Layout styles: application.html.slim -------- */
 .content {
   background-color: white;
 }
 
-/* Layout styles: home.html.slim */
+/* -------- Layout styles: home.html.slim -------- */
 .home-welcome-content {
   @extend .content;
 }
