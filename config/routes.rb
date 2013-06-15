@@ -19,11 +19,11 @@ ChirchApp::Application.routes.draw do
 
     match '/users_list', :to => 'stats#users_in_system'
 
-    root :to => 'articles#index'
+    root :to => 'homes#index'
   end
 
   match '*path', to: redirect("/#{I18n.default_locale}/%{path}"), constraints: lambda { |req| !req.path.starts_with? "/#{I18n.default_locale}/" }
-  match '', to: redirect("/#{I18n.default_locale}/articles")                              # Redirect default to articles.
+  match '', to: redirect("/#{I18n.default_locale}/homes")                                           # Redirect as a default to home page.
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
