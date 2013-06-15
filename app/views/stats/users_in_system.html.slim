@@ -16,8 +16,8 @@ table class="table table-striped table-bordered text-center"
         td = user.email
         td
           - if user.admin?
-            font color="red"
-              = t(".true_field")
+            font color="blue"
+              b = t(".true_field")
           - else
             = t(".false_field")
         td = user.sign_in_count
