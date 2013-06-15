@@ -1,7 +1,9 @@
 - content_for :welcome do
   div class="home-welcome-text"
-    h1 Welcome!
-    p Find me in app/views/homes/index.html.slim
+    - unless @welcome_message.nil?
+      p
+        = @welcome_message.content
+      = link_to "Edit", edit_welcome_message_path( @welcome_message )
 
 - content_for :photos do
   - unless Photo.first.nil?

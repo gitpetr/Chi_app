@@ -11,8 +11,10 @@ ChirchApp::Application.routes.draw do
     end
 
     resources :articles
-    resources :contacts, :only => [ :index, :edit, :update ]
-    resources :homes,    :only => [ :index ]
+    resources :contacts,         :only => [ :index, :edit, :update ]
+    resources :welcome_messages, :only => [ :edit, :update ]
+    resources :homes,            :only => [ :index ]
+
     resources :albums, :except => [ :show ] do
       resources :photos
     end
