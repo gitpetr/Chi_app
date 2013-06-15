@@ -150,6 +150,9 @@ en:
   shared:
     article:
       read_article: "Read more"
+  homes:
+    index:
+      edit_link: " Edit"
   welcome_messages:
     edit:
       legend: "Editing welcome words"

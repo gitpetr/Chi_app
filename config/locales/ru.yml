@@ -414,6 +414,9 @@ ru:
   shared:
     article:
       read_article: "Читать дальше"
+  homes:
+    index:
+      edit_link: " Редактировать"
   welcome_messages:
     edit:
       legend: "Редактирование приветствия"
