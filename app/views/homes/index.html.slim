@@ -7,6 +7,6 @@
   - unless Photo.first.nil?
     div class="row-fluid"
       div class="span6"
-        = image_tag @photos.first.image_url(:album)
+        = image_tag @photos.first.image_url(:album), :class => "home-photo"
       div class="span6"
-        = image_tag @photos.last.image_url(:album)
+        = image_tag @photos.last.image_url(:album), :class => "home-photo"
