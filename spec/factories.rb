@@ -34,4 +34,8 @@ FactoryGirl.define do
     description 'Some data'
     user
   end
+
+  factory :welcome_message do
+    content 'I am batman'
+  end
 end
