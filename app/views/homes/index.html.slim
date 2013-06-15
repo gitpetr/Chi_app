@@ -1,9 +1,10 @@
 - content_for :welcome do
   div class="home-welcome-text"
     - unless @welcome_message.nil?
-      = link_to edit_welcome_message_path( @welcome_message ), :class => "btn welcome-message-edit-button" do
-        i class="icon-pencil icon-white"
-        = t(".edit_link")
+      - if can? :edit, WelcomeMessage
+        = link_to edit_welcome_message_path( @welcome_message ), :class => "btn welcome-message-edit-button" do
+          i class="icon-pencil icon-white"
+          = t(".edit_link")
       p
         == @welcome_message.content
 
