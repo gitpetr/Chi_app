@@ -285,6 +285,9 @@ ru:
 
   # Contact
   contact_updated_message: "Контакты успешно обновлены!"
+
+  # Welcome message
+  welcome_updated_message: "Привественное слово успешно обновлено!"
   ##################################
   # PAGINATION
   ##################################
@@ -411,6 +414,11 @@ ru:
   shared:
     article:
       read_article: "Читать дальше"
+  welcome_messages:
+    edit:
+      legend: "Редактирование приветствия"
+      update_button: "Обновить"
+      cancel_button: "Отмена"
   ##################################
   # MODELS
   ##################################
@@ -452,6 +460,11 @@ ru:
             phone:
               presense_message: "не должен быть пустым"
               max_length_message: "не должен содержать больше %{count} символов"
+        welcome_message:
+          attributes:
+            content:
+              presence_message: "не должен быть пустым"
+              max_length_message: "не должно содержать больше %{count} символов. Пожалуйста, уменьшите объем текста!"
   ##################################
   # DEVISE
   ##################################

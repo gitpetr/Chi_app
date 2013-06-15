@@ -39,6 +39,9 @@ ru:
           address: "Адрес церкви"
           latitude: "Широта, на которой находится церковь"
           longitude: "Долгота, на которой находится церковь"
+      welcome_message:
+        edit:
+          content: "Основной текст"
     required:
       text: "Обязательное поле"
       mark: "*"

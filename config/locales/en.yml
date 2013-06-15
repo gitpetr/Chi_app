@@ -31,6 +31,9 @@ en:
 
   # Contact
   contact_updated_message: "Contacts updated successfully!"
+
+  # Welcome message
+  welcome_updated_message: "Welcome words updated successfully!"
   ##################################
   # VIEWS
   ##################################
@@ -147,6 +150,11 @@ en:
   shared:
     article:
       read_article: "Read more"
+  welcome_messages:
+    edit:
+      legend: "Editing welcome words"
+      update_button: "Update"
+      cancel_button: "Cancel"
   ##################################
   # MODELS
   ##################################
@@ -184,6 +192,11 @@ en:
               max_length_message: "can't contain more than %{count} symbols"
             phone:
               presense_message: "can't be blank"
+              max_length_message: "can't contain more than %{count} symbols"
+        welcome_message:
+          attributes:
+            content:
+              presence_message: "can't be blank"
               max_length_message: "can't contain more than %{count} symbols"
   ##################################
   # DEVISE

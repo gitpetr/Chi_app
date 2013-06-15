@@ -1,10 +1,10 @@
 legend
-  = "Editing..."
+  = t(".legend")
 
 = simple_form_for @welcome_message do |f|
   = f.input :content, :input_html => { :class => "span9" }
 
   div class="form-actions"
-    = f.button :submit, "Update", :class => "btn btn-large btn-warning"
+    = f.button :submit, t(".update_button"), :class => "btn btn-large btn-warning"
     | &#32;
-    = link_to "Cancel", root_path, :class => "btn btn-large"
+    = link_to t(".cancel_button"), root_path, :class => "btn btn-large"
