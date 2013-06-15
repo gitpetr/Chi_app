@@ -46,8 +46,8 @@ describe "Slideshows" do
   end
 
   it "should show slideshow when image clicked", :js => true do
-    sleep 0.5                                                                                       # without sleeping test fails.
-    first(:css, 'img').click                                                                        # Find the first one image and click it.
+    sleep 2                                                                                         # without sleeping test fails.
+    first(:css, 'img.photo').click                                                                  # Find the first one image and click it.
     page.should have_selector('h3', :text => 'Слайды')
   end
 end
