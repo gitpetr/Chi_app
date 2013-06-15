@@ -1,0 +1,16 @@
+-# Input param: id_element
+
+-# That is the only way to pass our local variable to js.
+-# To make content_tag work i adding some text inside of it.
+= content_tag "div", id: "inparams", data: {inparams: "#" + id_element}, style: "display: none;" do
+  p Some data to run it
+
+-# Here we find div with data, extract id_element and activate text area by this id with text editor.
+- if I18n.locale.to_s == "ru"
+  javascript:
+    var id_to_use = $('#inparams').data('inparams');
+    $( id_to_use ).wysihtml5({locale: "ru-RU"});
+- elsif I18n.locale.to_s == "en"
+  javascript:
+    var id_to_use = $('#inparams').data('inparams');
+    $( id_to_use ).wysihtml5();
