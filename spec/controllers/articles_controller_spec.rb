@@ -9,76 +9,74 @@ describe ArticlesController do
   end
 
   describe "GET 'index'" do
-    describe "for non-signed users" do
+    shared_examples "render-success" do
       it "should access" do
         get :index, :locale => :en
         response.should be_success
       end
+    end
+
+    describe "for non-signed users" do
+      include_examples "render-success"
     end
 
     describe "for signed-in users" do
       before(:each){ test_sign_in( @user ) }
 
-      it "should access" do
-        get :index, :locale => :en
-        response.should be_success
-      end
+      include_examples "render-success"
     end
 
     describe "for signed-in admin" do
       before(:each){ test_sign_in( @admin ) }
 
-      it "should access" do
-        get :index, :locale => :en
-        response.should be_success
-      end
+      include_examples "render-success"
     end
   end
 
   describe "GET 'show'" do
     before(:each){ @article = FactoryGirl.create :article }
 
-    describe "for non-signed users" do
+    shared_examples "render-success-and-show" do
       it "should access" do
         get :show, :id => @article, :locale => :en
         response.should be_success
       end
     end
 
+    describe "for non-signed users" do
+      include_examples "render-success-and-show"
+    end
+
     describe "for signed-in users" do
       before(:each){ test_sign_in( @user ) }
 
-      it "should access" do
-        get :show, :id => @article, :locale => :en
-        response.should be_success
-      end
+      include_examples "render-success-and-show"
     end
 
     describe "for signed-in admin" do
       before(:each){ test_sign_in( @admin ) }
 
-      it "should access" do
-        get :show, :id => @article, :locale => :en
-        response.should be_success
-      end
+      include_examples "render-success-and-show"
     end
   end
 
   describe "GET 'new'" do
-    describe "for non-signed users" do
+
+    shared_examples "new-render-success" do
       it "should deny access" do
         get :new, :locale => :en
         response.should redirect_to( root_path )
       end
+    end
+
+    describe "for non-signed users" do
+      include_examples "new-render-success"
     end
 
     describe "for signed-in users" do
       before(:each){ test_sign_in( @user ) }
 
-      it "should deny access" do
-        get :new, :locale => :en
-        response.should redirect_to( root_path )
-      end
+      include_examples "new-render-success"
     end
 
     describe "for signed-in admin" do
@@ -96,7 +94,7 @@ describe ArticlesController do
       @article = FactoryGirl.build(:article, :user => @admin, :content => "some", :title => "bla-bla")
     end
 
-    describe "for non-signed users" do
+    shared_examples "redirect-to-root-and-not-create" do
       it "should deny access" do
         post :create, :locale => :en, :article => @article
         response.should redirect_to( root_path )
@@ -109,19 +107,14 @@ describe ArticlesController do
       end
     end
 
+    describe "for non-signed users" do
+      include_examples "redirect-to-root-and-not-create"
+    end
+
     describe "for signed-in users" do
       before(:each){ test_sign_in( @user ) }
 
-      it "should deny access" do
-        post :create, :locale => :en, :article => @article
-        response.should redirect_to( root_path )
-      end
-
-      it "should not create article" do
-        expect do
-          post :create, :locale => :en, :article => @article
-        end.to_not change( Article, :count )
-      end
+      include_examples "redirect-to-root-and-not-create"
     end
 
     # describe "for signed-in admin" do
@@ -141,20 +134,21 @@ describe ArticlesController do
       @article = FactoryGirl.create(:article, :user => @admin, :content => "some", :title => "bla-bla")
     end
 
-    describe "for non-signed users" do
+    shared_examples "edit-redirect-to-root" do
       it "should deny access" do
         get :edit, :locale => :en, :id => @article
         response.should redirect_to( root_path )
       end
     end
 
+    describe "for non-signed users" do
+      include_examples "edit-redirect-to-root"
+    end
+
     describe "for signed-in users" do
       before(:each){ test_sign_in( @user ) }
 
-      it "should deny access" do
-        get :edit, :locale => :en, :id => @article
-        response.should redirect_to( root_path )
-      end
+      include_examples "edit-redirect-to-root"
     end
 
     describe "for signed-in admin" do
