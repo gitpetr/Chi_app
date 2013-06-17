@@ -9,47 +9,46 @@ describe AlbumsController do
   end
 
   describe "GET 'index'" do
-    describe "for non-signed users" do
+    shared_examples "render-success" do
       it "should access" do
         get :index, :locale => :en
         response.should be_success
       end
     end
 
+    describe "for non-signed users" do
+      include_examples "render-success"
+    end
+
     describe "for signed-in users" do
       before(:each){ test_sign_in( @user ) }
 
-      it "should access" do
-        get :index, :locale => :en
-        response.should be_success
-      end
+      include_examples "render-success"
     end
 
     describe "for signed-in admin" do
       before(:each){ test_sign_in( @admin ) }
 
-      it "should access" do
-        get :index, :locale => :en
-        response.should be_success
-      end
+      include_examples "render-success"
     end
   end
 
   describe "GET 'new'" do
-    describe "for non-signed users" do
+    shared_examples "redirect-to-root" do
       it "should deny access" do
         get :new, :locale => :en
         response.should redirect_to( root_path )
       end
+    end
+
+    describe "for non-signed users" do
+      include_examples "redirect-to-root"
     end
 
     describe "for signed-in users" do
       before(:each){ test_sign_in( @user ) }
 
-      it "should deny access" do
-        get :new, :locale => :en
-        response.should redirect_to( root_path )
-      end
+      include_examples "redirect-to-root"
     end
 
     describe "for signed-in admin" do
@@ -67,7 +66,7 @@ describe AlbumsController do
       @attrs = { :name => "name", :description => "" }
     end
 
-    describe "for non-signed users" do
+    shared_examples "redirect-to-root-and-not-create" do
       it "should deny access" do
         post :create, :locale => :en, :album => @attrs
         response.should redirect_to( root_path )
@@ -80,19 +79,14 @@ describe AlbumsController do
       end
     end
 
+    describe "for non-signed users" do
+      include_examples "redirect-to-root-and-not-create"
+    end
+
     describe "for signed-in users" do
       before(:each){ test_sign_in( @user ) }
 
-      it "should deny access" do
-        post :create, :locale => :en, :album => @attrs
-        response.should redirect_to( root_path )
-      end
-
-      it "should not create" do
-        expect do
-          post :create, :locale => :en, :album => @attrs
-        end.to_not change( Album, :count )
-      end
+      include_examples "redirect-to-root-and-not-create"
     end
 
     describe "for signed-in admin" do
@@ -111,20 +105,21 @@ describe AlbumsController do
       @album = FactoryGirl.create(:album)
     end
 
-    describe "for non-signed users" do
+    shared_examples "edit-redirect-to-root" do
       it "should deny access" do
         get :edit, :locale => :en, :id => @album
         response.should redirect_to( root_path )
       end
     end
 
+    describe "for non-signed users" do
+      include_examples "edit-redirect-to-root"
+    end
+
     describe "for signed-in users" do
       before(:each){ test_sign_in( @user ) }
 
-      it "should deny access" do
-        get :edit, :locale => :en, :id => @album
-        response.should redirect_to( root_path )
-      end
+      include_examples "edit-redirect-to-root"
     end
 
     describe "for signed-in admin" do
@@ -176,7 +171,7 @@ describe AlbumsController do
       @album = FactoryGirl.create(:album)
     end
 
-    describe "for non-signed users" do
+    shared_examples "redirect-to-root-and-not-delete" do
       it "should deny access" do
         delete :destroy, :locale => :en, :id => @album
         response.should redirect_to( root_path )
@@ -189,19 +184,14 @@ describe AlbumsController do
       end
     end
 
+    describe "for non-signed users" do
+      include_examples 'redirect-to-root-and-not-delete'
+    end
+
     describe "for signed-in users" do
       before(:each){ test_sign_in( @user ) }
 
-      it "should deny access" do
-        delete :destroy, :locale => :en, :id => @album
-        response.should redirect_to( root_path )
-      end
-
-      it "should not delete" do
-        expect do
-          delete :destroy, :locale => :en, :id => @album
-        end.to_not change( Album, :count )
-      end
+      include_examples 'redirect-to-root-and-not-delete'
     end
 
     describe "for signed-in admins" do

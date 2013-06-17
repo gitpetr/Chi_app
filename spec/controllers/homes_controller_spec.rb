@@ -1,12 +1,5 @@
 require 'spec_helper'
 
-shared_examples "render-success" do
-  it "should access" do
-    get :index, :locale => :en
-    response.should be_success
-  end
-end
-
 describe HomesController do
   render_views
 
@@ -16,6 +9,13 @@ describe HomesController do
   end
 
   describe "GET 'index'" do
+    shared_examples "render-success" do
+      it "should access" do
+        get :index, :locale => :en
+        response.should be_success
+      end
+    end
+
     describe "for non-signed users" do
       include_examples "render-success"
     end
