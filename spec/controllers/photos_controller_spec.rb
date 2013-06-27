@@ -13,29 +13,27 @@ describe PhotosController do
       @album = FactoryGirl.create( :album )
     end
 
-    describe "for non-signed users" do
+    shared_examples "photo-render-success" do
       it "should access" do
         get :index, :locale => :en, :album_id => @album
         response.should be_success
       end
+    end
+
+    describe "for non-signed users" do
+      include_examples "photo-render-success"
     end
 
     describe "for signed-in users" do
       before(:each){ test_sign_in( @user ) }
 
-      it "should access" do
-        get :index, :locale => :en, :album_id => @album
-        response.should be_success
-      end
+      include_examples "photo-render-success"
     end
 
     describe "for signed-in admin" do
       before(:each){ test_sign_in( @admin ) }
 
-      it "should access" do
-        get :index, :locale => :en, :album_id => @album
-        response.should be_success
-      end
+      include_examples "photo-render-success"
     end
   end
 
@@ -44,20 +42,21 @@ describe PhotosController do
       @album = FactoryGirl.create( :album )
     end
 
-    describe "for non-signed users" do
+    shared_examples "photo-deny-access" do
       it "should deny access" do
         get :new, :locale => :en, :album_id => @album
         response.should_not be_success
       end
     end
 
+    describe "for non-signed users" do
+      include_examples "photo-deny-access"
+    end
+
     describe "for signed-in users" do
       before(:each){ test_sign_in( @user ) }
 
-      it "should deny access" do
-        get :new, :locale => :en, :album_id => @album
-        response.should_not be_success
-      end
+      include_examples "photo-deny-access"
     end
 
     describe "for signed-in admin" do
@@ -76,7 +75,7 @@ describe PhotosController do
       @attrs = { :image => [ fixture_file_upload('/files/violin.jpg', 'image/jpg') ] }
     end
 
-    describe "for non-signed users" do
+    shared_examples "photo-deny-access-and-not-create" do
       it "should deny access" do
         post :create, :locale => :en, :album_id => @album, :photo => @attrs
         response.should redirect_to( root_path )
@@ -89,19 +88,14 @@ describe PhotosController do
       end
     end
 
+    describe "for non-signed users" do
+      include_examples "photo-deny-access-and-not-create"
+    end
+
     describe "for signed-in users" do
       before(:each){ test_sign_in( @user ) }
 
-      it "should deny access" do
-        post :create, :locale => :en, :album_id => @album, :photo => @attrs
-        response.should redirect_to( root_path )
-      end
-
-      it "should not create" do
-        expect do
-          post :create, :locale => :en, :album_id => @album, :photo => @attrs
-        end.to_not change( Photo, :count )
-      end
+      include_examples "photo-deny-access-and-not-create"
     end
 
     describe "for signed-in admin" do
@@ -121,20 +115,21 @@ describe PhotosController do
       @album = @photo.album
     end
 
-    describe "for non-signed users" do
+    shared_examples "photo-edit-deny-access" do
       it "should deny access" do
         get :edit, :locale => :en, :album_id => @album, :id => @photo
         response.should redirect_to( root_path )
       end
     end
 
+    describe "for non-signed users" do
+      include_examples "photo-edit-deny-access"
+    end
+
     describe "for signed-in users" do
       before(:each){ test_sign_in( @user ) }
 
-      it "should deny access" do
-        get :edit, :locale => :en, :album_id => @album, :id => @photo
-        response.should redirect_to( root_path )
-      end
+      include_examples "photo-edit-deny-access"
     end
 
     describe "for signed-in admin" do
@@ -188,7 +183,7 @@ describe PhotosController do
       @album = @photo.album
     end
 
-    describe "for non-signed users" do
+    shared_examples "photo-destroy-deny-access-and-not-create" do
       it "should deny access" do
         delete :destroy, :locale => :en, :album_id => @album, :id => @photo
         response.should redirect_to( root_path )
@@ -201,19 +196,14 @@ describe PhotosController do
       end
     end
 
+    describe "for non-signed users" do
+      include_examples "photo-destroy-deny-access-and-not-create"
+    end
+
     describe "for signed-in users" do
       before(:each){ test_sign_in( @user ) }
 
-      it "should deny access" do
-        delete :destroy, :locale => :en, :album_id => @album, :id => @photo
-        response.should redirect_to( root_path )
-      end
-
-      it "should not delete" do
-        expect do
-          delete :destroy, :locale => :en, :album_id => @album, :id => @photo
-        end.to_not change( Photo, :count )
-      end
+      include_examples "photo-destroy-deny-access-and-not-create"
     end
 
     describe "for signed-in admins" do
