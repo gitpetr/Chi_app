@@ -28,6 +28,6 @@ class ApplicationController < ActionController::Base
 
     # Overwriting the sign_in redirect path method.
     def after_sign_in_path_for(resource)
-      articles_path
+      root_path
     end
 end
