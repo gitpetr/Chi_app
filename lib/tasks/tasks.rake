@@ -28,7 +28,7 @@ def destroy_test_admin
 end
 
 def create_admins_team
-  emails = [ "gelika007@mail.ru", "gelvior@gmail.com", "veragorbatova@yandex.ru" ]
+  emails = [ "gelika007@mail.ru", "gelvior@gmail.com", "veragorbatova@yandex.ru", "am.fadin@genser.ru" ]
   uncreated_users_count = 0
 
   emails.each do |email|
