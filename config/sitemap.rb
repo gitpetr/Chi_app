@@ -5,17 +5,12 @@ SitemapGenerator::Sitemap.default_host = "http://bo-xpucte.ru/"
 SitemapGenerator::Sitemap.create_index = :auto
 
 SitemapGenerator::Sitemap.create do
-  add root_path( :locale => "ru" )
-  add root_path( :locale => "en" )
-
-  add articles_path(:locale => "ru")
-  add articles_path(:locale => "en")
-
-  add albums_path(:locale => "ru")
-  add albums_path(:locale => "en")
-
-  add contacts_path(:locale => "ru")
-  add contacts_path(:locale => "en")
+  I18n.available_locales.each do |locale|
+    add root_path( :locale => locale )
+    add articles_path( :locale => locale )
+    add albums_path( :locale => locale )
+    add contacts_path( :locale => locale )
+  end
 
   # Put links creation logic here.
   #
