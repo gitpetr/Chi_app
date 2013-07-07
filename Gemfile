@@ -18,6 +18,7 @@ gem 'capistrano', '2.14.2'                                                      
 gem 'less-rails', '2.3.2'                                                                           # twitter-bootstrap-rails needs that now. Without that it fails.
 gem 'slim', '1.3.8'
 gem 'gon', '3.0.5'                                                                                  # Access data from ruby and JS.
+gem 'sitemap_generator', '4.1.0'                                                                    # Generating sitemap.
 
 gem 'haml2slim'
 
