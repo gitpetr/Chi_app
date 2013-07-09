@@ -10,7 +10,7 @@ legend
    - @albums.each_slice(2) do |first, second|
     div class="row-fluid"
       - [first, second].each do |album|
-        = render :partial => 'album', :locals => { :album => album }
+        = render 'album', :album => album
 - else
   div class="well"
     p class="text-center"

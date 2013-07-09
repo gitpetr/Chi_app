@@ -20,7 +20,7 @@ div class="span6"
           p class="label-preview-small"
             = truncate( album.description, :length => @small_preview_size, :separator => ' ' )
 
-    = render :partial => 'delete', :locals => { :album => album }
+    = render 'delete', :album => album
 
 
 

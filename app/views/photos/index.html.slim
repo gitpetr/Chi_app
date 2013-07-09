@@ -14,9 +14,9 @@ legend
     - @photos.each_slice(3) do |a,b,c|
       div class="row-fluid"
         - [a,b,c].each do |val|
-          = render :partial => 'photo', :locals => { :photo => val }
+          = render 'photo', :photo => val
 
-  = render :partial => 'slideshow', :locals => { :photos => @photos }
+  = render 'slideshow', :photos => @photos
 - else
   div class="well"
     = t(".no_photos")
