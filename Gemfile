@@ -9,9 +9,9 @@ gem 'devise', '2.2.3'                                                           
 gem 'simple_form', '2.1.0'                                                                          # Super simple forms with bootstrap look support.
 gem 'bootstrap-wysihtml5-rails', "0.3.1.19"                                                         # Rich text editor via JS.
 gem 'kaminari', '0.14.0'                                                                            # Be very carefull with changing version of this gem (i modified a lot generated views).
-gem "cancan", '1.6.9'                                                                               # Authorization library.
-gem "carrierwave", '0.8.0'                                                                          # Simple file uploading.
-gem "rmagick", '2.13.2'                                                                             # Powerfull image manipulation. Don't forget to install imagemagick before that!
+gem 'cancan', '1.6.9'                                                                               # Authorization library.
+gem 'carrierwave', '0.8.0'                                                                          # Simple file uploading.
+gem 'rmagick', '2.13.2'                                                                             # Powerfull image manipulation. Don't forget to install imagemagick before that!
 gem 'gmaps4rails', '1.5.6'                                                                          # Google maps integration.
 gem 'unicorn', '4.6.2'                                                                              # Use unicorn as the app server
 gem 'capistrano', '2.14.2'                                                                          # Deploy with Capistrano
@@ -34,7 +34,7 @@ group :assets do
 end
 
 group :development do
-  gem "rails_best_practices"
+  gem 'rails_best_practices'
   gem 'webrick', '1.3.1'                                                                            # Standart server. I specify it to remove warning from logs.
   gem 'annotate', '~> 2.5.0'
   gem 'better_errors', '0.8.0'                                                                      # Show errors with better output.
