@@ -13,7 +13,7 @@ div class="modal-huge hide fade" id="modal-window-slideshow" data-backdrop="stat
             = image_tag photo.image
 
             -# Description of photo
-            - unless photo.description.blank?
+            - if photo.description?
               div.carousel-caption
                 p = photo.description
       / Carousel nav
