@@ -34,6 +34,7 @@ group :assets do
 end
 
 group :development do
+  gem "rails_best_practices"
   gem 'webrick', '1.3.1'                                                                            # Standart server. I specify it to remove warning from logs.
   gem 'annotate', '~> 2.5.0'
   gem 'better_errors', '0.8.0'                                                                      # Show errors with better output.
