@@ -29,8 +29,9 @@ namespace :deploy do
     # sudo "ln -nfs #{current_path}/config/nginx.conf /etc/nginx/sites-enabled/#{application}"
     # sudo "ln -nfs #{current_path}/config/unicorn_init.sh /etc/init.d/unicorn_#{application}"
     run "mkdir -p #{shared_path}/config"
+    run "mkdir -p #{shared_path}/config/initializers"
     # put File.read("config/database.example.yml"), "#{shared_path}/config/database.yml"
-    put File.read("config/initializers/secret_token.example.rb"), "#{shared_path}/config/initializers/secret_token.rb"
+    put File.read("config/initializers/secret_token.example.rb"), "#{shared_path}/config//secret_token.rb"
     puts "Now edit the config files in (and change secret key) #{shared_path}."
   end
   after "deploy:setup", "deploy:setup_config"
