@@ -10,9 +10,11 @@ To install Imagemagik in Mac use homebrew:
 
   `$ brew install imagemagick`
 
-2) In config/ create database.yml from database.example.yml. Give a password in database.yml in test and development sections.
+2) In `config/` create `database.yml` from `database.example.yml`. Give a password in database.yml in test and development sections.
 
-3) To lauch app:
+3) In `config/initializers/` create `secret_token.rb` from `secret_token.example.rb`
+
+4) To lauch app:
 
 ```shell
 $ cd app_name
@@ -22,16 +24,16 @@ $ rake db:migrate
 $ rake db:test:prepare
 ```
 
-4) After that, you should make sure that all tests pass:
+5) After that, you should make sure that all tests pass:
 
 ```shell
 $ rake spec
 ```
 
-5) Create admin (login: qwerty@qwerty.com, password: qwerty):
+6) Create admin (login: qwerty@qwerty.com, password: qwerty):
   `$ rake db:create_admin`
 
-6) Also you probably'd like to use .rvmrc file to set correct version. To use it you should do that:
+7) Also you probably'd like to use .rvmrc file to set correct version. To use it you should do that:
 
 ```shell
  $ cd this_app
@@ -95,6 +97,8 @@ and after this push git and deploy:
  $ git push
  $ cap deploy
 ```
+
+4) Do not forget to change a secret key in `shared/config/initializers/secret_token.rb`
 
 **Changelog**
 
