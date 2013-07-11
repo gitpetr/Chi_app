@@ -24,6 +24,6 @@ ChirchApp::Application.routes.draw do
     root :to => 'homes#index'
   end
 
-  match '*path', to: redirect("/#{I18n.default_locale}/%{path}"), constraints: lambda { |req| !req.path.starts_with? "/#{I18n.default_locale}/" }
-  match '', to: redirect("/#{I18n.default_locale}/")                                                # Redirect as a default to home page.
+  match '*path', to: redirect("/#{I18n.default_locale}/%{path}"), constraints: lambda { |req| !req.path.starts_with? "/#{I18n.default_locale}" }
+  match '', to: redirect("/#{I18n.default_locale}")                                                 # Redirect as a default to home page.
 end
