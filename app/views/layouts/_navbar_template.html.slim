@@ -10,7 +10,7 @@ div class="navbar navbar-inverse"
       / Left navigation.
       ul class="nav"
         li class="#{ active_link?( :controllers => ["homes"] ) }"
-          = link_to t(".home_link"), homes_path, :id => "navbar-home"
+          = link_to t(".home_link"), root_path, :id => "navbar-home"
 
         li class="#{ active_link?( :controllers => ["articles"] ) }"
           = link_to t(".articles_link"), articles_path, :id => "navbar-articles"
