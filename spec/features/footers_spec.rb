@@ -25,10 +25,6 @@ describe "Footers" do
   end
 
   describe "for non-signed users" do
-    it "should show link to login" do
-      page.should have_selector("a", :text => "Войти" )
-    end
-
     it "should not show setting's link" do
       page.should_not have_selector("a", :text => "Настройки" )
     end

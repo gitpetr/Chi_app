@@ -6,7 +6,7 @@ footer id="footer"
     = yield :scripts
 
     ul class="footer-links"
-      - unless user_signed_in?
+      - if !user_signed_in? and Rails.env.development?
         li = link_to t(".login_link"), new_user_session_path
         li|
 
