@@ -10,10 +10,11 @@ class ApplicationController < ActionController::Base
   private
     def set_locale
       I18n.locale = params[:locale] if params[:locale].present?
-      # current_user.locale
-      # request.subdomain
-      # request.env["HTTP_ACCEPT_LANGUAGE"]
-      # request.remote_ip
+
+      # Redirect login.domain.com to domain/sing-in-path.
+      if request.subdomain == 'login'
+        redirect_to new_user_session_url(:subdomain => false)
+      end
     end
 
     # To prevent problems with loading correct localization.
