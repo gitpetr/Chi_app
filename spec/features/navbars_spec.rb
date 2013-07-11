@@ -9,12 +9,12 @@ describe "Navbar" do
 
   it "should visit articles via brand name" do
     click_link "Преображение во Христе"
-    current_path.should == homes_path( :locale => "ru" )
+    current_path.should == root_path( :locale => "ru" )
   end
 
   it "should visit home page" do
     click_link "navbar-home"                                                                        # Click via id.
-    current_path.should == homes_path( :locale => "ru" )
+    current_path.should == root_path( :locale => "ru" )
   end
 
   it "should visit articles" do
