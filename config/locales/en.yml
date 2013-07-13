@@ -220,6 +220,8 @@ en:
             content:
               presense_message: "can't be blank"
               max_length_message: "can't contain more than %{count} symbols"
+            record:
+              presence_message: "can't be blank"
   ##################################
   # DEVISE
   ##################################

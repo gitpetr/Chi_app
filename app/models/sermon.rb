@@ -11,9 +11,13 @@
 #
 
 class Sermon < ActiveRecord::Base
-  attr_accessible :recorded_date, :title
+  attr_accessible :recorded_date, :title, :record
+
+	mount_uploader :record, RecordUploader
 
   validates :title,
               :presence => { :message => :presense_message },
               :length   => { :maximum => 250, :message => :max_length_message }
+
+  validates :record, :presence => { :message => :presence_message }
 end
