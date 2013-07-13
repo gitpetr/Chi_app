@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.ui.datepicker
+//= require jquery.ui.datepicker-ru
 //= require twitter/bootstrap
 //= require bootstrap-wysihtml5
 //= require bootstrap-wysihtml5/locales/ru-RU

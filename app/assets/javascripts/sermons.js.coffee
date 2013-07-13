@@ -3,4 +3,11 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 jQuery ->
-	$("#sermon_recorded_date").datepicker();
+	showDatepicker = () ->
+		$( '#sermon_recorded_date' ).datepicker({
+	      dateFormat:"dd.mm.yy"
+	    },
+	    $.datepicker.regional['ru']
+	  );
+
+	showDatepicker()
