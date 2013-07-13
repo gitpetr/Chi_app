@@ -5,3 +5,7 @@ legend
     = link_to new_sermon_path, :class => "btn btn-primary album-new-button" do
       i class="icon-plus icon-white"
       = t(".new_link")
+
+- @sermons.each do |sermon|
+	p = sermon.title
+	p = sermon.recorded_date
