@@ -11,5 +11,6 @@
  *= require_self
  *= require bootstrap-wysihtml5
  *= require jquery.ui.datepicker
+ *= require jplayer.blue.monday
  *= require_tree .
  */

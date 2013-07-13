@@ -17,4 +17,5 @@
 //= require twitter/bootstrap
 //= require bootstrap-wysihtml5
 //= require bootstrap-wysihtml5/locales/ru-RU
+//= require jquery.jplayer.min
 //= require_tree .
