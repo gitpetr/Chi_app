@@ -252,6 +252,8 @@ GEM
       rubyzip
       websocket (~> 1.0.4)
     sexp_processor (4.2.1)
+    sextant (0.2.4)
+      rails (>= 3.2)
     simple_form (2.1.0)
       actionpack (~> 3.0)
       activemodel (~> 3.0)
@@ -332,6 +334,7 @@ DEPENDENCIES
   rspec-rails (= 2.13.0)
   sass-rails (~> 3.2.4)
   selenium-webdriver (= 2.32.1)
+  sextant
   simple_form (= 2.1.0)
   sitemap_generator (= 4.1.0)
   slim (= 1.3.8)

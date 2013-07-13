@@ -13,7 +13,7 @@ ChirchApp::Application.routes.draw do
     resources :contacts,         :only => [ :index, :edit, :update ]
     resources :welcome_messages, :only => [ :edit, :update ]
     resources :homes,            :only => [ :index ]
-    resources :sermons,          :only => [ :index ]
+    resources :sermons,          :only => [ :index, :new, :create ]
 
     resources :albums, :except => [ :show ] do
       resources :photos
@@ -24,6 +24,7 @@ ChirchApp::Application.routes.draw do
     root :to => 'homes#index'
   end
 
-  match '*path', to: redirect("/#{I18n.default_locale}/%{path}"), constraints: lambda { |req| !req.path.starts_with? "/#{I18n.default_locale}" }
+  match '*path', to: redirect("/#{I18n.default_locale}/%{path}"), constraints: lambda { |req| !req.path.starts_with? "/#{I18n.default_locale}" and
+                                                                                               req.path != "/rails/routes" } # Don't apply this rule for sextant's path to make it work.
   match '', to: redirect("/#{I18n.default_locale}")                                                 # Redirect as a default to home page.
 end
