@@ -467,8 +467,13 @@ ru:
         welcome_message:
           attributes:
             content:
-              presence_message: "не должен быть пустым"
+              presence_message: "не должно быть пустым"
               max_length_message: "не должно содержать больше %{count} символов. Пожалуйста, уменьшите объем текста!"
+        sermon:
+          attributes:
+            content:
+              presense_message: "не должно быть пустым"
+              max_length_message: "не должно содержать больше %{count} символов."
   ##################################
   # DEVISE
   ##################################

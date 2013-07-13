@@ -202,6 +202,11 @@ en:
             content:
               presence_message: "can't be blank"
               max_length_message: "can't contain more than %{count} symbols"
+        sermon:
+          attributes:
+            content:
+              presense_message: "can't be blank"
+              max_length_message: "can't contain more than %{count} symbols"
   ##################################
   # DEVISE
   ##################################
