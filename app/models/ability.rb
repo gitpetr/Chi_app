@@ -13,6 +13,7 @@ class Ability
       can :read, Photo
       can :read, Contact
       can :read, Album
+      can :read, Sermon
     end
     #
     # The first argument to `can` is the action you are giving the user permission to do.
