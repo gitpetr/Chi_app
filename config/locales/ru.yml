@@ -262,8 +262,8 @@ ru:
     messages:
       carrierwave_processing_error: 'Невозможно изменить размер изображения.'
       carrierwave_integrity_error: 'Не является изображением.'
-      carrierwave_download_error: 'Невозможно загрузить изображение. Попробуйте еще раз!'
-      extension_white_list_error: "Файл с таким расширением загружать запрещено! Разрешено: 'jpg' 'jpeg' 'gif' 'png'"
+      carrierwave_download_error: 'Невозможно загрузить файл. Попробуйте еще раз!'
+      extension_white_list_error: "Файл с таким расширением загружать запрещено!"
   ##################################
   # CONTROLLERS
   ##################################

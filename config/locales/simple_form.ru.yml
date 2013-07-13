@@ -46,6 +46,7 @@ ru:
         new:
           title: "Название проведенной проповеди"
           recorded_date: "Дата записи"
+          record: "Аудиозапись"
     required:
       text: "Обязательное поле"
       mark: "*"
