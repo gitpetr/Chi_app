@@ -1,1 +1,7 @@
-p Index
+legend
+  = t(".legend")
+
+  - if can? :create, Sermon
+    = link_to new_sermon_path, :class => "btn btn-primary album-new-button" do
+      i class="icon-plus icon-white"
+      = t(".new_link")

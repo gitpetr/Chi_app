@@ -34,6 +34,9 @@ en:
 
   # Welcome message
   welcome_updated_message: "Welcome words updated successfully!"
+
+  # Sermon
+  sermon_created_message: "Sermon created successfully!"
   ##################################
   # VIEWS
   ##################################
@@ -108,6 +111,13 @@ en:
       confirm_message: "Are you really want to delete the whole album?"
       delete: "Destroy"
       close: "Cancel"
+  sermons:
+    index:
+      legend: "Sermon"
+      new_link: " Add a sermon"
+    new:
+      create: "Create"
+      cancel: "Cancel"
   layouts:
     head:
       title: "Official site of church \"Transfiguration in Christ\""

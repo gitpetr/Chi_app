@@ -288,6 +288,9 @@ ru:
 
   # Welcome message
   welcome_updated_message: "Привественное слово успешно обновлено!"
+
+  # Sermon
+  sermon_created_message: "Проповедь успешно добавлена!"
   ##################################
   # PAGINATION
   ##################################
@@ -373,6 +376,13 @@ ru:
       confirm_message: "Вы уверены, что хотите удалить альбом"
       delete: "Удалить"
       close: "Отменить"
+  sermons:
+    index:
+      legend: "Проповеди"
+      new_link: " Добавить проповедь"
+    new:
+      create: "Создать"
+      cancel: "Отменить"
   layouts:
     head:
       title: "Официальный сайт церкови \"Преображение во Христе\""
