@@ -42,6 +42,10 @@ ru:
       welcome_message:
         edit:
           content: "Основной текст"
+      sermon:
+        new:
+          title: "Название проведенной проповеди"
+          recorded_date: "Дата записи"
     required:
       text: "Обязательное поле"
       mark: "*"

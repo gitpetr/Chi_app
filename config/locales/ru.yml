@@ -381,6 +381,7 @@ ru:
       legend: "Проповеди"
       new_link: " Добавить проповедь"
     new:
+      legend: "Добавление проповеди"
       create: "Создать"
       cancel: "Отменить"
   layouts:

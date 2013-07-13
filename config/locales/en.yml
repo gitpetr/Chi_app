@@ -116,6 +116,7 @@ en:
       legend: "Sermon"
       new_link: " Add a sermon"
     new:
+      legend: "Adding a sermon"
       create: "Create"
       cancel: "Cancel"
   layouts:
