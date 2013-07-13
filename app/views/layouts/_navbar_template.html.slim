@@ -18,6 +18,9 @@ div class="navbar navbar-inverse"
         li class="#{ active_link?( :controllers => ["albums", "photos"] )} "
           = link_to t(".albums_link"), albums_path, :id => "navbar-albums"
 
+        li class="#{ active_link?( :controllers => ["sermons"] ) }"
+          = link_to t(".sermons_link"), sermons_path, :id => "navbar-sermons"
+
         li class="#{ active_link?( :controllers => ["contacts"] )} "
           = link_to t(".contacts_link"), contacts_path, :id => "navbar-contacts"
 

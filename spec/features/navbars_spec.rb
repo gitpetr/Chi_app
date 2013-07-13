@@ -27,6 +27,11 @@ describe "Navbar" do
     current_path.should == albums_path( :locale => "ru" )
   end
 
+  it "should visit sermons" do
+    click_link "navbar-sermons"                                                                     # Click via id.
+    current_path.should == sermons_path( :locale => "ru" )
+  end
+
   it "should visit contacts" do
     click_link "navbar-contacts"                                                                    # Click via id.
     current_path.should == contacts_path( :locale => "ru" )

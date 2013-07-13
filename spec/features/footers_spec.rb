@@ -18,6 +18,11 @@ describe "Footers" do
       current_path.should == albums_path( :locale => "ru" )
     end
 
+    it "should link to sermons" do
+      click_link "footer-sermons"                                                                   # Click via id.
+      current_path.should == sermons_path( :locale => "ru" )
+    end
+
     it "should link to contacts" do
       click_link "footer-contacts"                                                                  # Click via id.
       current_path.should == contacts_path( :locale => "ru" )
