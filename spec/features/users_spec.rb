@@ -5,8 +5,7 @@ describe "Users" do
   before(:each) do
     @user = FactoryGirl.create(:user)
 
-    visit root_path( :locale => "ru" )
-    click_link "Войти"
+    visit new_user_session_path( :locale => "ru" )
   end
 
   describe "Sign in/out" do
@@ -52,7 +51,8 @@ describe "Users" do
         click_button 'Обновить'
 
         click_link "Выйти"
-        click_link "Войти"
+
+        visit new_user_session_path( :locale => "ru" )
         fill_in "Ваш email",  :with => @user.email
         fill_in "Пароль", :with => new_pass
         click_button "Войти"

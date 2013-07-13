@@ -32,7 +32,7 @@ describe "Footers" do
 
   describe "for signed-in users" do
     before(:each) do
-      click_link "Войти"
+      visit new_user_session_path( :locale => "ru" )
       fill_in "Ваш email",  :with => @user.email
       fill_in "Пароль", :with => 'qwerty'
       click_button "Войти"
