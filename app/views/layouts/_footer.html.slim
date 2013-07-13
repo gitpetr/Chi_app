@@ -15,7 +15,7 @@ footer id="footer"
       li = link_to t(".sermons_link"),  sermons_path,  :id => "footer-sermons"
       li = link_to t(".contacts_link"), contacts_path, :id => "footer-contacts"
 
-      - if !user_signed_in? and Rails.env.development?
+      - if Rails.env.development?
         li|
         li = link_to "Routes", rails_routes_path
 
