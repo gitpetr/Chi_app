@@ -13,7 +13,7 @@ ChirchApp::Application.routes.draw do
     resources :contacts,         :only => [ :index, :edit, :update ]
     resources :welcome_messages, :only => [ :edit, :update ]
     resources :homes,            :only => [ :index ]
-    resources :sermons,          :only => [ :index, :new, :create ]
+    resources :sermons,          :only => [ :index, :new, :create, :show ]
 
     resources :albums, :except => [ :show ] do
       resources :photos

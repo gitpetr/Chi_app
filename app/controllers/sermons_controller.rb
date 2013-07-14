@@ -2,6 +2,11 @@ class SermonsController < ApplicationController
 	load_and_authorize_resource
 
 	def index
+		gon.record_path = @sermons.last.record_player_path
+	end
+
+	def show
+		gon.record_path = @sermon.record_player_path
 	end
 
 	def new

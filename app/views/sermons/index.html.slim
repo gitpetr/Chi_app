@@ -7,11 +7,8 @@ legend
       = t(".new_link")
 
 - @sermons.each do |sermon|
-	p = sermon.title
+	p = link_to sermon.title, sermon_path( sermon )
 	p = sermon.recorded_date
-	/ - if !sermon.record.file.nil?
-	/ p = audio_tag( sermon.record.file.path )
-
 
 = render 'audio_player'
 
