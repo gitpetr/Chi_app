@@ -4,6 +4,7 @@ legend
 = simple_form_for @sermon do |f|
   div class="album-unit"
   	= f.input :title, :input_html => { :class => "span12", :autofocus => true }
+  	= f.input :preacher
   	= f.input :recorded_date, :as => :string
   	= f.input :record, :as => :file, :hint => "You can upload only mp3 files"
 

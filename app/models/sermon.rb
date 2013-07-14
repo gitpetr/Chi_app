@@ -22,7 +22,7 @@ class Sermon < ActiveRecord::Base
 
   validates :record, :presence => { :message => :presence_message }
 
-  validates :preacher, :presence => { :message => "bla-bla" }
+  validates :preacher, :presence => { :message => :presense_message }
 
   # Path to record for audio player.
   def record_player_path

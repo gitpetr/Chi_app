@@ -484,11 +484,14 @@ ru:
               max_length_message: "не должно содержать больше %{count} символов. Пожалуйста, уменьшите объем текста!"
         sermon:
           attributes:
-            content:
+            title:
               presense_message: "не должно быть пустым"
               max_length_message: "не должно содержать больше %{count} символов."
             record:
               presence_message: "не должна быть пустой"
+            preacher:
+              presense_message: "не должно быть пустым"
+
   ##################################
   # DEVISE
   ##################################
