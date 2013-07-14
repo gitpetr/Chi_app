@@ -16,7 +16,7 @@ jQuery ->
         $(this).jPlayer("setMedia", {
             mp3: "/uploads/sermon/record/4/01_River_Of_Tuoni.mp3",
         })
-      swfPath: "http://jplayer.org/latest/js",
+      swfPath: "/assets/Jplayer-2-4-0.swf",
       supplied: "mp3"
     })
 
