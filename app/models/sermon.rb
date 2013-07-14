@@ -12,7 +12,7 @@
 #
 
 class Sermon < ActiveRecord::Base
-  attr_accessible :recorded_date, :title, :record
+  attr_accessible :recorded_date, :title, :preacher, :record
 
 	mount_uploader :record, RecordUploader
 
@@ -21,6 +21,8 @@ class Sermon < ActiveRecord::Base
               :length   => { :maximum => 250, :message => :max_length_message }
 
   validates :record, :presence => { :message => :presence_message }
+
+  validates :preacher, :presence => { :message => "bla-bla" }
 
   # Path to record for audio player.
   def record_player_path

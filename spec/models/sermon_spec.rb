@@ -17,6 +17,7 @@ describe Sermon do
   before(:each) do
     @attr = { :title => "qwerty@qwerty.com",
               :recorded_date => DateTime.now,
+              :preacher => "name",
               :record => File.open(File.join(Rails.root, '/spec/fixtures/files/record.mp3')) }
   end
 
@@ -35,6 +36,10 @@ describe Sermon do
 
     it "title can't have more than 250 symbols" do
       Sermon.new( @attr.merge( :title => "a" * 251 ) ).should_not be_valid
+    end
+
+    it "preacher can't be empty" do
+      Sermon.new( @attr.merge :preacher => "" ).should_not be_valid
     end
 
     it "record can't be empty" do
