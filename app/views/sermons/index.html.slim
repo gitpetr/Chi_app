@@ -7,12 +7,11 @@ legend
       = t(".new_link")
 
 - if !@sermons.empty?
-	- @sermons.each do |sermon|
-		p = link_to sermon.title, sermon_path( sermon )
-		p = sermon.recorded_date
-
-	= render 'audio_player'
-
-
+	div class="row-fluid"
+	  div class="row-fluid"
+	    div class="span10"
+	    	= render 'audio_player'
+	    div class="span2"
+			  = render partial: 'sermon_sidebar', locals: { :sermons => @sermons }
 
 

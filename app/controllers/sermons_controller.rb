@@ -10,6 +10,7 @@ class SermonsController < ApplicationController
 	end
 
 	def show
+		@sermons = Sermon.all
 		gon.record_path = @sermon.record_player_path
 	end
 

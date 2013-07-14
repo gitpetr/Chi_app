@@ -1,3 +1,9 @@
 legend Sermon
 
-= render 'audio_player'
+- if !@sermons.empty?
+	div class="row-fluid"
+	  div class="row-fluid"
+	    div class="span10"
+	    	= render 'audio_player'
+	    div class="span2"
+			  = render partial: 'sermon_sidebar', locals: { :sermons => @sermons }
