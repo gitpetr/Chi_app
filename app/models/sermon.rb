@@ -20,4 +20,9 @@ class Sermon < ActiveRecord::Base
               :length   => { :maximum => 250, :message => :max_length_message }
 
   validates :record, :presence => { :message => :presence_message }
+
+  # Path to record for audio player.
+  def record_player_path
+  	self.record.file.path.split("/public").last
+  end
 end
