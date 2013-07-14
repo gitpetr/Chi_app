@@ -2,7 +2,11 @@ class SermonsController < ApplicationController
 	load_and_authorize_resource
 
 	def index
-		gon.record_path = @sermons.last.record_player_path
+		if !@sermons.empty?
+			gon.record_path = @sermons.last.record_player_path
+		else
+			gon.record_path = nil
+		end
 	end
 
 	def show

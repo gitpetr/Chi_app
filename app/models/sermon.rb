@@ -24,6 +24,10 @@ class Sermon < ActiveRecord::Base
 
   # Path to record for audio player.
   def record_player_path
-  	self.record.file.path.split("/public").last
+  	if !self.nil?
+  		self.record.file.path.split("/public").last
+  	else
+  		nil
+  	end
   end
 end

@@ -6,11 +6,12 @@ legend
       i class="icon-plus icon-white"
       = t(".new_link")
 
-- @sermons.each do |sermon|
-	p = link_to sermon.title, sermon_path( sermon )
-	p = sermon.recorded_date
+- if !@sermons.empty?
+	- @sermons.each do |sermon|
+		p = link_to sermon.title, sermon_path( sermon )
+		p = sermon.recorded_date
 
-= render 'audio_player'
+	= render 'audio_player'
 
 
 
