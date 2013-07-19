@@ -1,5 +1,6 @@
 -# Input: sermons - array of all sermons.
 
-- sermons.each do |sermon|
-	p = link_to sermon.title, sermon_path( sermon )
-	p = sermon.recorded_date
+= content_tag :ul, :class => "nav nav-pills nav-stacked" do
+	- sermons.each do |sermon|
+		li class="#{ active_sermon_sidebar_link?( sermon_path( sermon ) ) }"
+			= link_to sermon.title, sermon_path( sermon )

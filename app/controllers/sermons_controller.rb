@@ -2,6 +2,8 @@ class SermonsController < ApplicationController
 	load_and_authorize_resource
 
 	def index
+		@sermons = Sermon.order("created_at DESC")
+
 		if !@sermons.empty?
 			gon.record_path = @sermons.last.record_player_path
 		else
@@ -10,7 +12,7 @@ class SermonsController < ApplicationController
 	end
 
 	def show
-		@sermons = Sermon.all
+		@sermons = Sermon.order("created_at DESC")
 		gon.record_path = @sermon.record_player_path
 	end
 
