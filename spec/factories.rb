@@ -43,5 +43,6 @@ FactoryGirl.define do
     title    'Dance of Fate'
     preacher 'Epica'
     record { fixture_file_upload("#{Rails.root}/spec/fixtures/files/record.mp3", "audio/mpeg") }
+    recorded_date DateTime.now
   end
 end

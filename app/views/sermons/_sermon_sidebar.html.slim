@@ -3,4 +3,4 @@
 = content_tag :ul, :class => "nav nav-pills nav-stacked" do
 	- sermons.each do |sermon|
 		li class="#{ active_sermon_sidebar_link?( sermon_path( sermon ) ) }"
-			= link_to "#{sermon.title} (#{sermon.preacher})", sermon_path( sermon )
+			= link_to "#{sermon.title} (#{sermon.preacher}), #{I18n.l sermon.recorded_date.to_date}", sermon_path( sermon )

@@ -227,6 +227,8 @@ en:
               presence_message: "can't be blank"
             preacher:
               presense_message: "can't be blank"
+            recorded_date:
+              presence_message: "can't be blank"
   ##################################
   # DEVISE
   ##################################

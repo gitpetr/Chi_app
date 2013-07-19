@@ -494,6 +494,8 @@ ru:
               presence_message: "не должна быть пустой"
             preacher:
               presense_message: "не должно быть пустым"
+            recorded_date:
+              presence_message: "не должна быть пустой"
 
   ##################################
   # DEVISE

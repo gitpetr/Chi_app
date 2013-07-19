@@ -92,6 +92,7 @@ describe SermonsController do
     before(:each) do
       @attrs = {  :title => "Dance",
                   :preacher => "Epica",
+                  :recorded_date => DateTime.now,
                   :record => fixture_file_upload('/files/record.mp3', 'audio/mpeg') }
     end
 
