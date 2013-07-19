@@ -114,11 +114,14 @@ en:
   sermons:
     index:
       legend: "Sermon"
-      new_link: " Add a sermon"
     new:
       legend: "Adding a sermon"
       create: "Create"
       cancel: "Cancel"
+    show:
+      legend: "Sermon"
+    new_sermon_btn:
+      new_link: " Add a sermon"
   layouts:
     head:
       title: "Official site of church \"Transfiguration in Christ\""

@@ -379,11 +379,14 @@ ru:
   sermons:
     index:
       legend: "Проповеди"
-      new_link: " Добавить проповедь"
     new:
       legend: "Добавление проповеди"
       create: "Создать"
       cancel: "Отменить"
+    show:
+      legend: "Проповеди"
+    new_sermon_btn:
+      new_link: " Добавить проповедь"
   layouts:
     head:
       title: "Официальный сайт церкови \"Преображение во Христе\""
