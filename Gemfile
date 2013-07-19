@@ -58,7 +58,7 @@ group :test do
   gem 'capybara', '2.1.0'                                                                           # Browser automation for rspec with js support.
   gem 'factory_girl_rails', '4.2.1'                                                                 # Factories for tests.
   gem 'database_cleaner', '0.9.1'
-  # gem 'selenium-webdriver', '2.32.1'                                                                # Driver to launch tests in Chrome.
+  gem 'selenium-webdriver', '2.32.1'                                                                # Driver to launch tests in browser.
 end
 
 # To use ActiveModel has_secure_password

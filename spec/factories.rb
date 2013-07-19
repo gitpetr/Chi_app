@@ -38,4 +38,10 @@ FactoryGirl.define do
   factory :welcome_message do
     content 'I am batman'
   end
+
+  factory :sermon do
+    title    'Dance of Fate'
+    preacher 'Epica'
+    record { fixture_file_upload("#{Rails.root}/spec/fixtures/files/record.mp3", "audio/mpeg") }
+  end
 end

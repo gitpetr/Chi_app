@@ -61,7 +61,6 @@ describe ArticlesController do
   end
 
   describe "GET 'new'" do
-
     shared_examples "article-new-render-success" do
       it "should deny access" do
         get :new, :locale => :en
