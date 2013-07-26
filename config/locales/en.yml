@@ -120,7 +120,7 @@ en:
       cancel: "Cancel"
     show:
       legend: "Sermon"
-    new_sermon_btn:
+    edit_btns:
       new_link: " Add a sermon"
   layouts:
     head:

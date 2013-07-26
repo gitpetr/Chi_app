@@ -385,7 +385,7 @@ ru:
       cancel: "Отменить"
     show:
       legend: "Проповеди"
-    new_sermon_btn:
+    edit_btns:
       new_link: " Добавить проповедь"
   layouts:
     head:

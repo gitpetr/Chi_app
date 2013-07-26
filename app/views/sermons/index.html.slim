@@ -1,7 +1,7 @@
 legend
   = t(".legend")
 
-  = render partial: 'new_sermon_btn', locals: { :sermon => @fresh_sermon }
+  = render partial: 'edit_btns', locals: { :sermon => @fresh_sermon }
 
 - if !@sermons.empty?
 	div class="row-fluid"
