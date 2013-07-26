@@ -5,7 +5,8 @@ class SermonsController < ApplicationController
 		@sermons = Sermon.order("created_at DESC")
 
 		if !@sermons.empty?
-			gon.record_path = @sermons.last.record_player_path
+			@fresh_sermon   = @sermons.last
+			gon.record_path = @fresh_sermon.record_player_path
 		else
 			gon.record_path = nil
 		end
@@ -25,6 +26,18 @@ class SermonsController < ApplicationController
       flash[:success] = t( :sermon_created_message )
     else
       render 'new'
+    end
+	end
+
+	def edit
+	end
+
+	def update
+		if @sermon.update_attributes( params[:sermon] )
+      redirect_to sermons_path
+      flash[:success] = t( :sermon_updated_message )
+    else
+      render 'edit'
     end
 	end
 end
