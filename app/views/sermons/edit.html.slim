@@ -1,1 +1,13 @@
-legend Edit sermon
+legend
+  = t(".legend")
+
+= simple_form_for @sermon do |f|
+  div class="album-unit"
+  	= f.input :title, :input_html => { :class => "span12", :autofocus => true }
+  	= f.input :preacher
+  	= f.input :recorded_date, :as => :string
+
+  div class="form-actions"
+    = f.button :submit, t(".create"), :class => "btn btn-large btn-success"
+    | &#32;
+    = link_to t(".cancel"), sermons_path, :class => "btn btn-large"

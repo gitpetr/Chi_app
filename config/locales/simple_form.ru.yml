@@ -48,6 +48,10 @@ ru:
           recorded_date: "Дата записи"
           record: "Аудиозапись"
           preacher: "ФИО проповедника"
+        edit:
+          title: "Название проведенной проповеди"
+          recorded_date: "Дата записи"
+          preacher: "ФИО проповедника"
     required:
       text: "Обязательное поле"
       mark: "*"

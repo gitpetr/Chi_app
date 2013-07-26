@@ -385,6 +385,10 @@ ru:
       cancel: "Отменить"
     show:
       legend: "Проповеди"
+    edit:
+      legend: "Редактирование проповеди"
+      create: "Создать"
+      cancel: "Отменить"
     edit_btns:
       new_link: " Добавить проповедь"
   layouts:
