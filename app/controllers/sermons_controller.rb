@@ -5,7 +5,7 @@ class SermonsController < ApplicationController
 		@sermons = Sermon.order("created_at DESC")
 
 		if !@sermons.empty?
-			@fresh_sermon   = @sermons.last
+			@fresh_sermon   = @sermons.first
 			gon.record_path = @fresh_sermon.record_player_path
 		else
 			gon.record_path = nil
