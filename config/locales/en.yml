@@ -126,6 +126,8 @@ en:
       cancel: "Cancel"
     edit_btns:
       new_link: " Add a sermon"
+      change: " Change "
+      edit: "Edit"
   layouts:
     head:
       title: "Official site of church \"Transfiguration in Christ\""
