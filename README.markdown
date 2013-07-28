@@ -31,6 +31,8 @@ $ rake db:test:prepare
 $ rake spec
 ```
 
+**Note:** There is known bug, that sometimes some tests just fall. Unfortunately, its impossible to find out, why. Just rerun tests and it should be enough for them to pass.
+
 6) Create admin (login: qwerty@qwerty.com, password: qwerty):
   `$ rake db:create_admin`
 
