@@ -37,6 +37,8 @@ en:
 
   # Sermon
   sermon_created_message: "Sermon created successfully!"
+  sermon_updated_message: "Sermon updated successfully!"
+  sermon_deleted_message: "Sermon deleted successfully!"
   ##################################
   # VIEWS
   ##################################
@@ -128,6 +130,7 @@ en:
       new_link: " Add a sermon"
       change: " Change "
       edit: "Edit"
+      delete: "Delete"
   layouts:
     head:
       title: "Official site of church \"Transfiguration in Christ\""
