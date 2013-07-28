@@ -21,6 +21,7 @@ $ cd app_name
 $ bundle
 $ rake db:create:all
 $ rake db:migrate
+$ rake db:seeds
 $ rake db:test:prepare
 ```
 
