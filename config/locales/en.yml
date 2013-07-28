@@ -124,7 +124,7 @@ en:
       legend: "Sermon"
     edit:
       legend: "Edit the sermon"
-      create: "Create"
+      update: "Update"
       cancel: "Cancel"
     edit_btns:
       new_link: " Add a sermon"

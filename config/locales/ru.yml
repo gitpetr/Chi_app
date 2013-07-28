@@ -389,7 +389,7 @@ ru:
       legend: "Проповеди"
     edit:
       legend: "Редактирование проповеди"
-      create: "Создать"
+      update: "Обновить"
       cancel: "Отменить"
     edit_btns:
       new_link: " Добавить проповедь"
