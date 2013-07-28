@@ -129,4 +129,109 @@ describe SermonsController do
       end
     end
   end
+
+  describe "GET 'edit'" do
+    before(:each) do
+      @sermon = FactoryGirl.create( :sermon )
+    end
+
+    shared_examples "sermons-edit-redirect-to-root" do
+      it "should deny access" do
+        get :edit, :locale => :en, :id => @sermon
+        response.should redirect_to( root_path )
+      end
+    end
+
+    describe "for non-signed users" do
+      include_examples "sermons-edit-redirect-to-root"
+    end
+
+    describe "for signed-in users" do
+      before(:each){ test_sign_in( @user ) }
+
+      include_examples "sermons-edit-redirect-to-root"
+    end
+
+    describe "for signed-in admin" do
+      before(:each){ test_sign_in( @admin ) }
+
+      it "should access" do
+        get :edit, :locale => :en, :id => @sermon
+        response.should be_success
+      end
+    end
+  end
+
+  describe "PUT 'update'" do
+    before(:each) do
+      @sermon = FactoryGirl.create( :sermon )
+      @attrs = { title: "Dont Lose Your Way!", preacher: "Olga Zhilkova", recorded_date: "2013-07-28 18:36:11" }
+    end
+
+    describe "for non-signed users" do
+      it "should deny access" do
+        put :update, :locale => :en, :id => @sermon, :sermon => @attrs
+        response.should redirect_to( root_path )
+      end
+    end
+
+    describe "for signed-in users" do
+      before(:each){ test_sign_in( @user ) }
+
+      it "should not update" do
+        put :update, :locale => :en, :id => @sermon, :sermon => @attrs
+        @sermon.reload
+        @sermon.title.should_not == @attrs[:title]
+      end
+    end
+
+    describe "for signed-in admin" do
+      before(:each){ test_sign_in( @admin ) }
+
+      it "should update" do
+        put :update, :locale => :en, :id => @sermon, :sermon => @attrs
+        @sermon.reload
+        @sermon.title.should == @attrs[:title]
+      end
+    end
+  end
+
+  describe "DELETE 'destroy'" do
+    before(:each) do
+      @sermon = FactoryGirl.create( :sermon )
+    end
+
+    shared_examples "sermon-destroy-deny-access-and-not-create" do
+      it "should deny access" do
+        delete :destroy, :locale => :en, :id => @sermon
+        response.should redirect_to( root_path )
+      end
+
+      it "should not delete" do
+        expect do
+          delete :destroy, :locale => :en, :id => @sermon
+        end.to_not change( Sermon, :count )
+      end
+    end
+
+    describe "for non-signed users" do
+      include_examples "sermon-destroy-deny-access-and-not-create"
+    end
+
+    describe "for signed-in users" do
+      before(:each){ test_sign_in( @user ) }
+
+      include_examples "sermon-destroy-deny-access-and-not-create"
+    end
+
+    describe "for signed-in admins" do
+      before(:each){ test_sign_in( @admin ) }
+
+      it "should delete" do
+        expect do
+          delete :destroy, :locale => :en, :id => @sermon
+        end.to change( Sermon, :count ).by(-1)
+      end
+    end
+  end
 end
