@@ -1,8 +1,8 @@
 -# Input: sermon (could be nil).
 
 - if can? [:edit, :create, :destroy], Sermon
-  - unless sermon.nil?
-    div class="btn-toolbar sermon-toolbar-buttons"
+  div class="btn-toolbar sermon-toolbar-buttons"
+    - unless sermon.nil?
       div class="btn-group"
         = link_to "#", :class => "btn dropdown-toggle article-edit-button", "data-toggle" => "dropdown" do
           i class="icon-wrench icon-white"

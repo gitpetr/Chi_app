@@ -1,6 +1,7 @@
 class SermonsController < ApplicationController
 	load_and_authorize_resource
 
+  # TODO: remove index method (and use show instead of that).
 	def index
 		@sermons = Sermon.order("created_at DESC")
 
