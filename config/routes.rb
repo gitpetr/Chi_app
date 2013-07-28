@@ -10,10 +10,10 @@ ChirchApp::Application.routes.draw do
     end
 
     resources :articles
+    resources :sermons
     resources :contacts,         :only => [ :index, :edit, :update ]
     resources :welcome_messages, :only => [ :edit, :update ]
     resources :homes,            :only => [ :index ]
-    resources :sermons,          :except => [ :destroy ]
 
     resources :albums, :except => [ :show ] do
       resources :photos

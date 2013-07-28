@@ -40,4 +40,12 @@ class SermonsController < ApplicationController
       render 'edit'
     end
 	end
+
+	def destroy
+		if @sermon.destroy
+			flash[:success] = t( :sermon_deleted_message )
+		end
+
+		redirect_to sermons_path
+	end
 end
