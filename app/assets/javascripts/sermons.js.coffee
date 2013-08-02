@@ -20,28 +20,26 @@ jQuery ->
       supplied: "mp3"
     })
 
-  # Hiding controls AFTER page load to make sure that we hide all nessesary elements, including volume bar.
-  $(window).on 'load', ->
-    sizeToRemoveControls = 1220
-    sizeToShowControls = 780
-    window_width = $(window).width()
-
-    if window_width <= sizeToRemoveControls and window_width > sizeToShowControls
+  hideControls = () ->
+    if $('#jp-controls-to-hide').is(":visible")
       $('#jp-controls-to-hide').hide()
       $('.jp-progress').hide()
       $('.jp-volume-bar').hide()
+
+  # Hiding controls AFTER page load to make sure that we hide all nessesary elements, including volume bar.
+  $(window).on 'load', ->
+    window_width = $(window).width()
+
+    if window_width <= root.sizeToRemoveControls and window_width > root.sizeToShowControls
+      hideControls()
     return true
 
   # Hiding controls if page is too small to show them.
   $(window).on 'resize', ->
-    sizeToRemoveControls = 1220
-    sizeToShowControls = 780
     window_width = $(window).width()
 
-    if window_width <= sizeToRemoveControls and window_width > sizeToShowControls
-      $('#jp-controls-to-hide').hide()
-      $('.jp-progress').hide()
-      $('.jp-volume-bar').hide()
+    if window_width <= root.sizeToRemoveControls and window_width > root.sizeToShowControls
+      hideControls()
     else
       if $('#jp-controls-to-hide').is(":hidden")                                                    # If this div is hidden, then other controls are hidden, too.
         $('#jp-controls-to-hide').show()
@@ -49,8 +47,15 @@ jQuery ->
         $('.jp-volume-bar').show()
     return true
 
+  # Global vars.
+  root = exports ? this
+  root.sizeToRemoveControls = 1220
+  root.sizeToShowControls   = 780
+
+  # Functions.
 	showDatepicker()
 	initAudioPlayer()
+
 
 
 
