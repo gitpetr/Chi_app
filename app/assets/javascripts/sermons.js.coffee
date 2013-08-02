@@ -20,6 +20,34 @@ jQuery ->
       supplied: "mp3"
     })
 
+  # Hiding controls AFTER page load to make sure that we hide all nessesary elements, including volume bar.
+  $(window).on 'load', ->
+    sizeToRemoveControls = 1220
+    sizeToShowControls = 780
+    window_width = $(window).width()
+
+    if window_width <= sizeToRemoveControls and window_width > sizeToShowControls
+      $('#jp-controls-to-hide').hide()
+      $('.jp-progress').hide()
+      $('.jp-volume-bar').hide()
+    return true
+
+  # Hiding controls if page is too small to show them.
+  $(window).on 'resize', ->
+    sizeToRemoveControls = 1220
+    sizeToShowControls = 780
+    window_width = $(window).width()
+
+    if window_width <= sizeToRemoveControls and window_width > sizeToShowControls
+      $('#jp-controls-to-hide').hide()
+      $('.jp-progress').hide()
+      $('.jp-volume-bar').hide()
+    else
+      if $('#jp-controls-to-hide').is(":hidden")                                                    # If this div is hidden, then other controls are hidden, too.
+        $('#jp-controls-to-hide').show()
+        $('.jp-progress').show()
+        $('.jp-volume-bar').show()
+    return true
 
 	showDatepicker()
 	initAudioPlayer()
