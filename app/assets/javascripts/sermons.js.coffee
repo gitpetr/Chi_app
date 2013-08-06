@@ -26,17 +26,7 @@ jQuery ->
       $('.jp-progress').hide()
       $('.jp-volume-bar').hide()
 
-  # Hiding controls AFTER page load to make sure that we hide all nessesary elements, including volume bar.
-  $(window).on 'load', ->
-    window_width = $(window).width()
-
-    if ( window_width <= root.sizeToRemoveControlsTablet and window_width >= root.sizeToShowControls ) or
-         window_width < root.sizeToRemoveControlsMobile
-      hideControls()
-    return true
-
-  # Hiding controls if page is too small to show them.
-  $(window).on 'resize', ->
+  controlsManipulator = () ->
     window_width = $(window).width()
 
     if ( window_width <= root.sizeToRemoveControlsTablet and window_width >= root.sizeToShowControls ) or
@@ -47,6 +37,15 @@ jQuery ->
         $('#jp-controls-to-hide').show()
         $('.jp-progress').show()
         $('.jp-volume-bar').show()
+
+  # Hiding controls AFTER page load to make sure that we hide all nessesary elements, including volume bar.
+  $(window).on 'load', ->
+    controlsManipulator()
+    return true
+
+  # Hiding controls if page is too small to show them.
+  $(window).on 'resize', ->
+    controlsManipulator()
     return true
 
   # Global vars.
