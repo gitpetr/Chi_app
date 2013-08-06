@@ -30,7 +30,7 @@ jQuery ->
   $(window).on 'load', ->
     window_width = $(window).width()
 
-    if ( window_width <= root.sizeToRemoveControlsTablet and window_width > root.sizeToShowControls ) or
+    if ( window_width <= root.sizeToRemoveControlsTablet and window_width >= root.sizeToShowControls ) or
          window_width < root.sizeToRemoveControlsMobile
       hideControls()
     return true
@@ -39,7 +39,7 @@ jQuery ->
   $(window).on 'resize', ->
     window_width = $(window).width()
 
-    if ( window_width <= root.sizeToRemoveControlsTablet and window_width > root.sizeToShowControls ) or
+    if ( window_width <= root.sizeToRemoveControlsTablet and window_width >= root.sizeToShowControls ) or
          window_width < root.sizeToRemoveControlsMobile
       hideControls()
     else
@@ -53,7 +53,7 @@ jQuery ->
   root = exports ? this
   root.sizeToRemoveControlsTablet = 1220
   root.sizeToRemoveControlsMobile = 518
-  root.sizeToShowControls         = 780
+  root.sizeToShowControls         = 767
 
   # Functions.
 	showDatepicker()
