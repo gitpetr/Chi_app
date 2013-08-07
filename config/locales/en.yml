@@ -116,6 +116,7 @@ en:
   sermons:
     index:
       legend: "Sermon"
+      no_sermons: "There are no sermons yet."
     new:
       legend: "Adding a sermon"
       create: "Create"
