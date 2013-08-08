@@ -28,5 +28,5 @@ legend
         -# Sidebar with sermons.
         ul class="nav nav-pills nav-stacked"
           - @sermons.each do |sermon|
-            li class="#{ active_sermon_sidebar_link?( sermon_path( sermon ) ) }"
+            li class="#{active_sermon_sidebar_link?(sermon_path( sermon ))}"
               = link_to "#{sermon.title} (#{sermon.preacher}), #{I18n.l sermon.recorded_date.to_date}", sermon_path( sermon )
