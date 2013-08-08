@@ -18,6 +18,7 @@ describe "Wysihtml5Editors" do
     end
 
     it "should have toolbar for default (russian) version", :js => true do
+      sleep 3
       page.should have_css('ul.wysihtml5-toolbar')
     end
 
