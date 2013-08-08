@@ -23,7 +23,7 @@ legend
   div class="row-fluid"
     div class="row-fluid"
       div class="span8"
-        = render 'audio_player'
+        = render partial: 'audio_player', locals: { :sermon => @sermon }
       div class="span4"
         -# Sidebar with sermons.
         ul class="nav nav-pills nav-stacked"
