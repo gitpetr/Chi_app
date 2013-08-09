@@ -1,6 +1,8 @@
 class AlbumsController < ApplicationController
   load_and_authorize_resource
 
+  before_filter :remember_controller
+
   def index
     @albums = Album.order("updated_at DESC")
     @small_preview_size = 65
@@ -40,4 +42,10 @@ class AlbumsController < ApplicationController
 
     redirect_to albums_path
   end
+
+  private
+
+    def remember_controller
+      gon.controller = params[:controller]
+    end
 end
