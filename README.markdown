@@ -106,6 +106,10 @@ and after this push git and deploy:
 **Changelog**
 
 ------------------------------------------------------------------------------------------
+* Sitemap generator. Edit `config/sitemap.rb` and then run `rake sitemap:refresh`.
+
+* Albums with photos, Sermons.
+
 * Slim migration. If you have troubles on production then you should just restart the whole server.
 
 * Admin can upload multiple photos now.
