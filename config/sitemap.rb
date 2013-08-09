@@ -10,6 +10,7 @@ SitemapGenerator::Sitemap.create do
     add articles_path( :locale => locale )
     add albums_path( :locale => locale )
     add contacts_path( :locale => locale )
+    add sermons_path( :locale => locale )
   end
 
   # Put links creation logic here.
