@@ -20,23 +20,23 @@ jQuery ->
       supplied: "mp3"
     })
 
-  hideControls = () ->
-    if $('#jp-controls-to-hide').is(":visible")
-      $('#jp-controls-to-hide').hide()
-      $('.jp-progress').hide()
-      $('.jp-volume-bar').hide()
+  isCollisionOfControlWithPlayer = (control) ->
+    audioPlayerRightSide = root.audioPlayerWindow.offset().left + root.audioPlayerWindow.width()
+    controlRightSide     = control.offset().left + control.width()
+
+    return controlRightSide > audioPlayerRightSide
 
   controlsManipulator = () ->
-    window_width = $(window).width()
+    controls = [ root.maxVolumeBtn, root.volumeBar, root.muteVolumeBtn, root.progressBar ]
 
-    if ( window_width <= root.sizeToRemoveControlsTablet and window_width >= root.sizeToShowControls ) or
-         window_width < root.sizeToRemoveControlsMobile
-      hideControls()
-    else
-      if $('#jp-controls-to-hide').is(":hidden")                                                    # If this div is hidden, then other controls are hidden, too.
-        $('#jp-controls-to-hide').show()
-        $('.jp-progress').show()
-        $('.jp-volume-bar').show()
+    for control in controls
+      # Hide via "visibility" because in that case jquery can find offset of hidden element.
+      if isCollisionOfControlWithPlayer( control )
+        control.css( { "visibility":"hidden" } )
+      else
+        control.css( { "visibility":"visible" } )
+
+    return true
 
   # Hiding controls AFTER page load to make sure that we hide all nessesary elements, including volume bar.
   $(window).on 'load', ->
@@ -50,9 +50,11 @@ jQuery ->
 
   # Global vars.
   root = exports ? this
-  root.sizeToRemoveControlsTablet = 1220
-  root.sizeToRemoveControlsMobile = 518
-  root.sizeToShowControls         = 767
+  root.audioPlayerWindow = $('.jp-type-single')
+  root.maxVolumeBtn      = $('.jp-volume-max')
+  root.volumeBar         = $('.jp-volume-bar')
+  root.muteVolumeBtn     = $('.jp-mute')
+  root.progressBar       = $('.jp-progress')
 
   # Functions.
 	showDatepicker()
