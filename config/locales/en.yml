@@ -123,7 +123,6 @@ en:
       cancel: "Cancel"
     show:
       legend: "Sermon"
-      new_link: " Add a sermon"
       change: " Change "
       edit: "Edit"
       delete: "Delete"
@@ -131,6 +130,8 @@ en:
       legend: "Edit the sermon"
       update: "Update"
       cancel: "Cancel"
+    new_btn:
+      new_link: " Add a sermon"
   layouts:
     head:
       title: "Official site of church \"Transfiguration in Christ\""

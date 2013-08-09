@@ -14,10 +14,7 @@ legend
             li = link_to t(".edit"), edit_sermon_path( @sermon )
             li = link_to t(".delete"), @sermon, :method => :delete
 
-      div class="btn-group"
-        = link_to new_sermon_path, :class => "btn btn-primary album-new-button" do
-          i class="icon-plus icon-white"
-          = t(".new_link")
+      = render 'new_btn'
 
 - if !@sermons.empty?
   div class="row-fluid"

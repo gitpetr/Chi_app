@@ -1,6 +1,10 @@
 legend
   = t(".legend")
 
+  - if can? [:create], Sermon
+    div class="btn-toolbar sermon-toolbar-buttons"
+      = render 'new_btn'
+
 - if @sermons.empty?
 	div class="row-fluid"
     pre = t(".no_sermons")
