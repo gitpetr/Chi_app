@@ -14,6 +14,13 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 #   Capybara::Selenium::Driver.new(app, :browser => :chrome)
 # end
 
+# Disabling stderr (this cleans tests output).
+Capybara.register_driver :webkit do |app|
+  Capybara::Webkit::Driver.new(app, :stderr => nil)
+end
+
+Capybara.javascript_driver = :webkit
+
 # RSpec config.
 RSpec.configure do |config|
   # Disable garbage collector to speed up the test suit.
