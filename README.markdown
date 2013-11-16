@@ -21,7 +21,7 @@ $ cd app_name
 $ bundle
 $ rake db:create:all
 $ rake db:migrate
-$ rake db:seeds
+$ rake db:seed
 $ rake db:test:prepare
 ```
 
@@ -34,7 +34,7 @@ $ rake spec
 **Note:** There is known bug, that sometimes some tests just fall. Unfortunately, its impossible to find out, why. Just rerun tests and it should be enough for them to pass.
 
 6) Create admin (login: qwerty@qwerty.com, password: qwerty):
-  `$ rake db:create_admin`
+  `$ rake db:create_test_admin`
 
 7) Also you probably'd like to use .rvmrc file to set correct version. To use it you should do that:
 
