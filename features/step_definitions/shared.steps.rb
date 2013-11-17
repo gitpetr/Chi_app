@@ -11,4 +11,8 @@ end
 
 # WHEN
 
+When(/^I click link "(.*?)"$/) do |str|
+  click_link str
+end
+
 # THEN

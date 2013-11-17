@@ -3,7 +3,6 @@ Feature: Sermon
   As an any user
   I should see sermon if they has been uploaded
 
-
   Background:
     Given There is 1 sermon
     When I go to page with sermons
