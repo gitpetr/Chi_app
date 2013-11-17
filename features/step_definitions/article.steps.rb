@@ -4,9 +4,14 @@ Given(/^I have an article$/) do
   @article = FactoryGirl.create( :article )
 end
 
+Given(/^There are (\d+) articles$/) do |count|
+  count.to_i.times{ FactoryGirl.create(:article) }
+end
+
 # WHEN
 
 When(/^I go to page with articles$/) do
+  visit root_path(:locale => :ru)
   page.find("#navbar-articles").click
 end
 
@@ -46,5 +51,10 @@ end
 
 Then(/^I should see message that article has been deleted$/) do
   page.should have_content "Статья была успешно удалена!"
+end
+
+Then(/^I should see pagination$/) do
+  page.should have_css('div.pagination.pagination-centered')
+  page.should have_selector('a', :text => "Последняя »")                        # Link to last page in pagination
 end
 
