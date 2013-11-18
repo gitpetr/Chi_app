@@ -5,7 +5,7 @@ div.span4
       - if can? [:edit, :destroy], Photo
         div class="photo-menu"
           = link_to t(".delete"), [@album, photo], :method => :delete, :class => "edit-link", :id => "destroy-photo-#{photo.id}"
-          = link_to t(".edit"), edit_album_photo_path( @album, photo ), :class => "destroy-link"
+          = link_to t(".edit"), edit_album_photo_path( @album, photo ), :class => "destroy-link", :id => "edit-photo-#{photo.id}"
 
       div data-id="#{photo.id}" id="photo-Link"
         = image_tag photo.image_url(:thumb), :class => "photo"
