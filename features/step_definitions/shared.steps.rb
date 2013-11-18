@@ -15,4 +15,8 @@ When(/^I click link "(.*?)"$/) do |str|
   click_link str
 end
 
+When(/^I click button "(.*?)"$/) do |str|
+  click_button str
+end
+
 # THEN

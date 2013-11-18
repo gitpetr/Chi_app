@@ -5,7 +5,7 @@ Feature: Photo slides
   I should see slideshow if photo has been uploaded
 
   Background:
-    Given There is album with photos for slideshow
+    Given There is album with photos
     And I go to page with albums
     When I open an album
 
