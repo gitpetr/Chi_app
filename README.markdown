@@ -14,7 +14,7 @@ To install Imagemagik in Mac use homebrew:
 
 3) In `config/initializers/` create `secret_token.rb` from `secret_token.example.rb`
 
-4) To lauch app:
+4) To launch application:
 
 ```shell
 $ cd app_name
@@ -29,19 +29,15 @@ $ rake db:test:prepare
 
 ```shell
 $ rake spec
+$ cucumber
 ```
 
-**Note:** There is known bug, that sometimes some tests just fall. Unfortunately, its impossible to find out, why. Just rerun tests and it should be enough for them to pass.
+**Note:** There is known bug, that sometimes some tests just fall. Unfortunately, i don't have enough time to find out, why. Just rerun tests and it should be enough for them to pass.
 
 6) Create admin (login: qwerty@qwerty.com, password: qwerty):
   `$ rake db:create_test_admin`
 
-7) Also you probably'd like to use .rvmrc file to set correct version. To use it you should do that:
-
-```shell
- $ cd this_app
- $ rvm rvmrc trust DIR
-```
+7) Also you should know that project has default ruby version and gemset. If you use rvm then you'll use them by default. Check `.ruby-version` and `.ruby-gemset` for more details.
 
 **Setup (production)**
 
@@ -106,6 +102,7 @@ and after this push git and deploy:
 **Changelog**
 
 ------------------------------------------------------------------------------------------
+* Cucumber for features instead of rspec features.
 * Sitemap generator. Edit `config/sitemap.rb` and then run `rake sitemap:refresh`.
 * Albums with photos, Sermons.
 * Slim migration. If you have troubles on production then you should just restart the whole server.
