@@ -3,10 +3,16 @@ rvm:
   - 2.0.0
 env:
   - DB=postgres
+  - RSPEC_FOLDER=spec/controllers/
+  - RSPEC_FOLDER=spec/models/
+before_install:
+  - gem install bundler --pre
 before_script:
+  - cp config/database.example.yml config/database.yml
   - psql -c 'create database chirch_app_test;' -U postgres
 script:
   - RAILS_ENV=test bundle exec rake db:migrate --trace
   - bundle exec rake db:test:prepare
-  - bundle exec rake
+  - bundle exec rspec $RSPEC_FOLDER
+  - bundle exec cucumber -f progress
 
