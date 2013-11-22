@@ -61,6 +61,7 @@ group :test do
   gem 'database_cleaner', '1.2.0'
   gem 'selenium-webdriver', '2.37.0'                                                                # Driver to launch tests in browser.
   gem 'cucumber-rails', :require => false
+  gem 'capybara-screenshot'                                                                         # Making sceenshots from capybara.
 end
 
 # To use ActiveModel has_secure_password
