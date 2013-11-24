@@ -7,6 +7,8 @@ This is a web app for chirch.
 
 ------------------------------------------------------------------------------------------
 
+0) Create `.ruby-version` with `ruby-2.0.0` and `.ruby-gemset` with `chirchApp`.
+
 1) Before installation make sure that you installed PostgreSQL and Imagemagik.
 
 To install Imagemagik in Mac use homebrew:
@@ -101,6 +103,10 @@ and after this push git and deploy:
 ```
 
 4) Do not forget to change a secret key in `shared/config/initializers/secret_token.rb`
+
+**Note:** On new mac you should do that: 
+
+`$ ssh-add -K`
 
 **Changelog**
 
