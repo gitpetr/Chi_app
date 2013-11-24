@@ -6,7 +6,7 @@ gem 'jquery-rails', '2.2.1'                                                     
 gem 'jquery-ui-rails', '4.0.3'                                                                      # Jquery css (for widgets and etc).
 gem 'haml', '4.0.2'                                                                                 # Templating engine for HTML.
 gem 'therubyracer', :platform => :ruby
-gem 'devise', '2.2.3'                                                                               # Easy authentication.
+gem 'devise', '3.2.1'                                                                               # Easy authentication.
 gem 'simple_form', '2.1.0'                                                                          # Super simple forms with bootstrap look support.
 gem 'bootstrap-wysihtml5-rails', "0.3.1.19"                                                         # Rich text editor via JS.
 gem 'kaminari', '0.14.0'                                                                            # Be very carefull with changing version of this gem (i modified a lot generated views).
