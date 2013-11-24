@@ -17,7 +17,7 @@ Feature: User sign in/out
 
   Scenario: Success sign out
     And I try to sign in with correct data
-    And I click link "Выйти"
+    And I sign out
     Then I should see message that i signed out
 
 

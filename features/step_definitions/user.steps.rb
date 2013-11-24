@@ -26,7 +26,7 @@ end
 
 When(/^I try to sign in with correct data$/) do
   fill_in "Ваш email",  :with => @user.email
-  fill_in "Пароль", :with => 'qwerty'
+  fill_in "Пароль", :with => 'qwertyqwerty'
   click_button "Войти"
 end
 
@@ -40,12 +40,12 @@ When(/^I fill fields to change password$/) do
   fill_in "Ваш email", :with => @user.email
   fill_in "Новый пароль", :with => @new_pass
   fill_in "Подтверждение нового пароля", :with => @new_pass
-  fill_in "Ваш текущий пароль", :with => 'qwerty'
+  fill_in "Ваш текущий пароль", :with => 'qwertyqwerty'
   click_button 'Обновить'
 end
 
 When(/^I sign out$/) do
-  click_link "Выйти"
+  visit "/ru/users/sign_out"
 end
 
 When(/^I try to sign in with new password$/) do

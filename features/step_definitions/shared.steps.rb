@@ -5,7 +5,7 @@ Given(/^I logged in as admin$/) do
 
   visit new_user_session_path( :locale => "ru" )
   fill_in "Ваш email",  :with => @admin.email
-  fill_in "Пароль", :with => 'qwerty'
+  fill_in "Пароль", :with => 'qwertyqwerty'
   click_button "Войти"
 end
 
