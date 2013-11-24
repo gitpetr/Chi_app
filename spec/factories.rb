@@ -3,7 +3,7 @@ include ActionDispatch::TestProcess
 FactoryGirl.define do
   factory :user do
     sequence(:email) { |n| "email#{n}@factory.com" }
-    password  'qwerty'
+    password  'qwertyqwerty'
 
     # Child of :user factory, since it's in the `factory :user` block
     factory :admin do

@@ -17,7 +17,7 @@ namespace :db do
 end
 
 def make_test_admin
-  admin = User.new( :email => "qwerty@qwerty.com", :password => "qwerty" )
+  admin = User.new( :email => "qwerty@qwerty.com", :password => "qwertyqwerty" )
   admin.admin = true
   admin.save!
 end

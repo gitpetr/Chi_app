@@ -22,7 +22,7 @@ require 'spec_helper'
 
 describe User do
   before(:each) do
-    @attr = { :email => "qwerty@qwerty.com", :password => "qwerty" }
+    @attr = { :email => "qwerty@qwerty.com", :password => "qwertyqwerty" }
   end
 
   describe "DB" do

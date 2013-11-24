@@ -36,7 +36,7 @@ $ cucumber
 
 **Note:** There is known bug, that sometimes some tests just fall. Unfortunately, i don't have enough time to find out, why. Just rerun tests and it should be enough for them to pass.
 
-6) Create admin (login: qwerty@qwerty.com, password: qwerty):
+6) Create admin (login: qwerty@qwerty.com, password: qwertyqwerty):
   `$ rake db:create_test_admin`
 
 7) Also you should know that project has default ruby version and gemset. If you use rvm then you'll use them by default. Check `.ruby-version` and `.ruby-gemset` for more details.
