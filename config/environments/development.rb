@@ -38,4 +38,7 @@ ChirchApp::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  # Available locales for rails-18n.
+  config.i18n.available_locales = [:ru, :en]
 end
