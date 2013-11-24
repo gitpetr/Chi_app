@@ -1,5 +1,11 @@
 class RegistrationsController < Devise::RegistrationsController
-  before_filter :prevent_sign_up
+  def new
+    prevent_sign_up
+  end
+
+  def create
+    prevent_sign_up
+  end
 
   private
 
