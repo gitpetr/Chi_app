@@ -219,6 +219,9 @@ GEM
       activesupport (= 3.2.15)
       bundler (~> 1.0)
       railties (= 3.2.15)
+    rails-i18n (3.0.0)
+      i18n (~> 0.5)
+      rails (>= 3.0.0, < 4.0.0)
     rails_best_practices (1.13.8)
       activesupport
       awesome_print
@@ -360,6 +363,7 @@ DEPENDENCIES
   pg (= 0.15.1)
   quiet_assets (= 1.0.2)
   rails (= 3.2.15)
+  rails-i18n (~> 3.0.0)
   rails_best_practices
   rb-fsevent
   rmagick (= 2.13.2)

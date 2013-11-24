@@ -20,6 +20,7 @@ gem 'less-rails', '2.3.2'                                                       
 gem 'slim', '1.3.8'
 gem 'gon', '3.0.5'                                                                                  # Access data from ruby and JS.
 gem 'sitemap_generator', '4.1.0'                                                                    # Generating sitemap.
+gem 'rails-i18n', '~> 3.0.0'
 
 gem 'haml2slim'
 
