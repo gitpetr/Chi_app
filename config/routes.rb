@@ -2,12 +2,7 @@ ChirchApp::Application.routes.draw do
 
   # Put all you routes to here (to keep correct localization).
   scope ":locale", locale: /#{I18n.available_locales.join("|")}/ do
-    devise_for :users, :skip => [:registrations]                                                    # Users can't register now (and destroy himself).
-    as :user do
-      get 'users/edit' => 'devise/registrations#edit', :as => 'edit_user_registration'              # But user can edit...
-      put 'users' => 'devise/registrations#update', :as => 'user_registration'                      # ..and update his password.
-      get '/users/sign_out' => 'devise/sessions#destroy'                                            # Unfortunately i use that because Webrate generated GET method for logout, not DELETE.
-    end
+    devise_for :users, :controllers => {:registrations => "registrations"}
 
     resources :articles
     resources :sermons
