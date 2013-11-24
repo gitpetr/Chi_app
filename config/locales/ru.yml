@@ -265,9 +265,6 @@ ru:
         sign_up_link: "Зарегистрироваться!"
         sign_in_link: "Уже зарегистрированы?"
     registrations:
-      new:
-        sign_up_title: "Регистрация"
-        sign_up_button: "Зарегистрироваться"
       edit:
         header: "Редактирование личных данных"
         update_button: "Обновить"
