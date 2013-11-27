@@ -17,9 +17,9 @@ class Article < ActiveRecord::Base
 
   validates :content,
               presence: true,
-              :length   => { :maximum => 50000 }
+              length: { maximum: 50000 }
   validates :title,
               presence: true,
-              :length => { :maximum => 100 }
+              length: { maximum: 100 }
 
 end

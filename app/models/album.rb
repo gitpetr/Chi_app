@@ -17,9 +17,9 @@ class Album < ActiveRecord::Base
   attr_accessible :description, :name
 
   validates :name,
-              :presence => { :message => :presense_message },
-              :length => { :maximum => 100, :message => :max_length_message }
+              presence: true,
+              length: { maximum: 100 }
 
   validates :description,
-              :length   => { :maximum => 2000, :message => :max_lenght_message }
+              length: { maximum: 2000 }
 end

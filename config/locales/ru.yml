@@ -205,13 +205,6 @@ ru:
               max_lenght_message: "не должно содержать больше %{count} символов"
             image:
               presence_message: "не должен быть пустым"
-        album:
-          attributes:
-            name:
-              presense_message: "не должно быть пустым"
-              max_length_message: "не должно содержать больше %{count} символов"
-            description:
-              max_lenght_message: "не должно содержать больше %{count} символов"
         contact:
           attributes:
             chirch_name:
