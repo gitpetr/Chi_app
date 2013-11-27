@@ -16,10 +16,10 @@ class Article < ActiveRecord::Base
   attr_accessible :title, :content
 
   validates :content,
-              :presence => { :message => :presense_message },
-              :length   => { :maximum => 50000, :message => :max_lenght_message }
+              presence: true,
+              :length   => { :maximum => 50000 }
   validates :title,
-              :presence => { :message => :presense_message },
-              :length => { :maximum => 100, :message => :max_length_message }
+              presence: true,
+              :length => { :maximum => 100 }
 
 end
