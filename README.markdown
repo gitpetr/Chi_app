@@ -33,8 +33,7 @@ $ rake db:test:prepare
 5) After that, you should make sure that all tests pass:
 
 ```shell
-$ rake spec
-$ cucumber
+$ rake 
 ```
 
 **Note:** There is known bug, that sometimes some tests just fall. Unfortunately, i don't have enough time to find out, why. Just rerun tests and it should be enough for them to pass.
@@ -111,10 +110,11 @@ and after this push git and deploy:
 **Changelog**
 
 ------------------------------------------------------------------------------------------
+* Rails and devise has updated. Devise's views regenerated.
 * Cucumber for features instead of rspec features.
 * Sitemap generator. Edit `config/sitemap.rb` and then run `rake sitemap:refresh`.
 * Albums with photos, Sermons.
-* Slim migration. If you have troubles on production then you should just restart the whole server.
+* Slim integration. If you have troubles on production then you should just restart the whole OS.
 * Admin can upload multiple photos now.
 * Now for capybara's js tests i use chrome browser. I added in `/spec/spec_helper.rb` that:
 
@@ -140,14 +140,14 @@ And also in installed driver (not sure about that): `$ brew install chromedriver
 }
 ```
 
-* Contacts: show, edit, update.
+* Contacts added.
 * Slideshow starts when user clicks a photo.
-* Uploading image has thumb version. Original resizes to 800x600 pixels.
-* Photo: showing, uploading, editing, deleting. For uploading i use `carrierwave`.
-* Article: showing, adding, updating, deleting.
+* Uploaded image has thumb version. Original resizes to 800x600 pixels.
+* Photos added. For uploading i use `carrierwave`.
+* Articles added.
 * CanCan implemented.
-* I implemented rich text editor via 'bootstrap-wysihtml5-rails'. [how to](https://github.com/Nerian/bootstrap-wysihtml5-rails)
-* I created my own .rvmrc to use project-specific ruby (1.9.3-head now) and gemset (global). I did that:
+* Rich text editor via 'bootstrap-wysihtml5-rails'. [how to](https://github.com/Nerian/bootstrap-wysihtml5-rails)
+* `.rvmrc` to use project-specific ruby (1.9.3-head now) and gemset (global). I did that:
 
     `$ rvm --rvmrc --create ruby-2.0.0-p0@chirchApp`
 
@@ -195,8 +195,8 @@ And also in installed driver (not sure about that): `$ brew install chromedriver
       -#  = link_to t(".sign_up_link"), new_registration_path(resource_name)`
 * Devise views converted from .erb to .haml via [This link](https://github.com/plataformatec/devise/wiki/How-To%3a-Create-Haml-and-Slim-Views)
 * I18n (English and Russian).
-* Links added to login/logout.
+* Links added to login and logout.
 * Show flash messages (which can be closed) and debug information (for developer only).
-* Navbar now can be collapesed.
+* Navbar now can be collapsed.
 * Bootstrap integrated in the app via 'twitter-bootstrap-rails' gem.
-* Haml integrated in the app.
+* Haml integrated in the application.
