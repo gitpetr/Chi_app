@@ -36,8 +36,8 @@ group :assets do
 end
 
 group :development do
-  gem 'sextant'                                                                                     # Navigate in routes on site.
-  gem 'rails_best_practices'
+  gem 'sextant', '0.2.4'                                                                            # Navigate in routes on site.
+  gem 'rails_best_practices', '1.13.8'
   gem 'webrick', '1.3.1'                                                                            # Standart server. I specify it to remove warning from logs.
   gem 'annotate', '~> 2.5.0'
   gem 'better_errors', '0.8.0'                                                                      # Show errors with better output.
@@ -49,20 +49,20 @@ end
 
 group :development, :test do
   gem 'rspec-rails', '2.13.0'
-  gem 'rb-fsevent'                                                                                  # Dependency for guard.
+  gem 'rb-fsevent', '0.9.3'                                                                         # Dependency for guard.
   gem 'guard-rspec', '2.5.2'                                                                        # Rspec for guard.
-  gem 'terminal-notifier-guard'                                                                     # Notification via notification center.
-  gem 'launchy'                                                                                     # This gem allow us to open testing page in browser (save_and_open_page method)
+  gem 'terminal-notifier-guard', '1.5.3'                                                            # Notification via notification center.
+  gem 'launchy', '2.3.0'                                                                            # This gem allow us to open testing page in browser (save_and_open_page method)
 end
 
 group :test do
   gem 'capybara', '2.1.0'                                                                           # Browser automation for rspec with js support.
-  gem 'capybara-webkit'
+  gem 'capybara-webkit', '1.0.0'
   gem 'factory_girl_rails', '4.2.1'                                                                 # Factories for tests.
   gem 'database_cleaner', '1.2.0'
   gem 'selenium-webdriver', '2.37.0'                                                                # Driver to launch tests in browser.
   gem 'cucumber-rails', :require => false
-  gem 'capybara-screenshot'                                                                         # Making sceenshots from capybara.
+  gem 'capybara-screenshot', '0.3.14'                                                               # Making sceenshots from capybara.
 end
 
 # To use ActiveModel has_secure_password
