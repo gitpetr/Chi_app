@@ -48,7 +48,7 @@ group :development do
 end
 
 group :development, :test do
-  gem 'rspec-rails', '2.13.0'
+  gem 'rspec-rails', '2.14.0'
   gem 'rb-fsevent', '0.9.3'                                                                         # Dependency for guard.
   gem 'guard-rspec', '2.5.2'                                                                        # Rspec for guard.
   gem 'terminal-notifier-guard', '1.5.3'                                                            # Notification via notification center.
@@ -56,6 +56,7 @@ group :development, :test do
 end
 
 group :test do
+  gem 'shoulda-matchers', '2.4.0'
   gem 'capybara', '2.1.0'                                                                           # Browser automation for rspec with js support.
   gem 'capybara-webkit', '1.0.0'
   gem 'factory_girl_rails', '4.2.1'                                                                 # Factories for tests.
