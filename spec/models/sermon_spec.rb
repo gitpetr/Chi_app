@@ -14,36 +14,22 @@
 require 'spec_helper'
 
 describe Sermon do
-  before(:each) do
-    @attr = { :title => "qwerty@qwerty.com",
-              :recorded_date => DateTime.now,
-              :preacher => "name",
-              :record => File.open(File.join(Rails.root, '/spec/fixtures/files/record.mp3')) }
-  end
+  it { should validate_presence_of(:title) }
+  it { should ensure_length_of(:title).is_at_most(250) }
+  it { should validate_presence_of(:record) }
+  it { should validate_presence_of(:preacher) }
+  it { should validate_presence_of(:recorded_date) }
 
   describe "DB" do
     it "should create sermon with valid params" do
+      attrs = { title: "qwerty@qwerty.com",
+                recorded_date: DateTime.now,
+                preacher: "name",
+                record: File.open(File.join(Rails.root, '/spec/fixtures/files/record.mp3')) }
+
       expect do
-        Sermon.create( @attr )
+        Sermon.create( attrs )
       end.to change( Sermon, :count ).by( 1 )
-    end
-  end
-
-  describe "Validations for" do
-    it "title can't be empty" do
-      Sermon.new( @attr.merge :title => "" ).should_not be_valid
-    end
-
-    it "title can't have more than 250 symbols" do
-      Sermon.new( @attr.merge( :title => "a" * 251 ) ).should_not be_valid
-    end
-
-    it "preacher can't be empty" do
-      Sermon.new( @attr.merge :preacher => "" ).should_not be_valid
-    end
-
-    it "record can't be empty" do
-      Sermon.new( @attr.merge( :record => "" ) ).should_not be_valid
     end
   end
 end
