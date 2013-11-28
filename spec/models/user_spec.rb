@@ -25,34 +25,21 @@ describe User do
     @attr = { :email => "qwerty@qwerty.com", :password => "qwertyqwerty" }
   end
 
+  it { should have_many(:articles) }
+  it { should have_many(:albums) }
+
   describe "DB" do
     it "should create user with valid params" do
       expect do
         user = User.create( @attr )
       end.to change( User, :count ).by( 1 )
     end
-
-    it "should not create user with invalid params" do
-      expect do
-        user = User.create( @attr.merge :email => "", :password => "" )
-      end.to_not change( User, :count )
-    end
   end
 
-  describe "Validations for" do
+  describe "Validations" do
     it "admin's attribute should = false when user has been created" do
       user = User.create( @attr )
       user.admin.should be_false
-    end
-
-    it "email can't be empty" do
-      user = User.create( @attr.merge :email => "" )
-      user.should_not be_valid
-    end
-
-    it "password can't be empty" do
-      user = User.create( @attr.merge :password => "" )
-      user.should_not be_valid
     end
   end
 end
