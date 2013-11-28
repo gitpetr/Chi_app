@@ -22,7 +22,7 @@ describe Article do
   describe "DB" do
     it "should create article with valid params" do
       user = FactoryGirl.create( :user )
-      attrs = { :content => "some text is here", :title => "Test title" }
+      attrs = { content: "some text is here", title: "Test title" }
 
       expect do
         user.articles.create attrs

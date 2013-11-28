@@ -22,7 +22,7 @@ describe Album do
   describe "DB" do
     it "should create album with valid params" do
       user = FactoryGirl.create( :user )
-      attrs = { :name => "Test title", :description => "some text is here" }
+      attrs = { name: "Test title", description: "some text is here" }
 
       expect do
         user.albums.create attrs
