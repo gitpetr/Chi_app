@@ -11,6 +11,7 @@ class PhotosController < ApplicationController
     @photo = @album.photos.new
   end
 
+  # TODO: format validation.
   def create
     if !params[:photo].nil?                                                                         # If user chose photos to upload.
       photos_db_before = Photo.all.size

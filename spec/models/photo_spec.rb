@@ -14,27 +14,18 @@ require 'spec_helper'
 
 #TODO: add test to check extensions of file.
 describe Photo do
-  before(:each){ @attr = { :description => "some text is here", :image => File.open(File.join(Rails.root, '/spec/fixtures/files/violin.jpg')) } }
+  it { should belong_to(:album) }
+  it { should validate_presence_of(:image) }
+  it { should ensure_length_of(:description).is_at_most(500) }
 
   describe "DB" do
     it "should create with valid params" do
+      attrs = { description: "some text is here",
+                image: File.open(File.join(Rails.root, '/spec/fixtures/files/violin.jpg')) }
+
       expect do
-        Photo.create( @attr )
+        Photo.create( attrs )
       end.to change( Photo, :count ).by( 1 )
-    end
-  end
-
-  describe "Validations for" do
-    it "description can be empty" do
-      Photo.new( @attr.merge( :description => "" ) ).should be_valid
-    end
-
-    it "description can't contain more than 500 symbols" do
-      Photo.new( @attr.merge( :description => "a" * 501 ) ).should_not be_valid
-    end
-
-    it "image can't have empty path" do
-      Photo.new( @attr.merge( :image => "" ) ).should_not be_valid
     end
   end
 end

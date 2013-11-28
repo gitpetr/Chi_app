@@ -17,6 +17,6 @@ class Photo < ActiveRecord::Base
 
   mount_uploader :image, ImageUploader
 
-  validates :description, :length => { :maximum => 500, :message => :max_lenght_message }
-  validates :image, :presence   => { :message => :presence_message }
+  validates :description, length: { maximum: 500 }
+  validates :image, presence: true
 end

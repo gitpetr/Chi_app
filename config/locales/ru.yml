@@ -199,12 +199,6 @@ ru:
   activerecord:
     errors:
       models:
-        photo:
-          attributes:
-            description:
-              max_lenght_message: "не должно содержать больше %{count} символов"
-            image:
-              presence_message: "не должен быть пустым"
         welcome_message:
           attributes:
             content:
