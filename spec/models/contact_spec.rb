@@ -16,41 +16,20 @@
 require 'spec_helper'
 
 describe Contact do
-  before(:each) do
-    @attr = { :chirch_name => "Transfiguration", :address => "Moscow", :phone => "12345"}
-  end
+  it { should validate_presence_of(:chirch_name) }
+  it { should ensure_length_of(:chirch_name).is_at_most(200) }
+  it { should validate_presence_of(:address) }
+  it { should ensure_length_of(:address).is_at_most(500) }
+  it { should validate_presence_of(:phone) }
+  it { should ensure_length_of(:phone).is_at_most(100) }
 
   describe "DB" do
     it "should create contact with valid params" do
+      @attr = { chirch_name: "Transfiguration", address: "Moscow", phone: "12345"}
+
       expect do
         Contact.create @attr
       end.to change( Contact, :count ).by( 1 )
-    end
-  end
-
-  describe "Validations for" do
-    it "chirch_name can't be empty" do
-      Contact.new( @attr.merge( :chirch_name => "" ) ).should_not be_valid
-    end
-
-    it "chirch_name can't have more than 200 symbols" do
-      Contact.new( @attr.merge( :chirch_name => "a" * 201 ) ).should_not be_valid
-    end
-
-    it "address can't be empty" do
-      Contact.new( @attr.merge( :address => "" ) ).should_not be_valid
-    end
-
-    it "chirch_name can't have more than 200 symbols" do
-      Contact.new( @attr.merge( :address => "a" * 501 ) ).should_not be_valid
-    end
-
-    it "phone can't be empty" do
-      Contact.new( @attr.merge( :phone => "" ) ).should_not be_valid
-    end
-
-    it "chirch_name can't have more than 5000 symbols" do
-      Contact.new( @attr.merge( :phone => "a" * 101 ) ).should_not be_valid
     end
   end
 end

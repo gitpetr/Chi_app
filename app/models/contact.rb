@@ -20,14 +20,14 @@ class Contact < ActiveRecord::Base
   attr_accessible :address, :chirch_name, :phone, :latitude, :longitude, :gmaps
 
   validates :chirch_name,
-              :presence => { :message => :presense_message },
-              :length   => { :maximum => 200, :message => :max_length_message }
+              presence: true,
+              length: { maximum: 200 }
 
   validates :address,
-              :presence => { :message => :presense_message },
-              :length   => { :maximum => 500, :message => :max_length_message }
+              presence: true,
+              length: { maximum: 500 }
 
   validates :phone,
-              :presence => { :message => :presense_message },
-              :length   => { :maximum => 100, :message => :max_length_message }
+              presence: true,
+              length: { maximum: 100 }
 end

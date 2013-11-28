@@ -205,20 +205,6 @@ ru:
               max_lenght_message: "не должно содержать больше %{count} символов"
             image:
               presence_message: "не должен быть пустым"
-        contact:
-          attributes:
-            chirch_name:
-              presense_message: "не должно быть пустым"
-              max_length_message: "не должно содержать больше %{count} символов"
-            address:
-              presense_message: "не должен быть пустым"
-              max_length_message: "не должен содержать больше %{count} символов"
-            google_map:
-              presense_message: "не должна быть пустой"
-              max_length_message: "не должна содержать больше %{count} символов"
-            phone:
-              presense_message: "не должен быть пустым"
-              max_length_message: "не должен содержать больше %{count} символов"
         welcome_message:
           attributes:
             content:
