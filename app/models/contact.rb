@@ -19,15 +19,7 @@ class Contact < ActiveRecord::Base
 
   attr_accessible :address, :chirch_name, :phone, :latitude, :longitude, :gmaps
 
-  validates :chirch_name,
-              presence: true,
-              length: { maximum: 200 }
-
-  validates :address,
-              presence: true,
-              length: { maximum: 500 }
-
-  validates :phone,
-              presence: true,
-              length: { maximum: 100 }
+  validates :chirch_name, presence: true, length: { maximum: 200 }
+  validates :address, presence: true, length: { maximum: 500 }
+  validates :phone, presence: true, length: { maximum: 100 }
 end

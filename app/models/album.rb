@@ -16,10 +16,6 @@ class Album < ActiveRecord::Base
 
   attr_accessible :description, :name
 
-  validates :name,
-              presence: true,
-              length: { maximum: 100 }
-
-  validates :description,
-              length: { maximum: 2000 }
+  validates :name, presence: true, length: { maximum: 100 }
+  validates :description, length: { maximum: 2000 }
 end

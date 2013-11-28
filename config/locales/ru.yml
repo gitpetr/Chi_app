@@ -194,17 +194,6 @@ ru:
       update_button: "Обновить"
       cancel_button: "Отмена"
   ##################################
-  # MODELS
-  ##################################
-  activerecord:
-    errors:
-      models:
-        welcome_message:
-          attributes:
-            content:
-              presence_message: "не должно быть пустым"
-              max_length_message: "не должно содержать больше %{count} символов. Пожалуйста, уменьшите объем текста!"
-  ##################################
   # DEVISE
   ##################################
   devise:

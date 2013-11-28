@@ -11,7 +11,5 @@
 class WelcomeMessage < ActiveRecord::Base
   attr_accessible :content
 
-  validates :content,
-              :presence => { :message => :presence_message },
-              :length   => { :maximum => 5000, :message => :max_length_message }
+  validates :content, presence: true, length: { maximum: 5000 }
 end

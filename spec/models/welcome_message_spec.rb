@@ -11,34 +11,16 @@
 require 'spec_helper'
 
 describe WelcomeMessage do
-  before(:each) do
-    @message = FactoryGirl.create( :welcome_message )
-    @attr = { :content => "data" }
-  end
+  it { should validate_presence_of(:content) }
+  it { should ensure_length_of(:content).is_at_most(5000) }
 
   describe "DB" do
     it "should create message with valid params" do
+      attrs = { :content => "data" }
+
       expect do
-        WelcomeMessage.create( @attr )
+        WelcomeMessage.create( attrs )
       end.to change( WelcomeMessage, :count ).by( 1 )
-    end
-
-    it "should not create message with invalid params" do
-      expect do
-        WelcomeMessage.create( @attr.merge :content => "" )
-      end.to_not change( WelcomeMessage, :count )
-    end
-  end
-
-  describe "Validations for" do
-    it "content can't be empty" do
-      message = WelcomeMessage.create( @attr.merge :content => "" )
-      message.should_not be_valid
-    end
-
-    it "content can't have more than 5000 symbols" do
-      message =WelcomeMessage.new( @attr.merge( :content => "a" * 5001 ) )
-      message.should_not be_valid
     end
   end
 end

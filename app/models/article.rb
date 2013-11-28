@@ -15,11 +15,6 @@ class Article < ActiveRecord::Base
 
   attr_accessible :title, :content
 
-  validates :content,
-              presence: true,
-              length: { maximum: 50000 }
-  validates :title,
-              presence: true,
-              length: { maximum: 100 }
-
+  validates :content, presence: true, length: { maximum: 50000 }
+  validates :title, presence: true, length: { maximum: 100 }
 end
