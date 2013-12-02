@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.15'
-gem 'pg', '0.15.1'                                                                                  # Connect to postgreSQL.
+gem 'pg', '0.17.0'                                                                                  # Connect to postgreSQL.
 gem 'jquery-rails', '2.2.1'                                                                         # Jquery for rails.
 gem 'jquery-ui-rails', '4.0.3'                                                                      # Jquery css (for widgets and etc).
 gem 'haml', '4.0.2'                                                                                 # Templating engine for HTML.
@@ -17,10 +17,11 @@ gem 'gmaps4rails', '1.5.6'                                                      
 gem 'unicorn', '4.6.2'                                                                              # Use unicorn as the app server
 gem 'capistrano', '2.14.2'                                                                          # Deploy with Capistrano
 gem 'less-rails', '2.3.2'                                                                           # twitter-bootstrap-rails needs that now. Without that it fails.
-gem 'slim', '1.3.8'
+gem 'slim', '2.0.2'
 gem 'gon', '4.1.1'                                                                                  # Access data from ruby and JS.
-gem 'sitemap_generator', '4.1.0'                                                                    # Generating sitemap.
+gem 'sitemap_generator', '4.3.0'                                                                    # Generating sitemap.
 gem 'rails-i18n', '~> 3.0.0'
+gem 'tilt', '1.3.7'                                                                                 # To resolve bundler error with "tilt"
 
 gem 'haml2slim'
 
@@ -42,7 +43,7 @@ group :development do
   gem 'annotate', '~> 2.5.0'
   gem 'better_errors', '0.8.0'                                                                      # Show errors with better output.
   gem 'binding_of_caller', '0.7.1'                                                                  # Advance better errors.
-  gem 'brakeman', '2.0.0'                                                                           # Checking for secure vulnerabilities.
+  gem 'brakeman', '2.2.0'                                                                           # Checking for secure vulnerabilities.
   gem 'meta_request', '0.2.5'                                                                       # Panel in chrome to debug rails apps.
   gem 'quiet_assets', '1.0.2'                                                                       # Don't show assets messages.
 end
