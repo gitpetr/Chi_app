@@ -14,9 +14,9 @@ gem 'cancan', '1.6.10'                                                          
 gem 'carrierwave', '0.9.0'                                                                          # Simple file uploading.
 gem 'rmagick', '2.13.2'                                                                             # Powerfull image manipulation. Don't forget to install imagemagick before that!
 gem 'gmaps4rails', '1.5.6'                                                                          # Google maps integration.
-gem 'unicorn', '4.6.2'                                                                              # Use unicorn as the app server
+gem 'unicorn', '4.7.0'                                                                              # Use unicorn as the app server
 gem 'capistrano', '2.14.2'                                                                          # Deploy with Capistrano
-gem 'less-rails', '2.3.2'                                                                           # twitter-bootstrap-rails needs that now. Without that it fails.
+gem 'less-rails', '2.4.2'                                                                           # twitter-bootstrap-rails needs that now. Without that it fails.
 gem 'slim', '2.0.2'
 gem 'gon', '4.1.1'                                                                                  # Access data from ruby and JS.
 gem 'sitemap_generator', '4.3.0'                                                                    # Generating sitemap.
@@ -32,7 +32,7 @@ gem 'haml2slim'
 group :assets do
   gem 'sass-rails',   '~> 3.2.4'
   gem 'coffee-rails', '~> 3.2.2'
-  gem 'twitter-bootstrap-rails', '2.2.6'                                                            # Twitter Bootstrap 2.
+  gem 'twitter-bootstrap-rails', '2.2.8'                                                            # Twitter Bootstrap 2.
   gem 'uglifier', '>= 1.2.3'
 end
 
