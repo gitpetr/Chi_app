@@ -8,9 +8,9 @@ gem 'haml', '4.0.2'                                                             
 gem 'therubyracer', :platform => :ruby
 gem 'devise', '3.2.1'                                                                               # Easy authentication.
 gem 'simple_form', '2.1.0'                                                                          # Super simple forms with bootstrap look support.
-gem 'bootstrap-wysihtml5-rails', "0.3.1.19"                                                         # Rich text editor via JS.
+gem 'bootstrap-wysihtml5-rails', '0.3.1.23'                                                         # Rich text editor via JS.
 gem 'kaminari', '0.14.0'                                                                            # Be very carefull with changing version of this gem (i modified a lot generated views).
-gem 'cancan', '1.6.9'                                                                               # Authorization library.
+gem 'cancan', '1.6.10'                                                                              # Authorization library.
 gem 'carrierwave', '0.9.0'                                                                          # Simple file uploading.
 gem 'rmagick', '2.13.2'                                                                             # Powerfull image manipulation. Don't forget to install imagemagick before that!
 gem 'gmaps4rails', '1.5.6'                                                                          # Google maps integration.
@@ -18,7 +18,7 @@ gem 'unicorn', '4.6.2'                                                          
 gem 'capistrano', '2.14.2'                                                                          # Deploy with Capistrano
 gem 'less-rails', '2.3.2'                                                                           # twitter-bootstrap-rails needs that now. Without that it fails.
 gem 'slim', '1.3.8'
-gem 'gon', '3.0.5'                                                                                  # Access data from ruby and JS.
+gem 'gon', '4.1.1'                                                                                  # Access data from ruby and JS.
 gem 'sitemap_generator', '4.1.0'                                                                    # Generating sitemap.
 gem 'rails-i18n', '~> 3.0.0'
 
