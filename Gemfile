@@ -38,13 +38,13 @@ end
 
 group :development do
   gem 'sextant', '0.2.4'                                                                            # Navigate in routes on site.
-  gem 'rails_best_practices', '1.13.8'
+  gem 'rails_best_practices', '1.14.4'
   gem 'webrick', '1.3.1'                                                                            # Standart server. I specify it to remove warning from logs.
-  gem 'annotate', '~> 2.5.0'
-  gem 'better_errors', '0.8.0'                                                                      # Show errors with better output.
+  gem 'annotate', '2.6.0'
+  gem 'better_errors', '1.0.1'                                                                      # Show errors with better output.
   gem 'binding_of_caller', '0.7.1'                                                                  # Advance better errors.
   gem 'brakeman', '2.2.0'                                                                           # Checking for secure vulnerabilities.
-  gem 'meta_request', '0.2.5'                                                                       # Panel in chrome to debug rails apps.
+  gem 'meta_request', '0.2.8'                                                                       # Panel in chrome to debug rails apps.
   gem 'quiet_assets', '1.0.2'                                                                       # Don't show assets messages.
 end
 
@@ -53,14 +53,14 @@ group :development, :test do
   gem 'rb-fsevent', '0.9.3'                                                                         # Dependency for guard.
   gem 'guard-rspec', '2.5.2'                                                                        # Rspec for guard.
   gem 'terminal-notifier-guard', '1.5.3'                                                            # Notification via notification center.
-  gem 'launchy', '2.3.0'                                                                            # This gem allow us to open testing page in browser (save_and_open_page method)
+  gem 'launchy', '2.4.2'                                                                            # This gem allow us to open testing page in browser (save_and_open_page method)
 end
 
 group :test do
   gem 'shoulda-matchers', '2.4.0'
-  gem 'capybara', '2.1.0'                                                                           # Browser automation for rspec with js support.
+  gem 'capybara', '2.2.0'                                                                           # Browser automation for rspec with js support.
   gem 'capybara-webkit', '1.0.0'
-  gem 'factory_girl_rails', '4.2.1'                                                                 # Factories for tests.
+  gem 'factory_girl_rails', '4.3.0'                                                                 # Factories for tests.
   gem 'database_cleaner', '1.2.0'
   gem 'selenium-webdriver', '2.37.0'                                                                # Driver to launch tests in browser.
   gem 'cucumber-rails', :require => false
