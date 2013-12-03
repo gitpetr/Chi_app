@@ -9,7 +9,7 @@ gem 'therubyracer', :platform => :ruby
 gem 'devise', '3.2.1'                                                                               # Easy authentication.
 gem 'simple_form', '2.1.1'                                                                          # Super simple forms with bootstrap look support.
 gem 'bootstrap-wysihtml5-rails', '0.3.1.23'                                                         # Rich text editor via JS.
-gem 'kaminari', '0.14.0'                                                                            # Be very carefull with changing version of this gem (i modified a lot generated views).
+gem 'kaminari', '0.15.0'                                                                            # Be very carefull with changing version of this gem (i modified a lot generated views).
 gem 'cancan', '1.6.10'                                                                              # Authorization library.
 gem 'carrierwave', '0.9.0'                                                                          # Simple file uploading.
 gem 'rmagick', '2.13.2'                                                                             # Powerfull image manipulation. Don't forget to install imagemagick before that!
