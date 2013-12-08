@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.15'
+gem 'rails', '3.2.16'
 gem 'pg', '0.17.0'                                                                                  # Connect to postgreSQL.
 gem 'jquery-rails', '3.0.4'                                                                         # Jquery for rails.
 gem 'jquery-ui-rails', '4.1.0'                                                                      # Jquery css (for widgets and etc).
