@@ -145,6 +145,7 @@ en:
     footer:
       login_link: "Login"
       articles_link: "Articles"
+      albums_link: "Albums"
       photos_link: "Photos"
       sermons_link: "Sermons"
       contacts_link: "Contacts"
