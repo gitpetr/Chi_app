@@ -17,7 +17,7 @@ ChirchApp::Application.routes.draw do
     match '/users_list', to: 'stats#users_in_system'
     match '/login', to: redirect("/#{I18n.default_locale}/users/sign_in")
 
-    root :to => 'homes#index'
+    root to: 'homes#index'
   end
 
   match '*path', to: redirect("/#{I18n.default_locale}/%{path}"), constraints: lambda { |req| !req.path.starts_with? "/#{I18n.default_locale}" and
