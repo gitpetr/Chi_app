@@ -2,19 +2,20 @@ ChirchApp::Application.routes.draw do
 
   # Put all you routes to here (to keep correct localization).
   scope ":locale", locale: /#{I18n.available_locales.join("|")}/ do
-    devise_for :users, :controllers => {:registrations => "registrations"}
+    devise_for :users, controllers: {registrations: "registrations"}
 
     resources :articles
     resources :sermons
-    resources :contacts,         :only => [ :index, :edit, :update ]
-    resources :welcome_messages, :only => [ :edit, :update ]
-    resources :homes,            :only => [ :index ]
+    resources :contacts,         only: [ :index, :edit, :update ]
+    resources :welcome_messages, only: [ :edit, :update ]
+    resources :homes,            only: [ :index ]
 
-    resources :albums, :except => [ :show ] do
+    resources :albums, except: [ :show ] do
       resources :photos
     end
 
-    match '/users_list', :to => 'stats#users_in_system'
+    match '/users_list', to: 'stats#users_in_system'
+    match '/login', to: redirect("/#{I18n.default_locale}/users/sign_in")
 
     root :to => 'homes#index'
   end
