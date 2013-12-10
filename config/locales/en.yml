@@ -42,6 +42,9 @@ en:
   ##################################
   # VIEWS
   ##################################
+  all_views:
+    title:
+      flag: "Interface language"
   articles:
     index:
       legend: "Articles"

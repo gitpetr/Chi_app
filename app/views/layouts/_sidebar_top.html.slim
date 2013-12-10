@@ -1,7 +1,7 @@
 div class="pagination-centered"
-  = link_to image_tag( "rus-icon.png", :id => "ru_flag" ), locale: "ru"
+  = link_to image_tag("rus-icon.png", id: "ru_flag", size: "35x35", title: I18n.t("all_views.title.flag")), locale: "ru"
   | &#32;
-  = link_to image_tag( "us-icon.png", :id => "us_flag" ), locale: "en"
+  = link_to image_tag("us-icon.png", id: "us_flag", size: "35x35", title: I18n.t("all_views.title.flag")), locale: "en"
 
 - if user_signed_in? and current_user.admin?
   = render 'layouts/admin_panel'
