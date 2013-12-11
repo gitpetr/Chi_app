@@ -1,13 +1,13 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.16'
+gem 'rails', '4.0.2'
 gem 'pg', '0.17.0'                                                                                  # Connect to postgreSQL.
 gem 'jquery-rails', '3.0.4'                                                                         # Jquery for rails.
 gem 'jquery-ui-rails', '4.1.0'                                                                      # Jquery css (for widgets and etc).
 gem 'haml', '4.0.4'                                                                                 # Templating engine for HTML.
 gem 'therubyracer', :platform => :ruby
 gem 'devise', '3.2.1'                                                                               # Easy authentication.
-gem 'simple_form', '2.1.1'                                                                          # Super simple forms with bootstrap look support.
+gem 'simple_form', '3.0.1'                                                                          # Super simple forms with bootstrap look support.
 gem 'bootstrap-wysihtml5-rails', '0.3.1.23'                                                         # Rich text editor via JS.
 gem 'kaminari', '0.15.0'                                                                            # Be very carefull with changing version of this gem (i modified a lot generated views).
 gem 'cancan', '1.6.10'                                                                              # Authorization library.
@@ -20,21 +20,20 @@ gem 'less-rails', '2.4.2'                                                       
 gem 'slim', '2.0.2'
 gem 'gon', '4.1.1'                                                                                  # Access data from ruby and JS.
 gem 'sitemap_generator', '4.3.0'                                                                    # Generating sitemap.
-gem 'rails-i18n', '~> 3.0.0'
+gem 'rails-i18n', '~> 4.0.0'
 gem 'tilt', '1.3.7'                                                                                 # To resolve bundler error with "tilt"
-
 gem 'haml2slim'
 
-# Gems used only for assets and not required
-# in production environments by default.
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', :platforms => :ruby
-group :assets do
-  gem 'sass-rails',   '~> 3.2.4'
-  gem 'coffee-rails', '~> 3.2.2'
-  gem 'twitter-bootstrap-rails', '2.2.8'                                                            # Twitter Bootstrap 2.
-  gem 'uglifier', '>= 1.2.3'
-end
+gem 'sass-rails',   '~> 4.0.0'
+gem 'coffee-rails', '~> 4.0.0'
+gem 'twitter-bootstrap-rails', '2.2.8'                                                            # Twitter Bootstrap 2.
+gem 'uglifier', '>= 1.3.0'
+
+# gems to help with the transition to rails 4.
+gem 'protected_attributes'
+gem 'rails-observers'
+gem 'actionpack-page_caching'
+gem 'actionpack-action_caching'
 
 group :development do
   gem 'sextant', '0.2.4'                                                                            # Navigate in routes on site.
