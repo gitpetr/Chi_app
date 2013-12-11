@@ -56,11 +56,11 @@ Then(/^I should see that modal with slideshow opened$/) do
 end
 
 Then(/^I should see text of one image$/) do
-  page.should have_content @slide_photo2_text
+  page.should have_content @slide_photo1_text
 end
 
 Then(/^I should see text of next image$/) do
-  page.should have_content @slide_photo1_text
+  page.should have_content @slide_photo2_text
 end
 
 Then(/^I should see that modal with slideshow is hidden$/) do
