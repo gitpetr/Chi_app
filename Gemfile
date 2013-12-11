@@ -15,7 +15,7 @@ gem 'carrierwave', '0.9.0'                                                      
 gem 'rmagick', '2.13.2'                                                                             # Powerfull image manipulation. Don't forget to install imagemagick before that!
 gem 'gmaps4rails', '1.5.6'                                                                          # Google maps integration.
 gem 'unicorn', '4.7.0'                                                                              # Use unicorn as the app server
-gem 'capistrano', '2.14.2'                                                                          # Deploy with Capistrano
+gem 'capistrano', '2.15.4'                                                                          # Deploy with Capistrano
 gem 'less-rails', '2.4.2'                                                                           # twitter-bootstrap-rails needs that now. Without that it fails.
 gem 'slim', '2.0.2'
 gem 'gon', '4.1.1'                                                                                  # Access data from ruby and JS.
