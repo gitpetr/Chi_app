@@ -9,22 +9,23 @@ This is a web app for chirch.
 
 0) Create `.ruby-version` with `ruby-2.0.0` and `.ruby-gemset` with `chirchApp`.
 
-1) Before installation make sure that you installed PostgreSQL and Imagemagik.
+1) Before installation make sure that you installed PostgreSQL, Imagemagik, QT4.
 
-To install Imagemagik in Mac use homebrew:
+To install Imagemagik and QT in Mac use homebrew:
 
   `$ brew install imagemagick`
+  `$ brew install qt4`
 
 2) In `config/` create `database.yml` from `database.example.yml`. Give a password in database.yml in test and development sections.
 
 3) In `config/initializers/` create `secret_token.rb` from `secret_token.example.rb`
 
-4) To launch application:
+4) To prepare databases ans setup gems:
 
 ```shell
 $ cd app_name
 $ bundle
-$ rake db:create:all
+$ rake db:create
 $ rake db:migrate
 $ rake db:seed
 $ rake db:test:prepare
@@ -33,7 +34,7 @@ $ rake db:test:prepare
 5) After that, you should make sure that all tests pass:
 
 ```shell
-$ rake 
+$ rake
 ```
 
 **Note:** There is known bug, that sometimes some tests just fall. Unfortunately, i don't have enough time to find out, why. Just rerun tests and it should be enough for them to pass.
@@ -103,7 +104,7 @@ and after this push git and deploy:
 
 4) Do not forget to change a secret key in `shared/config/initializers/secret_token.rb`
 
-**Note:** On new mac you should do that: 
+**Note:** On new mac you should do that:
 
 `$ ssh-add -K`
 
