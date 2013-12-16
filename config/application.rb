@@ -25,6 +25,9 @@ module ChirchApp
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     config.i18n.default_locale = :ru
 
+    # Application will raise an error if an invalid locale is passed.
+    I18n.config.enforce_available_locales = true
+
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
 
