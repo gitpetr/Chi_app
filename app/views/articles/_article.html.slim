@@ -3,7 +3,7 @@ h2
   = render :partial => 'articles/edit_link', :locals => { :article => article }
 p
   -# Make sure that we output data without escaping it.
-  == truncate( article.content, :length => 1200, :separator => ' ' )
+  == article.content.truncate(1500, separator: ' ')
 
 = link_to article_path( :id => article ), :class => "btn" do
   = t(".read_article")
