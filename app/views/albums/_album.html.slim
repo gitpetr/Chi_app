@@ -1,26 +1,26 @@
-div class="span6"
+.span6
   -# There is situation when nil object (because of the slice) could be send. We should just ignore it.
   - unless album.nil?
-    div class="album-with-label"
+    .album-with-label
       - if can? [:edit, :destroy], Album
-        div class="album-menu"
-          = link_to t(".delete"), "#", {:remote => true, :class => "destroy-link", 'data-toggle' => 'modal', 'data-target' => "#modal-window-#{album.id}", 'databackdrop' => true, 'data-keyboard' => true}
-          = link_to t(".edit"), edit_album_path( album ), :class => "edit-link"
+        .album-menu
+          = link_to t(".delete"), "#", {remote: true, class: "destroy-link", :'data-toggle' => 'modal', :'data-target' => "#modal-window-#{album.id}", :'databackdrop' => true, :'data-keyboard' => true}
+          = link_to t(".edit"), edit_album_path( album ), class: "edit-link"
 
       - if album.photos.empty?
-        = link_to image_tag("no-photos.jpg", :class => "album-preview"), album_photos_path( album ), :class => "album-preview", :id => "album-#{album.id}"
+        = link_to image_tag("no-photos.jpg", class: "album-preview"), album_photos_path( album ), class: "album-preview", id: "album-#{album.id}"
       - else
-        = link_to image_tag( album.photos.last.image_url(:album), :class => "album-preview" ), album_photos_path( album ), :class => "album-preview", :id => "album-#{album.id}"
+        = link_to image_tag( album.photos.last.image_url(:album), class: "album-preview" ), album_photos_path( album ), class: "album-preview", id: "album-#{album.id}"
 
-      div class="album-label"
+      .album-label
         b = album.name
         - if album.description?
           p class="label-preview-big" style="display: none;"
-            = truncate( album.description, :length => 400, :separator => ' ' )
-          p class="label-preview-small"
-            = truncate( album.description, :length => @small_preview_size, :separator => ' ' )
+            = album.description.truncate(400, separator: ' ')
+          p.label-preview-small
+            = album.description.truncate(@small_preview_size, separator: ' ')
 
-    = render 'delete', :album => album
+    = render 'delete', album: album
 
 
 

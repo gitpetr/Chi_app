@@ -2,9 +2,9 @@ legend
   = t(".legend")
 
 = simple_form_for @album do |f|
-  = render 'fields', :f => f
+  = render 'fields', f: f
 
-  div class="form-actions"
-    = f.button :submit, t(".update_button"), :class => "btn btn-large btn-warning"
+  .form-actions
+    = f.button :submit, t(".update_button"), class: "btn btn-large btn-warning"
     | &#32;
-    = link_to t(".cancel_button"), articles_path, :class => "btn btn-large"
+    = link_to t(".cancel_button"), albums_path, class: "btn btn-large"
