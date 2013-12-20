@@ -2,10 +2,10 @@ h2
   = link_to article.title, article_path( :id => article )
   = render :partial => 'articles/edit_link', :locals => { :article => article }
 p
-  -# Make sure that we output data without escaping it.
-  == article.content.truncate(1500, separator: ' ')
+  == article.content.truncate(Article::PREVIEW_SIZE, separator: ' ')
 
-= link_to article_path( :id => article ), :class => "btn" do
-  = t(".read_article")
-  i class="icon-arrow-right"
+- if article.content.size > Article::PREVIEW_SIZE
+  = link_to article_path( :id => article ), :class => "btn" do
+    = t(".read_article")
+    i class="icon-arrow-right"
 hr

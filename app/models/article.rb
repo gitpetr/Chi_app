@@ -13,6 +13,8 @@
 class Article < ActiveRecord::Base
   belongs_to :user
 
+  PREVIEW_SIZE = 1000
+
   attr_accessible :title, :content
 
   validates :content, presence: true, length: { maximum: 50000 }
