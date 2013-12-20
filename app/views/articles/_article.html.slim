@@ -1,11 +1,14 @@
-h2
-  = link_to article.title, article_path( id: article )
-  = render :partial => 'articles/edit_link', locals: { article: article }
-p
-  == article.content.truncate(Article::PREVIEW_SIZE, separator: ' ')
+article
+  .article
+    .article-text
+      h2
+        = link_to article.title, article_path( id: article )
+        = render partial: 'articles/edit_link', locals: { article: article }
+      p
+        == article.content.truncate(Article::PREVIEW_SIZE, separator: ' ')
 
-- if article.content.size > Article::PREVIEW_SIZE
-  = link_to article_path( id: article ), :class => "btn" do
-    = t(".read_article")
-    i.icon-arrow-right
-hr
+      - if article.content.size > Article::PREVIEW_SIZE
+        = link_to article_path( id: article ), :class => "btn" do
+          = t(".read_article")
+          i.icon-arrow-right
+.article-devider

@@ -2,6 +2,8 @@
 class ArticlesController < ApplicationController
   load_and_authorize_resource
 
+  layout "article", only: [ :index ]
+
   def index
     @articles = Article.order("updated_at DESC").page(params[:page]).per(5)
   end
