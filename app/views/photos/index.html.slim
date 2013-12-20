@@ -2,21 +2,21 @@ legend
   = t(".legend") + ": " + @album.name
 
 - if can? :create, Photo
-  = link_to t(".new_photo_button"), new_album_photo_path( @album ), :class => "btn btn-large btn-block"
-  br/
+  = link_to t(".new_photo_button"), new_album_photo_path( @album ), class: "btn btn-large btn-block"
+  br
 
 - unless @photos.empty?
   = slideshow_btn( @photos.first )
-  br/
+  br
 
   / Photos: 3 in 1 line.
   div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery"
     - @photos.each_slice(3) do |a,b,c|
-      div class="row-fluid"
+      .row-fluid
         - [a,b,c].each do |val|
-          = render 'photo', :photo => val
+          = render 'photo', photo: val
 
-  = render 'slideshow', :photos => @photos
+  = render 'slideshow', photos: @photos
 - else
-  div class="well"
+  .well
     = t(".no_photos")

@@ -1,9 +1,9 @@
 / Modal window to show slideshow.
 div class="modal-huge hide fade" id="modal-window-slideshow" data-backdrop="static"
-  div.modal-header
+  .modal-header
     button type="button" class="close" data-dismiss="modal" aria-hidden="true" ×
     h3 = t(".slides")
-  div.modal-huge-body
+  .modal-huge-body
     div id="myCarousel" class="carousel slide"
       / Carousel items
       div class="carousel-inner" id="div-carousel-items"
@@ -14,7 +14,7 @@ div class="modal-huge hide fade" id="modal-window-slideshow" data-backdrop="stat
 
             -# Description of photo
             - if photo.description?
-              div.carousel-caption
+              .carousel-caption
                 p = photo.description
       / Carousel nav
       a class="carousel-control left" href="#myCarousel" data-slide="prev" ‹
