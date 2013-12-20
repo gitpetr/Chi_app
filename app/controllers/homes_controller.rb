@@ -1,5 +1,5 @@
 class HomesController < ApplicationController
-  layout "home", :only => [ :index ]
+  layout "home", only: [ :index ]
 
   def index
   	authorize! :index, :home

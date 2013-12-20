@@ -18,10 +18,10 @@ class PhotosController < ApplicationController
       photos = params[:photo][:image]                                                               # Get array of input photos to save them later.
 
       if photos.size == 1                                                                           # If it is just one photo then we should save it via another method.
-        @album.photos.create( :image => photos.first )                                              # I founded that only this works.
+        @album.photos.create( image: photos.first )                                                 # I founded that only this works.
       else
         photos.each do |photo|
-          @album.photos.create( :image => photo )                                                           # Key :image is very important, saving doesn't work without it.
+          @album.photos.create( image: photo )                                                      # Key :image is very important, saving doesn't work without it.
         end
       end
 

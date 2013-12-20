@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
 
       # Redirect login.domain.com to domain/sing-in-path.
       if request.subdomain == 'login'
-        redirect_to new_user_session_url(:subdomain => false)
+        redirect_to new_user_session_url(subdomain: false)
       end
     end
 
