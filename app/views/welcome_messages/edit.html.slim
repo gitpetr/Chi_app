@@ -2,12 +2,12 @@ legend
   = t(".legend")
 
 = simple_form_for @welcome_message do |f|
-  = f.input :content, :input_html => { :class => "span9" }
+  = f.input :content, input_html: { class: "span9" }
 
-  div class="form-actions"
-    = f.button :submit, t(".update_button"), :class => "btn btn-large btn-warning"
+  .form-actions
+    = f.button :submit, t(".update_button"), class: "btn btn-large btn-warning"
     | &#32;
-    = link_to t(".cancel_button"), root_path, :class => "btn btn-large"
+    = link_to t(".cancel_button"), root_path, class: "btn btn-large"
 
-= render :partial => 'shared/rich_text_editor', :locals => { :id_element => "welcome_message_content" }
+= render partial: 'shared/rich_text_editor', locals: { id_element: "welcome_message_content" }
 
