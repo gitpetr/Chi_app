@@ -1,10 +1,10 @@
 legend
-  =t(".new_article_legend")
+  = t(".new_article_legend")
 
 = simple_form_for @article do |f|
-  = render 'fields', :f => f
+  = render 'fields', f: f
 
-  div class="form-actions"
-    = f.button :submit, t(".create_article_button"), :class => "btn btn-large btn-success"
+  .form-actions
+    = f.button :submit, t(".create_article_button"), class: "btn btn-large btn-success"
     | &#32;
-    = link_to t(".cancel"), articles_path, :class => "btn btn-large"
+    = link_to t(".cancel"), articles_path, class: "btn btn-large"

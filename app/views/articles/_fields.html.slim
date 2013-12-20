@@ -1,5 +1,5 @@
-div class="article-unit"
-  = f.input :title, :input_html => { :class => "span12", :autofocus => true }
-  = f.input :content, :input_html => { :class => "span12" }
+.article-unit
+  = f.input :title, input_html: { class: "span12", autofocus: true }
+  = f.input :content, input_html: { class: "span12" }
 
-= render :partial => 'shared/rich_text_editor', :locals => { :id_element => "article_content" }
+= render partial: 'shared/rich_text_editor', locals: { id_element: "article_content" }
