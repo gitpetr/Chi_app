@@ -3,27 +3,27 @@ legend
 
   -# Edit btns group.
   - if can? [:edit, :create, :destroy], Sermon
-    div class="btn-toolbar sermon-toolbar-buttons"
+    div.btn-toolbar.sermon-toolbar-buttons
       - unless @sermon.nil?
-        div class="btn-group"
+        .btn-group
           = link_to "#", :class => "btn dropdown-toggle article-edit-button", "data-toggle" => "dropdown" do
-            i class="icon-wrench icon-white"
+            i.icon-wrench.icon-white
             = t(".change")
-            span class="caret"
-          ul class="dropdown-menu"
+            span.caret
+          ul.dropdown-menu
             li = link_to t(".edit"), edit_sermon_path( @sermon )
             li = link_to t(".delete"), @sermon, :method => :delete
 
       = render 'new_btn'
 
 - if !@sermons.empty?
-  div class="row-fluid"
-    div class="row-fluid"
-      div class="span8"
+  .row-fluid
+    .row-fluid
+      .span8
         = render partial: 'audio_player', locals: { :sermon => @sermon }
-      div class="span4"
+      .span4
         -# Sidebar with sermons.
-        ul class="nav nav-pills nav-stacked"
+        ul.nav.nav-pills.nav-stacked
           - @sermons.each do |sermon|
             li class="#{active_sermon_sidebar_link?(sermon_path( sermon ))}"
               = link_to "#{sermon.title} (#{sermon.preacher}), #{I18n.l sermon.recorded_date.to_date}", sermon_path( sermon )
