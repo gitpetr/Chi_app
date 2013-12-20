@@ -3,19 +3,19 @@ html
   = render 'layouts/head'
 
   body
-    div id="wrap"
+    #wrap
       = render 'layouts/navbar_template'
       = render 'layouts/noscript'
 
-      div class="container-fluid"
-        div class="row-fluid"
-          div class="span2 sidebar"
+      .container-fluid
+        .row-fluid
+          div.span2.sidebar
             = render 'layouts/sidebar_top'
-          div class="span8"
+          .span8
             = render 'layouts/flash_message'
             = yield :articles
-          div class="span2"
-      div id="push"
+          .span2
+      #push
 
     = render 'layouts/footer'
 

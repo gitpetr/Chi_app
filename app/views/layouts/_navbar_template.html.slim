@@ -1,34 +1,34 @@
-div class="navbar navbar-inverse"
-  div class="navbar-inner"
+.navbar.navbar-inverse
+  .navbar-inner
     a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"
       / Show 3 icons in button when navabar collapsed.
       - 3.times do
-        span class="icon-bar"
+        span.icon-bar
 
     = link_to t(".brand_name"), root_path, :class => "brand"
-    div class="nav-collapse"
+    .nav-collapse
       / Left navigation.
-      ul class="nav"
-        li class="#{ active_link?( :controllers => ["homes"] ) }"
-          = link_to t(".home_link"), root_path, :id => "navbar-home"
+      ul.nav
+        li class="#{ active_link?( controllers: ["homes"] ) }"
+          = link_to t(".home_link"), root_path, id: "navbar-home"
 
-        li class="#{ active_link?( :controllers => ["articles"] ) }"
-          = link_to t(".articles_link"), articles_path, :id => "navbar-articles"
+        li class="#{ active_link?( controllers: ["articles"] ) }"
+          = link_to t(".articles_link"), articles_path, id: "navbar-articles"
 
-        li class="#{ active_link?( :controllers => ["albums", "photos"] )} "
-          = link_to t(".albums_link"), albums_path, :id => "navbar-albums"
+        li class="#{ active_link?( controllers: ["albums", "photos"] )} "
+          = link_to t(".albums_link"), albums_path, id: "navbar-albums"
 
-        li class="#{ active_link?( :controllers => ["sermons"] ) }"
-          = link_to t(".sermons_link"), sermons_path, :id => "navbar-sermons"
+        li class="#{ active_link?( controllers: ["sermons"] ) }"
+          = link_to t(".sermons_link"), sermons_path, id: "navbar-sermons"
 
-        li class="#{ active_link?( :controllers => ["contacts"] )} "
-          = link_to t(".contacts_link"), contacts_path, :id => "navbar-contacts"
+        li class="#{ active_link?( controllers: ["contacts"] )} "
+          = link_to t(".contacts_link"), contacts_path, id: "navbar-contacts"
 
       / Right navigation.
-      ul class="nav pull-right"
+      ul.nav.pull-right
         - if user_signed_in?
           li class="#{ active_link?( :controllers => ["devise/registrations"] ) }"
             = link_to t(".settings"), edit_user_registration_path
-          li class="divider-vertical"
+          li.divider-vertical
           li
-            = link_to t(".logout_link"), destroy_user_session_path, :method => :delete
+            = link_to t(".logout_link"), destroy_user_session_path, method: :delete

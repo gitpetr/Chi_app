@@ -1,19 +1,17 @@
--#= debug(params) if Rails.env.development?
-
-footer id="footer"
-  div class="container"
+footer#footer
+  .container
     / This is callback to load gmaps4rails javascript.
     = yield :scripts
 
-    ul class="footer-links"
+    ul.footer-links
       - if !user_signed_in? and Rails.env.development?
         li = link_to t(".login_link"), new_user_session_path
         li|
 
-      li = link_to t(".articles_link"), articles_path, :id => "footer-article"
-      li = link_to t(".albums_link"),   albums_path,   :id => "footer-albums"
-      li = link_to t(".sermons_link"),  sermons_path,  :id => "footer-sermons"
-      li = link_to t(".contacts_link"), contacts_path, :id => "footer-contacts"
+      li = link_to t(".articles_link"), articles_path, id: "footer-article"
+      li = link_to t(".albums_link"),   albums_path,   id: "footer-albums"
+      li = link_to t(".sermons_link"),  sermons_path,  id: "footer-sermons"
+      li = link_to t(".contacts_link"), contacts_path, id: "footer-contacts"
 
       - if Rails.env.development?
         li|

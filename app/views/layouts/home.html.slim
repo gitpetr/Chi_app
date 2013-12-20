@@ -3,34 +3,34 @@ html
   = render 'layouts/head'
 
   body
-    div id="wrap"
+    #wrap
       = render 'layouts/navbar_template'
       = render 'layouts/noscript'
 
-      div class="container-fluid"
-        div class="row-fluid"
-          div class="span12"
+      .container-fluid
+        .row-fluid
+          .span12
 
             / Welcome div
-            div class="row-fluid"
-              div class="span2 sidebar"
+            .row-fluid
+              div.span2.sidebar
                 = render 'layouts/sidebar_top'
-              div class="span8 home-welcome-content"
-                div class="content-inner"
+              div.span8.home-welcome-content
+                .content-inner
                   = render 'layouts/flash_message'
                   = yield :welcome
-              div class="span2"
+              .span2
 
             / Last photos div.
-            div class="row-fluid"
-              div class="span2"
-              div class="span8"
+            .row-fluid
+              .span2
+              .span8
                 - unless Photo.first.nil?
-                  legend class="home-photo-legend"
+                  legend.home-photo-legend
                     = t(".last-photos")
                   = yield :photos
-              div class="span2"
-      div id="push"
+              .span2
+      #push
 
     = render 'layouts/footer'
 
