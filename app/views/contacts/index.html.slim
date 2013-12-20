@@ -3,25 +3,24 @@ legend
 
   / Edit contact button
   - if not Contact.first.nil? and can? :edit, Article
-    = link_to edit_contact_path( Contact.first ), :class => "btn contact-edit-button" do
-      i class="icon-pencil icon-white"
+    = link_to edit_contact_path( Contact.first ), class: "btn contact-edit-button" do
+      i.icon-pencil.icon-white
       = t(".edit_link")
 
 / Contacts
 - unless @contact.nil?
-  div.span12
+  .span12
     address
       strong = @contact.chirch_name
-      br/
+      br
       = @contact.address
-      br/
+      br
       abbr title="Телефон"
       = @contact.phone
 
-
   div.span12.pagination-centered
     / To make correct zoom in our case we should set FIRSTLY "auto_zoom" => false and then set zoom value.
-    = gmaps("map_options" => { "detect_location" => true, "center_on_user" => true, "auto_zoom" => false, "zoom" => 16},"markers" => { "data" => @json })
-    br/
+    = gmaps(:"map_options" => { :"detect_location" => true, :"center_on_user" => true, :"auto_zoom" => false, :"zoom" => 16}, :"markers" => { :"data" => @json })
+    br
 
 

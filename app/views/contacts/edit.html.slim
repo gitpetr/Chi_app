@@ -2,14 +2,13 @@ legend
   = t(".legend")
 
 = simple_form_for @contact do |f|
-  = f.input :chirch_name, :input_html => { :class => "span9" }
-  = f.input :phone, :input_html => { :class => "span9" }
-  = f.input :address, :input_html => { :rows => "4", :class => "span9" }
-  = f.input :latitude, :input_html => { :class => "span9" }
-  = f.input :longitude, :input_html => { :class => "span9" }
+  = f.input :chirch_name, input_html: { class: "span9" }
+  = f.input :phone, input_html: { class: "span9" }
+  = f.input :address, input_html: { rows: "4", class: "span9" }
+  = f.input :latitude, input_html: { class: "span9" }
+  = f.input :longitude, input_html: { class: "span9" }
 
-
-  div class="form-actions"
-    = f.button :submit, t(".update_button"), :class => "btn btn-large btn-warning"
+  .form-actions
+    = f.button :submit, t(".update_button"), class: "btn btn-large btn-warning"
     | &#32;
-    = link_to t(".cancel_button"), contacts_path, :class => "btn btn-large"
+    = link_to t(".cancel_button"), contacts_path, class: "btn btn-large"
