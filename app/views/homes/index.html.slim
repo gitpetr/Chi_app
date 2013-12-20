@@ -1,17 +1,17 @@
 - content_for :welcome do
-  div class="home-welcome-text"
+  .home-welcome-text
     - unless @welcome_message.nil?
       - if can? :edit, WelcomeMessage
-        = link_to edit_welcome_message_path( @welcome_message ), :class => "btn welcome-message-edit-button" do
-          i class="icon-pencil icon-white"
+        = link_to edit_welcome_message_path( @welcome_message ), class: "btn welcome-message-edit-button" do
+          i.icon-pencil.icon-white
           = t(".edit_link")
       p
         == @welcome_message.content
 
 - content_for :photos do
   - unless Photo.first.nil?
-    div class="row-fluid"
-      div class="span6"
-        = image_tag @photos.first.image_url(:album), :class => "home-photo"
-      div class="span6"
-        = image_tag @photos.last.image_url(:album), :class => "home-photo"
+    .row-fluid
+      .span6
+        = image_tag @photos.first.image_url(:album), class: "home-photo"
+      .span6
+        = image_tag @photos.last.image_url(:album), class: "home-photo"
