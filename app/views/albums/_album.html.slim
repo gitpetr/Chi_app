@@ -20,7 +20,7 @@
           p.label-preview-small
             = album.description.truncate(@small_preview_size, separator: ' ')
 
-    = render 'delete', album: album
+    = render 'shared/modals/delete_album', album: album
 
 
 

@@ -9,17 +9,7 @@
       li.divider
       li = link_to t(".delete"), "#", {remote: true, :'data-toggle' => 'modal', :'data-target' => "#modal-window-#{article.id}", :'databackdrop' => true, :'data-keyboard' => true}
 
-  / Modal window to delete article.
-  div class="modal hide fade" id="modal-window-#{article.id}"
-    .modal-header
-      button type="button" class="close" data-dismiss="modal" aria-hidden="true" ×
-      h3
-        = t(".modal_title")
-    .modal-body
-      h6
-        p = t(".confirm_message") + " \"#{article.title}\"?"
-    .modal-footer
-      = link_to t(".delete"), article, method: :delete, class: "btn btn-danger", id: "destroy_link"
-      = link_to t(".close"), "#", class: "btn", :"data-dismiss" => "modal"
+  = render 'shared/modals/delete_article', article: article
+
 
 
