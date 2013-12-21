@@ -36,9 +36,12 @@
 
 .articles-pagination{
   background-color: white;
-  height: 50px;
-  padding-top: 7px;
-  padding-bottom: 26px;
+  max-height: 50px;
+}
+
+.articles-pagination > div.pagination{
+  padding-bottom: 20px;
+  padding-top: 10px;
 }
 
 .article-section-legend{
