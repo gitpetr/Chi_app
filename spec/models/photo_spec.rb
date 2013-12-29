@@ -28,4 +28,20 @@ describe Photo do
       end.to change( Photo, :count ).by( 1 )
     end
   end
+
+  describe "Image's format" do
+    it "should allow to save jpg, jpeg, gif, png" do
+      images = ["cello.jpg", "cello.jpeg", "cello.gif", "cello.png"]
+      images.each do |i|
+        FactoryGirl.build(:photo, image: File.open(File.join(Rails.root, "/spec/fixtures/files/#{i}"))).should be_valid
+      end
+    end
+
+    it "should not allow to save anything (such is mp3, mp4) except extensions in white list" do
+      files = ["record.mp3", "record.mp4"]
+      files.each do |f|
+        FactoryGirl.build(:photo, image: File.open(File.join(Rails.root, "/spec/fixtures/files/#{f}"))).should_not be_valid
+      end
+    end
+  end
 end
