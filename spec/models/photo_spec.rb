@@ -12,7 +12,6 @@
 
 require 'spec_helper'
 
-#TODO: add test to check extensions of file.
 describe Photo do
   it { should belong_to(:album) }
   it { should validate_presence_of(:image) }

@@ -37,7 +37,7 @@ describe User do
   end
 
   describe "Validations" do
-    it "admin's attribute should = false when user has been created" do
+    it "admin's attribute should be false when user has been created" do
       user = User.create( @attr )
       user.admin.should be_false
     end
