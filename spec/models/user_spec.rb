@@ -22,7 +22,7 @@ require 'spec_helper'
 
 describe User do
   before(:each) do
-    @attr = { :email => "qwerty@qwerty.com", :password => "qwertyqwerty" }
+    @attr = { email: "qwerty@qwerty.com", password: "qwertyqwerty" }
   end
 
   it { should have_many(:articles) }

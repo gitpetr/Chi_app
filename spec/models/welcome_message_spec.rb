@@ -16,7 +16,7 @@ describe WelcomeMessage do
 
   describe "DB" do
     it "should create message with valid params" do
-      attrs = { :content => "data" }
+      attrs = { content: "data" }
 
       expect do
         WelcomeMessage.create( attrs )

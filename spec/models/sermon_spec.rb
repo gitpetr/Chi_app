@@ -44,10 +44,11 @@ describe Sermon do
 
   describe "Record's format" do
     it "should not allow anything other formats, such as mp4 or jpg" do
-      records = [File.open(File.join(Rails.root, '/spec/fixtures/files/record.mp4')),
-                 File.open(File.join(Rails.root, '/spec/fixtures/files/cello.jpg'))]
+      records = ['record.mp4', 'cello.jpg']
 
-      records.each{ |r| FactoryGirl.build(:sermon, record: r).should_not be_valid }
+      records.each do |r|
+        FactoryGirl.build(:sermon, record: File.open(File.join(Rails.root, "/spec/fixtures/files/#{r}"))).should_not be_valid
+      end
     end
   end
 end
