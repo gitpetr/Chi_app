@@ -43,7 +43,7 @@ describe Sermon do
   end
 
   describe "Record's format" do
-    it "should not allow anything except mp3" do
+    it "should not allow anything other formats, such as mp4 or jpg" do
       records = [File.open(File.join(Rails.root, '/spec/fixtures/files/record.mp4')),
                  File.open(File.join(Rails.root, '/spec/fixtures/files/cello.jpg'))]
 
