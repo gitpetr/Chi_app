@@ -3,7 +3,7 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 jQuery ->
-  if gon.controller == "albums"
+  if gon? and gon.controller == "albums"
     # ------- Index -------
     # Show and hide description on mouse events.
     toggleLabels = (this_elem) ->

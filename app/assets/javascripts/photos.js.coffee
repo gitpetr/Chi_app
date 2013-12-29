@@ -3,7 +3,7 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 jQuery ->
-  if gon.controller == "photos"
+  if gon? and gon.controller == "photos"
     # Hide button and links on images.
     hideElements = (slideshowBtn) ->
       $( slideshowBtn ).hide()

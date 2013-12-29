@@ -4,7 +4,7 @@
 
 jQuery ->
   # Evaluate scripts only for pages of specific controller.
-  if gon.controller == "sermons"
+  if gon? and gon.controller == "sermons"
     # New, edit.
     showDatepicker = () ->
       $( '#sermon_recorded_date' ).datepicker({
