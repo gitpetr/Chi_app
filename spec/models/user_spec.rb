@@ -21,9 +21,7 @@
 require 'spec_helper'
 
 describe User do
-  before(:each) do
-    @attr = { email: "qwerty@qwerty.com", password: "qwertyqwerty" }
-  end
+  let(:attrs) { {email: "qwerty@qwerty.com", password: "qwertyqwerty"} }
 
   it { should have_many(:articles) }
   it { should have_many(:albums) }
@@ -31,14 +29,14 @@ describe User do
   describe "DB" do
     it "should create user with valid params" do
       expect do
-        user = User.create( @attr )
+        user = User.create( attrs )
       end.to change( User, :count ).by( 1 )
     end
   end
 
   describe "Validations" do
     it "admin's attribute should be false when user has been created" do
-      user = User.create( @attr )
+      user = User.create( attrs )
       user.admin.should be_false
     end
   end

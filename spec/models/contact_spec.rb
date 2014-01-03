@@ -25,10 +25,8 @@ describe Contact do
 
   describe "DB" do
     it "should create contact with valid params" do
-      @attr = { chirch_name: "Transfiguration", address: "Moscow", phone: "12345"}
-
       expect do
-        Contact.create @attr
+        Contact.create( chirch_name: "Transfiguration", address: "Moscow", phone: "12345" )
       end.to change( Contact, :count ).by( 1 )
     end
   end

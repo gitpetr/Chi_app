@@ -22,13 +22,11 @@ describe Sermon do
 
   describe "DB" do
     it "should create sermon with valid params" do
-      attrs = { title: "qwerty@qwerty.com",
-                recorded_date: DateTime.now,
-                preacher: "name",
-                record: File.open(File.join(Rails.root, '/spec/fixtures/files/record.mp3')) }
-
       expect do
-        Sermon.create( attrs )
+        Sermon.create( title: "qwerty@qwerty.com",
+                       recorded_date: DateTime.now,
+                       preacher: "name",
+                       record: File.open(File.join(Rails.root, '/spec/fixtures/files/record.mp3')) )
       end.to change( Sermon, :count ).by( 1 )
     end
   end

@@ -22,10 +22,9 @@ describe Article do
   describe "DB" do
     it "should create article with valid params" do
       user = FactoryGirl.create( :user )
-      attrs = { content: "some text is here", title: "Test title" }
 
       expect do
-        user.articles.create attrs
+        user.articles.create( content: "some text is here", title: "Test title" )
       end.to change( Article, :count ).by( 1 )
     end
   end

@@ -19,11 +19,9 @@ describe Photo do
 
   describe "DB" do
     it "should create with valid params" do
-      attrs = { description: "some text is here",
-                image: File.open(File.join(Rails.root, '/spec/fixtures/files/violin.jpg')) }
-
       expect do
-        Photo.create( attrs )
+        Photo.create( description: "some text is here",
+                      image: File.open(File.join(Rails.root, '/spec/fixtures/files/violin.jpg')) )
       end.to change( Photo, :count ).by( 1 )
     end
   end
