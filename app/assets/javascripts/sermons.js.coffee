@@ -23,19 +23,18 @@ jQuery ->
       })
 
     isCollisionOfControlWithPlayer = (control) ->
-      audioPlayerWindow = $('.jp-type-single')
-
+      audioPlayerWindow    = $('.jp-type-single')
       audioPlayerRightSide = audioPlayerWindow.offset().left + audioPlayerWindow.width()
       controlRightSide     = control.offset().left + control.width()
 
       return controlRightSide > audioPlayerRightSide
 
     controlsManipulator = () ->
-      maxVolumeBtn      = $('.jp-volume-max')
-      volumeBar         = $('.jp-volume-bar')
-      muteVolumeBtn     = $('.jp-mute')
-      progressBar       = $('.jp-progress')
-      controls = [ maxVolumeBtn, volumeBar, muteVolumeBtn, progressBar ]
+      maxVolumeBtn  = $('.jp-volume-max')
+      volumeBar     = $('.jp-volume-bar')
+      muteVolumeBtn = $('.jp-mute')
+      progressBar   = $('.jp-progress')
+      controls      = [ maxVolumeBtn, volumeBar, muteVolumeBtn, progressBar ]
 
       for control in controls
         # Hide via "visibility" because in that case jquery can find offset of hidden element.
@@ -45,15 +44,7 @@ jQuery ->
           control.css( { "visibility":"visible" } )
       return true
 
-    if gon.action is "new"
-      showDatepicker()
-
-    if gon.action is "edit"
-      showDatepicker()
-
-    if gon.action is "show"
-      initAudioPlayer()
-
+    hideControlsOnLoadOrResize = () ->
       # Hiding controls AFTER page load.
       $(window).on 'load', ->
         controlsManipulator()
@@ -63,3 +54,15 @@ jQuery ->
       $(window).on 'resize', ->
         controlsManipulator()
         return true
+
+    if gon.action is "new"
+      showDatepicker()
+
+    if gon.action is "edit"
+      showDatepicker()
+
+    if gon.action is "show"
+      initAudioPlayer()
+      hideControlsOnLoadOrResize()
+
+
