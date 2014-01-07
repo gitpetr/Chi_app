@@ -16,10 +16,10 @@
 
 .article{
   background-color: white;
-}
 
-.article-text{
-  padding: 30px;
+  .article-text{
+    padding: 30px;
+  }
 }
 
 .article-devider{
@@ -29,11 +29,11 @@
 .articles-pagination{
   background-color: white;
   max-height: 50px;
-}
 
-.articles-pagination > div.pagination{
-  padding-bottom: 20px;
-  padding-top: 10px;
+  div.pagination{
+    padding-bottom: 20px;
+    padding-top: 10px;
+  }
 }
 
 .article-section-legend{
