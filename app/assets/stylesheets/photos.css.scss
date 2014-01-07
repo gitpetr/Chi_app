@@ -28,17 +28,27 @@ img.photo{
   position: fixed;
   top: 38%;
   z-index: 1050;
+
+  .modal-huge-body{
+    max-height: $modal-height;
+    overflow-y: auto;
+    padding: 15px;
+  }
 }
 
-.modal-huge-body{
-  max-height: $modal-height;
-  overflow-y: auto;
-  padding: 15px;
+.carousel{
+  .carousel-inner {
+    text-align: center;
+  }
+
+  // Center image in slideshow.
+  .item {
+    img {
+      display: inline-block;
+    }
+  }
 }
 
-// Centering the image in the carousel.
-.carousel-inner { text-align: center; }
-.carousel .item > img { display: inline-block; }
 
 //----- Label on image. ----- //
 
