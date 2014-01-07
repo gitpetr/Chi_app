@@ -3,20 +3,16 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 jQuery ->
-  if gon? and gon.controller == "albums"
-    # ------- Index -------
-    # Show and hide description on mouse events.
+  if gon? and gon.controller is "albums" and gon.action is "index"
     toggleLabels = (this_elem) ->
+      animation_speed = 385
+
       if this_elem.find('p.label-preview-big').text().length > gon.small_preview_size               # Checking that full description is BIGGER then a small one.
-        this_elem.find('p.label-preview-small').toggle( root.animation_speed )
-        this_elem.find('p.label-preview-big').toggle( root.animation_speed )
+        this_elem.find('p.label-preview-small').toggle( animation_speed )
+        this_elem.find('p.label-preview-big').toggle( animation_speed )
 
     $(document).on "mouseenter", ".album-with-label", ->
       toggleLabels $(this)
 
     $(document).on "mouseleave", ".album-with-label", ->
       toggleLabels $(this)
-
-    # ------- Global variables. -------
-    root = exports ? this
-    root.animation_speed = 385
