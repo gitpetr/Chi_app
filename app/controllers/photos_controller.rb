@@ -1,7 +1,7 @@
 class PhotosController < ApplicationController
   load_and_authorize_resource
 
-  before_filter :load_album, :remember_controller
+  before_action :load_album, :remember_controller
 
   def index
     @photos = @album.photos

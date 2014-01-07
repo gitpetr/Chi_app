@@ -1,7 +1,7 @@
 class AlbumsController < ApplicationController
   load_and_authorize_resource
 
-  before_filter :remember_controller
+  before_action :remember_controller
 
   def index
     @albums = Album.order("updated_at DESC")

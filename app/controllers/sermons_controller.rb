@@ -1,7 +1,7 @@
 class SermonsController < ApplicationController
 	load_and_authorize_resource
 
-  before_filter :remember_controller
+  before_action :remember_controller
 
 	def index
 		@sermons = Sermon.order("created_at DESC")
