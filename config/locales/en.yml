@@ -68,7 +68,6 @@ en:
       read_article: "Read more "
   photos:
     index:
-      legend: "Albums"
       new_photo_button: "Add new photos"
       no_photos: "There is nothing to show here yet."
       slideshow: "Slideshow "
@@ -85,8 +84,6 @@ en:
       change: " Change"
       edit: "Edit"
       delete: "Delete"
-    slideshow:
-      slides: "Slides"
   contacts:
     index:
       legend: "Our contacts"

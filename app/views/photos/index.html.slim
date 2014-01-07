@@ -1,5 +1,5 @@
 legend
-  = t(".legend") + ": " + @album.name
+  = @album.name
 
 - if can? :create, Photo
   = link_to t(".new_photo_button"), new_album_photo_path( @album ), class: "btn btn-large btn-block"
@@ -16,7 +16,7 @@ legend
         - [a,b,c].each do |val|
           = render 'photo', photo: val
 
-  = render 'slideshow', photos: @photos
+  = render 'slideshow', photos: @photos, album_name: @album.name
 - else
   .well
     = t(".no_photos")
