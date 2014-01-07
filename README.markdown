@@ -1,4 +1,4 @@
-This is a web app for chirch.
+This is a web app for the chirch. It uses Rails 4 for backend, Slim + Sass + CoffeeScript for frontend. For tests I use Cucumber and Rspec.
 
 [![Build Status](https://travis-ci.org/Loremaster/Chirch_app.png?branch=master)](https://travis-ci.org/Loremaster/Chirch_app)
 [![Dependency Status](https://gemnasium.com/Loremaster/Chirch_app.png)](https://gemnasium.com/Loremaster/Chirch_app)
@@ -11,16 +11,16 @@ This is a web app for chirch.
 
 1) Before installation make sure that you installed PostgreSQL, Imagemagik, QT4.
 
-To install Imagemagik and QT in Mac use homebrew:
+To install Imagemagik and QT on Mac just use the homebrew:
 
   `$ brew install imagemagick`
   `$ brew install qt4`
 
-2) In `config/` create `database.yml` from `database.example.yml`. Give a password in database.yml in test and development sections.
+2) In `app/config/` create `database.yml` using `database.example.yml` as an example. Give a password in database.yml in test and development sections if you need.
 
-3) In `config/initializers/` create `secret_token.rb` from `secret_token.example.rb`
+3) In `app/config/initializers/` create `secret_token.rb` using `secret_token.example.rb` as an example.
 
-4) To prepare databases ans setup gems:
+4) Prepare databases and setup gems:
 
 ```shell
 $ cd app_name
@@ -31,18 +31,16 @@ $ rake db:seed
 $ rake db:test:prepare
 ```
 
-5) After that, you should make sure that all tests pass:
+5) Make sure that all tests pass:
 
 ```shell
 $ rake
 ```
 
-**Note:** There is known bug, that sometimes some tests just fall. Unfortunately, i don't have enough time to find out, why. Just rerun tests and it should be enough for them to pass.
-
-6) Create admin (login: qwerty@qwerty.com, password: qwertyqwerty):
+6) Create an admin:
   `$ rake db:create_test_admin`
 
-7) Also you should know that project has default ruby version and gemset. If you use rvm then you'll use them by default. Check `.ruby-version` and `.ruby-gemset` for more details.
+7) Start your server, visit `0.0.0.0:3000/login` and use login `qwerty@qwerty.com` and password `qwertyqwerty` to sign in.
 
 **Setup (production)**
 
@@ -111,7 +109,9 @@ and after this push git and deploy:
 **Changelog**
 
 ------------------------------------------------------------------------------------------
-* Rails and devise has updated. Devise's views regenerated.
+* Using `gon` for actions specific js.
+* Rails 4.
+* Devise has been updated. Devise's views regenerated.
 * Cucumber for features instead of rspec features.
 * Sitemap generator. Edit `config/sitemap.rb` and then run `rake sitemap:refresh`.
 * Albums with photos, Sermons.
@@ -127,7 +127,7 @@ end
 
 And also in installed driver (not sure about that): `$ brew install chromedriver`
 
-* Google map inetgration via `gmaps4rails` gem. After installation make sure that in `gmaps4rails.css.scss` you did that:
+* Google map integrated via `gmaps4rails` gem. After installation make sure that in `gmaps4rails.css.scss` you did that:
 
 ```css
 .map_container {
@@ -188,7 +188,7 @@ And also in installed driver (not sure about that): `$ brew install chromedriver
 
     `:skip => [:registrations]`
 
-    OR add link (i enabled few featerus in routes).
+    OR add link (i enabled few features in routes).
 
   2) From app/views/devise/shared/_links uncomment this:
     ` -#  %br/
