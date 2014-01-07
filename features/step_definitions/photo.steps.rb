@@ -52,7 +52,7 @@ end
 # THEN
 
 Then(/^I should see that modal with slideshow opened$/) do
-  page.should have_selector('h3', :text => 'Слайды')
+  page.should have_selector('h3', :text => 'New album')
 end
 
 Then(/^I should see text of one image$/) do
@@ -64,7 +64,7 @@ Then(/^I should see text of next image$/) do
 end
 
 Then(/^I should see that modal with slideshow is hidden$/) do
-  page.should_not have_selector('h3', :text => 'Слайды')
+  page.should_not have_selector('h3', :text => 'New album')
 end
 
 Then(/^I should see message that photo has been deleted$/) do
