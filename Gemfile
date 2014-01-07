@@ -36,7 +36,6 @@ gem 'actionpack-page_caching'
 gem 'actionpack-action_caching'
 
 group :development do
-  gem 'sextant', '0.2.4'                                                                            # Navigate in routes on site.
   gem 'rails_best_practices', '1.14.4'
   gem 'webrick', '1.3.1'                                                                            # Standart server. I specify it to remove warning from logs.
   gem 'annotate', '2.6.0'
