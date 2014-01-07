@@ -3,7 +3,7 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 jQuery ->
-  if gon? and gon.controller is "albums" and gon.action is "index"
+  if gon? and gon.controller is "albums"
     toggleLabels = (this_elem) ->
       animation_speed = 385
 
@@ -11,8 +11,9 @@ jQuery ->
         this_elem.find('p.label-preview-small').toggle( animation_speed )
         this_elem.find('p.label-preview-big').toggle( animation_speed )
 
-    $(document).on "mouseenter", ".album-with-label", ->
-      toggleLabels $(this)
+    if gon.action is "index"
+      $(document).on "mouseenter", ".album-with-label", ->
+        toggleLabels $(this)
 
-    $(document).on "mouseleave", ".album-with-label", ->
-      toggleLabels $(this)
+      $(document).on "mouseleave", ".album-with-label", ->
+        toggleLabels $(this)
