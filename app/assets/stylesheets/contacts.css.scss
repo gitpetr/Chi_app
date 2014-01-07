@@ -6,11 +6,15 @@
   float: right;
 }
 
-// Fix to show correct google map via gem.
-#map img {
-  max-width: none;
+// Fix to show correct google map via gem (instruments panel on the map).
+#map{
+  img {
+    max-width: none;
+  }
+
+  label {
+    width: auto;
+    display:inline;
+  }
 }
 
-#map label {
-  width: auto; display:inline;
-}
