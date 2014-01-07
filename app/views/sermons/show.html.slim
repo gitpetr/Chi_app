@@ -6,7 +6,7 @@ legend
     div.btn-toolbar.sermon-toolbar-buttons
       - unless @sermon.nil?
         .btn-group
-          = link_to "#", :class => "btn dropdown-toggle article-edit-button", "data-toggle" => "dropdown" do
+          = link_to "#", :class => "btn dropdown-toggle sermon-edit-button", "data-toggle" => "dropdown" do
             i.icon-wrench.icon-white
             = t(".change")
             span.caret
