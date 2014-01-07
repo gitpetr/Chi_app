@@ -3,7 +3,7 @@ legend
 
   / Edit contact button
   - if not Contact.first.nil? and can? :edit, Article
-    = link_to edit_contact_path( Contact.first ), class: "btn contact-edit-button" do
+    = link_to edit_contact_path( Contact.first ), class: "btn object-edit-button" do
       i.icon-pencil.icon-white
       = t(".edit_link")
 

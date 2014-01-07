@@ -1,6 +1,6 @@
 - if can? [:edit, :destroy], Article
-  div.article-edit-button.btn-group
-    = link_to "#", class: "btn dropdown-toggle article-edit-button", "data-toggle" => "dropdown" do
+  div.object-edit-button.btn-group
+    = link_to "#", class: "btn dropdown-toggle", :"data-toggle" => "dropdown" do
       i class="icon-wrench icon-white"
       = t(".change")
       span.caret
