@@ -21,6 +21,6 @@ ChirchApp::Application.routes.draw do
   end
 
   get '*path', to: redirect("/#{I18n.default_locale}/%{path}"), constraints: lambda { |req| !req.path.starts_with? "/#{I18n.default_locale}" and
-                                                                                               req.path != "/rails/routes" } # Don't apply this rule for sextant's path to make it work.
+                                                                                            !req.path.starts_with? "/rails/" } # Don't apply this rule for sextant's path to make it work.
   get '', to: redirect("/#{I18n.default_locale}")                                                 # Redirect as a default to home page.
 end
