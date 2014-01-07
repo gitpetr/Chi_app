@@ -3,8 +3,7 @@ class AlbumsController < ApplicationController
 
   def index
     @albums = Album.order("updated_at DESC")
-    @small_preview_size = 65
-    gon.small_preview_size = @small_preview_size
+    gon.small_preview_size = @small_preview_size = 65
   end
 
   def new
