@@ -2,7 +2,8 @@ legend
   = t(".legend")
 
 = simple_form_for @welcome_message do |f|
-  = f.input :content, input_html: { class: "span9" }
+  .form-unit
+    = f.input :content, input_html: { class: "span9" }
 
   .form-actions
     = f.button :submit, t(".update_button"), class: "btn btn-large btn-warning"

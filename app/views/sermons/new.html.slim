@@ -2,7 +2,7 @@ legend
   = t(".legend")
 
 = simple_form_for @sermon do |f|
-  .album-unit
+  .form-unit
   	= f.input :title, input_html: { class: "span12", autofocus: true }
   	= f.input :preacher
   	= f.input :recorded_date, as: :string
