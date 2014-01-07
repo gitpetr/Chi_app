@@ -3,14 +3,16 @@ html, body {
   height: 100%;
 }
 
-#wrap {
-  height: auto !important;
-  margin: 0 auto -60px;
-  min-height: 100%;
-}
+body {
+  #wrap {
+    height: auto !important;
+    margin: 0 auto -60px;
+    min-height: 100%;
+  }
 
-#push, #footer {
-  height: 60px;
+  #push, #footer {
+    height: 60px;
+  }
 }
 
 #footer {
@@ -21,23 +23,20 @@ html, body {
   margin-right: 0px;
   padding-left: 20px;
   padding-right: 20px;
+
+  .container {
+    max-width: 680px;
+    width: auto;
+    text-align: center;
+
+    .footer-links {
+      margin: 18px 0;
+
+      li {
+        display: inline;
+        margin-right: 10px;
+      }
+    }
+  }
 }
 
-.container {
-	max-width: 680px;
-	width: auto;
-  text-align: center;
-}
-
-.container .credit {
-	margin: 20px 0;
-}
-
-.footer-links {
-	margin: 18px 0;
-}
-
-.footer-links li {
-	display: inline;
-	margin-right: 10px;
-}
