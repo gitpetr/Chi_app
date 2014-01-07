@@ -71,11 +71,11 @@ jQuery ->
         RIGHT_ARROW = 39; LEFT_ARROW = 37
 
         # If event is not undefined and modal window with slideshow is visible.
-        if typeof event != 'undefined' and $('#modal-window-slideshow').is(':visible')
-          if event.keyCode == RIGHT_ARROW
+        if typeof event isnt 'undefined' and $('#modal-window-slideshow').is(':visible')
+          if event.keyCode is RIGHT_ARROW
             $('a.carousel-control.right').trigger('click')                                          # Find and click link to show next slide.
             $('.myCarousel').carousel 'pause'
-          if event.keyCode == LEFT_ARROW
+          if event.keyCode is LEFT_ARROW
             $('a.carousel-control.left').trigger('click')                                           # Find and click prev link.
             $('.myCarousel').carousel 'pause'
         return true
