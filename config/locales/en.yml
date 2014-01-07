@@ -124,6 +124,7 @@ en:
       legend: "Adding a sermon"
       create: "Create"
       cancel: "Cancel"
+      hint: "You can upload only mp3 files"
     show:
       legend: "Sermon"
       change: " Change "
