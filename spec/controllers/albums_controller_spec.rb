@@ -5,7 +5,7 @@ describe AlbumsController do
   let(:user) { FactoryGirl.create( :user ) }
 
   describe "GET 'index'" do
-    shared_examples "album-render-success" do
+    shared_examples "album-index-render-success" do
       it "should access" do
         get :index, locale: :en
         response.should be_success
@@ -13,24 +13,24 @@ describe AlbumsController do
     end
 
     describe "for non-signed users" do
-      include_examples "album-render-success"
+      include_examples "album-index-render-success"
     end
 
     describe "for signed-in users" do
       before(:each){ test_sign_in( user ) }
 
-      include_examples "album-render-success"
+      include_examples "album-index-render-success"
     end
 
     describe "for signed-in admin" do
       before(:each){ test_sign_in( admin ) }
 
-      include_examples "album-render-success"
+      include_examples "album-index-render-success"
     end
   end
 
   describe "GET 'new'" do
-    shared_examples "album-redirect-to-root" do
+    shared_examples "album-new-redirect-to-root" do
       it "should deny access" do
         get :new, locale: :en
         response.should redirect_to( root_path )
@@ -38,13 +38,13 @@ describe AlbumsController do
     end
 
     describe "for non-signed users" do
-      include_examples "album-redirect-to-root"
+      include_examples "album-new-redirect-to-root"
     end
 
     describe "for signed-in users" do
       before(:each){ test_sign_in( user ) }
 
-      include_examples "album-redirect-to-root"
+      include_examples "album-new-redirect-to-root"
     end
 
     describe "for signed-in admin" do
@@ -60,7 +60,7 @@ describe AlbumsController do
   describe "POST 'create'" do
     let(:attrs) { {name: "name", description: ""} }
 
-    shared_examples "album-redirect-to-root-and-not-create" do
+    shared_examples "album-create-redirect-to-root-and-not-create" do
       it "should deny access" do
         post :create, locale: :en, album: attrs
         response.should redirect_to( root_path )
@@ -74,13 +74,13 @@ describe AlbumsController do
     end
 
     describe "for non-signed users" do
-      include_examples "album-redirect-to-root-and-not-create"
+      include_examples "album-create-redirect-to-root-and-not-create"
     end
 
     describe "for signed-in users" do
       before(:each){ test_sign_in( user ) }
 
-      include_examples "album-redirect-to-root-and-not-create"
+      include_examples "album-create-redirect-to-root-and-not-create"
     end
 
     describe "for signed-in admin" do
@@ -159,7 +159,7 @@ describe AlbumsController do
   describe "DELETE 'destroy'" do
     let!(:album) { FactoryGirl.create(:album) }
 
-    shared_examples "album-redirect-to-root-and-not-delete" do
+    shared_examples "album-delete-redirect-to-root-and-not-delete" do
       it "should deny access" do
         delete :destroy, locale: :en, id: album
         response.should redirect_to( root_path )
@@ -173,13 +173,13 @@ describe AlbumsController do
     end
 
     describe "for non-signed users" do
-      include_examples 'album-redirect-to-root-and-not-delete'
+      include_examples 'album-delete-redirect-to-root-and-not-delete'
     end
 
     describe "for signed-in users" do
       before(:each){ test_sign_in( user ) }
 
-      include_examples 'album-redirect-to-root-and-not-delete'
+      include_examples 'album-delete-redirect-to-root-and-not-delete'
     end
 
     describe "for signed-in admins" do

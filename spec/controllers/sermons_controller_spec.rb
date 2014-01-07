@@ -5,7 +5,7 @@ describe SermonsController do
   let(:user)  { FactoryGirl.create( :user ) }
 
   describe "GET 'index'" do
-    shared_examples "sermons-render-success" do
+    shared_examples "sermons-index-render-success" do
       it "should access" do
         get :index, locale: :en
         response.should be_success
@@ -13,26 +13,26 @@ describe SermonsController do
     end
 
     describe "for non-signed users" do
-      include_examples "sermons-render-success"
+      include_examples "sermons-index-render-success"
     end
 
     describe "for signed-in users" do
       before(:each){ test_sign_in( user ) }
 
-      include_examples "sermons-render-success"
+      include_examples "sermons-index-render-success"
     end
 
     describe "for signed-in admin" do
       before(:each){ test_sign_in( admin ) }
 
-      include_examples "sermons-render-success"
+      include_examples "sermons-index-render-success"
     end
   end
 
   describe "GET 'show'" do
     let(:sermon) { FactoryGirl.create :sermon }
 
-    shared_examples "sermons-render-success-and-show" do
+    shared_examples "sermons-show-render-success" do
       it "should access" do
         get :show, id: sermon, locale: :en
         response.should be_success
@@ -40,24 +40,24 @@ describe SermonsController do
     end
 
     describe "for non-signed users" do
-      include_examples "sermons-render-success-and-show"
+      include_examples "sermons-show-render-success"
     end
 
     describe "for signed-in users" do
       before(:each){ test_sign_in( user ) }
 
-      include_examples "sermons-render-success-and-show"
+      include_examples "sermons-show-render-success"
     end
 
     describe "for signed-in admin" do
       before(:each){ test_sign_in( admin ) }
 
-      include_examples "sermons-render-success-and-show"
+      include_examples "sermons-show-render-success"
     end
   end
 
   describe "GET 'new'" do
-    shared_examples "sermons-deny access" do
+    shared_examples "sermons-new-deny-access" do
       it "should deny access" do
         get :new, locale: :en
         response.should redirect_to( root_path )
@@ -65,13 +65,13 @@ describe SermonsController do
     end
 
     describe "for non-signed users" do
-      include_examples "sermons-deny access"
+      include_examples "sermons-new-deny-access"
     end
 
     describe "for signed-in users" do
       before(:each){ test_sign_in( user ) }
 
-      include_examples "sermons-deny access"
+      include_examples "sermons-new-deny-access"
     end
 
     describe "for signed-in admin" do
@@ -90,7 +90,7 @@ describe SermonsController do
                    recorded_date: DateTime.now,
                    record: fixture_file_upload('/files/record.mp3', 'audio/mpeg')} }
 
-    shared_examples "sermons-deny-access-and-not-create" do
+    shared_examples "sermons-create-deny-access" do
       it "should deny access" do
         post :create, locale: :en, sermon: attrs
         response.should redirect_to( root_path )
@@ -104,13 +104,13 @@ describe SermonsController do
     end
 
     describe "for non-signed users" do
-      include_examples "sermons-deny-access-and-not-create"
+      include_examples "sermons-create-deny-access"
     end
 
     describe "for signed-in users" do
       before(:each){ test_sign_in( user ) }
 
-      include_examples "sermons-deny-access-and-not-create"
+      include_examples "sermons-create-deny-access"
     end
 
     describe "for signed-in admin" do
