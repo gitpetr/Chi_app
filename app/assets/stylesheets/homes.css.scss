@@ -7,3 +7,13 @@
 img.home-photo{
   margin-bottom: 15px;
 }
+
+// Paddings are hacks to make div bigger. Otherwise admin's panel goes down and it doesn't look good.
+.home-welcome-text{
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.home-photo-legend {
+  border-bottom: 1px solid black;
+}

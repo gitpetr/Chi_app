@@ -23,6 +23,15 @@ legend, hr {
   margin-bottom: 30px;
 }
 
+/* Text's aligning inside of the table. */
+table.text-center > thead > tr > th {
+  text-align: center;
+}
+
+table.text-center > tbody > tr > td {
+  text-align: center;
+}
+
 /* -------- Layout styles: application.html.slim -------- */
 .content {
   background-color: white;
@@ -31,24 +40,4 @@ legend, hr {
 /* -------- Layout styles: home.html.slim -------- */
 .home-welcome-content {
   @extend .content;
-}
-
-// Paddings are hacks to make div bigger. Otherwise admin's panel goes down and it doesn't look good.
-.home-welcome-text{
-  padding-top: 12px;
-  padding-bottom: 12px;
-}
-
-.home-photo-legend {
-  border-bottom: 1px solid black;
-}
-
-
-/* Text's aligning inside of the table. */
-table.text-center > thead > tr > th {
-    text-align: center;
-}
-
-table.text-center > tbody > tr > td {
-    text-align: center;
 }
