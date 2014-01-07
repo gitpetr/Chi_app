@@ -1,7 +1,7 @@
 class PhotosController < ApplicationController
   load_and_authorize_resource
 
-  before_action :load_album, :remember_controller
+  before_action :load_album
 
   def index
     @photos = @album.photos
@@ -62,9 +62,5 @@ class PhotosController < ApplicationController
   private
     def load_album
       @album = Album.where("id = ?", params[:album_id]).first
-    end
-
-    def remember_controller
-      gon.controller = params[:controller]
     end
 end

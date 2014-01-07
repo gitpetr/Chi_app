@@ -1,8 +1,6 @@
 class SermonsController < ApplicationController
 	load_and_authorize_resource
 
-  before_action :remember_controller
-
 	def index
 		@sermons = Sermon.order("created_at DESC")
 
@@ -47,10 +45,4 @@ class SermonsController < ApplicationController
 
 		redirect_to sermons_path
 	end
-
-  private
-
-    def remember_controller
-      gon.controller = params[:controller]
-    end
 end
