@@ -4,8 +4,7 @@
 
 jQuery ->
   # Evaluate scripts only for pages of specific controller.
-  if gon? and gon.controller == "sermons"
-    # New, edit.
+  if gon? and gon.controller is "sermons"
     showDatepicker = () ->
       $( '#sermon_recorded_date' ).datepicker({
           dateFormat:"dd.mm.yy"
@@ -13,7 +12,6 @@ jQuery ->
         $.datepicker.regional['ru']
       )
 
-    # Index.
     initAudioPlayer = () ->
       $( "#jquery_jplayer_1" ).jPlayer({
         ready: (event) ->
@@ -25,13 +23,19 @@ jQuery ->
       })
 
     isCollisionOfControlWithPlayer = (control) ->
-      audioPlayerRightSide = root.audioPlayerWindow.offset().left + root.audioPlayerWindow.width()
+      audioPlayerWindow = $('.jp-type-single')
+
+      audioPlayerRightSide = audioPlayerWindow.offset().left + audioPlayerWindow.width()
       controlRightSide     = control.offset().left + control.width()
 
       return controlRightSide > audioPlayerRightSide
 
     controlsManipulator = () ->
-      controls = [ root.maxVolumeBtn, root.volumeBar, root.muteVolumeBtn, root.progressBar ]
+      maxVolumeBtn      = $('.jp-volume-max')
+      volumeBar         = $('.jp-volume-bar')
+      muteVolumeBtn     = $('.jp-mute')
+      progressBar       = $('.jp-progress')
+      controls = [ maxVolumeBtn, volumeBar, muteVolumeBtn, progressBar ]
 
       for control in controls
         # Hide via "visibility" because in that case jquery can find offset of hidden element.
@@ -39,27 +43,23 @@ jQuery ->
           control.css( { "visibility":"hidden" } )
         else
           control.css( { "visibility":"visible" } )
-
       return true
 
-    # Hiding controls AFTER page load.
-    $(window).on 'load', ->
-      controlsManipulator()
-      return true
+    if gon.action is "new"
+      showDatepicker()
 
-    # Hiding/showing controls one by one.
-    $(window).on 'resize', ->
-      controlsManipulator()
-      return true
+    if gon.action is "edit"
+      showDatepicker()
 
-    # Global vars.
-    root = exports ? this
-    root.audioPlayerWindow = $('.jp-type-single')
-    root.maxVolumeBtn      = $('.jp-volume-max')
-    root.volumeBar         = $('.jp-volume-bar')
-    root.muteVolumeBtn     = $('.jp-mute')
-    root.progressBar       = $('.jp-progress')
+    if gon.action is "show"
+      initAudioPlayer()
 
-    # Functions.
-    showDatepicker()
-    initAudioPlayer()
+      # Hiding controls AFTER page load.
+      $(window).on 'load', ->
+        controlsManipulator()
+        return true
+
+      # Hiding/showing controls one by one.
+      $(window).on 'resize', ->
+        controlsManipulator()
+        return true
