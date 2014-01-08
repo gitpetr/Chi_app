@@ -14,14 +14,17 @@ require 'spec_helper'
 
 describe Photo do
   it { should belong_to(:album) }
+  it { should validate_presence_of(:album_id) }
   it { should validate_presence_of(:image) }
   it { should ensure_length_of(:description).is_at_most(500) }
 
   describe "DB" do
     it "should create with valid params" do
+      album = FactoryGirl.create(:album)
+
       expect do
-        Photo.create( description: "some text is here",
-                      image: File.open(File.join(Rails.root, '/spec/fixtures/files/violin.jpg')) )
+        album.photos.create( description: "some text is here",
+                             image: File.open(File.join(Rails.root, '/spec/fixtures/files/violin.jpg')) )
       end.to change( Photo, :count ).by( 1 )
     end
   end

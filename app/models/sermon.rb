@@ -23,6 +23,7 @@ class Sermon < ActiveRecord::Base
   validates :record, presence: true
   validates :preacher, presence: true
   validates :recorded_date, presence: true
+  validates :user_id, presence: true
 
   # Path to record for audio player.
   def record_player_path

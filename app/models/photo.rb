@@ -19,4 +19,5 @@ class Photo < ActiveRecord::Base
 
   validates :description, length: { maximum: 500 }
   validates :image, presence: true
+  validates :album_id, presence: true
 end
