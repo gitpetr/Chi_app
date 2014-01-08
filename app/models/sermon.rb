@@ -13,6 +13,8 @@
 #
 
 class Sermon < ActiveRecord::Base
+  belongs_to :user
+
   attr_accessible :recorded_date, :title, :preacher, :record
 
 	mount_uploader :record, RecordUploader

@@ -25,6 +25,7 @@ describe User do
 
   it { should have_many(:articles) }
   it { should have_many(:albums) }
+  it { should have_many(:sermons) }
 
   describe "DB" do
     it "should create user with valid params" do

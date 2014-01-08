@@ -15,6 +15,7 @@
 require 'spec_helper'
 
 describe Sermon do
+  it { should belong_to(:user) }
   it { should validate_presence_of(:title) }
   it { should ensure_length_of(:title).is_at_most(250) }
   it { should validate_presence_of(:record) }
@@ -23,11 +24,13 @@ describe Sermon do
 
   describe "DB" do
     it "should create sermon with valid params" do
+      user = FactoryGirl.create( :user )
+
       expect do
-        Sermon.create( title: "qwerty@qwerty.com",
-                       recorded_date: DateTime.now,
-                       preacher: "name",
-                       record: File.open(File.join(Rails.root, '/spec/fixtures/files/record.mp3')) )
+        user.sermons.create( title: "qwerty@qwerty.com",
+                             recorded_date: DateTime.now,
+                             preacher: "name",
+                             record: File.open(File.join(Rails.root, '/spec/fixtures/files/record.mp3')) )
       end.to change( Sermon, :count ).by( 1 )
     end
   end
