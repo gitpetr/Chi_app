@@ -9,9 +9,9 @@
 #  updated_at    :datetime         not null
 #  record        :string(255)
 #  preacher      :string(255)
+#  user_id       :integer
 #
 
-# TODO: belongs to user.
 class Sermon < ActiveRecord::Base
   attr_accessible :recorded_date, :title, :preacher, :record
 

@@ -9,6 +9,7 @@
 #  updated_at    :datetime         not null
 #  record        :string(255)
 #  preacher      :string(255)
+#  user_id       :integer
 #
 
 require 'spec_helper'
