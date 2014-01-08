@@ -15,6 +15,8 @@ class ArticlesController < ApplicationController
   end
 
   def create
+    @article = current_user.articles.new( params[:article] )
+
     if @article.save
       redirect_to articles_path
       flash[:success] = t( :article_created_message )

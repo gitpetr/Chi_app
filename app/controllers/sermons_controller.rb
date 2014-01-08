@@ -18,6 +18,8 @@ class SermonsController < ApplicationController
 	end
 
 	def create
+    @sermon = current_user.sermons.new( params[:sermon] )
+
 		if @sermon.save
       redirect_to sermons_path
       flash[:success] = t( :sermon_created_message )
