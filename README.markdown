@@ -1,7 +1,6 @@
 This is a web app for the chirch. It uses Rails 4 for backend, Slim + Sass + CoffeeScript for frontend. For tests I use Cucumber and Rspec.
 
 [![Build Status](https://travis-ci.org/Loremaster/Chirch_app.png?branch=master)](https://travis-ci.org/Loremaster/Chirch_app)
-[![Dependency Status](https://gemnasium.com/Loremaster/Chirch_app.png)](https://gemnasium.com/Loremaster/Chirch_app)
 
 **Setup (Development)**
 
