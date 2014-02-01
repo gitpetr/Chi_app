@@ -1,5 +1,7 @@
 This is a web app for the chirch. It uses Rails 4 + PostgreSQL for backend, Slim + Sass + CoffeeScript + Twitter Bootstrap 2 for frontend. For tests I use Cucumber and Rspec.
 
+**APP IS NOT SUPPORTED ANYMORE.**
+
 [![Build Status](https://travis-ci.org/Loremaster/Chirch_app.png?branch=master)](https://travis-ci.org/Loremaster/Chirch_app)
 
 **Setup (Development)**
